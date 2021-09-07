@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+transformation.functional.ctm.options=<null>[,inline role definitions]
+transformation.functional.options=protected.sections\=;definitions.external\=false
