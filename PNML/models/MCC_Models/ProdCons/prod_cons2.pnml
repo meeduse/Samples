@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net type="http://www.pnml.org/version-2009/grammar/ptnet" id="prod_cons">
+    <name>
+      <text>ProdCons</text>
+    </name>
+    <page id="page_1">
+      <place id="buffer">
+        <name>
+          <text>buffer</text>
+        </name>
+      </place>
+      <place id="ready">
+        <name>
+          <text>ready</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="accept">
+        <name>
+          <text>accept</text>
+        </name>
+      </place>
+      <transition id="request">
+        <name>
+          <text>request</text>
+        </name>
+      </transition>
+      <arc id="a6" source="buffer" target="request">
+        <inscription>
+          <text>5</text>
+        </inscription>
+      </arc>
+      <arc id="a7" source="ready" target="request"/>
+      <arc id="a8" source="request" target="accept"/>
+    </page>
+  </net>
+</pnml>

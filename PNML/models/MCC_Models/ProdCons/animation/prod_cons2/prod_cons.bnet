@@ -1,0 +1,33 @@
+
+MACHINE prod_cons
+DEFINITIONS
+   buffer_request == buffer >= 5;
+   a6 == buffer := buffer - 5;
+   ready_request == ready >= 1;  
+   a7 == ready := ready - 1;
+   request_accept == accept + 1 <= MAXINT;
+   a8 == accept := accept + 1;
+CONCRETE_VARIABLES
+   buffer,
+   ready,
+   accept
+INVARIANT
+   buffer : NAT &
+   ready : NAT &
+   accept : NAT 
+INITIALISATION
+   buffer := 0 ;
+   ready := 1 ;
+   accept := 0 
+OPERATIONS
+request =
+   IF
+      buffer_request &
+      ready_request &
+      request_accept 
+   THEN
+      a6;
+      a7;
+      a8
+   END
+END

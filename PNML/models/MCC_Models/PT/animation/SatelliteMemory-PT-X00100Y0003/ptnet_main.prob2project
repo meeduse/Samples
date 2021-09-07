@@ -1,0 +1,43 @@
+{
+  "name": "ptnet_main",
+  "description": "(ce projet à été crée automatiquement du fichier /Users/idani/eclipse/meeduse-2020-03/meeduse-PNML/MCC_Models/PT/animation/SatelliteMemory-PT-X00100Y0003/ptnet_main.mch)",
+  "machines": [
+    {
+      "name": "ptnet_main",
+      "description": "",
+      "location": "ptnet_main.mch",
+      "lastUsedPreferenceName": "default",
+      "ltlFormulas": [],
+      "ltlPatterns": [],
+      "symbolicCheckingFormulas": [],
+      "symbolicAnimationFormulas": [],
+      "testCases": [],
+      "traces": [],
+      "modelcheckingItems": [
+        {
+          "nodesLimit": "-",
+          "timeLimit": "-",
+          "options": {
+            "options": [
+              "FIND_DEADLOCKS",
+              "FIND_INVARIANT_VIOLATIONS",
+              "INSPECT_EXISTING_NODES"
+            ]
+          },
+          "shouldExecute": true
+        }
+      ],
+      "visBVisualisation": null
+    }
+  ],
+  "preferences": [],
+  "metadata": {
+    "fileType": "Project",
+    "formatVersion": 9,
+    "savedAt": "2021-05-18T12:00:45.013792Z",
+    "creator": "User",
+    "proB2KernelVersion": "3.14.0",
+    "proBCliVersion": null,
+    "modelName": null
+  }
+}

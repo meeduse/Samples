@@ -1,0 +1,247 @@
+
+MACHINE prod_cons
+DEFINITIONS
+   p12_t0 == p12 >= 94;
+   e25 == p12 := p12 - 94;
+   t3_p4 == p4 + 100 <= MAXINT;
+   e34 == p4 := p4 + 100;
+   p11_t4 == p11 >= 1;
+   e35 == p11 := p11 - 1;
+   p4_t0 == p4 >= 6;
+   e36 == p4 := p4 - 6;
+   t4_p5 == p5 + 1 <= MAXINT;
+   e37 == p5 := p5 + 1;
+   p12_t5 == p12 >= 94;
+   e38 == p12 := p12 - 94;
+   p3_t5 == p3 >= 94;
+   e39 == p3 := p3 - 94;
+   t5_p4 == p4 + 94 <= MAXINT;
+   e40 == p4 := p4 + 94;
+   t5_p6 == p6 + 94 <= MAXINT;
+   e41 == p6 := p6 + 94;
+   p10_t6 == p10 >= 1;
+   e42 == p10 := p10 - 1;
+   p12_t6 == p12 >= 1;
+   e43 == p12 := p12 - 1;
+   t1_p1 == p1 + 1 <= MAXINT;
+   e26 == p1 := p1 + 1;
+   p5_t6 == p5 >= 1;
+   e44 == p5 := p5 - 1;
+   p8_t6 == p8 >= 1;
+   e45 == p8 := p8 - 1;
+   t6_p12 == p12 + 1 <= MAXINT;
+   e46 == p12 := p12 + 1;
+   t0_p3 == p3 + 6 <= MAXINT;
+   e47 == p3 := p3 + 6;
+   t6_p5 == p5 + 1 <= MAXINT;
+   e48 == p5 := p5 + 1;
+   t6_p7 == p7 + 1 <= MAXINT;
+   e49 == p7 := p7 + 1;
+   p12_t7 == p12 >= 1;
+   e50 == p12 := p12 - 1;
+   p7_t7 == p7 >= 1;
+   e51 == p7 := p7 - 1;
+   t7_p6 == p6 + 1 <= MAXINT;
+   e52 == p6 := p6 + 1;
+   t7_p8 == p8 + 1 <= MAXINT;
+   e53 == p8 := p8 + 1;
+   t1_p6 == p6 + 1 <= MAXINT;
+   e27 == p6 := p6 + 1;
+   t7_p9 == p9 + 1 <= MAXINT;
+   e54 == p9 := p9 + 1;
+   p9_t8 == p9 >= 100;
+   e55 == p9 := p9 - 100;
+   t8_p10 == p10 + 100 <= MAXINT;
+   e56 == p10 := p10 + 100;
+   p5_t9 == p5 >= 1;
+   e57 == p5 := p5 - 1;
+   t0_p6 == p6 + 94 <= MAXINT;
+   e58 == p6 := p6 + 94;
+   t9_p11 == p11 + 1 <= MAXINT;
+   e59 == p11 := p11 + 1;
+   p0_t1 == p0 >= 1;
+   e60 == p0 := p0 - 1;
+   p2_t1 == p2 >= 1;
+   e61 == p2 := p2 - 1;
+   p4_t1 == p4 >= 1;
+   e62 == p4 := p4 - 1;
+   p6_t1 == p6 >= 1;
+   e63 == p6 := p6 - 1;
+   p1_t2 == p1 >= 1;
+   e28 == p1 := p1 - 1;
+   t1_p0 == p0 + 1 <= MAXINT;
+   e64 == p0 := p0 + 1;
+   p6_t2 == p6 >= 1;
+   e29 == p6 := p6 - 1;
+   t2_p12 == p12 + 1 <= MAXINT;
+   e30 == p12 := p12 + 1;
+   t2_p2 == p2 + 1 <= MAXINT;
+   e31 == p2 := p2 + 1;
+   t2_p3 == p3 + 1 <= MAXINT;
+   e32 == p3 := p3 + 1;
+   p3_t3 == p3 >= 100;
+   e33 == p3 := p3 - 100
+CONCRETE_VARIABLES
+   p0,
+   p6,
+   p7,
+   p8,
+   p9,
+   p1,
+   p10,
+   p11,
+   p12,
+   p2,
+   p3,
+   p4,
+   p5
+INVARIANT
+   p0 : NAT &
+   p6 : NAT &
+   p7 : NAT &
+   p8 : NAT &
+   p9 : NAT &
+   p1 : NAT &
+   p10 : NAT &
+   p11 : NAT &
+   p12 : NAT &
+   p2 : NAT &
+   p3 : NAT &
+   p4 : NAT &
+   p5 : NAT 
+INITIALISATION
+   p0 := 1 ;
+   p6 := 94 ;
+   p7 := 0 ;
+   p8 := 1 ;
+   p9 := 97 ;
+   p1 := 0 ;
+   p10 := 3 ;
+   p11 := 1 ;
+   p12 := 0 ;
+   p2 := 1 ;
+   p3 := 0 ;
+   p4 := 100 ;
+   p5 := 0 
+OPERATIONS
+t0 =
+   IF
+      p12_t0 &
+      p4_t0 &
+      t0_p3 &
+      t0_p6  
+   THEN
+      e25;
+      e36;
+      e47;
+      e58 
+   END;
+t1 =
+   IF
+      t1_p1 &
+      t1_p6 &
+      p0_t1 &
+      p2_t1 &
+      p4_t1 &
+      p6_t1 &
+      t1_p0  
+   THEN
+      e26;
+      e27;
+      e60;
+      e61;
+      e62;
+      e63;
+      e64 
+   END;
+t2 =
+   IF
+      p1_t2 &
+      p6_t2 &
+      t2_p12 &
+      t2_p2 &
+      t2_p3 
+   THEN
+      e28;
+      e29;
+      e30;
+      e31;
+      e32
+   END;
+t3 =
+   IF
+      t3_p4 &
+      p3_t3  
+   THEN
+      e34;
+      e33 
+   END;
+t4 =
+   IF
+      p11_t4 &
+      t4_p5  
+   THEN
+      e35;
+      e37 
+   END;
+t5 =
+   IF
+      p12_t5 &
+      p3_t5 &
+      t5_p4 &
+      t5_p6  
+   THEN
+      e38;
+      e39;
+      e40;
+      e41 
+   END;
+t6 =
+   IF
+      p10_t6 &
+      p12_t6 &
+      p5_t6 &
+      p8_t6 &
+      t6_p12 &
+      t6_p5 &
+      t6_p7  
+   THEN
+      e42;
+      e43;
+      e44;
+      e45;
+      e46;
+      e48;
+      e49 
+   END;
+t7 =
+   IF
+      p12_t7 &
+      p7_t7 &
+      t7_p6 &
+      t7_p8 &
+      t7_p9  
+   THEN
+      e50;
+      e51;
+      e52;
+      e53;
+      e54 
+   END;
+t8 =
+   IF
+      p9_t8 &
+      t8_p10  
+   THEN
+      e55;
+      e56 
+   END;
+t9 =
+   IF
+      p5_t9 &
+      t9_p11  
+   THEN
+      e57;
+      e59 
+   END
+END

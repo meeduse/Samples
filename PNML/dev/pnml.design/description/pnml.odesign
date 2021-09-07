@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="pnml" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Exec Table" domainClass="pnmlcoremodel::PetriNetDoc">
+      <metamodel href="http://org.pnml.tools/epnk/pnmlcoremodel#/"/>
+      <metamodel href="http://org.pnml.tools/epnk/types/ptnet#/"/>
+      <ownedLineMappings name="PlaceRow" domainClass="Place" semanticCandidatesExpression="[Place.allInstances()/]" headerLabelExpression="[self.id + '(' + if self.oclIsTypeOf(ptnet::Place) then self.oclAsType(ptnet::Place).marking else '0' endif + ')'/]"/>
+      <ownedColumnMappings name="Transition Col" headerLabelExpression="[self.id/]" domainClass="Transition" semanticCandidatesExpression="[Transition.allInstances()/]">
+        <defaultForeground labelSize="14">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+      </ownedColumnMappings>
+      <intersection name="IntersectionValConsume" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Exec%20Table']/@ownedLineMappings[name='PlaceRow']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Exec%20Table']/@ownedColumnMappings.0" labelExpression="['- ' + if self.oclIsTypeOf(ptnet::Arc) then self.oclAsType(ptnet::Arc).value else '1' endif/]" useDomainClass="true" columnFinderExpression="[self.target/]" lineFinderExpression="[self.source/]" domainClass="Arc"/>
+      <intersection name="IntersectionValProduce" canEdit="false" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Exec%20Table']/@ownedLineMappings[name='PlaceRow']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Exec%20Table']/@ownedColumnMappings.0" labelExpression="['+ ' + if self.oclIsTypeOf(ptnet::Arc) then self.oclAsType(ptnet::Arc).value else '1' endif/]" useDomainClass="true" columnFinderExpression="[self.source/]" lineFinderExpression="[self.target/]" domainClass="Arc"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Properties Table" domainClass="pnmlcoremodel::PetriNetDoc">
+      <metamodel href="http://org.pnml.tools/epnk/pnmlcoremodel#/"/>
+      <metamodel href="http://org.pnml.tools/epnk/types/ptnet#/"/>
+      <ownedLineMappings name="Ordinary" domainClass="Page" semanticCandidatesExpression="[Page.allInstances()/]" headerLabelExpression="Ordinary">
+        <defaultForeground labelSize="14">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <backgroundConditionalStyle predicateExpression="[Arc.allInstances()->forAll(a : Arc | a.oclIsTypeOf(ptnet::Arc) implies a.oclAsType(ptnet::Arc).inscription.oclIsUndefined() or a.oclAsType(ptnet::Arc).inscription.text.toString().toInteger() > 0)/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedLineMappings>
+      <ownedColumnMappings name="FeatureID" headerLabelExpression="value" featureName="id" labelExpression="[Arc.allInstances()->forAll(a : Arc | a.oclIsTypeOf(ptnet::Arc) implies a.oclAsType(ptnet::Arc).inscription.oclIsUndefined() or a.oclAsType(ptnet::Arc).inscription.text.toString().toInteger() > 0)/]"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Ordinary Table" domainClass="pnmlcoremodel::PetriNetDoc">
+      <metamodel href="http://org.pnml.tools/epnk/pnmlcoremodel#/"/>
+      <metamodel href="http://org.pnml.tools/epnk/types/ptnet#/"/>
+      <ownedLineMappings name="Ordinary" domainClass="Arc" semanticCandidatesExpression="[Arc.allInstances()/]">
+        <defaultForeground labelSize="14">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <backgroundConditionalStyle predicateExpression="[self.oclIsTypeOf(ptnet::Arc) implies self.oclAsType(ptnet::Arc).inscription.oclIsUndefined() or self.oclAsType(ptnet::Arc).inscription.text.toString().toInteger() = 1/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedLineMappings>
+      <ownedColumnMappings name="FeatureID" headerLabelExpression="value" featureName="id" labelExpression="[self.oclIsTypeOf(ptnet::Arc) implies self.oclAsType(ptnet::Arc).inscription.oclIsUndefined() or self.oclAsType(ptnet::Arc).inscription.text.toString().toInteger() = 1/]"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="State-Machine Table" domainClass="pnmlcoremodel::PetriNetDoc">
+      <metamodel href="http://org.pnml.tools/epnk/pnmlcoremodel#/"/>
+      <metamodel href="http://org.pnml.tools/epnk/types/ptnet#/"/>
+      <ownedLineMappings name="State-Machine" domainClass="Transition" semanticCandidatesExpression="[Transition.allInstances()/]">
+        <defaultForeground labelSize="14">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <backgroundConditionalStyle predicateExpression="[self._in->size()=1 and self.out->size()=1/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedLineMappings>
+      <ownedColumnMappings name="FeatureID" headerLabelExpression="value" featureName="id" labelExpression="[self._in->size()=1 and self.out->size()=1/]"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="diagram" domainClass="pnmlcoremodel::PetriNetDoc" enablePopupBars="true">
+      <metamodel href="http://org.pnml.tools/epnk/pnmlcoremodel#/"/>
+      <metamodel href="http://org.pnml.tools/epnk/types/ptnet#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="PlaceNode" semanticCandidatesExpression="[ptnet::Place.allInstances()/]" domainClass="ptnet::Place">
+          <style xsi:type="style:DotDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text + '(' + self.marking +')'/]" sizeComputationExpression="4" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.marking>0/]">
+            <style xsi:type="style:DotDescription" borderSizeComputationExpression="4" labelSize="12" showIcon="false" labelExpression="[self.name.text + '(' + self.marking +')'/]" sizeComputationExpression="4" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="TransitionNode" semanticCandidatesExpression="[Transition.allInstances()/]" domainClass="Transition">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text/]" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[ self._in->forAll(a:Arc|a.oclIsTypeOf(ptnet::Arc) implies let pp : ptnet::Place = a.source.oclAsType(ptnet::Place), aa : ptnet::Arc = a.oclAsType(ptnet::Arc) in pp.marking > 0 and pp.marking >= aa.value)/]">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text/]" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="ArcEdge" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagram']/@defaultLayer/@nodeMappings[name='PlaceNode'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagram']/@defaultLayer/@nodeMappings[name='TransitionNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagram']/@defaultLayer/@nodeMappings[name='TransitionNode'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagram']/@defaultLayer/@nodeMappings[name='PlaceNode']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="ptnet::Arc" useDomainElement="true">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.value/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="NestedDiagram" domainClass="pnmlcoremodel::PetriNetDoc" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="TransitionNodeInn" semanticCandidatesExpression="[Transition.allInstances()/]" domainClass="Transition">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text/]" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[ self._in->forAll(a:Arc|a.oclIsTypeOf(ptnet::Arc) implies let pp : ptnet::Place = a.source.oclAsType(ptnet::Place), aa : ptnet::Arc = a.oclAsType(ptnet::Arc) in pp.marking > 0 and pp.marking >= aa.value)/]">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text/]" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="ArcEdgeIn" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='NestedDiagram']/@defaultLayer/@containerMappings[name='PageContainer']/@subNodeMappings[name='PlaceNodeInner'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='NestedDiagram']/@defaultLayer/@nodeMappings[name='TransitionNodeInn']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='NestedDiagram']/@defaultLayer/@containerMappings[name='PageContainer']/@subNodeMappings[name='PlaceNodeInner'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='NestedDiagram']/@defaultLayer/@nodeMappings[name='TransitionNodeInn']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="ptnet::Arc" useDomainElement="true">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="PageContainer" semanticCandidatesExpression="[pnmlcoremodel::Page.allInstances()/]" domainClass="pnmlcoremodel::Page">
+          <subNodeMappings name="PlaceNodeInner" semanticCandidatesExpression="[self.object->select(oclIsTypeOf(ptnet::Place))/]" domainClass="ptnet::Place">
+            <style xsi:type="style:DotDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text + '(' + self.marking +')'/]" sizeComputationExpression="4" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+            <conditionnalStyles predicateExpression="[self.marking>0/]">
+              <style xsi:type="style:DotDescription" borderSizeComputationExpression="4" labelSize="12" showIcon="false" labelExpression="[self.name.text + '(' + self.marking +')'/]" sizeComputationExpression="4" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="[self.name.text/]" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="pnml.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

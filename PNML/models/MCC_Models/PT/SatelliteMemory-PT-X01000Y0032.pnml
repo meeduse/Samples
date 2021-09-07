@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+ <net id="SatelliteMemory-PT-X01000Y0032" type="http://www.pnml.org/version-2009/grammar/ptnet">
+  <name>
+   <text>SatelliteMemory-PT-X01000Y0032</text>
+  </name>
+ <page id="g-1934-C6623-1">
+  <place id="p0">
+  <name>
+   <text>p0</text>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+  </place>
+  <place id="p1">
+  <name>
+   <text>p1</text>
+  </name>
+  </place>
+  <place id="p10">
+  <name>
+   <text>p10</text>
+  </name>
+   <initialMarking>
+    <text>32</text>
+   </initialMarking>
+  </place>
+  <place id="p11">
+  <name>
+   <text>p11</text>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+  </place>
+  <place id="p12">
+  <name>
+   <text>p12</text>
+  </name>
+  </place>
+  <place id="p2">
+  <name>
+   <text>p2</text>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+  </place>
+  <place id="p3">
+  <name>
+   <text>p3</text>
+  </name>
+  </place>
+  <place id="p4">
+  <name>
+   <text>p4</text>
+  </name>
+   <initialMarking>
+    <text>1000</text>
+   </initialMarking>
+  </place>
+  <place id="p5">
+  <name>
+   <text>p5</text>
+  </name>
+  </place>
+  <place id="p6">
+  <name>
+   <text>p6</text>
+  </name>
+   <initialMarking>
+    <text>936</text>
+   </initialMarking>
+  </place>
+  <place id="p7">
+  <name>
+   <text>p7</text>
+  </name>
+  </place>
+  <place id="p8">
+  <name>
+   <text>p8</text>
+  </name>
+   <initialMarking>
+    <text>1</text>
+   </initialMarking>
+  </place>
+  <place id="p9">
+  <name>
+   <text>p9</text>
+  </name>
+   <initialMarking>
+    <text>968</text>
+   </initialMarking>
+  </place>
+  <transition id="t0">
+  <name>
+   <text>t0</text>
+  </name>
+  </transition>
+  <transition id="t1">
+  <name>
+   <text>t1</text>
+  </name>
+  </transition>
+  <transition id="t2">
+  <name>
+   <text>t2</text>
+  </name>
+  </transition>
+  <transition id="t3">
+  <name>
+   <text>t3</text>
+  </name>
+  </transition>
+  <transition id="t4">
+  <name>
+   <text>t4</text>
+  </name>
+  </transition>
+  <transition id="t5">
+  <name>
+   <text>t5</text>
+  </name>
+  </transition>
+  <transition id="t6">
+  <name>
+   <text>t6</text>
+  </name>
+  </transition>
+  <transition id="t7">
+  <name>
+   <text>t7</text>
+  </name>
+  </transition>
+  <transition id="t8">
+  <name>
+   <text>t8</text>
+  </name>
+  </transition>
+  <transition id="t9">
+  <name>
+   <text>t9</text>
+  </name>
+  </transition>
+  <arc id="e-1934-C665C-25" source="p12" target="t0">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C6663-26" source="t1" target="p1">
+  </arc>
+  <arc id="e-1934-C6664-27" source="t1" target="p6">
+  </arc>
+  <arc id="e-1934-C6665-28" source="p1" target="t2">
+  </arc>
+  <arc id="e-1934-C6666-29" source="p6" target="t2">
+  </arc>
+  <arc id="e-1934-C6666-30" source="t2" target="p12">
+  </arc>
+  <arc id="e-1934-C6667-31" source="t2" target="p2">
+  </arc>
+  <arc id="e-1934-C6668-32" source="t2" target="p3">
+  </arc>
+  <arc id="e-1934-C666B-33" source="p3" target="t3">
+   <inscription>
+    <text>1000</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C666C-34" source="t3" target="p4">
+   <inscription>
+    <text>1000</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C666D-35" source="p11" target="t4">
+  </arc>
+  <arc id="e-1934-C666E-36" source="p4" target="t0">
+   <inscription>
+    <text>64</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C666F-37" source="t4" target="p5">
+  </arc>
+  <arc id="e-1934-C6670-38" source="p12" target="t5">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C66E4-39" source="p3" target="t5">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C66E6-40" source="t5" target="p4">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C66E8-41" source="t5" target="p6">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C66EA-42" source="p10" target="t6">
+  </arc>
+  <arc id="e-1934-C66EB-43" source="p12" target="t6">
+  </arc>
+  <arc id="e-1934-C66EC-44" source="p5" target="t6">
+  </arc>
+  <arc id="e-1934-C66EE-45" source="p8" target="t6">
+  </arc>
+  <arc id="e-1934-C66F2-46" source="t6" target="p12">
+  </arc>
+  <arc id="e-1934-C66F4-47" source="t0" target="p3">
+   <inscription>
+    <text>64</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C66F5-48" source="t6" target="p5">
+  </arc>
+  <arc id="e-1934-C66F6-49" source="t6" target="p7">
+  </arc>
+  <arc id="e-1934-C66F7-50" source="p12" target="t7">
+  </arc>
+  <arc id="e-1934-C66F9-51" source="p7" target="t7">
+  </arc>
+  <arc id="e-1934-C66FA-52" source="t7" target="p6">
+  </arc>
+  <arc id="e-1934-C66FB-53" source="t7" target="p8">
+  </arc>
+  <arc id="e-1934-C66FE-54" source="t7" target="p9">
+  </arc>
+  <arc id="e-1934-C66FF-55" source="p9" target="t8">
+   <inscription>
+    <text>1000</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C6701-56" source="t8" target="p10">
+   <inscription>
+    <text>1000</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C6702-57" source="p5" target="t9">
+  </arc>
+  <arc id="e-1934-C6703-58" source="t0" target="p6">
+   <inscription>
+    <text>936</text>
+   </inscription>
+  </arc>
+  <arc id="e-1934-C6704-59" source="t9" target="p11">
+  </arc>
+  <arc id="e-1934-C6708-60" source="p0" target="t1">
+  </arc>
+  <arc id="e-1934-C6709-61" source="p2" target="t1">
+  </arc>
+  <arc id="e-1934-C670A-62" source="p4" target="t1">
+  </arc>
+  <arc id="e-1934-C670C-63" source="p6" target="t1">
+  </arc>
+  <arc id="e-1934-C670D-64" source="t1" target="p0">
+  </arc>
+ </page>
+ </net>
+</pnml>
