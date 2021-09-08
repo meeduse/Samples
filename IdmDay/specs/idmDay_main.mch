@@ -1,4 +1,4 @@
-/* idmDay_main
+/* 
  * Author: A. Idani (Meeduse)
  * Creation date: 10/05/2021
  * Remove the comments to avoid train collision
