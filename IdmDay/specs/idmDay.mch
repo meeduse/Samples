@@ -26,7 +26,7 @@ INVARIANT
 	Train : FIN(TRAIN) &
 	next : Section >->> Section &
 	position : Train --> Section
-& card(Train) <= 2
+	& card(Train) <= 2
 INITIALISATION
 	
 	Section := {} ||
