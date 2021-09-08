@@ -1,5 +1,5 @@
 /* idmDay_main
- * Author: 
+ * Author: Akram Idani (Meeduse)
  * Creation date: 10/05/2021
  */
 MACHINE
