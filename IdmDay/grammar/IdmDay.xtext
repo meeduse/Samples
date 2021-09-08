@@ -1,3 +1,5 @@
+generate idmDay "http://www.lig.fr/vasco/IdmDay"
+
 IdmDayModel:
 	name=ID
 	(sections+=Section)*
