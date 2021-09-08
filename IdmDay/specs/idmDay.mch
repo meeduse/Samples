@@ -8,13 +8,6 @@ MACHINE
 	
 	idmDay
 
-DEFINITIONS
-	
-
-
-	END_OF_GENERATED_DEFINITIONS_FOR == idmDay;
-	
-
 SETS
 	
 	SECTION;
