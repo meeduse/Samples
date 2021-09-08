@@ -1,6 +1,0 @@
-datatype ARC = pnmlcoremodel_ARC1 | pnmlcoremodel_ARC2 | pnmlcoremodel_ARC3 
-channel genDef
-channel genResDef
-channel genEntete
-
-MAIN = genEntete -> genResDef -> genDef -> STOP

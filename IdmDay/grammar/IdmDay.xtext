@@ -1,0 +1,12 @@
+IdmDayModel:
+	name=ID
+	(sections+=Section)*
+	(trains+=Train)*
+	;
+	
+Section:
+	name=ID '->' 
+	next=[Section] '/' 
+	(position+=[Train])* '-';
+
+Train : name=ID;
