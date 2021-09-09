@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_I32qUBFlEeyqWcG3xy0KFw" name="gpuScheduler" URI="http://www.lig.fr/vasco/GpuScheduler">
+  <packagedElement xmi:type="uml:Class" xmi:id="_I32qURFlEeyqWcG3xy0KFw" name="Server">
+    <ownedAttribute xmi:id="_I32qUhFlEeyqWcG3xy0KFw" name="gpus" type="_I32qWBFlEeyqWcG3xy0KFw" isOrdered="true" aggregation="composite" association="_I32qYhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qUxFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qVBFlEeyqWcG3xy0KFw" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_I32qVRFlEeyqWcG3xy0KFw" name="pocesses" type="_I32qXRFlEeyqWcG3xy0KFw" isOrdered="true" aggregation="composite" association="_I32qZhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qVhFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qVxFlEeyqWcG3xy0KFw" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I32qWBFlEeyqWcG3xy0KFw" name="Gpu">
+    <ownedAttribute xmi:id="_I32qWRFlEeyqWcG3xy0KFw" name="size" visibility="public" isOrdered="true">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_I32qWhFlEeyqWcG3xy0KFw" name="usedBy" type="_I32qXRFlEeyqWcG3xy0KFw" isOrdered="true" association="_I32qXhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qWxFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qXBFlEeyqWcG3xy0KFw" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I32qXRFlEeyqWcG3xy0KFw" name="Process"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_I32qXhFlEeyqWcG3xy0KFw" name="running" memberEnd="_I32qWhFlEeyqWcG3xy0KFw _I32qXxFlEeyqWcG3xy0KFw" navigableOwnedEnd="_I32qXxFlEeyqWcG3xy0KFw">
+    <ownedEnd xmi:id="_I32qXxFlEeyqWcG3xy0KFw" type="_I32qWBFlEeyqWcG3xy0KFw" association="_I32qXhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qYBFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qYRFlEeyqWcG3xy0KFw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_I32qYhFlEeyqWcG3xy0KFw" name="gpus" memberEnd="_I32qUhFlEeyqWcG3xy0KFw _I32qYxFlEeyqWcG3xy0KFw">
+    <ownedEnd xmi:id="_I32qYxFlEeyqWcG3xy0KFw" type="_I32qURFlEeyqWcG3xy0KFw" association="_I32qYhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qZBFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qZRFlEeyqWcG3xy0KFw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_I32qZhFlEeyqWcG3xy0KFw" name="processes" memberEnd="_I32qVRFlEeyqWcG3xy0KFw _I32qZxFlEeyqWcG3xy0KFw">
+    <ownedEnd xmi:id="_I32qZxFlEeyqWcG3xy0KFw" type="_I32qURFlEeyqWcG3xy0KFw" association="_I32qZhFlEeyqWcG3xy0KFw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I32qaBFlEeyqWcG3xy0KFw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I32qaRFlEeyqWcG3xy0KFw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <profileApplication xmi:id="_I32qahFlEeyqWcG3xy0KFw">
+    <eAnnotations xmi:id="_I32qaxFlEeyqWcG3xy0KFw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,5 @@
+GPUServer
+	GPU1 : 2 (slots) <- ;
+	GPU2 : 0 (slots) <- p6 p5 ;
+
+p1 p2 p3 p4 p5 p6
