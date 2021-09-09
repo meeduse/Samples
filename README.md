@@ -3,4 +3,4 @@ This repository shares xDSLs built in Meeduse (http://vasco.imag.fr/tools/meedus
 ## Samples
 * IdmDay: A simple train DSL presented at the IDM Day 2021 (https://vimeo.com/552239208).
 
-![](https://komarev.com/ghpvc/?username=akram.idani@univ-grenoble-alpes.fr)
+![](https://komarev.com/ghpvc/?username=meeduse)
