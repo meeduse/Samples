@@ -19,6 +19,4 @@ move(tt,ss)=
     THEN
         Train_SetSection(tt,ss)
     END
-    
-    
 END
