@@ -9,7 +9,7 @@ INCLUDES
 INVARIANT
     position : Train >-> Section
 OPERATIONS
-    move(tt,ss)=
+move(tt,ss)=
     PRE
         tt:Train
         & ss:Section
