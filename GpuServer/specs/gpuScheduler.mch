@@ -8,13 +8,6 @@ MACHINE
 	
 	gpuScheduler
 
-DEFINITIONS
-	
-
-
-	END_OF_GENERATED_DEFINITIONS_FOR == gpuScheduler;
-	
-
 SETS
 	
 	SERVER;
