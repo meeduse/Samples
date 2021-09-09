@@ -1,4 +1,4 @@
-This repository shares Formal xDSLs built in Meeduse (http://vasco.imag.fr/tools/meeduse/). To play with the underlying B specifications you can use ProB (https://prob.hhu.de) in standalone. The valued formal models are provided in folders /model/animation/Values.
+This repository shares Formal xDSLs built in Meeduse (http://vasco.imag.fr/tools/meeduse/). To play with the underlying B specifications you can use ProB (https://prob.hhu.de) in standalone by taking the valued formal models from folders /model/animation/Values.
 
 ## Samples
 * GpuServer: A GPU scheduler discussed in: https://doi.org/10.1007/978-3-030-63461-2_19
