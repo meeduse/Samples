@@ -1,0 +1,132 @@
+REFINEMENT
+    Linkage_Synchronization
+REFINES
+    Abstract_Operations
+INCLUDES
+    Lift_Existing, liftM
+DEFINITIONS
+    SET_PREF_SHOW_EVENTB_ANY_VALUES == TRUE ;
+    SET_PREF_MAXINT == 10
+
+     
+    
+PROPERTIES
+    /*FLOOR: FIN(FLOOR) &*/
+	groundf = 1 & /* Set to 1. */
+	topf = card(FLOOR)  /* Set to cardinality of DSL-Spec. */
+	
+
+VARIABLES
+	
+	  /* Variable to link floors. */
+	myLift,
+	linked_floors
+INVARIANT	
+	
+	/*& ran(linked_floors) = groundf..topf  hand written*/
+	
+
+	myLift : Lift /* generated */
+	
+	& linked_floors :  Floor >->>  groundf..topf /* generated */ 
+	
+	& !(f1,f2).(f1 : Floor & f2 : Floor & (f1|->f2) : up_down => linked_floors(f2) = linked_floors(f1) + 1)  /*hand written*/
+	
+    & (Door(myLift) = Closed => door_open = FALSE)
+    & (Door(myLift) = Open => door_open = TRUE)
+    
+    & (Direction(myLift) = Down => direction_up = FALSE)
+    & (Direction(myLift) = Up => direction_up = TRUE)
+
+    & linked_floors[selectedFloors[{myLift}]] = call_buttons
+    
+    & linked_floors(liftPosition(myLift)) = cur_floor /*generated*/
+
+INITIALISATION
+    
+
+	
+	myLift::Lift ; /* generated */
+
+	ANY mapFloors WHERE 
+		mapFloors : Floor >->>  groundf..topf  &
+		!(f1,f2).(f1 : Floor & f2 : Floor & (f1|->f2) : up_down => mapFloors(f2) = mapFloors(f1) + 1)  
+	THEN
+		linked_floors := mapFloors
+	END /* generated */ ; 
+	
+	ANY cur_floor_, door_open_, direction_up_, call_buttons_ WHERE
+	    cur_floor_ = linked_floors(liftPosition(myLift))
+	    & (Door(myLift) = Closed => door_open_ = FALSE)
+	    & (Door(myLift) = Open => door_open_ = TRUE)
+	    & (Direction(myLift) = Down => direction_up_ = FALSE)
+	    & (Direction(myLift) = Up => direction_up_ = TRUE)
+	    & linked_floors[selectedFloors[{myLift}]] = call_buttons_
+	THEN 
+	    setValues(call_buttons_, cur_floor_,direction_up_,door_open_) 
+	END
+	
+OPERATIONS
+move_up_inc = 
+BEGIN
+    move_up ;
+    SetLiftPosition(myLift,linked_floors~(cur_floor))
+END;
+move_down_inc = 
+BEGIN
+    move_down ;
+    SetLiftPosition(myLift,linked_floors~(cur_floor))
+END;
+reverse_lift_up_inc =
+BEGIN
+    reverse_lift_up;
+    SetDirection(myLift ,Up)
+END;
+reverse_lift_down_inc =
+BEGIN
+    reverse_lift_down;
+    SetDirection(myLift, Down)
+END;
+open_door_inc =
+BEGIN
+    open_door;
+    SetDoor(myLift, Open)
+END;
+close_door_inc =
+BEGIN
+    close_door;
+    SetDoor(myLift,Closed) ;
+    RemoveSelectFloor(myLift, linked_floors~(cur_floor))
+END;
+
+push_call_button_inc(fl)=
+PRE 
+    fl : (groundf .. topf)
+    & fl /: call_buttons
+THEN
+    push_call_button(fl);
+    AddSelectFloor(myLift, linked_floors~(fl))
+END;
+
+select_lift =
+ANY 
+    lift
+WHERE
+    lift : LIFT & lift /= myLift
+THEN 
+    myLift := lift ;
+    ANY cur_floor_, door_open_, direction_up_, call_buttons_ WHERE
+	    cur_floor_ = linked_floors(liftPosition(myLift))
+	    & (Door(myLift) = Closed => door_open_ = FALSE)
+	    & (Door(myLift) = Open => door_open_ = TRUE)
+	    & (Direction(myLift) = Down => direction_up_ = FALSE)
+	    & (Direction(myLift) = Up => direction_up_ = TRUE)
+	    & linked_floors[selectedFloors[{myLift}]] = call_buttons_
+	THEN 
+	    setValues(call_buttons_, cur_floor_,direction_up_,door_open_) 
+	END
+END
+
+
+END
+

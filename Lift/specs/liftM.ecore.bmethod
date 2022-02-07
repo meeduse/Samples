@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="ASCII"?>
+<bmethod:BSpec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bmethod="http://fr.liglab.vasco/b4msecure/2.0/models/bmethod" xmlns:ctm.trace="http://fr.liglab.vasco/b4msecure/2.0/models/ctm/trace" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" systemMachine="//@machines.0">
+  <eAnnotations source="http://fr.liglab.vasco/b4msecure/2.0/transformation/metadata">
+    <details key="date" value="Monday, February 7, 2022, 10:49 AM"/>
+    <details key="options" value="&lt;null>[!use fully qualified names,inline role definitions]"/>
+    <contents xsi:type="ecore:EAnnotation" source="transformation/configuration">
+      <references href="http://fr.liglab.vasco/b4msecure/2.0/transformation/functional/B4MSecure.transformationconfig#B4MSecureConfiguration"/>
+    </contents>
+    <contents xsi:type="ecore:EAnnotation" source="transformation/trace" references="//%meeduse%/%trace%/@contents.0"/>
+  </eAnnotations>
+  <eAnnotations source="meeduse">
+    <details key="options" value="protected.sections=invariant,operations;definitions.external=false"/>
+    <contents xsi:type="ecore:EAnnotation" source="trace">
+      <contents xsi:type="ctm.trace:TransformationTrace">
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.1" source="//%meeduse%/%trace%/@contents.0/@references.0" rule="fr.lig.vasco.becore.BEcoreTransformation#toMachine"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.3" source="//%meeduse%/%trace%/@contents.0/@references.2" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.5" source="//%meeduse%/%trace%/@contents.0/@references.4" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.7" source="//%meeduse%/%trace%/@contents.0/@references.6" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.9" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.10" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.11" source="//%meeduse%/%trace%/@contents.0/@references.6" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.13" source="//%meeduse%/%trace%/@contents.0/@references.12" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.13" source="//%meeduse%/%trace%/@contents.0/@references.14" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.16" source="//%meeduse%/%trace%/@contents.0/@references.15" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.16" source="//%meeduse%/%trace%/@contents.0/@references.17" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.19" source="//%meeduse%/%trace%/@contents.0/@references.18" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.19" source="//%meeduse%/%trace%/@contents.0/@references.20" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.22" source="//%meeduse%/%trace%/@contents.0/@references.21" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.24" source="//%meeduse%/%trace%/@contents.0/@references.23" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.25" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toConstructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.26" source="//%meeduse%/%trace%/@contents.0/@references.6" rule="fr.lig.vasco.becore.BEcoreTransformation#toConstructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.27" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toDestructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.28" source="//%meeduse%/%trace%/@contents.0/@references.6" rule="fr.lig.vasco.becore.BEcoreTransformation#toDestructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.29" source="//%meeduse%/%trace%/@contents.0/@references.21" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.30" source="//%meeduse%/%trace%/@contents.0/@references.23" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.14" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.32" source="//%meeduse%/%trace%/@contents.0/@references.12" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.33" source="//%meeduse%/%trace%/@contents.0/@references.20" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.34" source="//%meeduse%/%trace%/@contents.0/@references.18" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.35" source="//%meeduse%/%trace%/@contents.0/@references.17" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.36" source="//%meeduse%/%trace%/@contents.0/@references.15" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.37" source="//%meeduse%/%trace%/@contents.0/@references.21" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.38" source="//%meeduse%/%trace%/@contents.0/@references.23" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.39 //%meeduse%/%trace%/@contents.0/@references.40 //%meeduse%/%trace%/@contents.0/@references.41 //%meeduse%/%trace%/@contents.0/@references.42" source="//%meeduse%/%trace%/@contents.0/@references.14" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.43 //%meeduse%/%trace%/@contents.0/@references.44 //%meeduse%/%trace%/@contents.0/@references.45 //%meeduse%/%trace%/@contents.0/@references.46" source="//%meeduse%/%trace%/@contents.0/@references.12" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.47 //%meeduse%/%trace%/@contents.0/@references.48 //%meeduse%/%trace%/@contents.0/@references.49" source="//%meeduse%/%trace%/@contents.0/@references.20" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.50 //%meeduse%/%trace%/@contents.0/@references.51 //%meeduse%/%trace%/@contents.0/@references.52" source="//%meeduse%/%trace%/@contents.0/@references.18" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.53 //%meeduse%/%trace%/@contents.0/@references.54 //%meeduse%/%trace%/@contents.0/@references.55 //%meeduse%/%trace%/@contents.0/@references.56" source="//%meeduse%/%trace%/@contents.0/@references.17" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.57" source="//%meeduse%/%trace%/@contents.0/@references.15" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.0">
+          <object href="liftM.ecore#/"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.0" object="//@machines.0"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.1">
+          <object href="liftM.ecore#//DoorStatus"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.1" object="//@machines.0/@data.1"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.2">
+          <object href="liftM.ecore#//LiftDirection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.2" object="//@machines.0/@data.0"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.3 //%meeduse%/%trace%/@contents.0/@maps.6 //%meeduse%/%trace%/@contents.0/@maps.16 //%meeduse%/%trace%/@contents.0/@maps.18">
+          <object href="liftM.ecore#//Lift"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.3" object="//@machines.0/@data.2"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.4 //%meeduse%/%trace%/@contents.0/@maps.5 //%meeduse%/%trace%/@contents.0/@maps.15 //%meeduse%/%trace%/@contents.0/@maps.17">
+          <object href="liftM.ecore#//Floor"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.4" object="//@machines.0/@data.3"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.5" object="//@machines.0/@data.5"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.6" object="//@machines.0/@data.4"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.7 //%meeduse%/%trace%/@contents.0/@maps.22 //%meeduse%/%trace%/@contents.0/@maps.30">
+          <object href="liftM.ecore#//Lift/selectFloor"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.7 //%meeduse%/%trace%/@contents.0/@maps.8" object="//@machines.0/@data.8"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.8 //%meeduse%/%trace%/@contents.0/@maps.21 //%meeduse%/%trace%/@contents.0/@maps.29">
+          <object href="liftM.ecore#//Floor/selecterLift"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.9 //%meeduse%/%trace%/@contents.0/@maps.26 //%meeduse%/%trace%/@contents.0/@maps.34">
+          <object href="liftM.ecore#//Lift/liftPosition"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.9 //%meeduse%/%trace%/@contents.0/@maps.10" object="//@machines.0/@data.6"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.10 //%meeduse%/%trace%/@contents.0/@maps.25 //%meeduse%/%trace%/@contents.0/@maps.33">
+          <object href="liftM.ecore#//Floor/lift"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.11 //%meeduse%/%trace%/@contents.0/@maps.24 //%meeduse%/%trace%/@contents.0/@maps.32">
+          <object href="liftM.ecore#//Floor/up"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.11 //%meeduse%/%trace%/@contents.0/@maps.12" object="//@machines.0/@data.7"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.12 //%meeduse%/%trace%/@contents.0/@maps.23 //%meeduse%/%trace%/@contents.0/@maps.31">
+          <object href="liftM.ecore#//Floor/down"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.13 //%meeduse%/%trace%/@contents.0/@maps.19 //%meeduse%/%trace%/@contents.0/@maps.27">
+          <object href="liftM.ecore#//Lift/Direction"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.13" object="//@machines.0/@data.9"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.14 //%meeduse%/%trace%/@contents.0/@maps.20 //%meeduse%/%trace%/@contents.0/@maps.28">
+          <object href="liftM.ecore#//Lift/Door"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.14" object="//@machines.0/@data.10"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.15" object="//@machines.0/@operations.1"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.16" object="//@machines.0/@operations.0"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.17" object="//@machines.0/@operations.3"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.18" object="//@machines.0/@operations.2"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.19" object="//@machines.0/@operations.29"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.20" object="//@machines.0/@operations.30"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.21" object="//@machines.0/@operations.9"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.22" object="//@machines.0/@operations.5"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.23" object="//@machines.0/@operations.8"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.24" object="//@machines.0/@operations.7"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.25" object="//@machines.0/@operations.6"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.26" object="//@machines.0/@operations.4"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.27" object="//@machines.0/@operations.31"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.28" object="//@machines.0/@operations.32"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.29" object="//@machines.0/@operations.28"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.29" object="//@machines.0/@operations.20"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.29" object="//@machines.0/@operations.15"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.29" object="//@machines.0/@operations.23"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.30" object="//@machines.0/@operations.11"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.30" object="//@machines.0/@operations.21"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.30" object="//@machines.0/@operations.16"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.30" object="//@machines.0/@operations.24"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.31" object="//@machines.0/@operations.19"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.31" object="//@machines.0/@operations.27"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.31" object="//@machines.0/@operations.14"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.32" object="//@machines.0/@operations.13"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.32" object="//@machines.0/@operations.26"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.32" object="//@machines.0/@operations.18"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.33" object="//@machines.0/@operations.25"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.33" object="//@machines.0/@operations.12"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.33" object="//@machines.0/@operations.22"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.33" object="//@machines.0/@operations.17"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.34" object="//@machines.0/@operations.10"/>
+      </contents>
+    </contents>
+  </eAnnotations>
+  <machines name="liftM">
+    <data xsi:type="bmethod:BEnumSet" name="LiftDirection" typing="//@machines.0/@data.0/@values.0 //@machines.0/@data.0/@values.1 //@machines.0/@operations.0/@param.2 //@machines.0/@operations.31/@param.1">
+      <values name="Up" type="//@machines.0/@data.0"/>
+      <values name="Down" type="//@machines.0/@data.0"/>
+    </data>
+    <data xsi:type="bmethod:BEnumSet" name="DoorStatus" typing="//@machines.0/@data.1/@values.0 //@machines.0/@data.1/@values.1 //@machines.0/@operations.0/@param.3 //@machines.0/@operations.32/@param.1">
+      <values name="Closed" type="//@machines.0/@data.1"/>
+      <values name="Open" type="//@machines.0/@data.1"/>
+    </data>
+    <data xsi:type="bmethod:BAbstractSet" name="LIFT" typing="//@machines.0/@operations.0/@param.0"/>
+    <data xsi:type="bmethod:BAbstractSet" name="FLOOR" typing="//@machines.0/@operations.1/@param.0"/>
+    <data xsi:type="bmethod:BVariable" name="Lift" type="//@sharedTypes.1" typing="//@machines.0/@operations.2/@param.0 //@machines.0/@operations.4/@param.0 //@machines.0/@operations.5/@param.0 //@machines.0/@operations.10/@param.0 //@machines.0/@operations.11/@param.0 //@machines.0/@operations.16/@param.0 //@machines.0/@operations.21/@param.0 //@machines.0/@operations.22/@param.1 //@machines.0/@operations.23/@param.1 //@machines.0/@operations.24/@param.0 //@machines.0/@operations.25/@param.1 //@machines.0/@operations.28/@param.1 //@machines.0/@operations.29/@param.0 //@machines.0/@operations.30/@param.0 //@machines.0/@operations.31/@param.0 //@machines.0/@operations.32/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.1"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="Floor" type="//@sharedTypes.3" typing="//@machines.0/@operations.0/@param.1 //@machines.0/@operations.3/@param.0 //@machines.0/@operations.6/@param.0 //@machines.0/@operations.7/@param.0 //@machines.0/@operations.8/@param.0 //@machines.0/@operations.9/@param.0 //@machines.0/@operations.10/@param.1 //@machines.0/@operations.12/@param.0 //@machines.0/@operations.13/@param.0 //@machines.0/@operations.13/@param.1 //@machines.0/@operations.14/@param.0 //@machines.0/@operations.14/@param.1 //@machines.0/@operations.15/@param.0 //@machines.0/@operations.17/@param.0 //@machines.0/@operations.18/@param.0 //@machines.0/@operations.19/@param.0 //@machines.0/@operations.20/@param.0 //@machines.0/@operations.21/@param.1 //@machines.0/@operations.22/@param.0 //@machines.0/@operations.23/@param.0 //@machines.0/@operations.24/@param.1 //@machines.0/@operations.25/@param.0 //@machines.0/@operations.26/@param.0 //@machines.0/@operations.26/@param.1 //@machines.0/@operations.27/@param.0 //@machines.0/@operations.27/@param.1 //@machines.0/@operations.28/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.3"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="liftPosition" type="//@sharedTypes.4">
+      <typingPredicate operator="In" type="//@sharedTypes.4"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="up_down" type="//@sharedTypes.5">
+      <typingPredicate operator="In" type="//@sharedTypes.5"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="selectedFloors" type="//@sharedTypes.6">
+      <typingPredicate operator="In" type="//@sharedTypes.6"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="Direction" type="//@sharedTypes.7">
+      <typingPredicate operator="In" type="//@sharedTypes.7"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="Door" type="//@sharedTypes.8">
+      <typingPredicate operator="In" type="//@sharedTypes.8"/>
+    </data>
+    <operations name="Lift_NEW">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.4">
+            <value name="Lift \/ {aLift}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="liftPosition \/ {(aLift |-> aLiftPosition)}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.9">
+            <value name="Direction \/ {(aLift |-> aDirection)}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.10">
+            <value name="Door \/ {(aLift |-> aDoor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aLift /: Lift"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.2">
+        <typingPredicate operator="In" type="//@machines.0/@data.2"/>
+      </param>
+      <param name="aLiftPosition" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aDirection" type="//@machines.0/@data.0">
+        <typingPredicate operator="In" type="//@machines.0/@data.0"/>
+      </param>
+      <param name="aDoor" type="//@machines.0/@data.1">
+        <typingPredicate operator="In" type="//@machines.0/@data.1"/>
+      </param>
+    </operations>
+    <operations name="Floor_NEW">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.5">
+            <value name="Floor \/ {aFloor}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aFloor /: Floor"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.3">
+        <typingPredicate operator="In" type="//@machines.0/@data.3"/>
+      </param>
+    </operations>
+    <operations name="Lift_Free">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.4">
+            <value name="Lift - {aLift}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="{aLift} &lt;&lt;| liftPosition"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="{aLift} &lt;&lt;| selectedFloors"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.9">
+            <value name="{aLift} &lt;&lt;| Direction"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.10">
+            <value name="{aLift} &lt;&lt;| Door"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="Floor_Free">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.5">
+            <value name="Floor - {aFloor}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="liftPosition |>> {aFloor}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="{aFloor} &lt;&lt;| (up_down |>> {aFloor})"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors |>> {aFloor}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="liftPosition~[{aFloor}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="GetLiftPosition">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := liftPosition(aLift)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aLift : dom(liftPosition)"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="GetSelectFloor">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := selectedFloors[{aLift}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aLift : dom(selectedFloors)"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="GetLift">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := liftPosition~[{aFloor}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aFloor : ran(liftPosition)"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="GetUp">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := up_down(aFloor)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aFloor : dom(up_down)"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="GetDown">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := up_down~(aFloor)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aFloor : ran(up_down)"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="GetSelecterLift">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := selectedFloors~[{aFloor}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aFloor : ran(selectedFloors)"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="SetLiftPosition">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="({aLift} &lt;&lt;| liftPosition) \/ {(aLift |-> aLiftPosition)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aLift |-> aLiftPosition)} /&lt;: liftPosition"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="aLiftPosition" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="SetSelectFloor">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="({aLift} &lt;&lt;| selectedFloors) \/ ({aLift} * theSelectFloor)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="({aLift} * theSelectFloor) /&lt;: selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="theSelectFloor" type="//@sharedTypes.10">
+        <typingPredicate operator="In" type="//@sharedTypes.10"/>
+      </param>
+    </operations>
+    <operations name="SetLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="(liftPosition |>> {aFloor}) \/ (theLift * {aFloor})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theLift * {aFloor}) /&lt;: liftPosition"/>
+          <typingPredicate body="liftPosition~[{aFloor}] = {}"/>
+          <typingPredicate body="!added.( added : theLift => liftPosition[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="theLift" type="//@sharedTypes.12">
+        <typingPredicate operator="In" type="//@sharedTypes.12"/>
+      </param>
+    </operations>
+    <operations name="SetUp">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="({aFloor} &lt;&lt;| up_down) \/ {(aFloor |-> aUp)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aFloor |-> aUp)} /&lt;: up_down"/>
+          <typingPredicate body="up_down~[{aUp}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aUp" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="SetDown">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="(up_down |>> {aFloor}) \/ {(aDown |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aDown |-> aFloor)} /&lt;: up_down"/>
+          <typingPredicate body="up_down[{aDown}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aDown" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="SetSelecterLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="(selectedFloors |>> {aFloor}) \/ (theSelecterLift * {aFloor})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theSelecterLift * {aFloor}) /&lt;: selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="theSelecterLift" type="//@sharedTypes.12">
+        <typingPredicate operator="In" type="//@sharedTypes.12"/>
+      </param>
+    </operations>
+    <operations name="UnsetSelectFloor">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="{aLift} &lt;&lt;| selectedFloors"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="UnsetLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="liftPosition |>> {aFloor}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="liftPosition~[{aFloor}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="UnsetUp">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="{aFloor} &lt;&lt;| up_down"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="UnsetDown">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="up_down |>> {aFloor}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="UnsetSelecterLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors |>> {aFloor}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="AddSelectFloor">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors \/ {(aLift |-> aSelectFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aLift |-> aSelectFloor) /: selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="aSelectFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="AddLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="liftPosition \/ {(aLift |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aLift |-> aFloor) /: liftPosition"/>
+          <typingPredicate body="liftPosition[{aLift}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="AddSelecterLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors \/ {(aSelecterLift |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aSelecterLift |-> aFloor) /: selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aSelecterLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="RemoveSelectFloor">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors - {(aLift |-> aSelectFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aLift |-> aSelectFloor) : selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="aSelectFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="RemoveLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.6">
+            <value name="liftPosition - {(aLift |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aLift |-> aFloor) : liftPosition"/>
+          <typingPredicate body="card(liftPosition[{aLift}]) >= 2"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="RemoveUp">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="up_down - {(aFloor |-> aUp)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aFloor |-> aUp) : up_down"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aUp" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="RemoveDown">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.7">
+            <value name="up_down - {(aDown |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aDown |-> aFloor) : up_down"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aDown" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+    </operations>
+    <operations name="RemoveSelecterLift">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.8">
+            <value name="selectedFloors - {(aSelecterLift |-> aFloor)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aSelecterLift |-> aFloor) : selectedFloors"/>
+        </precondition>
+      </substitution>
+      <param name="aFloor" type="//@machines.0/@data.5">
+        <typingPredicate operator="In" type="//@machines.0/@data.5"/>
+      </param>
+      <param name="aSelecterLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="GetDirection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := Direction(aLift)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aLift : dom(Direction)"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="GetDoor">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := Door(aLift)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aLift : dom(Door)"/>
+        </precondition>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+    </operations>
+    <operations name="SetDirection">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.9">
+            <value name="({aLift} &lt;&lt;| Direction)  \/ {(aLift |-> aDirection)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="aDirection" type="//@machines.0/@data.0">
+        <typingPredicate operator="In" type="//@machines.0/@data.0"/>
+      </param>
+    </operations>
+    <operations name="SetDoor">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.10">
+            <value name="({aLift} &lt;&lt;| Door)  \/ {(aLift |-> aDoor)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aLift" type="//@machines.0/@data.4">
+        <typingPredicate operator="In" type="//@machines.0/@data.4"/>
+      </param>
+      <param name="aDoor" type="//@machines.0/@data.1">
+        <typingPredicate operator="In" type="//@machines.0/@data.1"/>
+      </param>
+    </operations>
+    <initialisation init="//@machines.0/@data.4"/>
+    <initialisation init="//@machines.0/@data.5"/>
+    <initialisation init="//@machines.0/@data.6"/>
+    <initialisation init="//@machines.0/@data.7"/>
+    <initialisation init="//@machines.0/@data.8"/>
+    <initialisation init="//@machines.0/@data.9"/>
+    <initialisation init="//@machines.0/@data.10"/>
+  </machines>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.2"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.4" base="//@machines.0/@data.2" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.3"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.5" base="//@machines.0/@data.3" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.6" expression="TotalFunction" dom="//@machines.0/@data.4" ran="//@machines.0/@data.5"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.7" expression="PartialInjection" dom="//@machines.0/@data.5" ran="//@machines.0/@data.5"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.8" dom="//@machines.0/@data.4" ran="//@machines.0/@data.5"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.9" expression="TotalFunction" dom="//@machines.0/@data.4" ran="//@machines.0/@data.0"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.10" expression="TotalFunction" dom="//@machines.0/@data.4" ran="//@machines.0/@data.1"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.5"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.11/@param.1" base="//@machines.0/@data.5" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.4"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.12/@param.1 //@machines.0/@operations.15/@param.1" base="//@machines.0/@data.4" finite="true"/>
+</bmethod:BSpec>
