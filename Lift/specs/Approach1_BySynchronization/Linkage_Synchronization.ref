@@ -19,34 +19,34 @@ PROPERTIES
 VARIABLES
 	
 	  /* Variable to link floors. */
-	myLift,
+	linked_lift,
 	linked_floors
 INVARIANT	
 	
 	/*& ran(linked_floors) = groundf..topf  hand written*/
 	
 
-	myLift : Lift /* generated */
+	linked_lift : Lift /* generated */
 	
 	& linked_floors :  Floor >->>  groundf..topf /* generated */ 
 	
 	& !(f1,f2).(f1 : Floor & f2 : Floor & (f1|->f2) : up_down => linked_floors(f2) = linked_floors(f1) + 1)  /*hand written*/
 	
-    & (Door(myLift) = Closed => door_open = FALSE)
-    & (Door(myLift) = Open => door_open = TRUE)
+    & (Door(linked_lift) = Closed => door_open = FALSE)
+    & (Door(linked_lift) = Open => door_open = TRUE)
     
-    & (Direction(myLift) = Down => direction_up = FALSE)
-    & (Direction(myLift) = Up => direction_up = TRUE)
+    & (Direction(linked_lift) = Down => direction_up = FALSE)
+    & (Direction(linked_lift) = Up => direction_up = TRUE)
 
-    & linked_floors[selectedFloors[{myLift}]] = call_buttons
+    & linked_floors[selectedFloors[{linked_lift}]] = call_buttons
     
-    & linked_floors(liftPosition(myLift)) = cur_floor /*generated*/
+    & linked_floors(liftPosition(linked_lift)) = cur_floor /*generated*/
 
 INITIALISATION
     
 
 	
-	myLift::Lift ; /* generated */
+	linked_lift::Lift ; /* generated */
 
 	ANY mapFloors WHERE 
 		mapFloors : Floor >->>  groundf..topf  &
@@ -56,12 +56,12 @@ INITIALISATION
 	END /* generated */ ; 
 	
 	ANY cur_floor_, door_open_, direction_up_, call_buttons_ WHERE
-	    cur_floor_ = linked_floors(liftPosition(myLift))
-	    & (Door(myLift) = Closed => door_open_ = FALSE)
-	    & (Door(myLift) = Open => door_open_ = TRUE)
-	    & (Direction(myLift) = Down => direction_up_ = FALSE)
-	    & (Direction(myLift) = Up => direction_up_ = TRUE)
-	    & linked_floors[selectedFloors[{myLift}]] = call_buttons_
+	    cur_floor_ = linked_floors(liftPosition(linked_lift))
+	    & (Door(linked_lift) = Closed => door_open_ = FALSE)
+	    & (Door(linked_lift) = Open => door_open_ = TRUE)
+	    & (Direction(linked_lift) = Down => direction_up_ = FALSE)
+	    & (Direction(linked_lift) = Up => direction_up_ = TRUE)
+	    & linked_floors[selectedFloors[{linked_lift}]] = call_buttons_
 	THEN 
 	    setValues(call_buttons_, cur_floor_,direction_up_,door_open_) 
 	END
@@ -70,33 +70,33 @@ OPERATIONS
 move_up_inc = 
 BEGIN
     move_up ;
-    SetLiftPosition(myLift,linked_floors~(cur_floor))
+    SetLiftPosition(linked_lift,linked_floors~(cur_floor))
 END;
 move_down_inc = 
 BEGIN
     move_down ;
-    SetLiftPosition(myLift,linked_floors~(cur_floor))
+    SetLiftPosition(linked_lift,linked_floors~(cur_floor))
 END;
 reverse_lift_up_inc =
 BEGIN
     reverse_lift_up;
-    SetDirection(myLift ,Up)
+    SetDirection(linked_lift ,Up)
 END;
 reverse_lift_down_inc =
 BEGIN
     reverse_lift_down;
-    SetDirection(myLift, Down)
+    SetDirection(linked_lift, Down)
 END;
 open_door_inc =
 BEGIN
     open_door;
-    SetDoor(myLift, Open)
+    SetDoor(linked_lift, Open)
 END;
 close_door_inc =
 BEGIN
     close_door;
-    SetDoor(myLift,Closed) ;
-    RemoveSelectFloor(myLift, linked_floors~(cur_floor))
+    SetDoor(linked_lift,Closed) ;
+    RemoveSelectFloor(linked_lift, linked_floors~(cur_floor))
 END;
 
 push_call_button_inc(fl)=
@@ -105,23 +105,23 @@ PRE
     & fl /: call_buttons
 THEN
     push_call_button(fl);
-    AddSelectFloor(myLift, linked_floors~(fl))
+    AddSelectFloor(linked_lift, linked_floors~(fl))
 END;
 
 select_lift =
 ANY 
     lift
 WHERE
-    lift : LIFT & lift /= myLift
+    lift : LIFT & lift /= linked_lift
 THEN 
-    myLift := lift ;
+    linked_lift := lift ;
     ANY cur_floor_, door_open_, direction_up_, call_buttons_ WHERE
-	    cur_floor_ = linked_floors(liftPosition(myLift))
-	    & (Door(myLift) = Closed => door_open_ = FALSE)
-	    & (Door(myLift) = Open => door_open_ = TRUE)
-	    & (Direction(myLift) = Down => direction_up_ = FALSE)
-	    & (Direction(myLift) = Up => direction_up_ = TRUE)
-	    & linked_floors[selectedFloors[{myLift}]] = call_buttons_
+	    cur_floor_ = linked_floors(liftPosition(linked_lift))
+	    & (Door(linked_lift) = Closed => door_open_ = FALSE)
+	    & (Door(linked_lift) = Open => door_open_ = TRUE)
+	    & (Direction(linked_lift) = Down => direction_up_ = FALSE)
+	    & (Direction(linked_lift) = Up => direction_up_ = TRUE)
+	    & linked_floors[selectedFloors[{linked_lift}]] = call_buttons_
 	THEN 
 	    setValues(call_buttons_, cur_floor_,direction_up_,door_open_) 
 	END
