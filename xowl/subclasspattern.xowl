@@ -1,0 +1,14 @@
+Ontology (
+ 	 
+ 	DisjointClasses ( Plant Animal )
+ 	SubClassOf ( Carnivorous_Plant Plant )
+	Declaration ( Class (Animal) )
+ 	 
+	SubClassOf ( Plant Fauna_Flora )
+ 	
+ 	SubClassOf ( Carnivorous_Plant Animal )
+ 	Declaration ( Class (Plant) )
+ 	Declaration ( Class (Carnivorous_Plant) )
+ 	SubClassOf ( Animal Fauna_Flora )
+	Declaration ( Class (Fauna_Flora) ) //
+ )
