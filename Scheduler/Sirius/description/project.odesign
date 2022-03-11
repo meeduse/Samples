@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SchedularDiagram" domainClass="schedularDSL2::schedular" enablePopupBars="true">
+      <metamodel href="http://www.example.org/schedularDSL2#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="Schedular" semanticCandidatesExpression="[self/]" domainClass="schedularDSL2::schedular" childrenPresentation="List">
+          <subNodeMappings name="Process" semanticCandidatesExpression="[Process.allInstances()/]" domainClass="schedularDSL2::Process">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="['P: '+self.Number+'='+self.Status/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+            <conditionnalStyles predicateExpression="[self.Status=StatusEnum::readyDSL/]">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="['P: '+self.Number+'='+self.Status/]" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[self.Status=StatusEnum::activeDSL/]">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="['P: '+self.Number+'='+self.Status/]" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="['SCHEDULAR'/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Process">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Process" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='SchedularDiagram']/@defaultLayer/@containerMappings[name='Schedular']/@subNodeMappings[name='Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="schedularDSL2::Process" referenceName="process">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Number" valueExpression="[container.process.Number->size().max(Number->size()+1)/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="myScheularNew.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
