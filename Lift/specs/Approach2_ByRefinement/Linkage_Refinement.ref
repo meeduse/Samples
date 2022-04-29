@@ -70,11 +70,16 @@ INITIALISATION
 	
 	
 OPERATIONS
- move_up = SELECT door_open = FALSE & cur_floor < topf & direction_up = TRUE &
-             # cc.((cc : INTEGER) & ((cc : INTEGER) & (cc > cur_floor) & (cc : call_buttons))) &
-            (cur_floor /: call_buttons) THEN
-   cur_floor := ((cur_floor)+(1)); 
-	SetLiftPosition(linked_lift ,linked_floors~(cur_floor)) 
+ move_up = 
+     SELECT 
+         door_open = FALSE 
+         & cur_floor < topf 
+         & direction_up = TRUE 
+         & # cc.((cc : INTEGER) & ((cc : INTEGER) & (cc > cur_floor) & (cc : call_buttons))) 
+         & (cur_floor /: call_buttons) 
+     THEN
+         cur_floor := ((cur_floor)+(1));
+         SetLiftPosition(linked_lift ,linked_floors~(cur_floor)) 
  END ;
  move_down = SELECT door_open = FALSE & cur_floor > groundf & (direction_up = FALSE) &
        # cu.((cu : INTEGER) & ((cu : INTEGER) & (cu < cur_floor) & (cu : call_buttons))) &

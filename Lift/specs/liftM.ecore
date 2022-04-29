@@ -31,7 +31,7 @@
         <details key="generated" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectFloor" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedFloors" upperBound="-1"
         eType="#//Floor" eOpposite="#//Floor/selecterLift">
       <eAnnotations source="meeduse">
         <details key="generated" value=""/>
@@ -75,14 +75,14 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selecterLift" upperBound="-1"
-        eType="#//Lift" eOpposite="#//Lift/selectFloor">
+        eType="#//Lift" eOpposite="#//Lift/selectedFloors">
       <eAnnotations source="meeduse">
         <details key="generated" value="NOT"/>
         <details key="association" value="selectedFloors"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Building">
+  <eClassifiers xsi:type="ecore:EClass" name="Building" abstract="true">
     <eAnnotations source="meeduse">
       <details key="generated" value="NOT"/>
     </eAnnotations>
