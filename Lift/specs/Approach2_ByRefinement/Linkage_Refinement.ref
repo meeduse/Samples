@@ -64,23 +64,24 @@ INITIALISATION
 	END;
 	SetDirection(linked_lift ,Up);
 	SetDoor(linked_lift,Closed);
-	UnsetSelectFloor(linked_lift)
+	UnsetSelectedFloors(linked_lift)
 	
 	
 	
 	
 OPERATIONS
  move_up = 
-     SELECT 
-         door_open = FALSE 
-         & cur_floor < topf 
-         & direction_up = TRUE 
-         & # cc.((cc : INTEGER) & ((cc : INTEGER) & (cc > cur_floor) & (cc : call_buttons))) 
-         & (cur_floor /: call_buttons) 
-     THEN
-         cur_floor := ((cur_floor)+(1));
-         SetLiftPosition(linked_lift ,linked_floors~(cur_floor)) 
+ SELECT 
+     door_open = FALSE 
+     & cur_floor < topf 
+     & direction_up = TRUE 
+     & # cc.((cc : INTEGER) & ((cc : INTEGER) & (cc > cur_floor) & (cc : call_buttons))) &
+            (cur_floor /: call_buttons)
+THEN
+    cur_floor := ((cur_floor)+(1));
+    SetLiftPosition(linked_lift ,linked_floors~(cur_floor)) 
  END ;
+ 
  move_down = SELECT door_open = FALSE & cur_floor > groundf & (direction_up = FALSE) &
        # cu.((cu : INTEGER) & ((cu : INTEGER) & (cu < cur_floor) & (cu : call_buttons))) &
       (cur_floor /: call_buttons) THEN
@@ -106,13 +107,11 @@ OPERATIONS
  close_door = SELECT door_open = TRUE THEN
     door_open := FALSE || call_buttons := ((call_buttons)-({cur_floor}));
     SetDoor(linked_lift,Closed) ;
-    RemoveSelectFloor(linked_lift, linked_floors~(cur_floor))
+    RemoveSelectedFloors(linked_lift, linked_floors~(cur_floor))
  END ;
  push_call_button(fl) = PRE (fl : (groundf .. topf)) & (fl /: call_buttons) THEN 
      call_buttons := ((call_buttons)\/({fl}));
-    AddSelectFloor(linked_lift, linked_floors~(fl))
+    AddSelectedFloors(linked_lift, linked_floors~(fl))
  END
 	
 END
-
-

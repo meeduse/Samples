@@ -27,7 +27,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
         <target xmi:type="liftM:Building" href="My.liftm#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KvyBAIQ_EeyEjs9xdx15rw" name="last" repPath="#_KvYYYIQ_EeyEjs9xdx15rw" changeId="55cf48ea-55bb-4d4d-a671-5933d6a03e0e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KvyBAIQ_EeyEjs9xdx15rw" name="last" repPath="#_KvYYYIQ_EeyEjs9xdx15rw" changeId="7b442419-759f-46ab-aadd-490f96c474f8">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
         <target xmi:type="liftM:Building" href="My1.liftm#/"/>
       </ownedRepresentationDescriptors>
@@ -905,9 +905,9 @@
               <children xmi:type="notation:Node" xmi:id="_WeAzoIRIEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_WeAzoYRIEeyVleZlNJqVcg" x="7" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_VCTtUIf7Eeyj3dUbw3F9Dw" type="3005" element="_VCG5AYf7Eeyj3dUbw3F9Dw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_VCTtUYf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCTtUof7Eeyj3dUbw3F9Dw"/>
+              <children xmi:type="notation:Node" xmi:id="_5B7mILWJEey6Gc9lKWWsew" type="3005" element="_5Bx1IbWJEey6Gc9lKWWsew">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_5B7mIbWJEey6Gc9lKWWsew" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5B7mIrWJEey6Gc9lKWWsew"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_WeAMkYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeAMkoRIEeyVleZlNJqVcg" x="91" y="20" width="124" height="127"/>
@@ -949,7 +949,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd9JQoRIEeyVleZlNJqVcg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd7UEYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd7UEoRIEeyVleZlNJqVcg" x="180" y="756" width="494" height="171"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd7UEoRIEeyVleZlNJqVcg" x="36" y="756" width="494" height="171"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Wd9JQ4RIEeyVleZlNJqVcg" type="2002" element="_WcGIEYRIEeyVleZlNJqVcg">
           <children xmi:type="notation:Node" xmi:id="_Wd9wUIRIEeyVleZlNJqVcg" type="5006"/>
@@ -958,9 +958,9 @@
               <children xmi:type="notation:Node" xmi:id="_WeMZ04RIEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_WeMZ1IRIEeyVleZlNJqVcg" x="7" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_lOLDgIfxEeygetrENs7YVw" type="3005" element="_lOIAMYfxEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_lOLDgYfxEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOLDgofxEeygetrENs7YVw"/>
+              <children xmi:type="notation:Node" xmi:id="_5B8NMLWJEey6Gc9lKWWsew" type="3005" element="_5BzqUbWJEey6Gc9lKWWsew">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_5B8NMbWJEey6Gc9lKWWsew" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5B8NMrWJEey6Gc9lKWWsew"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_WeMZ0YRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeMZ0oRIEeyVleZlNJqVcg" x="91" y="16" width="124" height="127"/>
@@ -969,9 +969,9 @@
               <children xmi:type="notation:Node" xmi:id="_WePdIIRIEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_WePdIYRIEeyVleZlNJqVcg" x="7" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_HW6bsIf4EeyO1aWwlb_qKg" type="3005" element="_HW08IYf4EeyO1aWwlb_qKg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_HW6bsYf4EeyO1aWwlb_qKg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HW6bsof4EeyO1aWwlb_qKg"/>
+              <children xmi:type="notation:Node" xmi:id="_7Y7HMLTPEey-tuPFnQtzTw" type="3005" element="_7YykUbTPEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y7HMbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y7HMrTPEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_WeO2EYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeO2EoRIEeyVleZlNJqVcg" x="307" y="16" width="124" height="127"/>
@@ -991,9 +991,9 @@
               <children xmi:type="notation:Node" xmi:id="_rXcOsIRKEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_rXcOsYRKEeyVleZlNJqVcg" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_3u9aNoToEey-SurOSkX-mA" type="3005" element="_3uW9QYToEey-SurOSkX-mA">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_3u9aN4ToEey-SurOSkX-mA" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3u9aOIToEey-SurOSkX-mA"/>
+              <children xmi:type="notation:Node" xmi:id="_3-BtoLTPEey-tuPFnQtzTw" type="3005" element="_3938o7TPEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_3-BtobTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3-BtorTPEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_rXbnoYRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXbnooRKEeyVleZlNJqVcg" x="261" y="62" width="39" height="39"/>
@@ -1002,7 +1002,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd-XYoRIEeyVleZlNJqVcg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd9JRIRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd9JRYRIEeyVleZlNJqVcg" x="180" y="590" width="494" height="169"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd9JRYRIEeyVleZlNJqVcg" x="36" y="590" width="494" height="169"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Wd--cIRIEeyVleZlNJqVcg" type="2002" element="_WcHWMYRIEeyVleZlNJqVcg">
           <children xmi:type="notation:Node" xmi:id="_Wd_lgIRIEeyVleZlNJqVcg" type="5006"/>
@@ -1011,9 +1011,9 @@
               <children xmi:type="notation:Node" xmi:id="_WeRSU4RIEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_WeRSVIRIEeyVleZlNJqVcg" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_VCU7cIf7Eeyj3dUbw3F9Dw" type="3005" element="_VCJ8U4f7Eeyj3dUbw3F9Dw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_VCU7cYf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCU7cof7Eeyj3dUbw3F9Dw"/>
+              <children xmi:type="notation:Node" xmi:id="_AsZL8LTQEey-tuPFnQtzTw" type="3005" element="_AsUTcbTQEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_AsZL8bTQEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsZL8rTQEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_WeRSUYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeRSUoRIEeyVleZlNJqVcg" x="91" y="20" width="124" height="127"/>
@@ -1022,9 +1022,9 @@
               <children xmi:type="notation:Node" xmi:id="_WeSgcIRIEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_WeSgcYRIEeyVleZlNJqVcg" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_EO--sIUJEeyGEbR_UT6cUg" type="3005" element="_EO9JjoUJEeyGEbR_UT6cUg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_EO--sYUJEeyGEbR_UT6cUg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EO--soUJEeyGEbR_UT6cUg"/>
+              <children xmi:type="notation:Node" xmi:id="_3F034KRIEey35vEMz13u6w" type="3005" element="_3FvYUaRIEey35vEMz13u6w">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_3F034aRIEey35vEMz13u6w" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3F034qRIEey35vEMz13u6w"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_WeR5YYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeR5YoRIEeyVleZlNJqVcg" x="307" y="20" width="124" height="127"/>
@@ -1033,9 +1033,9 @@
               <children xmi:type="notation:Node" xmi:id="_rXc1w4RKEeyVleZlNJqVcg" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_rXc1xIRKEeyVleZlNJqVcg" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_VCU7c4f7Eeyj3dUbw3F9Dw" type="3005" element="_VCLKcYf7Eeyj3dUbw3F9Dw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_VCU7dIf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCU7dYf7Eeyj3dUbw3F9Dw"/>
+              <children xmi:type="notation:Node" xmi:id="_vMIPoLTOEey-tuPFnQtzTw" type="3005" element="_vL8CYbTOEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_vMIPobTOEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vMIPorTOEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_rXc1wYRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXc1woRKEeyVleZlNJqVcg" x="31" y="70" width="39" height="39"/>
@@ -1055,7 +1055,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd_lg4RIEeyVleZlNJqVcg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd--cYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd--coRIEeyVleZlNJqVcg" x="180" y="420" width="494" height="171"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd--coRIEeyVleZlNJqVcg" x="36" y="420" width="494" height="171"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_AfmCQIRNEeyVleZlNJqVcg" type="2001" element="_Ae4QkIRNEeyVleZlNJqVcg">
           <children xmi:type="notation:Node" xmi:id="_AfmCQ4RNEeyVleZlNJqVcg" type="5002">
@@ -1066,7 +1066,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCVigof7Eeyj3dUbw3F9Dw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_AfmCQYRNEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfmCQoRNEeyVleZlNJqVcg" x="300" y="938" width="63" height="53"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfmCQoRNEeyVleZlNJqVcg" x="156" y="938" width="63" height="53"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_AfnQYIRNEeyVleZlNJqVcg" type="2001" element="_AfBagIRNEeyVleZlNJqVcg">
           <children xmi:type="notation:Node" xmi:id="_AfoegIRNEeyVleZlNJqVcg" type="5002">
@@ -1077,7 +1077,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-gfRIoXUEeygetrENs7YVw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_AfnQYYRNEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfnQYoRNEeyVleZlNJqVcg" x="528" y="938" width="63" height="53"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfnQYoRNEeyVleZlNJqVcg" x="384" y="938" width="63" height="53"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_UEpIEITCEeykKNNonYJstQ" type="2002" element="_UEEgVITCEeykKNNonYJstQ">
           <children xmi:type="notation:Node" xmi:id="_UEpvIITCEeykKNNonYJstQ" type="5006"/>
@@ -1086,9 +1086,9 @@
               <children xmi:type="notation:Node" xmi:id="_UEuAk4TCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UEuAlITCEeykKNNonYJstQ" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_AZ9UM4XVEeygetrENs7YVw" type="3005" element="_AZ4bs4XVEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_AZ9UNIXVEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AZ9UNYXVEeygetrENs7YVw"/>
+              <children xmi:type="notation:Node" xmi:id="_26cxsLWIEey6Gc9lKWWsew" type="3005" element="_26UO0bWIEey6Gc9lKWWsew">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_26cxsbWIEey6Gc9lKWWsew" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_26cxsrWIEey6Gc9lKWWsew"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UEuAkYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEuAkoTCEeykKNNonYJstQ" x="91" y="30" width="124" height="127"/>
@@ -1097,9 +1097,9 @@
               <children xmi:type="notation:Node" xmi:id="_UEy5EITCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UEy5EYTCEeykKNNonYJstQ" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_V07vYIXSEeygetrENs7YVw" type="3005" element="_V0tF4YXSEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_V07vYYXSEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V07vYoXSEeygetrENs7YVw"/>
+              <children xmi:type="notation:Node" xmi:id="_2tR1A6RIEey35vEMz13u6w" type="3005" element="_2tM8g6RIEey35vEMz13u6w">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_2tR1BKRIEey35vEMz13u6w" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2tR1BaRIEey35vEMz13u6w"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UEySAYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEySAoTCEeykKNNonYJstQ" x="307" y="30" width="124" height="127"/>
@@ -1108,9 +1108,9 @@
               <children xmi:type="notation:Node" xmi:id="_UEzgIITCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UEzgIYTCEeykKNNonYJstQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_VCVig4f7Eeyj3dUbw3F9Dw" type="3005" element="_VCMYk4f7Eeyj3dUbw3F9Dw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_VCVihIf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCVihYf7Eeyj3dUbw3F9Dw"/>
+              <children xmi:type="notation:Node" xmi:id="_AsZzALTQEey-tuPFnQtzTw" type="3005" element="_AsWIo7TQEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_AsZzAbTQEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsZzArTQEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UEy5E4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEy5FITCEeykKNNonYJstQ" x="43" y="74" width="39" height="39"/>
@@ -1119,18 +1119,18 @@
               <children xmi:type="notation:Node" xmi:id="_UEzgJYTCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UEzgJoTCEeykKNNonYJstQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_7aCdkIXUEeygetrENs7YVw" type="3005" element="_7Z7I0YXUEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_7aCdkYXUEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7aCdkoXUEeygetrENs7YVw"/>
+              <children xmi:type="notation:Node" xmi:id="_HDxLEMgTEeygL5aToTP0Ig" type="3005" element="_HDF1ocgTEeygL5aToTP0Ig">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_HDxLEcgTEeygL5aToTP0Ig" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HDxLEsgTEeygL5aToTP0Ig"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UEzgI4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEzgJITCEeykKNNonYJstQ" x="259" y="74" width="47" height="47"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEzgJITCEeykKNNonYJstQ" x="259" y="74" width="39" height="39"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_UEq9QYTCEeykKNNonYJstQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_UEq9QoTCEeykKNNonYJstQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_UEpIEYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEpIEoTCEeykKNNonYJstQ" x="180" y="240" width="494" height="183"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEpIEoTCEeykKNNonYJstQ" x="36" y="240" width="494" height="183"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_UErkUITCEeykKNNonYJstQ" type="2002" element="_UEFucITCEeykKNNonYJstQ">
           <children xmi:type="notation:Node" xmi:id="_UEsLYITCEeykKNNonYJstQ" type="5006"/>
@@ -1144,46 +1144,46 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V2a2woXKEeyyub486-J1QQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UE2jcYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE2jcoTCEeykKNNonYJstQ" x="103" y="30" width="124" height="127"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE2jcoTCEeykKNNonYJstQ" x="93" y="30" width="124" height="127"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_UE3KgITCEeykKNNonYJstQ" type="3007" element="_UEMcIoTCEeykKNNonYJstQ">
               <children xmi:type="notation:Node" xmi:id="_UE3Kg4TCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3KhITCEeykKNNonYJstQ" y="-24"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_JRz_Y4UJEeyGEbR_UT6cUg" type="3005" element="_JRyxQ4UJEeyGEbR_UT6cUg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_JRz_ZIUJEeyGEbR_UT6cUg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JRz_ZYUJEeyGEbR_UT6cUg"/>
+              <children xmi:type="notation:Node" xmi:id="_7Y8VULTPEey-tuPFnQtzTw" type="3005" element="_7Y21wbTPEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y8VUbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y8VUrTPEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3KgYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3KgoTCEeykKNNonYJstQ" x="297" y="30" width="124" height="127"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3KgoTCEeykKNNonYJstQ" x="309" y="30" width="124" height="127"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_UE3KhYTCEeykKNNonYJstQ" type="3007" element="_UEO4YITCEeykKNNonYJstQ">
               <children xmi:type="notation:Node" xmi:id="_UE3xkITCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3xkYTCEeykKNNonYJstQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_VCWJkIf7Eeyj3dUbw3F9Dw" type="3005" element="_VCONwYf7Eeyj3dUbw3F9Dw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_VCWJkYf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCWJkof7Eeyj3dUbw3F9Dw"/>
+              <children xmi:type="notation:Node" xmi:id="_1GMV6aHsEeyi6_cYSXBn6Q" type="3005" element="_1GHdd6HsEeyi6_cYSXBn6Q">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_1GMV6qHsEeyi6_cYSXBn6Q" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1GMV66HsEeyi6_cYSXBn6Q"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3KhoTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3Kh4TCEeykKNNonYJstQ" x="55" y="78" width="39" height="39"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3Kh4TCEeykKNNonYJstQ" x="43" y="74" width="39" height="39"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_UE3xkoTCEeykKNNonYJstQ" type="3007" element="_UEO4Y4TCEeykKNNonYJstQ">
               <children xmi:type="notation:Node" xmi:id="_UE3xlYTCEeykKNNonYJstQ" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3xloTCEeykKNNonYJstQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_IoR6MIUJEeyGEbR_UT6cUg" type="3005" element="_IoQsE4UJEeyGEbR_UT6cUg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_IoR6MYUJEeyGEbR_UT6cUg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IoR6MoUJEeyGEbR_UT6cUg"/>
+              <children xmi:type="notation:Node" xmi:id="_7Y88YLTPEey-tuPFnQtzTw" type="3005" element="_7Y4D4bTPEey-tuPFnQtzTw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y88YbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y88YrTPEey-tuPFnQtzTw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3xk4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3xlITCEeykKNNonYJstQ" x="259" y="78" width="39" height="39"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3xlITCEeykKNNonYJstQ" x="271" y="74" width="39" height="39"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_UEsLYoTCEeykKNNonYJstQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_UEsLY4TCEeykKNNonYJstQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_UErkUYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UErkUoTCEeykKNNonYJstQ" x="180" y="60" width="494" height="183"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UErkUoTCEeykKNNonYJstQ" x="36" y="60" width="494" height="183"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_KwKbgoQ_EeyEjs9xdx15rw"/>
       </data>
@@ -1207,7 +1207,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCG5AYf7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_5Bx1IbWJEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.1/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1262,7 +1262,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOIAMYfxEeygetrENs7YVw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_5BzqUbWJEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1273,8 +1273,8 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_HW08IYf4EeyO1aWwlb_qKg" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.1/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7YykUbTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
       </ownedDiagramElements>
@@ -1295,7 +1295,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_3uW9QYToEey-SurOSkX-mA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_3938o7TPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
@@ -1317,7 +1317,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCJ8U4f7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AsUTcbTQEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1328,7 +1328,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_EO9JjoUJEeyGEbR_UT6cUg" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_3FvYUaRIEey35vEMz13u6w" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1339,7 +1339,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCLKcYf7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_vL8CYbTOEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
@@ -1394,7 +1394,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AZ4bs4XVEeygetrENs7YVw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_26UO0bWIEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1405,7 +1405,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_V0tF4YXSEeygetrENs7YVw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_2tM8g6RIEey35vEMz13u6w" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
@@ -1416,7 +1416,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCMYk4f7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AsWIo7TQEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
@@ -1427,8 +1427,8 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Z7I0YXUEeygetrENs7YVw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOn.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@conditionnalStyles.0/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_HDF1ocgTEeygL5aToTP0Ig" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
       </ownedDiagramElements>
@@ -1460,8 +1460,8 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_JRyxQ4UJEeyGEbR_UT6cUg" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Y21wbTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.1/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
       </ownedDiagramElements>
@@ -1471,7 +1471,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCONwYf7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_1GHdd6HsEeyi6_cYSXBn6Q" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
@@ -1482,7 +1482,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_IoQsE4UJEeyGEbR_UT6cUg" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Y4D4bTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>

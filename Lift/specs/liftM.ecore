@@ -82,7 +82,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Building" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Building">
     <eAnnotations source="meeduse">
       <details key="generated" value="NOT"/>
     </eAnnotations>

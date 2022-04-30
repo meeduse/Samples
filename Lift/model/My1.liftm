@@ -4,7 +4,7 @@
     <cabins Id="f1l1" belongsTo="//@lifts.0"/>
     <cabins Id="f1l2" belongsTo="//@lifts.1"/>
   </floors>
-  <floors Id="Floor2" lift="//@lifts.1" up="//@floors.2" down="//@floors.0">
+  <floors Id="Floor2" up="//@floors.2" down="//@floors.0">
     <cabins Id="f2l1" belongsTo="//@lifts.0"/>
     <cabins Id="f2l2" belongsTo="//@lifts.1"/>
   </floors>
@@ -16,10 +16,10 @@
     <cabins Id="f4l1" belongsTo="//@lifts.0"/>
     <cabins Id="f4l2" belongsTo="//@lifts.1"/>
   </floors>
-  <floors Id="Floor5" down="//@floors.3">
+  <floors Id="Floor5" lift="//@lifts.1" down="//@floors.3">
     <cabins Id="f5l1" belongsTo="//@lifts.0"/>
     <cabins Id="f5l2" belongsTo="//@lifts.1"/>
   </floors>
   <lifts Id="Lift1" liftPosition="//@floors.0"/>
-  <lifts Id="Lift2" liftPosition="//@floors.1" Direction="Down" selectFloor="//@floors.3"/>
+  <lifts Id="Lift2" liftPosition="//@floors.4" Direction="Down" selectFloor="//@floors.3"/>
 </liftM:Building>
