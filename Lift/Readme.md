@@ -64,4 +64,6 @@ See the Eclipse User Guide for instructions on how to install software from upda
 
 ![Screenshot](./Images/screenShot6.png)
 
-Once your model and representation 
+Once your model and representation are ready. Now right click on either model or representation, click on Execute Model -> Linkage_Refinement.ref / Liankge_Synchronization.ref and in the prompt dialoge box, you have the option to generate inject machine (you can click it if you want to generate the inject machine). Enter Finish and the it open the Meeduse Perspective. You can play with visualization using the operations in execution view. You can also randomly animatie by clicking the green play button -> Random animation with invariant checking. Below is a GIF which shows the animation of the LIFT. 
+
+![GIF](./Images/GIF.gif)
