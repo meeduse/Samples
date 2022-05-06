@@ -40,4 +40,28 @@ See the Eclipse User Guide for instructions on how to install software from upda
 
 - Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below BuildingDiagram (0). A window will open, select Building and Finish. The default name is New Buidling Diagram, click Ok. Now Save (ctrl+s).
 
+- Now you will have an empty building without any floors and lift, like can be seen in below screenshot.
+
 ![Screenshot](./Images/screenShot1.png)
+
+- Click on Building -> Child -> Floor and set Floor Id to 1 in properties and ctrl+s. and your representation looks like as below screenshot.
+
+![Screenshot](./Images/screenShot2.png)
+
+- Add two more floors and arranage them like as in below screenshot. 
+
+![Screenshot](./Images/screenShot3.png)
+
+- Now click at building and add a child Lift and set the Id as Lift 1  and set also the position to Floor 1. 
+
+- Now add a cabin to each floor by clicking on Floor -> New Child -> cabin and in properties of each cabin sets the belongsTo with Lift 1. 
+
+- Once the cabins are added, the following representation will look like in below screenshot.
+
+![Screenshot](./Images/screenShot5.png)
+
+- You need to arrange the representation as following screenshot (Note: set the zoom level to 50%).
+
+![Screenshot](./Images/screenShot6.png)
+
+Once your model and representation 
