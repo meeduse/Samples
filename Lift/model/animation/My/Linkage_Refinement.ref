@@ -3,7 +3,7 @@ REFINEMENT
 REFINES
     	Lift_Existing
 INCLUDES
-	    liftM
+	liftM
 DEFINITIONS
     SET_PREF_SHOW_EVENTB_ANY_VALUES == TRUE ;
     SET_PREF_MAXINT == 10
@@ -115,3 +115,5 @@ THEN
  END
 	
 END
+
+

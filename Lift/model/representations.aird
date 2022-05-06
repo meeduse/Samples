@@ -1,1496 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:liftM="http://www.example.org/liftM" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_MRtjIBCWEeyAqJKehKpBDg" selectedViews="_IGRYQBCoEey1ntah2ZkP0Q _SCIH4IQsEeyboo9R4qtzqg" version="14.3.1.202003261200">
-    <semanticResources>http://fr.liglab.vasco/b4msecure/2.0/transformation/functional/B4MSecure.transformationconfig</semanticResources>
-    <semanticResources>platform:/plugin/LiftM/model/liftM.ecore</semanticResources>
+  <viewpoint:DAnalysis uid="_iAW14M0MEeyEQYLq_p8HcA" selectedViews="_wC2OUM0OEey4RbSssulsHA" version="14.3.1.202003261200">
     <semanticResources>My.liftm</semanticResources>
     <semanticResources>animation/My/My.liftm.bmethod</semanticResources>
-    <semanticResources>My1.liftm</semanticResources>
-    <semanticResources>animation/My1/My1.liftm.bmethod</semanticResources>
-    <ownedViews xmi:type="viewpoint:DView" uid="_F7lmMBCkEey1ntah2ZkP0Q">
-      <viewpoint xmi:type="description:Viewpoint" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GiQkoBCkEey1ntah2ZkP0Q" name="new MyDiagram Description" repPath="#_Gh1t4BCkEey1ntah2ZkP0Q" changeId="42f53ef6-ce9a-4405-9d8e-3fcd3d453778">
-        <description xmi:type="description_1:DiagramDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']"/>
+    <semanticResources>http://fr.liglab.vasco/b4msecure/2.0/transformation/functional/B4MSecure.transformationconfig</semanticResources>
+    <semanticResources>platform:/plugin/abc/model/liftM.ecore</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_wC2OUM0OEey4RbSssulsHA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-LHwkM0OEey4RbSssulsHA" name="new BuildingDiagram" repPath="#_-Kk-AM0OEey4RbSssulsHA" changeId="fd6a49cf-306b-4769-a2a0-321c64351e29">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
         <target xmi:type="liftM:Building" href="My.liftm#/"/>
-      </ownedRepresentationDescriptors>
-    </ownedViews>
-    <ownedViews xmi:type="viewpoint:DView" uid="_IGRYQBCoEey1ntah2ZkP0Q">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nc89cBE7EeysXtiApMq2Og" name="MyDiagram Description" repPath="#_nc7vUBE7EeysXtiApMq2Og" changeId="0c3fde58-796a-450b-b40a-070544775a38">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']"/>
-        <target xmi:type="liftM:Building" href="My.liftm#/"/>
-      </ownedRepresentationDescriptors>
-    </ownedViews>
-    <ownedViews xmi:type="viewpoint:DView" uid="_SCIH4IQsEeyboo9R4qtzqg">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_STlrUIQsEeyboo9R4qtzqg" name="new BuildingDiagram" repPath="#_STLboIQsEeyboo9R4qtzqg" changeId="4f7f19ec-44ea-4af3-aa8b-ba957b5c4d5c">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
-        <target xmi:type="liftM:Building" href="My.liftm#/"/>
-      </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KvyBAIQ_EeyEjs9xdx15rw" name="last" repPath="#_KvYYYIQ_EeyEjs9xdx15rw" changeId="7b442419-759f-46ab-aadd-490f96c474f8">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
-        <target xmi:type="liftM:Building" href="My1.liftm#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_Gh1t4BCkEey1ntah2ZkP0Q">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GisCcBCkEey1ntah2ZkP0Q" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_GisCcRCkEey1ntah2ZkP0Q" type="Sirius" element="_Gh1t4BCkEey1ntah2ZkP0Q" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_GjmBYBCkEey1ntah2ZkP0Q" type="2001" element="_Gi3ooBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_GjtWIBCkEey1ntah2ZkP0Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_GjtWIRCkEey1ntah2ZkP0Q" y="5"/>
+  <diagram:DSemanticDiagram uid="_-Kk-AM0OEey4RbSssulsHA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_-LuNgM0OEey4RbSssulsHA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_-LuNgc0OEey4RbSssulsHA" type="Sirius" element="_-Kk-AM0OEey4RbSssulsHA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_sjvNsM0PEey4RbSssulsHA" type="2002" element="_sjWzMM0PEey4RbSssulsHA">
+          <children xmi:type="notation:Node" xmi:id="_sjyRAM0PEey4RbSssulsHA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_sj0tQM0PEey4RbSssulsHA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_PIUmoM0REey4RbSssulsHA" type="3007" element="_PH8MKM0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIUmo80REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIUmpM0REey4RbSssulsHA" x="-10" y="6"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Tgf14M0TEey4RbSssulsHA" type="3005" element="_TgdZqc0TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_Tgf14c0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tgf14s0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIUmoc0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIUmos0REey4RbSssulsHA" x="47" y="18" width="124" height="127"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PIXC4M0REey4RbSssulsHA" type="3007" element="_PIIZYM0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIXp8M0REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIXp8c0REey4RbSssulsHA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ThYmsM0TEey4RbSssulsHA" type="3005" element="_ThXYkc0TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ThYmsc0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ThYmss0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIXC4c0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIXC4s0REey4RbSssulsHA" x="9" y="50" width="47" height="47"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_sj0tQc0PEey4RbSssulsHA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_sj0tQs0PEey4RbSssulsHA"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_lOogcBCmEey1ntah2ZkP0Q" type="3005" element="_lOgkoRCmEey1ntah2ZkP0Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lOogcRCmEey1ntah2ZkP0Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOogchCmEey1ntah2ZkP0Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_GjmBYRCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GjmBYhCkEey1ntah2ZkP0Q" x="-24" y="516" width="124" height="127"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sjvNsc0PEey4RbSssulsHA" fontName="Segoe UI" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sjvNss0PEey4RbSssulsHA" x="216" y="347" width="200" height="170"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Gj6xgBCkEey1ntah2ZkP0Q" type="2001" element="_GjGSIBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_Gj6xgxCkEey1ntah2ZkP0Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Gj6xhBCkEey1ntah2ZkP0Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_ETAfaM0QEey4RbSssulsHA" type="2002" element="_ETAfYs0QEey4RbSssulsHA">
+          <children xmi:type="notation:Node" xmi:id="_ETAfa80QEey4RbSssulsHA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_ETAfbM0QEey4RbSssulsHA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_PIatQM0REey4RbSssulsHA" type="3007" element="_PILcsM0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIatQ80REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIatRM0REey4RbSssulsHA" x="-10" y="6"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Tw6QcM0TEey4RbSssulsHA" type="3005" element="_Tw4bQ80TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_Tw6Qcc0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tw6Qcs0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIatQc0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIatQs0REey4RbSssulsHA" x="46" y="10" width="124" height="128"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PIcicM0REey4RbSssulsHA" type="3007" element="_PINR4M0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIcic80REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIcidM0REey4RbSssulsHA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_TpYFEM0TEey4RbSssulsHA" type="3005" element="_TpW2980TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_TpYFEc0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TpYFEs0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIcicc0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIcics0REey4RbSssulsHA" x="8" y="54" width="47" height="47"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ETAfbc0QEey4RbSssulsHA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ETAfbs0QEey4RbSssulsHA"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_lOpHgBCmEey1ntah2ZkP0Q" type="3005" element="_lOhLsRCmEey1ntah2ZkP0Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lOpHgRCmEey1ntah2ZkP0Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOpHghCmEey1ntah2ZkP0Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Gj6xgRCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gj6xghCkEey1ntah2ZkP0Q" x="-24" y="372" width="124" height="127"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ETAfac0QEey4RbSssulsHA" fontName="Segoe UI" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ETAfas0QEey4RbSssulsHA" x="214" y="192" width="200" height="158"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Gj7YkBCkEey1ntah2ZkP0Q" type="2001" element="_GjJ8gRCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_Gj7_oBCkEey1ntah2ZkP0Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Gj7_oRCkEey1ntah2ZkP0Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_ETAfb80QEey4RbSssulsHA" type="2002" element="_ETAfZc0QEey4RbSssulsHA">
+          <children xmi:type="notation:Node" xmi:id="_ETAfcs0QEey4RbSssulsHA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_ETAfc80QEey4RbSssulsHA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_PIdwkM0REey4RbSssulsHA" type="3007" element="_PIPHEc0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIdwk80REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIdwlM0REey4RbSssulsHA" x="-10" y="6"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Tt5Ys80TEey4RbSssulsHA" type="3005" element="_Tt4KlM0TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_Tt5YtM0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Tt5Ytc0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIdwkc0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIdwks0REey4RbSssulsHA" x="57" y="10" width="124" height="127"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PIeXoM0REey4RbSssulsHA" type="3007" element="_PIRjUM0REey4RbSssulsHA">
+              <children xmi:type="notation:Node" xmi:id="_PIe-sM0REey4RbSssulsHA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIe-sc0REey4RbSssulsHA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_TvFrgM0TEey4RbSssulsHA" type="3005" element="_TvD2Us0TEey4RbSssulsHA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_TvFrgc0TEey4RbSssulsHA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TvFrgs0TEey4RbSssulsHA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PIeXoc0REey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIeXos0REey4RbSssulsHA" x="7" y="54" width="47" height="47"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ETAfdM0QEey4RbSssulsHA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ETAfdc0QEey4RbSssulsHA"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_lOpukBCmEey1ntah2ZkP0Q" type="3005" element="_lOhywBCmEey1ntah2ZkP0Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lOpukRCmEey1ntah2ZkP0Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOpukhCmEey1ntah2ZkP0Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Gj7YkRCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gj7YkhCkEey1ntah2ZkP0Q" x="-24" y="240" width="124" height="127"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ETAfcM0QEey4RbSssulsHA" fontName="Segoe UI" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ETAfcc0QEey4RbSssulsHA" x="214" y="36" width="200" height="158"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Gj7_ohCkEey1ntah2ZkP0Q" type="2001" element="_GjNm4RCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_Gj8msBCkEey1ntah2ZkP0Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Gj8msRCkEey1ntah2ZkP0Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_vRFvUM0QEey4RbSssulsHA" type="2001" element="_vQ7-UM0QEey4RbSssulsHA">
+          <children xmi:type="notation:Node" xmi:id="_vRGWYM0QEey4RbSssulsHA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_vRGWYc0QEey4RbSssulsHA" x="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_lOqVoBCmEey1ntah2ZkP0Q" type="3005" element="_lOhywxCmEey1ntah2ZkP0Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lOqVoRCmEey1ntah2ZkP0Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOqVohCmEey1ntah2ZkP0Q"/>
+          <children xmi:type="notation:Node" xmi:id="_Ts7IUM0TEey4RbSssulsHA" type="3005" element="_Ts5TIc0TEey4RbSssulsHA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Ts7IUc0TEey4RbSssulsHA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ts7IUs0TEey4RbSssulsHA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Gj7_oxCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gj7_pBCkEey1ntah2ZkP0Q" x="-24" y="114" width="124" height="127"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_vRFvUc0QEey4RbSssulsHA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRFvUs0QEey4RbSssulsHA" x="281" y="528" width="63" height="53"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Gj9NwBCkEey1ntah2ZkP0Q" type="2001" element="_GjQqMRCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_Gj9NwxCkEey1ntah2ZkP0Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Gj9NxBCkEey1ntah2ZkP0Q" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_lOqVoxCmEey1ntah2ZkP0Q" type="3005" element="_lOiZ0BCmEey1ntah2ZkP0Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_lOqVpBCmEey1ntah2ZkP0Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOqVpRCmEey1ntah2ZkP0Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Gj9NwRCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gj9NwhCkEey1ntah2ZkP0Q" x="-24" y="-24" width="124" height="127"/>
-        </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_GisCchCkEey1ntah2ZkP0Q"/>
-        <edges xmi:type="notation:Edge" xmi:id="_qEAl4BCkEey1ntah2ZkP0Q" visible="false" type="4001" element="_qDhdsBCkEey1ntah2ZkP0Q" source="_Gj7YkBCkEey1ntah2ZkP0Q" target="_GjmBYBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_qEB0ABCkEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEB0ARCkEey1ntah2ZkP0Q" x="9" y="-6"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qECbEBCkEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qECbERCkEey1ntah2ZkP0Q" x="-10" y="7"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qEDpMBCkEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEDpMRCkEey1ntah2ZkP0Q" x="-9" y="7"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qEBM8BCkEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_qEBM8RCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qEBM8hCkEey1ntah2ZkP0Q" points="[-18, 64, 78, -284]$[-79, 285, 17, -63]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEMzIBCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEMzIRCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_qEMzIhCkEey1ntah2ZkP0Q" visible="false" type="4001" element="_qDm9QBCkEey1ntah2ZkP0Q" source="_Gj7_ohCkEey1ntah2ZkP0Q" target="_Gj6xgBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_qEOBQBCkEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEOBQRCkEey1ntah2ZkP0Q" x="12" y="-6"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qEOBQhCkEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEOBQxCkEey1ntah2ZkP0Q" x="-14" y="8"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qEOBRBCkEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEOBRRCkEey1ntah2ZkP0Q" x="-11" y="7"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qEMzIxCkEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_qEMzJBCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qEMzJRCkEey1ntah2ZkP0Q" points="[-19, 64, 78, -272]$[-79, 273, 18, -63]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEOoUBCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEOoURCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_qEOoUhCkEey1ntah2ZkP0Q" visible="false" type="4001" element="_qDnkUhCkEey1ntah2ZkP0Q" source="_Gj9NwBCkEey1ntah2ZkP0Q" target="_Gj7YkBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_qEPPYBCkEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEPPYRCkEey1ntah2ZkP0Q" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qEPPYhCkEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEPPYxCkEey1ntah2ZkP0Q" x="-1" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_qEPPZBCkEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qEPPZRCkEey1ntah2ZkP0Q" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_qEOoUxCkEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_qEOoVBCkEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qEOoVRCkEey1ntah2ZkP0Q" points="[-62, 0, 598, 0]$[-598, 0, 62, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEP2cBCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qEP2cRCkEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_HV1hMBClEey1ntah2ZkP0Q" visible="false" type="4001" element="_HVN2IBClEey1ntah2ZkP0Q" source="_GjmBYBCkEey1ntah2ZkP0Q" target="_Gj6xgBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_HV1hNBClEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV1hNRClEey1ntah2ZkP0Q" x="-1" y="-1"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2IQBClEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2IQRClEey1ntah2ZkP0Q" x="3" y="-1"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2IQhClEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2IQxClEey1ntah2ZkP0Q" x="-7" y="-1"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HV1hMRClEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_HV1hMhClEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HV1hMxClEey1ntah2ZkP0Q" points="[0, -63, 0, 81]$[0, -80, 0, 64]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2IRBClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2IRRClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_HV2IRhClEey1ntah2ZkP0Q" visible="false" type="4001" element="_HVOdMhClEey1ntah2ZkP0Q" source="_Gj6xgBCkEey1ntah2ZkP0Q" target="_Gj7YkBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_HV2IShClEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2ISxClEey1ntah2ZkP0Q" x="2" y="-4"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2ITBClEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2ITRClEey1ntah2ZkP0Q" x="1" y="1"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2IThClEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2ITxClEey1ntah2ZkP0Q" x="1" y="2"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HV2IRxClEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_HV2ISBClEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HV2ISRClEey1ntah2ZkP0Q" points="[0, -63, 0, 69]$[0, -68, 0, 64]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2IUBClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2IURClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_HV2vUBClEey1ntah2ZkP0Q" visible="false" type="4001" element="_HVPEQhClEey1ntah2ZkP0Q" source="_Gj7YkBCkEey1ntah2ZkP0Q" target="_Gj7_ohCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_HV2vVBClEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vVRClEey1ntah2ZkP0Q" x="-10" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2vVhClEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vVxClEey1ntah2ZkP0Q" x="8" y="-4"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2vWBClEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vWRClEey1ntah2ZkP0Q" x="8" y="-4"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HV2vURClEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_HV2vUhClEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HV2vUxClEey1ntah2ZkP0Q" points="[0, -63, 0, 63]$[0, -62, 0, 64]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2vWhClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV2vWxClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_HV2vXBClEey1ntah2ZkP0Q" visible="false" type="4001" element="_HVPrUBClEey1ntah2ZkP0Q" source="_Gj7_ohCkEey1ntah2ZkP0Q" target="_Gj9NwBCkEey1ntah2ZkP0Q">
-          <children xmi:type="notation:Node" xmi:id="_HV2vYBClEey1ntah2ZkP0Q" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vYRClEey1ntah2ZkP0Q" x="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2vYhClEey1ntah2ZkP0Q" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vYxClEey1ntah2ZkP0Q" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_HV2vZBClEey1ntah2ZkP0Q" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HV2vZRClEey1ntah2ZkP0Q" x="-10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HV2vXRClEey1ntah2ZkP0Q"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_HV2vXhClEey1ntah2ZkP0Q" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HV2vXxClEey1ntah2ZkP0Q" points="[0, -63, 0, 75]$[0, -74, 0, 64]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV3WYBClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HV3WYRClEey1ntah2ZkP0Q" id="(0.5,0.5)"/>
-        </edges>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_-LuNgs0OEey4RbSssulsHA"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GjWw0BCkEey1ntah2ZkP0Q" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_GjXX4BCkEey1ntah2ZkP0Q"/>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_-L6awM0OEey4RbSssulsHA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_-L6awc0OEey4RbSssulsHA"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Gi3ooBCkEey1ntah2ZkP0Q" name="0" outgoingEdges="_HVN2IBClEey1ntah2ZkP0Q" incomingEdges="_qDhdsBCkEey1ntah2ZkP0Q" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sjWzMM0PEey4RbSssulsHA" name="1" width="20" height="10">
+      <target xmi:type="liftM:Floor" href="My.liftm#//@floors.0"/>
+      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floors.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOgkoRCmEey1ntah2ZkP0Q" labelSize="20" showIcon="false" labelAlignment="LEFT" workspacePath="/LiftM/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sjgkMM0PEey4RbSssulsHA" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.0"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.0"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PH8MKM0REey4RbSssulsHA" name="1" width="-1" height="-1">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.0/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.0/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_TgdZqc0TEey4RbSssulsHA" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PIIZYM0REey4RbSssulsHA" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.0/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.0/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_ThXYkc0TEey4RbSssulsHA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOn.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_GjGSIBCkEey1ntah2ZkP0Q" name="1" outgoingEdges="_HVOdMhClEey1ntah2ZkP0Q" incomingEdges="_qDm9QBCkEey1ntah2ZkP0Q _HVN2IBClEey1ntah2ZkP0Q" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ETAfYs0QEey4RbSssulsHA" name="2" width="20" height="10">
+      <target xmi:type="liftM:Floor" href="My.liftm#//@floors.1"/>
+      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floors.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOhLsRCmEey1ntah2ZkP0Q" labelSize="20" showIcon="false" labelAlignment="LEFT" workspacePath="/LiftM/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ETAfY80QEey4RbSssulsHA" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.1"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.1"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PILcsM0REey4RbSssulsHA" name="1" width="-1" height="-1">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.1/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.1/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Tw4bQ80TEey4RbSssulsHA" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftOpen.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PINR4M0REey4RbSssulsHA" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.1/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.1/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_TpW2980TEey4RbSssulsHA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOn.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_GjJ8gRCkEey1ntah2ZkP0Q" name="2" outgoingEdges="_qDhdsBCkEey1ntah2ZkP0Q _HVPEQhClEey1ntah2ZkP0Q" incomingEdges="_qDnkUhCkEey1ntah2ZkP0Q _HVOdMhClEey1ntah2ZkP0Q" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ETAfZc0QEey4RbSssulsHA" name="3" width="20" height="10">
+      <target xmi:type="liftM:Floor" href="My.liftm#//@floors.2"/>
+      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floors.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOhywBCmEey1ntah2ZkP0Q" labelSize="20" showIcon="false" labelAlignment="LEFT" workspacePath="/LiftM/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ETAfZs0QEey4RbSssulsHA" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.2"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.2"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PIPHEc0REey4RbSssulsHA" name="1" width="-1" height="-1">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.2/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.2/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Tt4KlM0TEey4RbSssulsHA" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_PIRjUM0REey4RbSssulsHA" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="liftM:Cabin" href="My.liftm#//@floors.2/@cabins.0"/>
+        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floors.2/@cabins.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_TvD2Us0TEey4RbSssulsHA" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOn.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_GjNm4RCkEey1ntah2ZkP0Q" name="3" outgoingEdges="_qDm9QBCkEey1ntah2ZkP0Q _HVPrUBClEey1ntah2ZkP0Q" incomingEdges="_HVPEQhClEey1ntah2ZkP0Q" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_vQ7-UM0QEey4RbSssulsHA" name="1" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="liftM:Lift" href="My.liftm#//@lifts.0"/>
+      <semanticElements xmi:type="liftM:Lift" href="My.liftm#//@lifts.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOhywxCmEey1ntah2ZkP0Q" labelSize="20" showIcon="false" labelAlignment="LEFT" workspacePath="/LiftM/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Ts5TIc0TEey4RbSssulsHA" labelSize="12" showIcon="false" workspacePath="/myLift2.project.design/Images/up_arrow.gif">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.3"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.3"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_GjQqMRCkEey1ntah2ZkP0Q" name="4" outgoingEdges="_qDnkUhCkEey1ntah2ZkP0Q" incomingEdges="_HVPrUBClEey1ntah2ZkP0Q" width="-1" height="-1" resizeKind="NSEW">
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lOiZ0BCmEey1ntah2ZkP0Q" labelSize="20" showIcon="false" labelAlignment="LEFT" workspacePath="/LiftM/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.4"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.4"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qDhdsBCkEey1ntah2ZkP0Q" visible="false" sourceNode="_GjJ8gRCkEey1ntah2ZkP0Q" targetNode="_Gi3ooBCkEey1ntah2ZkP0Q">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qDlvIBCkEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qDmWMBCkEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.1"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.1"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qDm9QBCkEey1ntah2ZkP0Q" visible="false" sourceNode="_GjNm4RCkEey1ntah2ZkP0Q" targetNode="_GjGSIBCkEey1ntah2ZkP0Q">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qDm9QRCkEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qDm9QhCkEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.2"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.2"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qDnkUhCkEey1ntah2ZkP0Q" visible="false" sourceNode="_GjQqMRCkEey1ntah2ZkP0Q" targetNode="_GjJ8gRCkEey1ntah2ZkP0Q">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qDoycBCkEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qDoycRCkEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelation']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.3"/>
-      <semanticElements xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.3"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HVN2IBClEey1ntah2ZkP0Q" visible="false" sourceNode="_Gi3ooBCkEey1ntah2ZkP0Q" targetNode="_GjGSIBCkEey1ntah2ZkP0Q">
-      <graphicalFilters xmi:type="diagram:HideFilter" uid="_TMZfgBClEey1ntah2ZkP0Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HVN2IRClEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HVN2IhClEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.0"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HVOdMhClEey1ntah2ZkP0Q" visible="false" sourceNode="_GjGSIBCkEey1ntah2ZkP0Q" targetNode="_GjJ8gRCkEey1ntah2ZkP0Q">
-      <graphicalFilters xmi:type="diagram:HideFilter" uid="_TugHABClEey1ntah2ZkP0Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HVOdMxClEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HVOdNBClEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.1"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HVPEQhClEey1ntah2ZkP0Q" visible="false" sourceNode="_GjJ8gRCkEey1ntah2ZkP0Q" targetNode="_GjNm4RCkEey1ntah2ZkP0Q">
-      <graphicalFilters xmi:type="diagram:HideFilter" uid="_UHDw8BClEey1ntah2ZkP0Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HVPEQxClEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HVPERBClEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.2"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HVPrUBClEey1ntah2ZkP0Q" visible="false" sourceNode="_GjNm4RCkEey1ntah2ZkP0Q" targetNode="_GjQqMRCkEey1ntah2ZkP0Q">
-      <graphicalFilters xmi:type="diagram:HideFilter" uid="_UcXSkBClEey1ntah2ZkP0Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HVPrURClEey1ntah2ZkP0Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HVPrUhClEey1ntah2ZkP0Q" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@edgeMappings[name='FloorRelationUp']"/>
-      <target xmi:type="liftM:Floor_level" href="My.liftm#//@floor_levels.3"/>
-    </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_GiAF8BCkEey1ntah2ZkP0Q"/>
-    <activatedLayers xmi:type="description_1:Layer" href="MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer"/>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_-K5HEM0OEey4RbSssulsHA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer"/>
     <target xmi:type="liftM:Building" href="My.liftm#/"/>
-  </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram uid="_nc7vUBE7EeysXtiApMq2Og">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_nc9kgBE7EeysXtiApMq2Og" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_nc9kgRE7EeysXtiApMq2Og" type="Sirius" element="_nc7vUBE7EeysXtiApMq2Og" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_tLMskEt5EeyRws7L-3nZew" type="2001" element="_tLC7kEt5EeyRws7L-3nZew">
-          <children xmi:type="notation:Node" xmi:id="_tLPv4Et5EeyRws7L-3nZew" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_tLPv4Ut5EeyRws7L-3nZew" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_yYRUUIQiEeyUGekU45jX3Q" type="3005" element="_yYNC4YQiEeyUGekU45jX3Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_yYRUUYQiEeyUGekU45jX3Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yYRUUoQiEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLMskUt5EeyRws7L-3nZew" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLMskkt5EeyRws7L-3nZew" x="961" y="702" width="124" height="127"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_tLVPcEt5EeyRws7L-3nZew" type="2001" element="_tLFX0Et5EeyRws7L-3nZew">
-          <children xmi:type="notation:Node" xmi:id="_tLVPc0t5EeyRws7L-3nZew" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_tLVPdEt5EeyRws7L-3nZew" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_yYR7YIQiEeyUGekU45jX3Q" type="3005" element="_yYNp8YQiEeyUGekU45jX3Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_yYR7YYQiEeyUGekU45jX3Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yYR7YoQiEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLVPcUt5EeyRws7L-3nZew" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLVPckt5EeyRws7L-3nZew" x="960" y="576" width="124" height="127"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_tLV2gEt5EeyRws7L-3nZew" type="2001" element="_tLF-4kt5EeyRws7L-3nZew">
-          <children xmi:type="notation:Node" xmi:id="_tLV2g0t5EeyRws7L-3nZew" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_tLV2hEt5EeyRws7L-3nZew" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_pM6YAIQiEeyUGekU45jX3Q" type="3005" element="_pM2GkYQiEeyUGekU45jX3Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_pM6YAYQiEeyUGekU45jX3Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pM6YAoQiEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLV2gUt5EeyRws7L-3nZew" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLV2gkt5EeyRws7L-3nZew" x="960" y="462" width="124" height="127"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_tLWdkEt5EeyRws7L-3nZew" type="2001" element="_tLGl8kt5EeyRws7L-3nZew">
-          <children xmi:type="notation:Node" xmi:id="_tLXEoEt5EeyRws7L-3nZew" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_tLXEoUt5EeyRws7L-3nZew" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_AuQSk4NLEey9CaG-gE7QIQ" type="3005" element="_AuPEcYNLEey9CaG-gE7QIQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_AuQSlINLEey9CaG-gE7QIQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuQSlYNLEey9CaG-gE7QIQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLWdkUt5EeyRws7L-3nZew" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLWdkkt5EeyRws7L-3nZew" x="961" y="336" width="124" height="127"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_tLXEokt5EeyRws7L-3nZew" type="2001" element="_tLHNAkt5EeyRws7L-3nZew">
-          <children xmi:type="notation:Node" xmi:id="_tLXEpUt5EeyRws7L-3nZew" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_tLXEpkt5EeyRws7L-3nZew" x="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_Asv2sINLEey9CaG-gE7QIQ" type="3005" element="_AsuBhYNLEey9CaG-gE7QIQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Asv2sYNLEey9CaG-gE7QIQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Asv2soNLEey9CaG-gE7QIQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLXEo0t5EeyRws7L-3nZew" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLXEpEt5EeyRws7L-3nZew" x="960" y="216" width="124" height="127"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AULgcIQhEeyUGekU45jX3Q" type="2002" element="__9BvQIQhEeyUGekU45jX3Q">
-          <children xmi:type="notation:Node" xmi:id="_AURAAIQhEeyUGekU45jX3Q" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_AUS1MIQhEeyUGekU45jX3Q" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_AUS1MYQhEeyUGekU45jX3Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_AUS1MoQhEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AULgcYQhEeyUGekU45jX3Q" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AULgcoQhEeyUGekU45jX3Q" x="-12" y="528" width="398" height="206"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AUUDUIQhEeyUGekU45jX3Q" type="2002" element="__9C9YoQhEeyUGekU45jX3Q">
-          <children xmi:type="notation:Node" xmi:id="_AUUqYIQhEeyUGekU45jX3Q" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_AUUqYYQhEeyUGekU45jX3Q" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_yYR7Y4QiEeyUGekU45jX3Q" type="3007" element="_yYPfKoQiEeyUGekU45jX3Q">
-              <children xmi:type="notation:Node" xmi:id="_yYSicIQiEeyUGekU45jX3Q" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_yYSicYQiEeyUGekU45jX3Q" x="-14" y="4"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_yYSicoQiEeyUGekU45jX3Q" type="3005" element="_yYPfK4QiEeyUGekU45jX3Q">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_yYSic4QiEeyUGekU45jX3Q" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yYSidIQiEeyUGekU45jX3Q"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_yYR7ZIQiEeyUGekU45jX3Q" fontName="Segoe UI" fontHeight="18"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yYR7ZYQiEeyUGekU45jX3Q" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_AUUqYoQhEeyUGekU45jX3Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_AUUqY4QhEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AUUDUYQhEeyUGekU45jX3Q" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUUDUoQhEeyUGekU45jX3Q" x="-12" y="326" width="398" height="205"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AUUqZIQhEeyUGekU45jX3Q" type="2002" element="__9DkcoQhEeyUGekU45jX3Q">
-          <children xmi:type="notation:Node" xmi:id="_AUVRcIQhEeyUGekU45jX3Q" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_AUVRcYQhEeyUGekU45jX3Q" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_pM6YA4QiEeyUGekU45jX3Q" type="3007" element="_pM37woQiEeyUGekU45jX3Q">
-              <children xmi:type="notation:Node" xmi:id="_pM6YBoQiEeyUGekU45jX3Q" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_pM6YB4QiEeyUGekU45jX3Q" x="-14" y="2"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_pM6_EIQiEeyUGekU45jX3Q" type="3005" element="_pM37w4QiEeyUGekU45jX3Q">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_pM6_EYQiEeyUGekU45jX3Q" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pM6_EoQiEeyUGekU45jX3Q"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_pM6YBIQiEeyUGekU45jX3Q" fontName="Segoe UI" fontHeight="18"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pM6YBYQiEeyUGekU45jX3Q" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_AUVRcoQhEeyUGekU45jX3Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_AUVRc4QhEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AUUqZYQhEeyUGekU45jX3Q" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUUqZoQhEeyUGekU45jX3Q" x="-12" y="124" width="398" height="205"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AUVRdIQhEeyUGekU45jX3Q" type="2002" element="__9Dkd4QhEeyUGekU45jX3Q">
-          <children xmi:type="notation:Node" xmi:id="_AUV4gIQhEeyUGekU45jX3Q" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_AUV4gYQhEeyUGekU45jX3Q" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_AUV4goQhEeyUGekU45jX3Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_AUV4g4QhEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AUVRdYQhEeyUGekU45jX3Q" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUVRdoQhEeyUGekU45jX3Q" x="-12" y="-78" width="398" height="205"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AUV4hIQhEeyUGekU45jX3Q" type="2002" element="__9EykoQhEeyUGekU45jX3Q">
-          <children xmi:type="notation:Node" xmi:id="_AUWfkIQhEeyUGekU45jX3Q" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_AUWfkYQhEeyUGekU45jX3Q" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_AUWfkoQhEeyUGekU45jX3Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_AUWfk4QhEeyUGekU45jX3Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AUV4hYQhEeyUGekU45jX3Q" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUV4hoQhEeyUGekU45jX3Q" x="-12" y="-280" width="398" height="205"/>
-        </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_nc9kghE7EeysXtiApMq2Og"/>
-      </data>
-    </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ndE5QRE7EeysXtiApMq2Og" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ndE5QhE7EeysXtiApMq2Og"/>
-    </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tLC7kEt5EeyRws7L-3nZew" name="1" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_yYNC4YQiEeyUGekU45jX3Q" labelSize="12" showIcon="false" workspacePath="/mylift.project.design/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tLFX0Et5EeyRws7L-3nZew" name="2" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_yYNp8YQiEeyUGekU45jX3Q" labelSize="12" showIcon="false" workspacePath="/mylift.project.design/Images/LiftClosed.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@conditionnalStyles.1/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tLF-4kt5EeyRws7L-3nZew" name="3" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_pM2GkYQiEeyUGekU45jX3Q" labelSize="12" showIcon="false" workspacePath="/mylift.project.design/Images/LiftClosed.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@conditionnalStyles.1/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tLGl8kt5EeyRws7L-3nZew" name="4" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AuPEcYNLEey9CaG-gE7QIQ" labelSize="12" showIcon="false" workspacePath="/mylift.project.design/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tLHNAkt5EeyRws7L-3nZew" name="5" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AsuBhYNLEey9CaG-gE7QIQ" labelSize="12" showIcon="false" workspacePath="/mylift.project.design/Images/LiftEmpty.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@nodeMappings[name='FloorNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9BvQIQhEeyUGekU45jX3Q" name="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9CWUIQhEeyUGekU45jX3Q" labelSize="20" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9C9YoQhEeyUGekU45jX3Q" name="2">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9C9Y4QhEeyUGekU45jX3Q" labelSize="20" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yYPfKoQiEeyUGekU45jX3Q" name="2" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Lift" href="My.liftm#//@lifts.1"/>
-        <semanticElements xmi:type="liftM:Lift" href="My.liftm#//@lifts.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_yYPfK4QiEeyUGekU45jX3Q" labelSize="18" showIcon="false" labelAlignment="RIGHT" workspacePath="/mylift.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='LiftNode']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='LiftNode']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9DkcoQhEeyUGekU45jX3Q" name="3">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9Dkc4QhEeyUGekU45jX3Q" labelSize="20" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_pM37woQiEeyUGekU45jX3Q" name="1" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Lift" href="My.liftm#//@lifts.0"/>
-        <semanticElements xmi:type="liftM:Lift" href="My.liftm#//@lifts.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_pM37w4QiEeyUGekU45jX3Q" labelSize="18" showIcon="false" labelAlignment="RIGHT" workspacePath="/mylift.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='LiftNode']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='LiftNode']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9Dkd4QhEeyUGekU45jX3Q" name="4">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9ELgIQhEeyUGekU45jX3Q" labelSize="20" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__9EykoQhEeyUGekU45jX3Q" name="5">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__9Eyk4QhEeyUGekU45jX3Q" labelSize="20" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-    </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_nc7vURE7EeysXtiApMq2Og"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/mylift.project.design/description/MyLift.odesign#//@ownedViewpoints[name='LiftViewPoint']/@ownedRepresentations[name='MyDiagram%20Description']/@defaultLayer"/>
-    <target xmi:type="liftM:Building" href="My.liftm#/"/>
-  </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram uid="_STLboIQsEeyboo9R4qtzqg">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_SUCXQIQsEeyboo9R4qtzqg" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_SUCXQYQsEeyboo9R4qtzqg" type="Sirius" element="_STLboIQsEeyboo9R4qtzqg" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_SU4EwIQsEeyboo9R4qtzqg" type="2002" element="_SUfqQIQsEeyboo9R4qtzqg">
-          <children xmi:type="notation:Node" xmi:id="_SU-ycIQsEeyboo9R4qtzqg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_SU_ZgIQsEeyboo9R4qtzqg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UpIw8IQtEeyboo9R4qtzqg" type="3007" element="_UoeCkIQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpJ_EIQtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpJ_EYQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_EseJ0IQ2Eeyys4nFZxekCw" type="3005" element="_EsYDMYQ2Eeyys4nFZxekCw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_EseJ0YQ2Eeyys4nFZxekCw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EseJ0oQ2Eeyys4nFZxekCw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpIw8YQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpIw8oQtEeyboo9R4qtzqg" x="25" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UpOQgIQtEeyboo9R4qtzqg" type="3007" element="_Uof3wIQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpO3kIQtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpO3kYQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_l689YIQ1Eeyys4nFZxekCw" type="3005" element="_l6qpgYQ1Eeyys4nFZxekCw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_l689YYQ1Eeyys4nFZxekCw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l689YoQ1Eeyys4nFZxekCw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpOQgYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpOQgoQtEeyboo9R4qtzqg" x="181" y="30" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_SU_ZgYQsEeyboo9R4qtzqg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_SU_ZgoQsEeyboo9R4qtzqg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_SU4EwYQsEeyboo9R4qtzqg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SU4EwoQsEeyboo9R4qtzqg" x="108" y="564" width="324" height="171"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_SVE5EIQsEeyboo9R4qtzqg" type="2002" element="_SUlJ0IQsEeyboo9R4qtzqg">
-          <children xmi:type="notation:Node" xmi:id="_SVFgIIQsEeyboo9R4qtzqg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_SVFgIYQsEeyboo9R4qtzqg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UpPeo4QtEeyboo9R4qtzqg" type="3007" element="_UohF4IQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpQFsoQtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpQFs4QtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_z_5M4IQ3Eeyys4nFZxekCw" type="3005" element="_z_uNwYQ3Eeyys4nFZxekCw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_z_5M4YQ3Eeyys4nFZxekCw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z_5M4oQ3Eeyys4nFZxekCw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpQFsIQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpQFsYQtEeyboo9R4qtzqg" x="31" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UpQswIQtEeyboo9R4qtzqg" type="3007" element="_Uohs8YQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpRT0IQtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpRT0YQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rKQ4IQxEeyLxLRQAHHQFQ" type="3005" element="_4rAf4YQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rKQ4YQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rKQ4oQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpQswYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpQswoQtEeyboo9R4qtzqg" x="187" y="30" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_SVFgIoQsEeyboo9R4qtzqg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_SVFgI4QsEeyboo9R4qtzqg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_SVE5EYQsEeyboo9R4qtzqg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVE5EoQsEeyboo9R4qtzqg" x="108" y="396"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_SVFgJIQsEeyboo9R4qtzqg" type="2002" element="_SUlw4IQsEeyboo9R4qtzqg">
-          <children xmi:type="notation:Node" xmi:id="_SVGHMIQsEeyboo9R4qtzqg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_SVGHMYQsEeyboo9R4qtzqg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UpSh8IQtEeyboo9R4qtzqg" type="3007" element="_UoiUAIQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpSh84QtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpSh9IQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_z_5z8IQ3Eeyys4nFZxekCw" type="3005" element="_z_wC8YQ3Eeyys4nFZxekCw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_z_5z8YQ3Eeyys4nFZxekCw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z_5z8oQ3Eeyys4nFZxekCw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpSh8YQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpSh8oQtEeyboo9R4qtzqg" x="31" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UpSh9YQtEeyboo9R4qtzqg" type="3007" element="_UoiUA4QtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpTJAIQtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpTJAYQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rK38IQxEeyLxLRQAHHQFQ" type="3005" element="_4rCVEIQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rK38YQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rK38oQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpSh9oQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpSh94QtEeyboo9R4qtzqg" x="187" y="30" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_SVGHMoQsEeyboo9R4qtzqg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_SVGHM4QsEeyboo9R4qtzqg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_SVFgJYQsEeyboo9R4qtzqg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVFgJoQsEeyboo9R4qtzqg" x="108" y="228"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_SVGHNIQsEeyboo9R4qtzqg" type="2002" element="_SUlw4YQsEeyboo9R4qtzqg">
-          <children xmi:type="notation:Node" xmi:id="_SVGuQIQsEeyboo9R4qtzqg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_SVGuQYQsEeyboo9R4qtzqg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UpUXIIQtEeyboo9R4qtzqg" type="3007" element="_Uoi7EoQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpUXI4QtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpUXJIQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rLfAIQxEeyLxLRQAHHQFQ" type="3005" element="_4rC8IYQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rLfAYQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rLfAoQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpUXIYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpUXIoQtEeyboo9R4qtzqg" x="31" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UpU-MIQtEeyboo9R4qtzqg" type="3007" element="_UojiIYQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpU-M4QtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpU-NIQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rMGEIQxEeyLxLRQAHHQFQ" type="3005" element="_4rEKQYQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rMGEYQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rMGEoQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpU-MYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpU-MoQtEeyboo9R4qtzqg" x="187" y="30" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_SVGuQoQsEeyboo9R4qtzqg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_SVGuQ4QsEeyboo9R4qtzqg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_SVGHNYQsEeyboo9R4qtzqg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVGHNoQsEeyboo9R4qtzqg" x="108" y="60"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_SVGuRIQsEeyboo9R4qtzqg" type="2002" element="_SUlw4oQsEeyboo9R4qtzqg">
-          <children xmi:type="notation:Node" xmi:id="_SVHVUIQsEeyboo9R4qtzqg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_SVHVUYQsEeyboo9R4qtzqg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UpWzYIQtEeyboo9R4qtzqg" type="3007" element="_UokJMYQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpWzY4QtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpWzZIQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rMtIIQxEeyLxLRQAHHQFQ" type="3005" element="_4rExUoQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rMtIYQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rMtIoQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpWzYYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpWzYoQtEeyboo9R4qtzqg" x="31" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UpXacIQtEeyboo9R4qtzqg" type="3007" element="_UokwQoQtEeyboo9R4qtzqg">
-              <children xmi:type="notation:Node" xmi:id="_UpXac4QtEeyboo9R4qtzqg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UpXadIQtEeyboo9R4qtzqg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_4rN7QIQxEeyLxLRQAHHQFQ" type="3005" element="_4rFYYoQxEeyLxLRQAHHQFQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_4rN7QYQxEeyLxLRQAHHQFQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4rN7QoQxEeyLxLRQAHHQFQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UpXacYQtEeyboo9R4qtzqg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpXacoQtEeyboo9R4qtzqg" x="187" y="30" width="124" height="127"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_SVHVUoQsEeyboo9R4qtzqg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_SVHVU4QsEeyboo9R4qtzqg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_SVGuRYQsEeyboo9R4qtzqg" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVGuRoQsEeyboo9R4qtzqg" x="108" y="-108"/>
-        </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_SUCXQoQsEeyboo9R4qtzqg"/>
-      </data>
-    </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_SUoNIIQsEeyboo9R4qtzqg" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_SUoNIYQsEeyboo9R4qtzqg"/>
-    </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SUfqQIQsEeyboo9R4qtzqg" name="Floor1" width="15" height="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dS3cUIQsEeyboo9R4qtzqg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UoeCkIQtEeyboo9R4qtzqg" name="floor1_lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.0/@cabin.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.0/@cabin.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_EsYDMYQ2Eeyys4nFZxekCw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Uof3wIQtEeyboo9R4qtzqg" name="floor1_lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.0/@cabin.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.0/@cabin.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_l6qpgYQ1Eeyys4nFZxekCw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.0/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SUlJ0IQsEeyboo9R4qtzqg" name="Floor2" width="15" height="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dS5RgYQsEeyboo9R4qtzqg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UohF4IQtEeyboo9R4qtzqg" name="floor2_lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.1/@cabin.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.1/@cabin.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_z_uNwYQ3Eeyys4nFZxekCw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Uohs8YQtEeyboo9R4qtzqg" name="floor2_lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.1/@cabin.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.1/@cabin.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rAf4YQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SUlw4IQsEeyboo9R4qtzqg" name="Floor3" width="15" height="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dS54kYQsEeyboo9R4qtzqg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UoiUAIQtEeyboo9R4qtzqg" name="floor3_lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.2/@cabin.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.2/@cabin.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_z_wC8YQ3Eeyys4nFZxekCw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.0/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UoiUA4QtEeyboo9R4qtzqg" name="floor3_lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.2/@cabin.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.2/@cabin.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rCVEIQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SUlw4YQsEeyboo9R4qtzqg" name="Floor4" width="15" height="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dS54k4QsEeyboo9R4qtzqg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Uoi7EoQtEeyboo9R4qtzqg" name="floor4_lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.3/@cabin.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.3/@cabin.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rC8IYQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UojiIYQtEeyboo9R4qtzqg" name="floor4_lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.3/@cabin.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.3/@cabin.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rEKQYQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SUlw4oQsEeyboo9R4qtzqg" name="Floor5" width="15" height="1">
-      <target xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <semanticElements xmi:type="liftM:Floor" href="My.liftm#//@floor_levels.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dS6foYQsEeyboo9R4qtzqg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UokJMYQtEeyboo9R4qtzqg" name="floor5_lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.4/@cabin.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.4/@cabin.0"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rExUoQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UokwQoQtEeyboo9R4qtzqg" name="floor5_lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.4/@cabin.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My.liftm#//@floor_levels.4/@cabin.1"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_4rFYYoQxEeyLxLRQAHHQFQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_STVzsIQsEeyboo9R4qtzqg"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer"/>
-    <target xmi:type="liftM:Building" href="My.liftm#/"/>
-  </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram uid="_KvYYYIQ_EeyEjs9xdx15rw">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KwKbgIQ_EeyEjs9xdx15rw" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_KwKbgYQ_EeyEjs9xdx15rw" type="Sirius" element="_KvYYYIQ_EeyEjs9xdx15rw" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_Wd7UEIRIEeyVleZlNJqVcg" type="2002" element="_WcES4IRIEeyVleZlNJqVcg">
-          <children xmi:type="notation:Node" xmi:id="_Wd8iMIRIEeyVleZlNJqVcg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Wd9JQIRIEeyVleZlNJqVcg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_WeAMkIRIEeyVleZlNJqVcg" type="3007" element="_WcJLYIRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WeAzoIRIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WeAzoYRIEeyVleZlNJqVcg" x="7" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_5B7mILWJEey6Gc9lKWWsew" type="3005" element="_5Bx1IbWJEey6Gc9lKWWsew">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_5B7mIbWJEey6Gc9lKWWsew" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5B7mIrWJEey6Gc9lKWWsew"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeAMkYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeAMkoRIEeyVleZlNJqVcg" x="91" y="20" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_WeKkoIRIEeyVleZlNJqVcg" type="3007" element="_WcjbEYRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WeLLsIRIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WeLLsYRIEeyVleZlNJqVcg" x="7" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_7Z-zMIXUEeygetrENs7YVw" type="3005" element="_7Z0bIYXUEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Z-zMYXUEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Z-zMoXUEeygetrENs7YVw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeKkoYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeKkooRIEeyVleZlNJqVcg" x="307" y="20" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXYkUIRKEeyVleZlNJqVcg" type="3007" element="_rW_iwIRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXZLYIRKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXZLYYRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_S9Ml44XVEeygetrENs7YVw" type="3005" element="_S9JikYXVEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_S9Ml5IXVEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S9Ml5YXVEeygetrENs7YVw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXYkUYRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXYkUoRKEeyVleZlNJqVcg" x="31" y="60" width="39" height="39"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXZLYoRKEeyVleZlNJqVcg" type="3007" element="_rXAw4IRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXZycIRKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXZycYRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_rdSkc4W9Eeyyub486-J1QQ" type="3005" element="_rdNr9oW9Eeyyub486-J1QQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_rdSkdIW9Eeyyub486-J1QQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rdSkdYW9Eeyyub486-J1QQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXZLY4RKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXZLZIRKEeyVleZlNJqVcg" x="259" y="60" width="39" height="39"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_Wd9JQYRIEeyVleZlNJqVcg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd9JQoRIEeyVleZlNJqVcg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd7UEYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd7UEoRIEeyVleZlNJqVcg" x="36" y="756" width="494" height="171"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_Wd9JQ4RIEeyVleZlNJqVcg" type="2002" element="_WcGIEYRIEeyVleZlNJqVcg">
-          <children xmi:type="notation:Node" xmi:id="_Wd9wUIRIEeyVleZlNJqVcg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Wd-XYIRIEeyVleZlNJqVcg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_WeMZ0IRIEeyVleZlNJqVcg" type="3007" element="_Wc29EIRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WeMZ04RIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WeMZ1IRIEeyVleZlNJqVcg" x="7" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_5B8NMLWJEey6Gc9lKWWsew" type="3005" element="_5BzqUbWJEey6Gc9lKWWsew">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_5B8NMbWJEey6Gc9lKWWsew" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5B8NMrWJEey6Gc9lKWWsew"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeMZ0YRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeMZ0oRIEeyVleZlNJqVcg" x="91" y="16" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_WeO2EIRIEeyVleZlNJqVcg" type="3007" element="_WdIp4YRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WePdIIRIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WePdIYRIEeyVleZlNJqVcg" x="7" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_7Y7HMLTPEey-tuPFnQtzTw" type="3005" element="_7YykUbTPEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y7HMbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y7HMrTPEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeO2EYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeO2EoRIEeyVleZlNJqVcg" x="307" y="16" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXZycoRKEeyVleZlNJqVcg" type="3007" element="_rXEbQYRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXbAkIRKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXbAkYRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_kKVA44fxEeygetrENs7YVw" type="3005" element="_kKQvcYfxEeygetrENs7YVw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_kKVA5IfxEeygetrENs7YVw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kKVA5YfxEeygetrENs7YVw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXZyc4RKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXZydIRKEeyVleZlNJqVcg" x="31" y="62" width="39" height="39"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXbnoIRKEeyVleZlNJqVcg" type="3007" element="_rXEbQoRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXcOsIRKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXcOsYRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_3-BtoLTPEey-tuPFnQtzTw" type="3005" element="_3938o7TPEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_3-BtobTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3-BtorTPEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXbnoYRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXbnooRKEeyVleZlNJqVcg" x="261" y="62" width="39" height="39"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_Wd-XYYRIEeyVleZlNJqVcg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd-XYoRIEeyVleZlNJqVcg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd9JRIRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd9JRYRIEeyVleZlNJqVcg" x="36" y="590" width="494" height="169"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_Wd--cIRIEeyVleZlNJqVcg" type="2002" element="_WcHWMYRIEeyVleZlNJqVcg">
-          <children xmi:type="notation:Node" xmi:id="_Wd_lgIRIEeyVleZlNJqVcg" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Wd_lgYRIEeyVleZlNJqVcg" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_WeRSUIRIEeyVleZlNJqVcg" type="3007" element="_Wdbk0IRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WeRSU4RIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WeRSVIRIEeyVleZlNJqVcg" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_AsZL8LTQEey-tuPFnQtzTw" type="3005" element="_AsUTcbTQEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_AsZL8bTQEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsZL8rTQEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeRSUYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeRSUoRIEeyVleZlNJqVcg" x="91" y="20" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_WeR5YIRIEeyVleZlNJqVcg" type="3007" element="_WdpAMoRIEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_WeSgcIRIEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_WeSgcYRIEeyVleZlNJqVcg" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_3F034KRIEey35vEMz13u6w" type="3005" element="_3FvYUaRIEey35vEMz13u6w">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_3F034aRIEey35vEMz13u6w" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3F034qRIEey35vEMz13u6w"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_WeR5YYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WeR5YoRIEeyVleZlNJqVcg" x="307" y="20" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXc1wIRKEeyVleZlNJqVcg" type="3007" element="_rXIFoIRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXc1w4RKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXc1xIRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_vMIPoLTOEey-tuPFnQtzTw" type="3005" element="_vL8CYbTOEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_vMIPobTOEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vMIPorTOEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXc1wYRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXc1woRKEeyVleZlNJqVcg" x="31" y="70" width="39" height="39"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_rXdc0IRKEeyVleZlNJqVcg" type="3007" element="_rXIFoYRKEeyVleZlNJqVcg">
-              <children xmi:type="notation:Node" xmi:id="_rXdc04RKEeyVleZlNJqVcg" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_rXdc1IRKEeyVleZlNJqVcg" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_C5smw4UJEeyGEbR_UT6cUg" type="3005" element="_C5qxloUJEeyGEbR_UT6cUg">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_C5smxIUJEeyGEbR_UT6cUg" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C5smxYUJEeyGEbR_UT6cUg"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_rXdc0YRKEeyVleZlNJqVcg" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXdc0oRKEeyVleZlNJqVcg" x="261" y="70" width="39" height="39"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_Wd_lgoRIEeyVleZlNJqVcg"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_Wd_lg4RIEeyVleZlNJqVcg"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Wd--cYRIEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wd--coRIEeyVleZlNJqVcg" x="36" y="420" width="494" height="171"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AfmCQIRNEeyVleZlNJqVcg" type="2001" element="_Ae4QkIRNEeyVleZlNJqVcg">
-          <children xmi:type="notation:Node" xmi:id="_AfmCQ4RNEeyVleZlNJqVcg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_AfmCRIRNEeyVleZlNJqVcg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_VCVigIf7Eeyj3dUbw3F9Dw" type="3005" element="_VCFD0Yf7Eeyj3dUbw3F9Dw">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_VCVigYf7Eeyj3dUbw3F9Dw" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCVigof7Eeyj3dUbw3F9Dw"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AfmCQYRNEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfmCQoRNEeyVleZlNJqVcg" x="156" y="938" width="63" height="53"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_AfnQYIRNEeyVleZlNJqVcg" type="2001" element="_AfBagIRNEeyVleZlNJqVcg">
-          <children xmi:type="notation:Node" xmi:id="_AfoegIRNEeyVleZlNJqVcg" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_AfoegYRNEeyVleZlNJqVcg" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_-gfRIIXUEeygetrENs7YVw" type="3005" element="_-gPZgYXUEeygetrENs7YVw">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_-gfRIYXUEeygetrENs7YVw" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-gfRIoXUEeygetrENs7YVw"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_AfnQYYRNEeyVleZlNJqVcg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AfnQYoRNEeyVleZlNJqVcg" x="384" y="938" width="63" height="53"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_UEpIEITCEeykKNNonYJstQ" type="2002" element="_UEEgVITCEeykKNNonYJstQ">
-          <children xmi:type="notation:Node" xmi:id="_UEpvIITCEeykKNNonYJstQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_UEq9QITCEeykKNNonYJstQ" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UEuAkITCEeykKNNonYJstQ" type="3007" element="_UEGVgYTCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UEuAk4TCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UEuAlITCEeykKNNonYJstQ" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_26cxsLWIEey6Gc9lKWWsew" type="3005" element="_26UO0bWIEey6Gc9lKWWsew">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_26cxsbWIEey6Gc9lKWWsew" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_26cxsrWIEey6Gc9lKWWsew"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEuAkYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEuAkoTCEeykKNNonYJstQ" x="91" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UEySAITCEeykKNNonYJstQ" type="3007" element="_UEIKsYTCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UEy5EITCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UEy5EYTCEeykKNNonYJstQ" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_2tR1A6RIEey35vEMz13u6w" type="3005" element="_2tM8g6RIEey35vEMz13u6w">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_2tR1BKRIEey35vEMz13u6w" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2tR1BaRIEey35vEMz13u6w"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEySAYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEySAoTCEeykKNNonYJstQ" x="307" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UEy5EoTCEeykKNNonYJstQ" type="3007" element="_UEJ_4ITCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UEzgIITCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UEzgIYTCEeykKNNonYJstQ" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_AsZzALTQEey-tuPFnQtzTw" type="3005" element="_AsWIo7TQEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_AsZzAbTQEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsZzArTQEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEy5E4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEy5FITCEeykKNNonYJstQ" x="43" y="74" width="39" height="39"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UEzgIoTCEeykKNNonYJstQ" type="3007" element="_UEKm8ITCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UEzgJYTCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UEzgJoTCEeykKNNonYJstQ" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_HDxLEMgTEeygL5aToTP0Ig" type="3005" element="_HDF1ocgTEeygL5aToTP0Ig">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_HDxLEcgTEeygL5aToTP0Ig" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HDxLEsgTEeygL5aToTP0Ig"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEzgI4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEzgJITCEeykKNNonYJstQ" x="259" y="74" width="39" height="39"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_UEq9QYTCEeykKNNonYJstQ"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_UEq9QoTCEeykKNNonYJstQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_UEpIEYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEpIEoTCEeykKNNonYJstQ" x="36" y="240" width="494" height="183"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_UErkUITCEeykKNNonYJstQ" type="2002" element="_UEFucITCEeykKNNonYJstQ">
-          <children xmi:type="notation:Node" xmi:id="_UEsLYITCEeykKNNonYJstQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_UEsLYYTCEeykKNNonYJstQ" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_UE2jcITCEeykKNNonYJstQ" type="3007" element="_UEKm84TCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UE2jc4TCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UE2jdITCEeykKNNonYJstQ" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_V2a2wIXKEeyyub486-J1QQ" type="3005" element="_V2ZBkYXKEeyyub486-J1QQ">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_V2a2wYXKEeyyub486-J1QQ" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V2a2woXKEeyyub486-J1QQ"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UE2jcYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE2jcoTCEeykKNNonYJstQ" x="93" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UE3KgITCEeykKNNonYJstQ" type="3007" element="_UEMcIoTCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UE3Kg4TCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3KhITCEeykKNNonYJstQ" y="-24"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_7Y8VULTPEey-tuPFnQtzTw" type="3005" element="_7Y21wbTPEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y8VUbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y8VUrTPEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3KgYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3KgoTCEeykKNNonYJstQ" x="309" y="30" width="124" height="127"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UE3KhYTCEeykKNNonYJstQ" type="3007" element="_UEO4YITCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UE3xkITCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3xkYTCEeykKNNonYJstQ" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_1GMV6aHsEeyi6_cYSXBn6Q" type="3005" element="_1GHdd6HsEeyi6_cYSXBn6Q">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_1GMV6qHsEeyi6_cYSXBn6Q" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1GMV66HsEeyi6_cYSXBn6Q"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3KhoTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3Kh4TCEeykKNNonYJstQ" x="43" y="74" width="39" height="39"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_UE3xkoTCEeykKNNonYJstQ" type="3007" element="_UEO4Y4TCEeykKNNonYJstQ">
-              <children xmi:type="notation:Node" xmi:id="_UE3xlYTCEeykKNNonYJstQ" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_UE3xloTCEeykKNNonYJstQ" y="5"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_7Y88YLTPEey-tuPFnQtzTw" type="3005" element="_7Y4D4bTPEey-tuPFnQtzTw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_7Y88YbTPEey-tuPFnQtzTw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7Y88YrTPEey-tuPFnQtzTw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_UE3xk4TCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UE3xlITCEeykKNNonYJstQ" x="271" y="74" width="39" height="39"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_UEsLYoTCEeykKNNonYJstQ"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_UEsLY4TCEeykKNNonYJstQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_UErkUYTCEeykKNNonYJstQ" fontName="Segoe UI" fontHeight="10"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UErkUoTCEeykKNNonYJstQ" x="36" y="60" width="494" height="183"/>
-        </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_KwKbgoQ_EeyEjs9xdx15rw"/>
-      </data>
-    </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KwucMIQ_EeyEjs9xdx15rw" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_KwucMYQ_EeyEjs9xdx15rw"/>
-    </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_WcES4IRIEeyVleZlNJqVcg" name="Floor1" width="20" height="10">
-      <target xmi:type="liftM:Floor" href="My1.liftm#//@floors.0"/>
-      <semanticElements xmi:type="liftM:Floor" href="My1.liftm#//@floors.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_WcE58IRIEeyVleZlNJqVcg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WcJLYIRIEeyVleZlNJqVcg" name="Lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_5Bx1IbWJEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.1/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WcjbEYRIEeyVleZlNJqVcg" name="Lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Z0bIYXUEeygetrENs7YVw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rW_iwIRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_S9JikYXVEeygetrENs7YVw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rXAw4IRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.0/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_rdNr9oW9Eeyyub486-J1QQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_WcGIEYRIEeyVleZlNJqVcg" name="Floor2" width="20" height="10">
-      <target xmi:type="liftM:Floor" href="My1.liftm#//@floors.1"/>
-      <semanticElements xmi:type="liftM:Floor" href="My1.liftm#//@floors.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_WcGvIIRIEeyVleZlNJqVcg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Wc29EIRIEeyVleZlNJqVcg" name="Lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_5BzqUbWJEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WdIp4YRIEeyVleZlNJqVcg" name="Lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7YykUbTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rXEbQYRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_kKQvcYfxEeygetrENs7YVw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rXEbQoRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.1/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_3938o7TPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_WcHWMYRIEeyVleZlNJqVcg" name="Floor3" width="20" height="10">
-      <target xmi:type="liftM:Floor" href="My1.liftm#//@floors.2"/>
-      <semanticElements xmi:type="liftM:Floor" href="My1.liftm#//@floors.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_WcHWMoRIEeyVleZlNJqVcg" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Wdbk0IRIEeyVleZlNJqVcg" name="Lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AsUTcbTQEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WdpAMoRIEeyVleZlNJqVcg" name="Lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_3FvYUaRIEey35vEMz13u6w" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rXIFoIRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_vL8CYbTOEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rXIFoYRKEeyVleZlNJqVcg" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.2/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_C5qxloUJEeyGEbR_UT6cUg" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ae4QkIRNEeyVleZlNJqVcg" name="Lift1" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Lift" href="My1.liftm#//@lifts.0"/>
-      <semanticElements xmi:type="liftM:Lift" href="My1.liftm#//@lifts.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VCFD0Yf7Eeyj3dUbw3F9Dw" labelSize="12" showIcon="false" workspacePath="/myLift2.project.design/Images/up_arrow.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']/@conditionnalStyles.0/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_AfBagIRNEeyVleZlNJqVcg" name="Lift2" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="liftM:Lift" href="My1.liftm#//@lifts.1"/>
-      <semanticElements xmi:type="liftM:Lift" href="My1.liftm#//@lifts.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_-gPZgYXUEeygetrENs7YVw" labelSize="12" showIcon="false" workspacePath="/myLift2.project.design/Images/down_arrow.gif">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']/@conditionnalStyles.1/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@nodeMappings[name='LiftNode']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_UEEgVITCEeykKNNonYJstQ" name="Floor4" width="20" height="10">
-      <target xmi:type="liftM:Floor" href="My1.liftm#//@floors.3"/>
-      <semanticElements xmi:type="liftM:Floor" href="My1.liftm#//@floors.3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_UEFHYITCEeykKNNonYJstQ" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEGVgYTCEeykKNNonYJstQ" name="Lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_26UO0bWIEey6Gc9lKWWsew" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEIKsYTCEeykKNNonYJstQ" name="Lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_2tM8g6RIEey35vEMz13u6w" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEJ_4ITCEeykKNNonYJstQ" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_AsWIo7TQEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEKm8ITCEeykKNNonYJstQ" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.3/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_HDF1ocgTEeygL5aToTP0Ig" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_UEFucITCEeykKNNonYJstQ" name="Floor5" width="20" height="10">
-      <target xmi:type="liftM:Floor" href="My1.liftm#//@floors.4"/>
-      <semanticElements xmi:type="liftM:Floor" href="My1.liftm#//@floors.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_UEFucYTCEeykKNNonYJstQ" labelSize="10" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEKm84TCEeykKNNonYJstQ" name="Lift1" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_V2ZBkYXKEeyyub486-J1QQ" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftEmpty.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEMcIoTCEeykKNNonYJstQ" name="Lift2" width="-1" height="-1">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Y21wbTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelAlignment="RIGHT" workspacePath="/myLift2.project.design/Images/LiftClosed.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']/@conditionnalStyles.1/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='Cabin']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEO4YITCEeykKNNonYJstQ" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.0"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_1GHdd6HsEeyi6_cYSXBn6Q" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UEO4Y4TCEeykKNNonYJstQ" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.1"/>
-        <semanticElements xmi:type="liftM:Cabin" href="My1.liftm#//@floors.4/@cabins.1"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_7Y4D4bTPEey-tuPFnQtzTw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/myLift2.project.design/Images/CallButtonOff.gif">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer/@containerMappings[name='FloorContainer']/@subNodeMappings[name='CabinButton']"/>
-      </ownedDiagramElements>
-    </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_KviJYIQ_EeyEjs9xdx15rw"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/myLift2.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='BuildingDiagram']/@defaultLayer"/>
-    <target xmi:type="liftM:Building" href="My1.liftm#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

@@ -4,7 +4,6 @@ REFINES
     Abstract_Operations
 INCLUDES
     Lift_Existing, liftM
-
 DEFINITIONS
     SET_PREF_SHOW_EVENTB_ANY_VALUES == TRUE ;
     SET_PREF_MAXINT == 10

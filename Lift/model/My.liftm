@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liftM:Building xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:liftM="http://www.example.org/liftM">
+  <floors Id="1" selecterLift="//@lifts.0">
+    <cabins Id="1" belongsTo="//@lifts.0"/>
+  </floors>
+  <floors Id="2" lift="//@lifts.0" selecterLift="//@lifts.0">
+    <cabins Id="2" belongsTo="//@lifts.0"/>
+  </floors>
+  <floors Id="3" selecterLift="//@lifts.0">
+    <cabins Id="3" belongsTo="//@lifts.0"/>
+  </floors>
+  <lifts Id="1" liftPosition="//@floors.1" Door="Open" selectedFloors="//@floors.0 //@floors.1 //@floors.2"/>
+</liftM:Building>
