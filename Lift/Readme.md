@@ -18,4 +18,26 @@ See the Eclipse User Guide for instructions on how to install software from upda
 
 2. Pull the https://github.com/meeduse/Samples/tree/main/Lift project from GIT
 
-3. 
+3. When all is set up and done then you are ready to use the resourcses from GIT.
+
+- Click on File -> New -> Other -> Eclipse Modeling Framework, EMF Project -> Next -> (Give a name "abc") -> Next -> Ecore Model -> Next -> Browsw File System and then from Specs folder choose from the approach folder ByRefinement / BySynchronization select liftM Ecore Model. Load it, click Next then select check & Finish.
+
+- Now go to LIFT GIT Folder then specs folder -> open the approach folder ByRefinement / BySynchronization, copy all the files except liftM Ecore Model and paste it to the "abc" eclipse project's model folder where liftM.ecore is already placed. 
+
+- Generate the Edit and Editor: To do this open the liftM.genmodel file from "abc" eclispe projects's model model folder. When it is open, right click on the root liftM and generate all and you can see the edit and editor generated in model explorer. 
+
+- Uploading the Sirius Represenation: Click on File -> Import -> Projects from Folder or Archive -> Next -> Directory and inside Sirius folder select myLift2.project.design folder and Finish. 
+
+- Setting up the meta-model in Sirius Project: In the model explorer under the myLift2.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> BuildingDiagram. Goto the properties of BuildingDiagram and click the meta-model where you can find a liftM model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and click on "abc" folder. Under the model folder, select the liftM.ecore and click Ok. Now save all. 
+
+- Now it is timw to goto runtime eclipse: Right click in model explorer, go to Run As-> Eclipse Application and it will start a runtime eclipse. 
+
+- In runtime eclispe, click on New -> Other -> Sirius -> Modeling project, Next -> give a project name: "xyz" and Ok Finish. 
+
+- Now click on "xyz" folder in model explorer, click New -> Other -> Example EMF Model Creation Wizards and select the LiftM Model and click Next.  Now you have My.liftM, put it in folder xyz and click next. Now it asks to set the root class in model object. Select Building class and click Finish. 
+
+- If you open the My.liftM under the "xyz" folder in model explorer, you can see the model with a building. 
+
+- Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below BuildingDiagram (0). A window will open, select Building and Finish. The default name is New Buidling Diagram, click Ok. Now Save (ctrl+s).
+
+![Screenshot](./Images/screenShot1.png)
