@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="TTD table" domainClass="railwayDSL1::Railway" initialHeaderColumnWidth="-1">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedLineMappings name="trainBis" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Location of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="TTD" headerLabelExpression="['TTD'+' '+self.Id/]" domainClass="railwayDSL1::Trackside" semanticCandidatesExpression="feature:ttds">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <intersection name="intersectionHead" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.front/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionRear" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionOther" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[Trackside.allInstances()->select(t:Trackside | t.Id.toInteger() &lt; self.front.Id.toInteger() and t.Id.toInteger() > self.rear.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationHead" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.frontTrackLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationRear" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rearTrackLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationOther" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[Trackside.allInstances()->select(t:Trackside | t.Id.toInteger() &lt; self.frontTrackLocation.Id.toInteger() and t.Id.toInteger() > self.rearTrackLocation.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VSS table" domainClass="railwayDSL1::Railway">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedLineMappings name="trainBis" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Location of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedLineMappings name="MAofTrain" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['MA of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="VSS" headerLabelExpression="['VSS'+' '+self.Id/]" domainClass="railwayDSL1::VirtualBlock" semanticCandidatesExpression="feature:virtualblock">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <intersection name="intersectionHead" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.VssFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionRear" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.VssRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionOther" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[VirtualBlock.allInstances()->select(v:VirtualBlock | v.Id.toInteger() &lt; self.VssFront.Id.toInteger() and v.Id.toInteger() > self.VssRear.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationHead" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.frontVssLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationRear" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rearVssLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationOther" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[VirtualBlock.allInstances()->select(v:VirtualBlock | v.Id.toInteger() &lt; self.frontVssLocation.Id.toInteger() and v.Id.toInteger() > self.rearVssLocation.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionMAfront" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="feature:frontMA">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intercectionMARear" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="feature:rearMA">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionMAother" lineMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']" columnMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[VirtualBlock.allInstances()->select(v:VirtualBlock | v.Id.toInteger() &lt; self.frontMA.Id.toInteger() and v.Id.toInteger() > self.rearMA.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="State table" domainClass="railwayDSL1::Railway">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="VSS" domainClass="railwayDSL1::VirtualBlock" semanticCandidatesExpression="feature:virtualblock" headerLabelExpression="['VSS'+' '+self.Id/]"/>
+      <ownedColumnMappings name="State" featureName="VssStatus">
+        <backgroundConditionalStyle predicateExpression="[self.VssStatus=VSSStatus::UnknownVSS/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <backgroundConditionalStyle predicateExpression="[self.VssStatus=VSSStatus::FreeVSS/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <backgroundConditionalStyle predicateExpression="[self.VssStatus=VSSStatus::OccupiedVSS/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <backgroundConditionalStyle predicateExpression="[self.VssStatus=VSSStatus::AmbiguousVSS/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="TTD State Table" domainClass="railwayDSL1::Railway">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="TTD" domainClass="railwayDSL1::Trackside" semanticCandidatesExpression="feature:ttds">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="State" headerLabelExpression="State" featureName="TrackStatus">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+        <backgroundConditionalStyle predicateExpression="[self.TrackStatus=Status::Free/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <backgroundConditionalStyle predicateExpression="[self.TrackStatus=Status::Occupied/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ertms_etcs.project.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="DSLv0">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="TTD table" domainClass="railwayDSL1::Railway" initialHeaderColumnWidth="-1">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="TTD" headerLabelExpression="['TTD'+' '+self.Id/]" domainClass="railwayDSL1::Trackside" semanticCandidatesExpression="feature:ttds">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <intersection name="intersectionHead" lineMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.front/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionRear" lineMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionOther" lineMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[Trackside.allInstances()->select(t:Trackside | t.Id.toInteger() &lt; self.front.Id.toInteger() and t.Id.toInteger() > self.rear.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="TTD State Table" domainClass="railwayDSL1::Railway">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="TTD" domainClass="railwayDSL1::Trackside" semanticCandidatesExpression="feature:ttds">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="State" headerLabelExpression="State" featureName="TrackStatus">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+        <backgroundConditionalStyle predicateExpression="[self.TrackStatus=Status::Free/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <backgroundConditionalStyle predicateExpression="[self.TrackStatus=Status::Occupied/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ertms_etcs.project.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="DSLv2">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VSS table" domainClass="railwayDSL1::Railway">
+      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedLineMappings name="trainBis" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Location of Train'+' '+self.Id/]">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="VSS" headerLabelExpression="['VSS'+' '+self.Id/]" domainClass="railwayDSL1::VirtualBlock" semanticCandidatesExpression="feature:virtualblock">
+        <defaultForeground>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <intersection name="intersectionHead" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.VssFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionRear" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.VssRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionOther" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[VirtualBlock.allInstances()->select(v:VirtualBlock | v.Id.toInteger() &lt; self.VssFront.Id.toInteger() and v.Id.toInteger() > self.VssRear.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationHead" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.frontVssLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationRear" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rearVssLocation/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="intersectionLocationOther" lineMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']" columnMapping="//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0" labelExpression="Other" columnFinderExpression="[VirtualBlock.allInstances()->select(v:VirtualBlock | v.Id.toInteger() &lt; self.frontVssLocation.Id.toInteger() and v.Id.toInteger() > self.rearVssLocation.Id.toInteger())/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ertms_etcs.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

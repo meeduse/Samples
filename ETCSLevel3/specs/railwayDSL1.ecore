@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="railwayDSL1" nsURI="http://www.example.org/railwayDSL1" nsPrefix="railwayDSL1">
+  <eAnnotations source="meeduse">
+    <details key="generated" value=""/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Railway">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ttds" upperBound="-1" eType="#//Trackside"
+        containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="train" upperBound="-1"
+        eType="#//Train" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SupervisionOfTrain" eType="#//SupervisionStatus">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualblock" upperBound="-1"
+        eType="#//VirtualBlock" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trackside">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" upperBound="2"
+        eType="#//Trackside" eOpposite="#//Trackside/next">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant" value="OK"/>
+        <details key="association" value="previous_next"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" upperBound="2" eType="#//Trackside"
+        eOpposite="#//Trackside/previous">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="previous_next"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrackStatus" eType="#//Status">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontOfTrain" upperBound="-1"
+        eType="#//Train" eOpposite="#//Train/front">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="TrainFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rearOfTrain" upperBound="-1"
+        eType="#//Train" eOpposite="#//Train/rear">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="TrainRear"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualblock" upperBound="-1"
+        eType="#//VirtualBlock" eOpposite="#//VirtualBlock/trackside">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant" value="OK"/>
+        <details key="association" value="virtualBlockToTrackside"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrackGhostTimer" eType="#//TimerValuesDSL">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="Ok"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Train">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="KindOfTrain" eType="#//KindsOfTrains">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Connected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="front" eType="#//Trackside"
+        eOpposite="#//Trackside/frontOfTrain">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="TrainFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rear" eType="#//Trackside"
+        eOpposite="#//Trackside/rearOfTrain">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="TrainRear"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VssRear" eType="#//VirtualBlock"
+        eOpposite="#//VirtualBlock/VssRearOfTrain">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="VssTrainRear"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VssFront" eType="#//VirtualBlock"
+        eOpposite="#//VirtualBlock/VssFrontOfTrain">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="VssTrainFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontTrackLocation" eType="#//Trackside">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="frontTrackLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rearTrackLocation" eType="#//Trackside">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="rearTrackLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontVssLocation" eType="#//VirtualBlock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="frontVssLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rearVssLocation" eType="#//VirtualBlock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="Ok"/>
+        <details key="association" value="rearVssLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontMA" eType="#//VirtualBlock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="frontMA"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rearMA" eType="#//VirtualBlock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="rearMA"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LocationLengthChange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousVssFront" eType="#//VirtualBlock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="previousVssFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="previousVssFrontStatus"
+        eType="#//VSSStatus">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrainMuteTimer" eType="#//TimerValuesDSL">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrainWaitIntegrityTimer"
+        eType="#//TimerValuesDSL">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrainReConnected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Status">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+    <eLiterals name="Free"/>
+    <eLiterals name="Occupied" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="KindsOfTrains">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+    <eLiterals name="TIMSERTMS"/>
+    <eLiterals name="ERTMS" value="1"/>
+    <eLiterals name="NoERTMS" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SupervisionStatus">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+    <eLiterals name="Active"/>
+    <eLiterals name="Deactive" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualBlock">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VssRearOfTrain" upperBound="-1"
+        eType="#//Train" eOpposite="#//Train/VssRear">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="VssTrainRear"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VssFrontOfTrain" upperBound="-1"
+        eType="#//Train" eOpposite="#//Train/VssFront">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="VssTrainFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trackside" lowerBound="1"
+        eType="#//Trackside" eOpposite="#//Trackside/virtualblock">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant" value="OK"/>
+        <details key="association" value="virtualBlockToTrackside"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//VirtualBlock"
+        eOpposite="#//VirtualBlock/previous">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="association" value="previous_next_vb"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//VirtualBlock"
+        eOpposite="#//VirtualBlock/next">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+        <details key="constant" value="OK"/>
+        <details key="association" value="previous_next_vb"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VssStatus" eType="#//VSSStatus">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VssDisconnectTimer" eType="#//TimerValuesDSL">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VSSStatus">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+    <eLiterals name="FreeVSS"/>
+    <eLiterals name="OccupiedVSS" value="1"/>
+    <eLiterals name="UnknownVSS" value="2"/>
+    <eLiterals name="AmbiguousVSS" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimerValuesDSL">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="Ok"/>
+    </eAnnotations>
+    <eLiterals name="Inactive"/>
+    <eLiterals name="Running" value="1"/>
+    <eLiterals name="Expired" value="2"/>
+  </eClassifiers>
+</ecore:EPackage>

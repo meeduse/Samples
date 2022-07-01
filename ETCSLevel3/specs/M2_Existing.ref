@@ -1,0 +1,239 @@
+
+
+REFINEMENT M2_Existing
+REFINES M1_Existing
+    
+CONSTANTS
+    Vss, 
+    minVSS,
+    maxVSS, // VSS is an interval of narurals
+    TtdOfVss // associate a VSS to its TTD
+    
+PROPERTIES
+    minVSS : NAT1
+    & maxVSS : NAT1
+    & minVSS <= maxVSS
+    & Vss = minVSS..maxVSS
+    & TtdOfVss : Vss -->> Ttds
+    & !(v1,v2).(v1 : Vss & v2 : Vss & v1 < v2 => TtdOfVss(v1) <= TtdOfVss(v2))
+    & TtdOfVss(minVSS)=minTTD
+    & TtdOfVss(maxVSS)=maxTTD
+    
+ 
+    
+VARIABLES
+    
+    stateTTD,
+    trainOccupationVSSFront,
+    trainOccupationVSSRear,
+    isConnected,
+    supervisor,
+    trainLocationVSSFront,
+    trainLocationVSSRear
+    
+INVARIANT
+    
+      TtdOfVss : Vss -->> Ttds
+      & trainLocationVSSFront : dom(trainLocationTTDFront) --> Vss
+      & trainLocationVSSRear : dom(trainLocationTTDRear) --> Vss
+      & trainOccupationVSSFront : dom(trainOccupationTTDFront) --> Vss
+      & trainOccupationVSSRear : dom(trainOccupationTTDFront) --> Vss
+      & !tr.(tr : dom(trainOccupationVSSFront) => TtdOfVss(trainOccupationVSSFront(tr)) = trainOccupationTTDFront(tr))
+      & !tr.(tr : dom(trainOccupationVSSRear) => TtdOfVss(trainOccupationVSSRear(tr)) = trainOccupationTTDRear(tr))
+      & !tr.(tr : dom(trainLocationVSSRear) => TtdOfVss(trainLocationVSSRear(tr)) = trainLocationTTDRear(tr))
+      & !tr.(tr : dom(trainOccupationVSSFront) => trainOccupationVSSRear(tr) <= trainOccupationVSSFront(tr))
+      & !tr.(tr : dom(trainLocationVSSFront) => TtdOfVss(trainLocationVSSFront(tr)) = trainLocationTTDFront(tr))
+      & !tr.(tr : dom(trainLocationVSSRear) => trainLocationVSSFront(tr) >= trainLocationVSSRear(tr))
+      & !tr.(tr : dom(isConnected) & (isConnected(tr) = TRUE & tr: dom(trainOccupationVSSFront)) => tr : dom(trainLocationVSSFront) & trainLocationVSSFront(tr) = trainOccupationVSSFront(tr))
+      & !tr.(tr : dom(trainLocationVSSRear) => trainLocationVSSRear(tr) <= trainOccupationVSSRear(tr))
+    
+INITIALISATION
+    
+    stateTTD := Ttds * {occupiedT} ||
+    isConnected := (trainKind~)[{Ertms,TimErtms}] * {FALSE}||
+    supervisor := TRUE ||
+    trainLocationVSSFront := {} ||
+    trainOccupationVSSFront := {} ||
+    trainLocationVSSRear := {} ||
+    trainOccupationVSSRear := {}
+    
+    
+
+OPERATIONS 
+    trainSupervisor =
+    ANY 
+        ttds, active 
+    WHERE
+        ttds=(UNION tr.(tr: dom(trainOccupationVSSFront) | TtdOfVss(trainOccupationVSSRear(tr))..TtdOfVss(trainOccupationVSSFront(tr))))
+        & supervisor = TRUE
+        & active: BOOL
+        
+        & supervisor=TRUE
+    THEN
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ||
+        supervisor := active
+  END ;
+
+
+trainEntring =
+    ANY tr 
+    WHERE
+      supervisor = FALSE
+      & tr: TRAINS - dom(trainOccupationVSSFront) 
+      & tr : Trains
+    THEN
+      supervisor := TRUE ||
+      trainOccupationVSSFront(tr) := minVSS ||
+      trainOccupationVSSRear(tr) := minVSS ||
+      trainLocationVSSRear := 
+      IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+              trainLocationVSSRear \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSRear 
+          END ||
+      trainLocationVSSFront := 
+          IF 
+              (tr |-> TRUE) : isConnected & trainKind(tr) : {TimErtms,Ertms} 
+          THEN trainLocationVSSFront \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSFront 
+          END
+END;
+
+trainMovingInSameTTD = 
+    ANY integ, newposVSSSRear, newposVSSFront, currentVSSRear, tr, currentVSSFront
+    WHERE
+      tr: dom(trainOccupationVSSFront) 
+      & supervisor = FALSE
+      & tr : dom(trainOccupationVSSFront)
+      & currentVSSRear = trainOccupationVSSRear(tr)
+      & currentVSSFront = trainOccupationVSSFront(tr)
+      & tr : Trains
+      & newposVSSSRear |-> newposVSSFront : 
+          ({TRUE |-> {currentVSSRear |-> currentVSSFront+1}, FALSE |-> {}}
+            ( bool(currentVSSFront<max(TtdOfVss~[{TtdOfVss(currentVSSFront)}])))
+            )
+            \/
+            (
+            {TRUE |-> {currentVSSRear +1 |-> currentVSSFront},
+            FALSE |-> {}}
+            (bool( currentVSSRear <max(TtdOfVss~[{TtdOfVss(currentVSSRear)}]) &
+            currentVSSRear <currentVSSFront))
+            )
+    THEN 
+         supervisor := TRUE ||
+         trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ||
+         trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ||
+          trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ||
+         trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newposVSSSRear} ELSE trainLocationVSSRear END
+    END;
+trainMovingFrontNextTTD =
+    ANY newFrontVSS,tr
+    WHERE 
+      tr : dom(trainOccupationVSSFront)
+      & tr : Trains
+      & TtdOfVss(trainOccupationVSSFront(tr)) < maxTTD
+      & newFrontVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))+ 1}])
+      & supervisor = FALSE
+      & trainOccupationVSSFront(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))}])
+      & (tr : dom(trainLocationVSSFront)=> newFrontVSS >= trainLocationVSSFront(tr))
+    
+THEN 
+     LET  newFront  BE newFront = TtdOfVss(newFrontVSS) IN
+      trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ||
+      supervisor := TRUE ||
+      trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newFrontVSS} ELSE trainLocationVSSFront END
+      END
+    END;
+
+trainMovingRearNextTTD =
+    ANY integ,newRearVSS,tr
+    WHERE 
+      tr : dom(trainOccupationVSSFront)
+      & tr : Trains
+      & TtdOfVss(trainOccupationVSSRear(tr)) < TtdOfVss(trainOccupationVSSFront(tr))
+      & newRearVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr)) + 1}])
+      & (tr : dom(trainLocationVSSFront)=> trainOccupationVSSFront(tr) >= trainLocationVSSFront(tr))
+      & supervisor = FALSE
+      & trainOccupationVSSRear(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr))}])
+    
+THEN 
+   LET newRear BE newRear = TtdOfVss(newRearVSS) IN
+      supervisor := TRUE ||
+      trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ||
+      trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newRearVSS} ELSE trainLocationVSSRear END
+      END
+  END;
+
+  
+trainExiting = 
+    ANY tr
+    WHERE 
+      supervisor = FALSE
+      & tr : dom(trainOccupationVSSFront)
+      & trainOccupationVSSRear(tr) = maxVSS
+      & tr : Trains
+    THEN 
+      trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ||
+      trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ||
+      supervisor := TRUE ||
+      trainLocationVSSFront := {tr} <<| trainLocationVSSFront ||
+      trainLocationVSSRear := {tr} <<| trainLocationVSSRear
+  END;
+
+  
+trainConnect = 
+    ANY tr 
+    WHERE
+      tr : Trains
+      & trainKind(tr) : {Ertms,TimErtms}
+      & isConnected(tr) = FALSE
+      & supervisor = FALSE
+    THEN
+       isConnected := isConnected <+ {tr |-> TRUE} ||
+       supervisor := TRUE ||
+       trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ||
+       trainLocationVSSFront := trainLocationVSSFront <+ ({tr} <| trainOccupationVSSFront)
+  END;
+
+  
+trainDisconnect = 
+    ANY tr 
+    WHERE
+      tr : dom(isConnected) 
+      & isConnected(tr)=TRUE
+      & supervisor = FALSE
+    THEN
+      isConnected(tr) :=  FALSE ||
+      supervisor := TRUE 
+      END;
+
+  
+trainSplit = 
+    ANY car,vs,tr,td
+    WHERE 
+      tr : Trains
+      & tr : dom(trainOccupationVSSFront)
+      & car : Cars - dom(trainOccupationVSSFront)
+      & vs : Vss
+      & vs : trainOccupationVSSRear(tr)..trainOccupationVSSFront(tr)
+      & supervisor = TRUE
+      & /* @M2:grd5 */ FALSE = TRUE // Can comment this one?
+    // WITH 
+      //td: /* @M2:td */ 
+& td = TtdOfVss(vs) // With used
+    THEN 
+      trainOccupationVSSRear := ({tr} <<| trainOccupationVSSRear) \/ {tr |-> vs,car |-> trainOccupationVSSRear(tr)} ||
+      trainOccupationVSSFront := trainOccupationVSSFront <+ {car |-> vs} ||
+      supervisor := FALSE
+  END;
+
+TimerExipation =
+    SELECT
+        supervisor = FALSE
+    THEN
+        supervisor := TRUE
+    END
+    
+END

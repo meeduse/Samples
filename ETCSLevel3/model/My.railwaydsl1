@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<railwayDSL1:Railway xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:railwayDSL1="http://www.example.org/railwayDSL1">
+  <ttds next="//@ttds.1" Id="1" virtualblock="//@virtualblock.0 //@virtualblock.1 //@virtualblock.2"/>
+  <ttds previous="//@ttds.0" next="//@ttds.2" Id="2" virtualblock="//@virtualblock.3 //@virtualblock.4"/>
+  <ttds previous="//@ttds.1" next="//@ttds.3" Id="3" virtualblock="//@virtualblock.5 //@virtualblock.6"/>
+  <ttds previous="//@ttds.2" next="//@ttds.4" Id="4" virtualblock="//@virtualblock.8 //@virtualblock.7"/>
+  <ttds previous="//@ttds.3" Id="5" virtualblock="//@virtualblock.10 //@virtualblock.9"/>
+  <train Id="1" Connected="true"/>
+  <train Id="2"/>
+  <virtualblock Id="1" trackside="//@ttds.0" next="//@virtualblock.1" VssStatus="UnknownVSS"/>
+  <virtualblock Id="2" trackside="//@ttds.0" next="//@virtualblock.2" previous="//@virtualblock.0" VssStatus="UnknownVSS"/>
+  <virtualblock Id="3" trackside="//@ttds.0" next="//@virtualblock.3" previous="//@virtualblock.1" VssStatus="UnknownVSS"/>
+  <virtualblock Id="4" trackside="//@ttds.1" next="//@virtualblock.4" previous="//@virtualblock.2" VssStatus="UnknownVSS"/>
+  <virtualblock Id="5" trackside="//@ttds.1" next="//@virtualblock.5" previous="//@virtualblock.3" VssStatus="UnknownVSS"/>
+  <virtualblock Id="6" trackside="//@ttds.2" next="//@virtualblock.6" previous="//@virtualblock.4" VssStatus="UnknownVSS"/>
+  <virtualblock Id="7" trackside="//@ttds.2" next="//@virtualblock.7" previous="//@virtualblock.5" VssStatus="UnknownVSS"/>
+  <virtualblock Id="8" trackside="//@ttds.3" next="//@virtualblock.8" previous="//@virtualblock.6" VssStatus="UnknownVSS"/>
+  <virtualblock Id="9" trackside="//@ttds.3" next="//@virtualblock.9" previous="//@virtualblock.7" VssStatus="UnknownVSS"/>
+  <virtualblock Id="10" trackside="//@ttds.4" next="//@virtualblock.10" previous="//@virtualblock.8" VssStatus="UnknownVSS"/>
+  <virtualblock Id="11" trackside="//@ttds.4" previous="//@virtualblock.9" VssStatus="UnknownVSS"/>
+</railwayDSL1:Railway>

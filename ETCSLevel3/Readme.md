@@ -1,6 +1,4 @@
-Will be edited.
-
-The Lift Sample contains the artifects used in our ICFEM 2022 conference paper: Visual Animation of B Specifications using Domain-Specific Languages
+The ETCSLevel3 Sample contains the artifects used in our SEFM 2022 conference paper: An Iterative Formal Model-Driven Approach to Railway Systems Validation - A Case Study
 
 1. Prerequits to use this project are ECLIPSE and MEEDUSE
 
@@ -8,7 +6,7 @@ MEEDUSE Installation: Link: http://vasco.imag.fr/tools/meeduse/html/index.html
 
 - Meeduse integrates the ProB tool within EMF-based frameworks like XText, Sirius, GMF. To use Meeduse:
 
-Install the Eclipse Modelling Tools. Any recent distribution should work (The Lift project is built on ECLISPE Version: 2021-03 (4.19.0)). Link: https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-modeling-tools
+Install the Eclipse Modelling Tools. Any recent distribution should work (The ETCSLevel3 project is built on ECLISPE Version: 2021-03 (4.19.0)). Link: https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-modeling-tools
 
 
 Launch your eclipse and install B4MSecure and Meeduse from the following update sites:
@@ -18,27 +16,37 @@ Launch your eclipse and install B4MSecure and Meeduse from the following update 
 See the Eclipse User Guide for instructions on how to install software from update sites:
 - https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-129.htm&cp%3D0_3_17
 
-2. Pull the https://github.com/meeduse/Samples/tree/main/Lift project from GIT
+2. Pull the https://github.com/meeduse/Samples/tree/main/ETCSLevel3 project from GIT
 
 3. When all is set up and done then you are ready to use the resourcses from GIT in Eclipse.
 
-- In Eclipse, click on File -> New -> Other -> Eclipse Modeling Framework, EMF Project -> Next -> (Give a name "abc") -> Next -> Ecore Model -> Next -> Browsw File System and then in Specs folder of Lift project choose an approach. In the folder of choosen approach, ByRefinement or BySynchronization, select liftM Ecore Model. Load it, click Next then select check & Finish.
+- In Eclipse, click on File -> New -> Other -> Eclipse Modeling Framework, EMF Project -> Next -> (Give a name "abc") -> Next -> Ecore Model -> Next -> Browsw File System and then in Specs folder of ETCSLevel3 project  select railwayDSL1 Ecore Model (This is the DSL meta-model level 3 - called DSLv3 in paper, you can use this for animation of all the Linkages). Load it, click Next then select check & Finish.
 
-- Now go to LIFT GIT Folder then specs folder -> open the approach folder: ByRefinement or BySynchronization, copy all the files except liftM Ecore Model and paste it to the "abc" eclipse project's model folder where liftM.ecore is already placed. 
+- Now go to ETCSLevel3 GIT Folder then specs folder -> open the approach folder: copy all the files except railwayDSL1 Ecore Model and paste it to the "abc" eclipse project's model folder where railwayDSL1.ecore is already placed. 
 
-- Generate the Edit and Editor: To do this, Go to  open the liftM.genmodel file from "abc" eclispe projects's model folder. When it is open, right click on the root liftM and generate all and you can see the edit, editor and test(Not required) projects generated in model explorer. 
+- Generate the Edit and Editor: To do this, Go to  open the railwayDSL1.genmodel file from "abc" eclispe projects's model folder. When it is open, right click on the root railwayDSL1 and generate all and you can see the edit, editor and test(Not required) projects generated in model explorer. 
 
-- Uploading the Sirius Represenation: Click on File -> Import -> Projects from Folder or Archive -> Next -> Directory and you here you go inside Sirius folder of GIT repository, select the myLift2.project.design folder and Finish. 
+- Uploading the Sirius Represenation: Click on File -> Import -> Projects from Folder or Archive -> Next -> Directory and you here you go inside Sirius folder of GIT repository, select the ertms_etcs.project.design folder and Finish. 
 
-- Setting up the meta-model in Sirius Project: In the model explorer under the myLift2.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> BuildingDiagram. Goto the properties of BuildingDiagram and click the meta-model tab where you can find a liftM model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the liftM.ecore and click Ok. Now save all. 
+- Setting up the meta-model in Sirius Project: In the model explorer under the ertms_etcs.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> TTD table. Goto the properties of TTD table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all. 
+
+Repeat the process which you did for TTD table; for all the tables:
+
+-> MyViewpoint -> VSS table. Goto the properties of VSS table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all.
+
+-> MyViewpoint -> State table (which is VSS state Table). Goto the properties of State table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all.
+
+-> MyViewpoint -> TTD State table (which is TTD state Table). Goto the properties of TTD State table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all.
 
 - Now it is time to goto runtime eclipse: Right click in model explorer, then click on Run As-> Eclipse Application and it will start a runtime eclipse. 
 
 - In runtime eclispe, click on New -> Other -> Sirius -> Modeling project, Next -> give a project name: "xyz" and Ok Finish. 
 
-- Now click on "xyz" folder in model explorer, click New -> Other -> Example EMF Model Creation Wizards and select the LiftM Model and click Next.  Now you have My.liftM in dialog box, put it in folder xyz and click next. Now it asks to set the root class in model object. Select Building class and click Finish. 
+- Now click on "xyz" folder in model explorer, click New -> Other -> Example EMF Model Creation Wizards and select the RailwayDSL1 Model and click Next.  Now you have My.railwayDSL1 in dialog box, put it in folder xyz and click next. Now it asks to set the root class in model object. Select Railway class and click Finish. 
 
-- If you open the My.liftM under the "xyz" folder in model explorer, you can see the model with a building. 
+- If you open the My.railwayDSL1 under the "xyz" folder in model explorer, you can see the model with a railway. 
+
+Below Text Need to be edited..............................
 
 - Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below BuildingDiagram (0) in aird editor. A window will open, select Building and Finish. The default name is New Buidling Diagram, click Ok. Now Save (ctrl+s).
 

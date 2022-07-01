@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:railwayDSL1="http://www.example.org/railwayDSL1" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_SgVF4K9lEeyEE73jN-7TOg" selectedViews="_9VwLINp9Eeym-bf_6l6TWQ _ipRHMO1REey7SNGRzMvdow _NsfkwO1xEey7SNGRzMvdow" version="14.3.1.202003261200">
+    <semanticResources>My.railwaydsl1</semanticResources>
+    <semanticResources>http://fr.liglab.vasco/b4msecure/2.0/transformation/functional/B4MSecure.transformationconfig</semanticResources>
+    <semanticResources>platform:/plugin/RailwayDSL1/model/railwayDSL1.ecore</semanticResources>
+    <semanticResources>platform:/plugin/RailwayDSL1/model/railwayDSL1.ecore.bmethod</semanticResources>
+    <semanticResources>animation/My/My.railwaydsl1.bmethod</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_9VwLINp9Eeym-bf_6l6TWQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_92rt8Np9Eeym-bf_6l6TWQ" name="new table" repPath="#_92bPQNp9Eeym-bf_6l6TWQ" changeId="bc4b7aa4-f16b-415e-bcf8-fa34c6d54b67">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vCtHANqjEeyDurOB9Szbgw" name="new TTD table" repPath="#_vCRCINqjEeyDurOB9Szbgw" changeId="d2c032d9-7fd7-4795-b07e-42f4e774790e">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xJEWkNqjEeyDurOB9Szbgw" name="new VSS table" repPath="#_xIrVANqjEeyDurOB9Szbgw" changeId="ca995fad-94ae-4486-acdc-ad4b616eb12f">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_JRwIkNt6EeyBeOquwW8dkg" name="new State table" repPath="#_JRu6cNt6EeyBeOquwW8dkg" changeId="7bf4799e-a57d-40a0-92e3-e0416f2cd3c2">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_wHU_x95nEeyfeeR42WdaFg" name="new TTD State Table" repPath="#_wHU_sN5nEeyfeeR42WdaFg" changeId="b50f02a9-1f28-4737-a7be-89cad541e88a">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_f3ycEO1nEey7SNGRzMvdow" name="DSLv1 TTD table" repPath="#_f3gIMO1nEey7SNGRzMvdow" changeId="af2b79f2-c9de-4be6-983d-cb720a4d8104">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kIEliO1nEey7SNGRzMvdow" name="DSLv1 TTD State Table" repPath="#_kHhy8O1nEey7SNGRzMvdow" changeId="b4303a8c-9747-4806-aa84-57603c81733f">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_u02u8O2AEey7SNGRzMvdow" name="DSLv3 VSS table" repPath="#_u0rIwO2AEey7SNGRzMvdow" changeId="36887df2-99fd-4a67-8d5d-e3796d7a4c0d">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_z1D5cO2AEey7SNGRzMvdow" name="DSLv3 VSS State table" repPath="#_z0Wu0O2AEey7SNGRzMvdow" changeId="9f5ebc90-18a2-4149-a6e4-f322a18b155e">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_ipRHMO1REey7SNGRzMvdow">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kQ9dwO1REey7SNGRzMvdow" name="DSLv0 TTD table" repPath="#_kP6U4O1REey7SNGRzMvdow" changeId="b57cafce-ed97-4726-b932-ef3562f1c81d">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_u4A8CO1REey7SNGRzMvdow" name="DSLv0 TTD State Table" repPath="#_u3wdUO1REey7SNGRzMvdow" changeId="3999bbe2-423a-4593-8093-5eb865440f67">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_NsfkwO1xEey7SNGRzMvdow">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_QBLkMO1xEey7SNGRzMvdow" name="DSLv2 VSS table" repPath="#_QAiD8O1xEey7SNGRzMvdow" changeId="e4cf04f3-02e8-42e4-87db-29ce4ce44492">
+        <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']"/>
+        <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_92bPQNp9Eeym-bf_6l6TWQ" headerColumnWidth="176">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_OLOTcNp-Eeym-bf_6l6TWQ" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_OLPhkNp-Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_OLRWwNp-Eeym-bf_6l6TWQ" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_OLRWwdp-Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_jP4ZANp-Eeym-bf_6l6TWQ" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_jP4ZAdp-Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_jP4ZAtp-Eeym-bf_6l6TWQ" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_jP4ZA9p-Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_HREvUNp_Eeym-bf_6l6TWQ" label="TTD 1" width="66">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_HRFWYNp_Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_HRFWYdp_Eeym-bf_6l6TWQ" label="TTD 2" width="74">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_HRFWYtp_Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_HRFWY9p_Eeym-bf_6l6TWQ" label="TTD 3" width="65">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_HRFWZNp_Eeym-bf_6l6TWQ" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_r1OmwNqVEeyDurOB9Szbgw" label="TTD 4" width="68">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_r1OmwdqVEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_uzUIgNqVEeyDurOB9Szbgw" label="TTD 5" width="71">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_uzUIgdqVEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='table']"/>
+  </table:DTable>
+  <table:DTable uid="_vCRCINqjEeyDurOB9Szbgw" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_vCRCIdqjEeyDurOB9Szbgw" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCXv0NqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_vCXv0dqjEeyDurOB9Szbgw" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCXv0tqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_vCYW4NqjEeyDurOB9Szbgw" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCbaMNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_vCbaMdqjEeyDurOB9Szbgw" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCbaMtqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_vCbaM9qjEeyDurOB9Szbgw" label="TTD 1" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCd2cNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_vCd2cdqjEeyDurOB9Szbgw" label="TTD 2" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCd2ctqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_vCd2c9qjEeyDurOB9Szbgw" label="TTD 3" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCd2dNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_vCd2ddqjEeyDurOB9Szbgw" label="TTD 4" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCd2dtqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_vCd2d9qjEeyDurOB9Szbgw" label="TTD 5" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_vCd2eNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_xIrVANqjEeyDurOB9Szbgw" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_xIrVAdqjEeyDurOB9Szbgw" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIrVAtqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_xIrVA9qjEeyDurOB9Szbgw" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIrVBNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_xIrVBdqjEeyDurOB9Szbgw" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIr8ENqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_xIr8EdqjEeyDurOB9Szbgw" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIr8EtqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_okssUNqkEeyDurOB9Szbgw" label="MA of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_LpXPANwQEeyBeOquwW8dkg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_okssUtqkEeyDurOB9Szbgw" label="MA of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_LpX2ENwQEeyBeOquwW8dkg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_xIr8E9qjEeyDurOB9Szbgw" label="VSS 1" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIvmcNqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNgNqjEeyDurOB9Szbgw" label="VSS 2" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNgdqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNgtqjEeyDurOB9Szbgw" label="VSS 3" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNg9qjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNhNqjEeyDurOB9Szbgw" label="VSS 4" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNhdqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNhtqjEeyDurOB9Szbgw" label="VSS 5" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNh9qjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNiNqjEeyDurOB9Szbgw" label="VSS 6" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNidqjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_xIwNitqjEeyDurOB9Szbgw" label="VSS 7" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_xIwNi9qjEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Jh7-4NqkEeyDurOB9Szbgw" label="VSS 8" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Jh7-4dqkEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Jh7-4tqkEeyDurOB9Szbgw" label="VSS 9" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Jh7-49qkEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Jh7-5NqkEeyDurOB9Szbgw" label="VSS 10" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Jh7-5dqkEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_Jh7-5tqkEeyDurOB9Szbgw" label="VSS 11" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Jh7-59qkEeyDurOB9Szbgw" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_JRu6cNt6EeyBeOquwW8dkg" headerColumnWidth="94">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_hRe4INt6EeyBeOquwW8dkg" label="VSS 1">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN6l0tt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_er5rFdt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgGQNt6EeyBeOquwW8dkg" label="VSS 2">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN8bANt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esC1ANt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgGQtt6EeyBeOquwW8dkg" label="VSS 3">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9CENt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esDcENt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgtUdt6EeyBeOquwW8dkg" label="VSS 4">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9CEtt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esEDINt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgtU9t6EeyBeOquwW8dkg" label="VSS 5">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9CFNt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esEqMNt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgtVdt6EeyBeOquwW8dkg" label="VSS 6">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9CFtt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esEqMdt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRgtV9t6EeyBeOquwW8dkg" label="VSS 7">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9pIdt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esFRQNt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRhUYNt6EeyBeOquwW8dkg" label="VSS 8">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9pI9t7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esFRQdt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRhUYtt6EeyBeOquwW8dkg" label="VSS 9">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN9pJdt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esF4UNt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRhUZNt6EeyBeOquwW8dkg" label="VSS 10">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN-QMdt7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esF4Udt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_hRhUZtt6EeyBeOquwW8dkg" label="VSS 11">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_EN-QM9t7EeyBeOquwW8dkg" label="UnknownVSS" column="_EN6l0Nt7EeyBeOquwW8dkg">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_esGfYNt8EeyBeOquwW8dkg" backgroundColor="246,139,139">
+          <foregroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_EN6l0Nt7EeyBeOquwW8dkg" cells="_EN6l0tt7EeyBeOquwW8dkg _EN8bANt7EeyBeOquwW8dkg _EN9CENt7EeyBeOquwW8dkg _EN9CEtt7EeyBeOquwW8dkg _EN9CFNt7EeyBeOquwW8dkg _EN9CFtt7EeyBeOquwW8dkg _EN9pIdt7EeyBeOquwW8dkg _EN9pI9t7EeyBeOquwW8dkg _EN9pJdt7EeyBeOquwW8dkg _EN-QMdt7EeyBeOquwW8dkg _EN-QM9t7EeyBeOquwW8dkg" width="97" featureName="VssStatus">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_wHU_sN5nEeyfeeR42WdaFg" headerColumnWidth="96">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_wHU_sd5nEeyfeeR42WdaFg" label="Trackside 1">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_wHU_vd5nEeyfeeR42WdaFg" label="Free" column="_wHU_u95nEeyfeeR42WdaFg">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_SG1yLN5oEeyfeeR42WdaFg" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_st5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wHU_s95nEeyfeeR42WdaFg" label="Trackside 2">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_wHU_v95nEeyfeeR42WdaFg" label="Free" column="_wHU_u95nEeyfeeR42WdaFg">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_SHJ7MN5oEeyfeeR42WdaFg" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_tN5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wHU_td5nEeyfeeR42WdaFg" label="Trackside 3">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_wHU_wd5nEeyfeeR42WdaFg" label="Free" column="_wHU_u95nEeyfeeR42WdaFg">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_SHKiQN5oEeyfeeR42WdaFg" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_tt5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wHU_t95nEeyfeeR42WdaFg" label="Trackside 4">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_wHU_w95nEeyfeeR42WdaFg" label="Free" column="_wHU_u95nEeyfeeR42WdaFg">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_SHKiQd5oEeyfeeR42WdaFg" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_uN5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wHU_ud5nEeyfeeR42WdaFg" label="Trackside 5">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_wHU_xd5nEeyfeeR42WdaFg" label="Free" column="_wHU_u95nEeyfeeR42WdaFg">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_SHLJUN5oEeyfeeR42WdaFg" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_ut5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_wHU_u95nEeyfeeR42WdaFg" label="State" cells="_wHU_vd5nEeyfeeR42WdaFg _wHU_v95nEeyfeeR42WdaFg _wHU_wd5nEeyfeeR42WdaFg _wHU_w95nEeyfeeR42WdaFg _wHU_xd5nEeyfeeR42WdaFg" width="86" featureName="TrackStatus">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_wHU_vN5nEeyfeeR42WdaFg" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+  </table:DTable>
+  <table:DTable uid="_kP6U4O1REey7SNGRzMvdow" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_kP678O1REey7SNGRzMvdow" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQlqUO1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_kQlqUe1REey7SNGRzMvdow" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQlqUu1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_kQqi0u1REey7SNGRzMvdow" label="TTD 1" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQu0QO1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_kQu0Qe1REey7SNGRzMvdow" label="TTD 2" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQu0Qu1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_kQu0Q-1REey7SNGRzMvdow" label="TTD 3" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQu0RO1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_kQu0Re1REey7SNGRzMvdow" label="TTD 4" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQu0Ru1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_kQu0R-1REey7SNGRzMvdow" label="TTD 5" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kQu0SO1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_u3wdUO1REey7SNGRzMvdow" headerColumnWidth="115">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_u3xEYO1REey7SNGRzMvdow" label="Trackside 1">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_u3ySgO1REey7SNGRzMvdow" label="Free" column="_u3xEau1REey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_u3ySge1REey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEYe1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u3xEYu1REey7SNGRzMvdow" label="Trackside 2">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_u4A8AO1REey7SNGRzMvdow" label="Free" column="_u3xEau1REey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_u4A8Ae1REey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEY-1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u3xEZO1REey7SNGRzMvdow" label="Trackside 3">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_u4A8Au1REey7SNGRzMvdow" label="Free" column="_u3xEau1REey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_u4A8A-1REey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEZe1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u3xEZu1REey7SNGRzMvdow" label="Trackside 4">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_u4A8BO1REey7SNGRzMvdow" label="Free" column="_u3xEau1REey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_u4A8Be1REey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEZ-1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u3xEaO1REey7SNGRzMvdow" label="Trackside 5">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_u4A8Bu1REey7SNGRzMvdow" label="Free" column="_u3xEau1REey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_u4A8B-1REey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEae1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_u3xEau1REey7SNGRzMvdow" label="State" cells="_u3ySgO1REey7SNGRzMvdow _u4A8AO1REey7SNGRzMvdow _u4A8Au1REey7SNGRzMvdow _u4A8BO1REey7SNGRzMvdow _u4A8Bu1REey7SNGRzMvdow" width="81" featureName="TrackStatus">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u3xEa-1REey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv0']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+  </table:DTable>
+  <table:DTable uid="_f3gIMO1nEey7SNGRzMvdow" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_3M0MUO1oEey7SNGRzMvdow" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <cells xmi:type="table:DCell" uid="_8Pwhwu1oEey7SNGRzMvdow" label="Rear" column="_f3m14-1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_8Pwhw-1oEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.1"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_BON_0O1pEey7SNGRzMvdow" label="Other" column="_f3nc8O1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_BON_0e1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="138,226,52">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.2"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_H0yEIO1pEey7SNGRzMvdow" label="Front" column="_f3nc9O1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_H0yEIe1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="77,137,20">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.0"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_H0yrMO1pEey7SNGRzMvdow" label="Other" column="_f3nc8u1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_H0yrMe1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="138,226,52">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.2"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.2"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_3M0zYO1oEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3M0zYe1oEey7SNGRzMvdow" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='train']"/>
+      <cells xmi:type="table:DCell" uid="_C-ylku1pEey7SNGRzMvdow" label="Rear" column="_f3m14-1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_C-ylk-1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.1"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_K1pNEO1pEey7SNGRzMvdow" label="Front" column="_f3nc8O1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_K1pNEe1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="77,137,20">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.0"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_3M1acO1oEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3M1ace1oEey7SNGRzMvdow" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']"/>
+      <cells xmi:type="table:DCell" uid="_--vQgu1oEey7SNGRzMvdow" label="Rear" column="_f3m14-1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_--vQg-1oEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="194,239,255">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.4"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_BON_1O1pEey7SNGRzMvdow" label="Other" column="_f3nc8O1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_BOOm4O1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="114,159,207">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.5"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_V3ETIO1pEey7SNGRzMvdow" label="Front" column="_f3nc8u1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_V3ETIe1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="39,76,114">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.3"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.3"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_3M1acu1oEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3M1ac-1oEey7SNGRzMvdow" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedLineMappings[name='trainBis']"/>
+      <cells xmi:type="table:DCell" uid="_FeSt4u1pEey7SNGRzMvdow" label="Rear" column="_f3m14-1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_FeSt4-1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="194,239,255">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.4"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_K1p0IO1pEey7SNGRzMvdow" label="Front" column="_f3nc8O1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_K1p0Ie1pEey7SNGRzMvdow" defaultBackgroundStyle="true" backgroundColor="39,76,114">
+          <backgroundStyleOrigin xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.3"/>
+        </currentStyle>
+        <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@intersection.3"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_3M1adO1oEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_f3m14-1nEey7SNGRzMvdow" label="TTD 1" cells="_8Pwhwu1oEey7SNGRzMvdow _--vQgu1oEey7SNGRzMvdow _C-ylku1pEey7SNGRzMvdow _FeSt4u1pEey7SNGRzMvdow" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_f3m15O1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_f3nc8O1nEey7SNGRzMvdow" label="TTD 2" cells="_BON_0O1pEey7SNGRzMvdow _BON_1O1pEey7SNGRzMvdow _K1pNEO1pEey7SNGRzMvdow _K1p0IO1pEey7SNGRzMvdow" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_f3nc8e1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_f3nc8u1nEey7SNGRzMvdow" label="TTD 3" cells="_H0yrMO1pEey7SNGRzMvdow _V3ETIO1pEey7SNGRzMvdow" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_f3nc8-1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_f3nc9O1nEey7SNGRzMvdow" label="TTD 4" cells="_H0yEIO1pEey7SNGRzMvdow" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_f3nc9e1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_f3nc9u1nEey7SNGRzMvdow" label="TTD 5" width="61">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_f3nc9-1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_kHhy8O1nEey7SNGRzMvdow" headerColumnWidth="108">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_kHhy8e1nEey7SNGRzMvdow" label="Trackside 1">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_kHiaC-1nEey7SNGRzMvdow" label="Occupied" column="_kHiaCe1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_kHjBEO1nEey7SNGRzMvdow" backgroundColor="255,245,181">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaAO1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_kHiaAe1nEey7SNGRzMvdow" label="Trackside 2">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_kIElgO1nEey7SNGRzMvdow" label="Occupied" column="_kHiaCe1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_kIElge1nEey7SNGRzMvdow" backgroundColor="255,245,181">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaAu1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_kHiaA-1nEey7SNGRzMvdow" label="Trackside 3">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_kIElgu1nEey7SNGRzMvdow" label="Occupied" column="_kHiaCe1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.2"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_kIElg-1nEey7SNGRzMvdow" backgroundColor="255,245,181">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaBO1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_kHiaBe1nEey7SNGRzMvdow" label="Trackside 4">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_kIElhO1nEey7SNGRzMvdow" label="Occupied" column="_kHiaCe1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.3"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_kIElhe1nEey7SNGRzMvdow" backgroundColor="255,245,181">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaBu1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_kHiaB-1nEey7SNGRzMvdow" label="Trackside 5">
+      <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedLineMappings[name='TTD']"/>
+      <cells xmi:type="table:DCell" uid="_kIElhu1nEey7SNGRzMvdow" label="Free" column="_kHiaCe1nEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <semanticElements xmi:type="railwayDSL1:Trackside" href="My.railwaydsl1#//@ttds.4"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_kIElh-1nEey7SNGRzMvdow" backgroundColor="204,242,166">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaCO1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_kHiaCe1nEey7SNGRzMvdow" label="State" cells="_kHiaC-1nEey7SNGRzMvdow _kIElgO1nEey7SNGRzMvdow _kIElgu1nEey7SNGRzMvdow _kIElhO1nEey7SNGRzMvdow _kIElhu1nEey7SNGRzMvdow" width="90" featureName="TrackStatus">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']/@ownedColumnMappings[name='State']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_kHiaCu1nEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='TTD%20State%20Table']"/>
+  </table:DTable>
+  <table:DTable uid="_QAiD8O1xEey7SNGRzMvdow" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_QAiD8e1xEey7SNGRzMvdow" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAr08O1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_QAr08e1xEey7SNGRzMvdow" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAr08u1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_QAr08-1xEey7SNGRzMvdow" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAvfUO1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_QAvfUe1xEey7SNGRzMvdow" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAvfUu1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_QAwGYO1xEey7SNGRzMvdow" label="VSS 1" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwwO1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwwe1xEey7SNGRzMvdow" label="VSS 2" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwwu1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzww-1xEey7SNGRzMvdow" label="VSS 3" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwxO1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwxe1xEey7SNGRzMvdow" label="VSS 4" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwxu1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwx-1xEey7SNGRzMvdow" label="VSS 5" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwyO1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwye1xEey7SNGRzMvdow" label="VSS 6" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwyu1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwy-1xEey7SNGRzMvdow" label="VSS 7" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwzO1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwze1xEey7SNGRzMvdow" label="VSS 8" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzwzu1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzwz-1xEey7SNGRzMvdow" label="VSS 9" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzw0O1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzw0e1xEey7SNGRzMvdow" label="VSS 10" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzw0u1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_QAzw0-1xEey7SNGRzMvdow" label="VSS 11" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_QAzw1O1xEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='DSLv2']/@ownedRepresentations[name='VSS%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_u0rIwO2AEey7SNGRzMvdow" headerColumnWidth="152">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_u0rIwe2AEey7SNGRzMvdow" label="Occupation of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0sW4O2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u0sW4e2AEey7SNGRzMvdow" label="Occupation of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='train']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0sW4u2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u0sW4-2AEey7SNGRzMvdow" label="Location of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0sW5O2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u0sW5e2AEey7SNGRzMvdow" label="Location of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='trainBis']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0sW5u2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u0sW5-2AEey7SNGRzMvdow" label="MA of Train 1">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0wBQO2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_u0wBQe2AEey7SNGRzMvdow" label="MA of Train 2">
+      <target xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <semanticElements xmi:type="railwayDSL1:Train" href="My.railwaydsl1#//@train.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedLineMappings[name='MAofTrain']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0wBQu2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woUO2AEey7SNGRzMvdow" label="VSS 1" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woUe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woUu2AEey7SNGRzMvdow" label="VSS 2" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woU-2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woVO2AEey7SNGRzMvdow" label="VSS 3" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woVe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woVu2AEey7SNGRzMvdow" label="VSS 4" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woV-2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woWO2AEey7SNGRzMvdow" label="VSS 5" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woWe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woWu2AEey7SNGRzMvdow" label="VSS 6" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woW-2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woXO2AEey7SNGRzMvdow" label="VSS 7" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woXe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woXu2AEey7SNGRzMvdow" label="VSS 8" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woX-2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woYO2AEey7SNGRzMvdow" label="VSS 9" width="60">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woYe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woYu2AEey7SNGRzMvdow" label="VSS 10" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woY-2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <columns xmi:type="table:DTargetColumn" uid="_u0woZO2AEey7SNGRzMvdow" label="VSS 11" width="67">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']/@ownedColumnMappings.0"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_u0woZe2AEey7SNGRzMvdow" labelSize="12" defaultForegroundStyle="true"/>
+    </columns>
+    <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='VSS%20table']"/>
+  </table:DTable>
+  <table:DTable uid="_z0Wu0O2AEey7SNGRzMvdow" headerColumnWidth="75">
+    <target xmi:type="railwayDSL1:Railway" href="My.railwaydsl1#/"/>
+    <lines xmi:type="table:DLine" uid="_z0XV4O2AEey7SNGRzMvdow" label="VSS 1">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z0_oAe2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.0"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z0_oAu2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A8O2AEey7SNGRzMvdow" label="VSS 2">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSYO2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.1"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSYe2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A8u2AEey7SNGRzMvdow" label="VSS 3">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSYu2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.2"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSY-2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A9O2AEey7SNGRzMvdow" label="VSS 4">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSZO2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.3"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSZe2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A9u2AEey7SNGRzMvdow" label="VSS 5">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSZu2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.4"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSZ-2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A-O2AEey7SNGRzMvdow" label="VSS 6">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSaO2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.5"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSae2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A-u2AEey7SNGRzMvdow" label="VSS 7">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSau2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.6"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSa-2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A_O2AEey7SNGRzMvdow" label="VSS 8">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSbO2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.7"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSbe2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_A_u2AEey7SNGRzMvdow" label="VSS 9">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DSbu2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.8"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSb-2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_BAO2AEey7SNGRzMvdow" label="VSS 10">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DScO2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.9"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSce2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_z0_BAu2AEey7SNGRzMvdow" label="VSS 11">
+      <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedLineMappings[name='VSS']"/>
+      <cells xmi:type="table:DCell" uid="_z1DScu2AEey7SNGRzMvdow" label="UnknownVSS" column="_z0_BBO2AEey7SNGRzMvdow">
+        <target xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+        <semanticElements xmi:type="railwayDSL1:VirtualBlock" href="My.railwaydsl1#//@virtualblock.10"/>
+        <currentStyle xmi:type="table:DCellStyle" uid="_z1DSc-2AEey7SNGRzMvdow" backgroundColor="246,139,139">
+          <backgroundStyleOrigin xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+        </currentStyle>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_z0_BBO2AEey7SNGRzMvdow" cells="_z0_oAe2AEey7SNGRzMvdow _z1DSYO2AEey7SNGRzMvdow _z1DSYu2AEey7SNGRzMvdow _z1DSZO2AEey7SNGRzMvdow _z1DSZu2AEey7SNGRzMvdow _z1DSaO2AEey7SNGRzMvdow _z1DSau2AEey7SNGRzMvdow _z1DSbO2AEey7SNGRzMvdow _z1DSbu2AEey7SNGRzMvdow _z1DScO2AEey7SNGRzMvdow _z1DScu2AEey7SNGRzMvdow" width="76" featureName="VssStatus">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']/@ownedColumnMappings[name='State']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/ertms_etcs.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='State%20table']"/>
+  </table:DTable>
+</xmi:XMI>

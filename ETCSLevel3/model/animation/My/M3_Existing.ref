@@ -1,0 +1,550 @@
+
+
+REFINEMENT M3_Existing
+REFINES M2_Existing
+    
+SETS
+    TimerValues={inactive,running,expired};
+    StateVSS={freeV,occupiedV,unknown,ambiguous}
+    
+    
+
+VARIABLES
+    
+    muteTimer,
+    lengthChange,
+    previousFrontState,
+    previousFront,
+    ghostTimer,
+    disconnectTimer,
+    MATrainRear,
+    reConnected,
+    MATrainFront,
+    waitIntegrityTimer,
+    currentStateVSS,
+    trainOccupationVSSRear,
+    trainLocationVSSFront,
+    trainLocationVSSRear,
+    trainOccupationVSSFront,
+    //trainLocationTTDRear,
+    //trainLocationTTDFront,
+    //trainOccupationTTDFront,
+    supervisor,
+    stateTTD,
+    //trainOccupationTTDRear,
+    isConnected
+    
+INVARIANT
+    MATrainRear : Trains +-> Vss
+    & MATrainFront : dom(MATrainRear) --> Vss
+    & !tr.(tr : Trains & (tr : dom(MATrainRear) & trainKind(tr) = NoErtms) => #(td1,td2).(td1 : Ttds & (td2 : Ttds & (td1 <= td2 & (MATrainRear(tr) = min((TtdOfVss~)[{td1}]) & MATrainFront(tr) = max((TtdOfVss~)[{td2}]))))))
+    & !tr.(tr : dom(MATrainRear) => MATrainRear(tr) <= MATrainFront(tr))
+    & !tr1.(tr1 : dom(MATrainFront) => !tr2.(tr2 : dom(MATrainFront) & tr1 /= tr2 & 1=1 /* LEQ_SYM_BREAK(tr1,tr2) */ => MATrainRear(tr1)..MATrainFront(tr1) /\ MATrainRear(tr2)..MATrainFront(tr2) = {}))
+    & currentStateVSS : Vss --> StateVSS
+    & lengthChange : dom(trainLocationVSSFront) --> BOOL
+    & previousFront : dom(trainLocationVSSFront) +-> Vss
+    & previousFrontState : dom(previousFront) --> StateVSS
+    & muteTimer : (trainKind~)[{TimErtms,Ertms}] --> TimerValues
+    & waitIntegrityTimer : (trainKind~)[{TimErtms,Ertms}] --> TimerValues
+    & disconnectTimer : Vss --> TimerValues
+    & ghostTimer : Ttds --> TimerValues
+    & reConnected : (trainKind~)[{Ertms,TimErtms}] --> BOOL
+    
+INITIALISATION
+    
+    stateTTD := Ttds * {occupiedT} 
+    || isConnected := (trainKind~)[{Ertms,TimErtms}] * {FALSE}
+    || supervisor := TRUE
+    || trainLocationVSSFront := {}
+    || trainOccupationVSSFront := {}
+    || trainLocationVSSRear := {}
+    || trainOccupationVSSRear := {}
+    || MATrainRear := {}
+    || MATrainFront := {}
+    || currentStateVSS := Vss * {unknown}
+    || previousFront := {}
+    || previousFrontState := {}
+    || muteTimer := (trainKind~)[{TimErtms,Ertms}] * {inactive}
+    || waitIntegrityTimer := (trainKind~)[{TimErtms,Ertms}] * {inactive}
+    || lengthChange := {}
+    || disconnectTimer := Vss * {inactive}
+    || ghostTimer := Ttds * {inactive}
+    || reConnected := (trainKind~)[{Ertms,TimErtms}] * {FALSE}
+    
+OPERATIONS
+    
+    trainSupervisor =
+    ANY 
+        ttds, active,ghostTimerStop,vss10B,vss10A,vss9A,disconnectTimerStop,vss3A,vss4B,
+        vss2A,vss1A,vss1B,stateVSS,vss7A,vss8B,vss6A,vss5A,vss4A,vss1C,ghostTimerStart,vss1D,vss1F
+    WHERE
+        ttds=(UNION tr.(tr: dom(trainOccupationVSSFront) | TtdOfVss(trainOccupationVSSRear(tr))..TtdOfVss(trainOccupationVSSFront(tr))))
+        & supervisor = TRUE
+        & active: BOOL
+        
+        
+        
+        & vss1A=
+        (UNION vs . (vs: TtdOfVss~[ttds-stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (! tr.(tr: dom(MATrainFront) => TtdOfVss(vs): MATrainRear(tr).. MATrainFront(tr)))
+                &
+                (! tr. (tr: dom(trainLocationVSSRear) =>
+                        TtdOfVss(vs)/:  TtdOfVss(trainLocationVSSRear(tr))..TtdOfVss(trainLocationVSSFront(tr)))) | {vs}))*{unknown}
+        & vss1B= (UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (# tr . (tr : dom(muteTimer) &muteTimer(tr)= expired & tr : dom(MATrainRear) & vs : MATrainRear(tr)..MATrainFront(tr) & tr: dom(trainLocationVSSFront) & vs > trainLocationVSSFront(tr))) | {vs}))*{unknown}
+        & vss1C= (UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	& (# vs1.(vs1 : Vss-{vs} & TtdOfVss(vs)=TtdOfVss(vs1) & disconnectTimer(vs1)=expired & currentStateVSS[vs+1..vs1-1 \/ vs1+1..vs-1]<: {unknown, freeV})) |  {vs}))*{unknown}
+        & vss1D=
+        (UNION vs.(vs: TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (!tr.(tr: dom(MATrainFront) => vs/:MATrainRear(tr)..MATrainFront(tr))) &
+                (# vs1.(vs1 : Vss-{vs} & TtdOfVss(vs)/=TtdOfVss(vs1) &
+                        disconnectTimer(vs1)=expired &
+                        currentStateVSS[vs+1..vs1-1 \/ vs1+1..vs-1]<: {unknown, freeV}))
+                |  {vs}
+            ))
+        * {unknown}
+        
+        &  vss1F = (UNION vs . (vs : TtdOfVss~[stateTTD~[{occupiedT}]]  &  currentStateVSS(vs)= freeV	&
+                (# td. (td: dom(ghostTimer) & ghostTimer(td)=expired &
+                        (! vs1. (vs1 : (vs+1)..min(TtdOfVss~[{td}])\/max(TtdOfVss~[{td}])..(vs-1) => currentStateVSS(vs1): {freeV, unknown}))
+                        & TtdOfVss(vs)/=td
+                    ))
+                |  {vs})
+        ) *{unknown}
+        & vss2A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= freeV &
+                (#tr. ( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr) &
+                        (tr: dom(previousFrontState) & previousFront(tr)/=vs & previousFrontState(tr)=occupiedV)
+                    )
+                )
+                |{vs}
+            )) * {occupiedV}
+        & vss3A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= freeV &
+                (#tr.( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss4A=(UNION vs.(vs :  TtdOfVss~[stateTTD~[{freeT}]-ttds] & currentStateVSS(vs)= unknown|{vs})) * {freeV}
+        & vss4B=(UNION vs.(vs :  Vss & currentStateVSS(vs)= unknown &
+                (# tr. (tr: dom(reConnected) & reConnected(tr)=TRUE &
+                        tr: dom(MATrainRear) & vs : MATrainRear(tr)..MATrainFront(tr)
+                        &
+                        (tr: dom(trainLocationVSSRear) & vs > trainLocationVSSFront(tr))
+                    ))
+                |{vs})) * {freeV}
+        & vss5A=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= unknown &
+                (#tr.( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss6A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= occupiedV &
+                (!tr.(tr: dom(trainLocationVSSRear) =>  vs/= trainLocationVSSRear(tr)
+                    )
+                )
+                |{vs}
+            ) )* {freeV}
+        & vss7A=
+        (
+            UNION vs.(vs : Vss  & currentStateVSS(vs)= occupiedV &
+                (
+                    #tr.(tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                        & trainKind(tr): {TimErtms,Ertms} &
+                        (muteTimer(tr)=expired  or isConnected(tr)=FALSE)
+                    )
+                )
+                |{vs}
+            )) * {unknown}
+        & vss8B=
+        (
+            UNION vs.(vs : Vss  & currentStateVSS(vs)= occupiedV &
+                (
+                    #tr.(tr: dom(trainLocationVSSRear) & trainLocationVSSRear(tr)/=minVSS
+                        & vs : trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                        &
+                        
+                        (currentStateVSS(trainLocationVSSRear(tr)-1)=unknown
+                            or
+                            disconnectTimer(trainLocationVSSRear(tr)-1)=expired)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss9A=(UNION vs.(vs : TtdOfVss~[stateTTD~[{freeT}]-ttds] &
+                currentStateVSS(vs)= ambiguous |{vs})) * {freeV}
+        & vss10A=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= ambiguous  &
+                (
+                    ! tr.(tr: dom(trainLocationVSSRear) =>
+                        vs < trainLocationVSSRear(tr))
+                )
+                |{vs}
+            ))
+        *{unknown}
+        & vss10B=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= ambiguous  &
+                (
+                    # tr.(tr: dom(trainLocationVSSRear) &
+                        vs : trainLocationVSSRear(tr).. trainLocationVSSFront(tr) &
+                        trainKind(tr): {TimErtms,Ertms} &
+                        (muteTimer(tr)=expired or isConnected(tr)=FALSE) &
+                        (!tr1.(tr1: dom(trainLocationVSSRear)=> vs/:trainLocationVSSRear(tr1).. trainLocationVSSFront(tr1)))
+                    )
+                )
+                |{vs}
+            ))
+        *{unknown}
+        & stateVSS = vss1A \/ (vss1B \/ (vss1C \/ (vss1D \/ (vss1F \/ ((vss3A <+ vss2A)
+                            \/ ((vss5A <+ (vss4B \/ vss4A)) \/ (((vss6A \/ vss8B) <+ vss7A) \/ ((vss10A <+ vss9A) \/ vss10B)
+                                )))))))
+        & active= (bool(stateVSS /<: currentStateVSS or
+                ((ttds*{occupiedT})\/((Ttds-ttds)*{freeT}))/=stateTTD))
+        & disconnectTimerStop={TRUE|-> {}, FALSE|->( UNION vs.(vs : Vss & disconnectTimer(vs) /= inactive| {vs}))}(active)
+        & ghostTimerStop=(UNION td.(td:Ttds & ghostTimer(td)=expired|{td}))
+        & ghostTimerStart=(UNION td.(td : ttds - stateTTD~[{occupiedT}] &
+                (!tr.(tr: dom(trainLocationVSSRear) => TtdOfVss~[{td}] /\ (trainLocationVSSRear(tr).. trainLocationVSSFront(tr))={})) &
+                (!tr.(tr : TRAINS => tr: dom(MATrainRear) & TtdOfVss~[{td}] /\  MATrainRear(tr)..MATrainFront(tr)={})) | {td}))
+        
+    THEN
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ||
+        supervisor := active ||
+        currentStateVSS:=currentStateVSS <+ (stateVSS) ||
+        previousFront:=(UNION tr.(tr: dom(trainLocationVSSFront)|{tr |-> trainLocationVSSFront(tr)})) ||
+        previousFrontState := (UNION tr. (tr: dom(trainLocationVSSFront)|
+            {tr |-> (currentStateVSS<+(stateVSS))(trainLocationVSSFront(tr))})) ||
+        disconnectTimer:=
+        (disconnectTimer<+(
+                (UNION vs.( vs : dom(stateVSS) & stateVSS(vs)=unknown &
+                        (# tr. (tr: dom(MATrainRear) &
+                                muteTimer(tr) = expired &
+                                vs : MATrainRear(tr)..MATrainFront(tr)))
+                        | {vs}))*{running}))
+        <+(((UNION vs. (vs:dom(stateVSS) & stateVSS(vs) /= unknown | {vs})) \/ disconnectTimerStop)*{inactive}) ||
+       
+        ghostTimer:=ghostTimer <+ ((ghostTimerStart*{running})\/(ghostTimerStop*{inactive}))
+    END ;
+    
+    
+    trainEntring =
+    ANY tr 
+    WHERE
+        supervisor = FALSE
+        & tr: TRAINS - dom(trainOccupationVSSFront) 
+        & tr : Trains
+        & trainKind(tr):{Ertms,TimErtms}  // =>      tr:dom(MATrainFront) & minVSS:MATrainRear(tr)..MATrainFront(tr)
+       &   isConnected(tr) = TRUE //  added by me
+    THEN
+        supervisor := TRUE ||
+        trainOccupationVSSFront(tr) := minVSS ||
+        trainOccupationVSSRear(tr) := minVSS ||
+        
+        
+       trainLocationVSSRear := 
+      IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+              trainLocationVSSRear \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSRear 
+          END ||
+      trainLocationVSSFront := 
+          IF 
+              (tr |-> TRUE) : isConnected & trainKind(tr) : {TimErtms,Ertms} 
+          THEN trainLocationVSSFront \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSFront 
+          END ||
+        
+        
+        muteTimer := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN muteTimer <+ {tr 
+                |-> running} ELSE muteTimer END
+        ||
+        lengthChange := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN lengthChange 
+            <+ {tr |-> FALSE} ELSE lengthChange END
+    END;
+    
+    trainMovingInSameTTD = 
+    ANY integ, newposVSSSRear, newposVSSFront, currentVSSRear, tr, currentVSSFront, lengch
+    WHERE
+    
+ supervisor = FALSE
+        & tr : dom(trainOccupationVSSFront)
+       & currentVSSRear = trainOccupationVSSRear(tr) & currentVSSFront = trainOccupationVSSFront(tr)
+        & tr : Trains
+       & newposVSSSRear |-> newposVSSFront : 
+        ({TRUE |-> {currentVSSRear |-> currentVSSFront+1}, FALSE |-> {}}
+            ( bool(currentVSSFront<max(TtdOfVss~[{TtdOfVss(currentVSSFront)}])))
+           )
+           \/
+           (
+           {TRUE |-> {currentVSSRear +1 |-> currentVSSFront},
+            FALSE |-> {}}
+           (bool( currentVSSRear <max(TtdOfVss~[{TtdOfVss(currentVSSRear)}]) &
+           currentVSSRear <currentVSSFront))
+            )
+    & integ : BOOL
+    & tr : dom(MATrainFront)  // => newposVSSFront : MATrainRear(tr)..MATrainFront(tr) //problem in predicate
+       & lengch : BOOL  & lengch = FALSE
+      & integ=TRUE
+        
+    THEN 
+        supervisor := TRUE ||
+        trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ||
+        trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ||
+      
+      trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ||
+        trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newposVSSSRear} ELSE trainLocationVSSRear END
+        ||
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer <+ {tr |-> running} ELSE muteTimer END
+        ||
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer or lengch = TRUE))}(bool(integ = TRUE))
+        ||
+        lengthChange := IF tr |-> TRUE : isConnected THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange END
+ 
+        
+    END ;
+    trainMovingFrontNextTTD =
+    ANY integ,newFrontVSS,tr,lengch
+    WHERE 
+        tr : dom(trainOccupationVSSFront)
+        & tr : Trains
+        & TtdOfVss(trainOccupationVSSFront(tr)) < maxTTD
+        & newFrontVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))+ 1}])
+        & supervisor = FALSE
+        & trainOccupationVSSFront(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))}])
+        & (tr : dom(trainLocationVSSFront)=> newFrontVSS >= trainLocationVSSFront(tr))
+       
+        & (tr : dom(MATrainFront) => newFrontVSS : MATrainRear(tr) ..MATrainFront(tr))
+        & lengch = FALSE
+        &  integ = TRUE
+        
+    THEN 
+
+  LET  newFront  BE newFront = TtdOfVss(newFrontVSS) IN
+        trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ||
+        supervisor := TRUE ||
+        trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newFrontVSS} ELSE trainLocationVSSFront END
+        ||
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer 
+            <+ {tr |-> running} ELSE muteTimer END
+        ||
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer 
+                    <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer & lengch = TRUE))}(bool(integ = TRUE))
+        ||
+        lengthChange := IF tr |-> TRUE : isConnected THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange  END
+        
+END
+        
+    END;
+    
+    trainMovingRearNextTTD =
+    ANY integ,newRearVSS,tr,lengch
+    WHERE 
+        tr : dom(trainOccupationVSSFront)
+        & tr : Trains
+        & TtdOfVss(trainOccupationVSSRear(tr)) < TtdOfVss(trainOccupationVSSFront(tr))
+        & newRearVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr)) + 1}])
+        & (tr : dom(trainLocationVSSFront)=> trainOccupationVSSFront(tr) >= trainLocationVSSFront(tr))
+        & supervisor = FALSE
+        & trainOccupationVSSRear(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr))}])
+        
+        
+        & lengch:BOOL  & lengch=FALSE
+        & integ=TRUE
+    THEN 
+
+LET newRear BE newRear = TtdOfVss(newRearVSS) IN
+        supervisor := TRUE ||
+        trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ||
+        trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newRearVSS} ELSE trainLocationVSSRear END  ||
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer 
+            <+ {tr |-> running} ELSE muteTimer END
+        ||
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer 
+                    <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,
+                            Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer & lengch = TRUE))}(bool(integ = TRUE))
+        ||
+        lengthChange := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN lengthChange 
+            <+ {tr |-> FALSE} ELSE lengthChange END
+	END
+    END;
+    
+    
+    trainExiting = 
+    ANY tr
+    WHERE 
+        supervisor = FALSE
+        & tr : dom(trainOccupationVSSFront)
+        & trainOccupationVSSRear(tr) = maxVSS
+        & tr : Trains
+    THEN 
+        trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ||
+        trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ||
+        supervisor := TRUE ||
+        trainLocationVSSFront := {tr} <<| trainLocationVSSFront ||
+        trainLocationVSSRear := {tr} <<| trainLocationVSSRear ||
+        previousFront := {tr} <<| previousFront
+        ||
+        previousFrontState := {tr} <<| previousFrontState
+        ||
+        lengthChange := {tr} <<| lengthChange
+        ||
+        waitIntegrityTimer(tr) := inactive
+        ||
+        muteTimer(tr) := inactive
+        ||
+        MATrainRear := {tr} <<| MATrainRear
+        ||
+        MATrainFront := {tr} <<| MATrainFront
+    END;
+    
+    
+    trainConnect = 
+    ANY tr 
+    WHERE
+        tr : Trains
+        & trainKind(tr) : {Ertms,TimErtms}
+        & isConnected(tr) = FALSE
+        & supervisor = FALSE
+    THEN
+        isConnected := isConnected <+ {tr |-> TRUE} ||
+        supervisor := TRUE ||
+        trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ||
+        trainLocationVSSFront := trainLocationVSSFront <+ ({tr} <| trainOccupationVSSFront)  ||
+        muteTimer := muteTimer <+ {tr |-> running}
+        ||
+        disconnectTimer := disconnectTimer <+ (Vss <| (max(trainLocationVSSRear[{tr}] \/ {0})
+                .. max(trainLocationVSSFront[{tr}] \/ {0})) * {inactive})
+        ||
+        reConnected := reConnected <+ {tr |-> bool(muteTimer(tr) /= inactive)}
+        ||
+        lengthChange := IF tr : dom(trainOccupationVSSFront) THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange END
+    END;
+    
+    
+    trainDisconnect = 
+    ANY tr 
+    WHERE
+        tr : dom(isConnected)  & isConnected(tr)=TRUE
+        & supervisor = FALSE
+       & tr: dom(trainLocationVSSRear)
+    THEN
+        isConnected(tr) :=  FALSE ||
+        supervisor := TRUE  ||
+        disconnectTimer := disconnectTimer <+ (trainLocationVSSRear(tr) .. trainLocationVSSFront(tr)) * {running} ||
+        muteTimer := muteTimer <+ {tr |-> inactive}
+    END;
+    
+    
+    trainSplit = 
+    ANY car,vs,tr,td
+    WHERE 
+        tr : Trains
+        & tr : dom(trainOccupationVSSFront)
+        & car : Cars - dom(trainOccupationVSSFront)
+        & vs : Vss
+        & vs : trainOccupationVSSRear(tr)..trainOccupationVSSFront(tr)
+        & supervisor = TRUE
+        &  FALSE = TRUE // Can comment this one?
+        //WITH 
+        //td: 
+        & td = TtdOfVss(vs) // With used
+    THEN 
+        trainOccupationVSSRear := ({tr} <<| trainOccupationVSSRear) \/ {tr |-> vs,car |-> trainOccupationVSSRear(tr)} ||
+        trainOccupationVSSFront := trainOccupationVSSFront <+ {car |-> vs} ||
+        supervisor := FALSE
+    END;
+    
+    
+    assignMANoErtmsTrain =
+    ANY tr, newFront, newRear
+    WHERE
+        tr : TRAINS & trainKind(tr) = NoErtms
+        & newFront : max(TtdOfVss[MATrainFront[{tr}]] \/ {minTTD}).. maxTTD
+        & newRear : max(TtdOfVss[MATrainRear[{tr}]] \/ {minTTD})..maxTTD
+        & newRear <= newFront
+        & !tr1.(tr1 : dom(MATrainFront) & tr1 /= tr => min((TtdOfVss~)[{newRear}])
+            .. max((TtdOfVss~)[{newFront}]) /\ MATrainRear(tr1).. MATrainFront(tr1) = {})
+        & max(MATrainFront[{tr}] \/ {minTTD}) .. newFront <: (stateTTD~)[{freeT}]
+    THEN 
+        MATrainRear := MATrainRear <+ {tr |-> min((TtdOfVss~)[{newRear}])} ||
+        MATrainFront := MATrainFront <+ {tr |-> max((TtdOfVss~)[{newFront}])}
+    END;
+    
+    
+    
+    assignMAErtmsTrain = 
+    ANY tr,newFront
+    WHERE 
+        tr : dom(isConnected)
+        & isConnected(tr) = TRUE
+        & trainKind(tr) /= NoErtms
+        & newFront : Vss
+        & newFront : max(trainLocationVSSFront[{tr}] \/ (MATrainFront[{tr}] \/{minVSS})
+        )..max(Vss)
+        & !tr1.(tr1 : dom(MATrainFront) & tr1 /= tr => max(trainLocationVSSRear[{tr}] 
+                \/{minVSS})..newFront /\ MATrainRear(tr1) .. MATrainFront(tr1) = {})
+        & max(trainLocationVSSRear[{tr}] \/ {minVSS}) ‥ newFront <: (currentStateVSS~)
+        [{freeV}]
+    THEN 
+        MATrainRear := MATrainRear <+ {tr |-> max(trainLocationVSSRear[{tr}] \/ {minVSS})} ||
+        MATrainFront := MATrainFront <+ {tr |-> newFront}
+    END;
+    
+    muteTimerExpire = 
+    ANY tr
+    WHERE 
+        supervisor = FALSE
+        &  tr : dom(trainLocationVSSRear)
+        & tr : dom(muteTimer)
+        & muteTimer(tr) = running
+        & tr : dom(isConnected)
+        & isConnected(tr) = FALSE
+    THEN 
+        supervisor := TRUE ||
+        muteTimer := muteTimer <+ {tr |-> expired} || 
+        disconnectTimer:=
+        disconnectTimer<+(
+            (UNION vs.(vs : trainLocationVSSRear(tr)..trainLocationVSSFront(tr) &
+                    tr /: dom(MATrainRear) ∣ {vs}))*{running})
+        
+    END; 
+    
+    disconectTimerExpire = 
+    ANY tr
+    WHERE 
+        supervisor = FALSE
+        & tr : dom(trainLocationVSSRear)
+        & disconnectTimer[trainLocationVSSRear(tr) .. trainLocationVSSFront(tr)] = {running}
+    THEN 
+        supervisor := TRUE ||
+        disconnectTimer := disconnectTimer <+ (trainLocationVSSRear(tr) ..trainLocationVSSFront(tr)) * {expired} 
+    END;
+    
+    ghostTimerExpire = 
+    ANY td
+    WHERE 
+        supervisor = FALSE
+        & td : Ttds
+        & ghostTimer(td) = running
+    THEN 
+        supervisor := TRUE ||
+        ghostTimer := ghostTimer <+ {td |-> expired}
+    END 
+    
+END
