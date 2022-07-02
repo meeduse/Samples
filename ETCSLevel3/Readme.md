@@ -22,13 +22,13 @@ See the Eclipse User Guide for instructions on how to install software from upda
 
 - In Eclipse, click on File -> New -> Other -> Eclipse Modeling Framework, EMF Project -> Next -> (Give a name "abc") -> Next -> Ecore Model -> Next -> Browsw File System and then in Specs folder of ETCSLevel3 project  select railwayDSL1 Ecore Model (This is the DSL meta-model level 3 - called DSLv3 in paper, you can use this for animation of all the Linkages). Load it, click Next then select check & Finish.
 
-- Now go to ETCSLevel3 GIT Folder then specs folder -> open the approach folder: copy all the files except railwayDSL1 Ecore Model and paste it to the "abc" eclipse project's model folder where railwayDSL1.ecore is already placed. 
+- Now go to ETCSLevel3 GIT Folder then specs folder ->  copy all the files except railwayDSL1 Ecore Model and paste it to the "abc" eclipse project's model folder where railwayDSL1.ecore is already placed. 
 
-- Generate the Edit and Editor: To do this, Go to  open the railwayDSL1.genmodel file from "abc" eclispe projects's model folder. When it is open, right click on the root railwayDSL1 and generate all and you can see the edit, editor and test(Not required) projects generated in model explorer. 
+- Generate the Edit and Editor: To do this, Go to  open the railwayDSL1.genmodel file from "abc" eclispe projects's model folder. When it is open, right click on the root RailwayDSL1 and generate all and you can see the edit, editor and test(Not required) projects generated in model explorer. 
 
-- Uploading the Sirius Represenation: Click on File -> Import -> Projects from Folder or Archive -> Next -> Directory and you here you go inside Sirius folder of GIT repository, select the ertms_etcs.project.design folder and Finish. 
+- Uploading the Sirius Represenation: Click on File -> Import -> General-> Projects from Folder or Archive -> Next -> Directory: and you here you go inside Sirius folder of GIT repository, select the ertms_etcs.project.design folder and Finish. 
 
-- Setting up the meta-model in Sirius Project: In the model explorer under the ertms_etcs.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> TTD table. Goto the properties of TTD table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all. 
+- Setting up the meta-model in Sirius Project: In the model explorer under the ertms_etcs.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> TTD table. Goto the properties of TTD table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all (CTRL+S). 
 
 Repeat the process which you did for TTD table; for all the tables:
 
@@ -38,42 +38,47 @@ Repeat the process which you did for TTD table; for all the tables:
 
 -> MyViewpoint -> TTD State table (which is TTD state Table). Goto the properties of TTD State table and click the meta-model tab where you can find a railwayDSL1 model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the railwayDSL1.ecore and click Ok. Now save all.
 
-- Now it is time to goto runtime eclipse: Right click in model explorer, then click on Run As-> Eclipse Application and it will start a runtime eclipse. 
+- Now it is time to goto runtime eclipse: Right click in model explorer, then click on Run As-> Run Configurations. It will open the Run Configurations window. Now Right click on "Eclipse Application" Option on left side of window. And here you can select "New Configuration". Name it "RunTimeETCS" then click Apply and Run.
+It will start a runtime eclipse. 
 
 - In runtime eclispe, click on New -> Other -> Sirius -> Modeling project, Next -> give a project name: "xyz" and Ok Finish. 
 
-- Now click on "xyz" folder in model explorer, click New -> Other -> Example EMF Model Creation Wizards and select the RailwayDSL1 Model and click Next.  Now you have My.railwayDSL1 in dialog box, put it in folder xyz and click next. Now it asks to set the root class in model object. Select Railway class and click Finish. 
+- Now click on "xyz" folder in model explorer, click New -> Other -> Example EMF Model Creation Wizards and select the RailwayDSL1 Model and click Next.  Now you have My.railwaydsl1 in dialog box, put it in folder xyz and click next. Now it asks to set the root class in model object. Select Railway class and click Finish. 
 
-- If you open the My.railwayDSL1 under the "xyz" folder in model explorer, you can see the model with a railway. 
+- If you open the My.railwayDSL1 under the "xyz" folder in project explorer, you can see the model with a railway. 
 
-Below Text Need to be edited..............................
 
-- Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below BuildingDiagram (0) in aird editor. A window will open, select Building and Finish. The default name is New Buidling Diagram, click Ok. Now Save (ctrl+s).
 
-- Now you will have an empty building without any floors and lift, which can be seen like in below screenshot.
+- Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below TTD table (0) in aird editor. A window will open, select Railway and Finish. The default name is new TTD table, click Ok. Now Save (ctrl+s). The TTD tableis opened. Do the same process for all tables: VSS table, State Table and TTD State Table, double click on them. Select Railway and click Ok. Ctrl+S. Now you can see all of your tables but they are empty. 
+
+- Now you will have an empty Railway model without any Trains, TTDs and VSSs. Double Click on My.railwayDSL1 in project explorer which open the model that can be seen like in below screenshot.
 
 ![Screenshot](./Images/screenShot1.png)
 
-- Click on Building -> Child -> Floor and set Floor Id to 1 in properties and ctrl+s. and your representation looks like as below screenshot.
+- Click on Railway -> New Child -> Trackside and set Id of Trackside to 1 in properties and ctrl+s. and your representation looks like as below screenshot.
 
 ![Screenshot](./Images/screenShot2.png)
 
-- Add two more floors and arranage them like as in below screenshot. 
+- Add two more Tracksides (Set Ids to 2 and 3) and set Next of Trackside 2 to Trackside 3. And them Previous of Trackside to Trackside 1 and Ctrl+3. Now Add two trains: Click on Railway -> New Child -> Train and set their Ids to 1 and 2 respectively (By default their Kind is TIMSERTMS). and Ctrl+S. and now your model look like this.
 
 ![Screenshot](./Images/screenShot3.png)
 
-- Now click at building and add a child Lift and set the Id as Lift 1  and set also the position to Floor 1. 
+- It is time to add the VSSs. Like Trackside, now add Virtual Block. Add 6 Virtual Blocks and set their Ids from 1 to 6. Also set their Previous and Next such that Virtual Block 1 next is 2, 2s next is 3, 3s is 4, 4s is 5 and 5s is 6. Ctrl+s.
 
-- Now add a cabin to each floor by clicking on Floor -> New Child -> cabin and in properties of each cabin sets the belongsTo(property) to Lift 1. (Ctrl+s)
+-  Set the Tracksie of Virtual Blocks 1 and 2 to Trackside 1. Virtual Blocks 3 and 4 to Trackside 2. Virtual Blocks 5 and 6 to Trackside 3 (ctrl+s). and your model looks like in screenshot below:
 
-- Once the cabins are added, the representation will look like the below screenshot.
+![Screenshot](./Images/screenShot4.png)
+
+Now arrange your Tables in a way shown in screenshot below:
 
 ![Screenshot](./Images/screenShot5.png)
 
-- You need to arrange the representation as following screenshot (Note: set the zoom level to 50% if your screen is smaller).
+ 
 
-![Screenshot](./Images/screenShot6.png)
+- Now in Project explorer on left side of the eclispe application, under My.railwaydsl1 -> right click on Railway -> Execute Model -> and here you will see all the B machines. You have to select from Linkage0.ref, Linkage1.ref, Linkage2.ref and Linkage3.ref.
 
-Once your model and representation are ready. Now right click on either model or representation, click on Execute Model -> Linkage_Refinement.ref / Linkage_Synchronization.ref and in the prompted dialog box, you have the option to generate injected machine (you can click it if you want to generate the injected valued machine). Enter Finish and the it open the Meeduse Perspective. You can play with visualization using the operations in execution view. You can also randomly animatie by clicking the green play button -> Random animation with invariant checking. Below is a GIF which shows the animation of the LIFT. 
+Lets select th Linkage3....
 
-![GIF](./Images/GIF.gif)
+
+
+

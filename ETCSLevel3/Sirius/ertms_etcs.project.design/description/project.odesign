@@ -2,7 +2,7 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" name="project" version="12.0.0.2017041100">
   <ownedViewpoints name="MyViewpoint">
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="TTD table" domainClass="railwayDSL1::Railway" initialHeaderColumnWidth="-1">
-      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <metamodel href="../../abc/model/railwayDSL1.ecore#/"/>
       <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
         <defaultForeground>
           <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -59,7 +59,7 @@
       </intersection>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VSS table" domainClass="railwayDSL1::Railway">
-      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <metamodel href="../../abc/model/railwayDSL1.ecore#/"/>
       <ownedLineMappings name="train" domainClass="railwayDSL1::Train" semanticCandidatesExpression="feature:train" headerLabelExpression="['Occupation of Train'+' '+self.Id/]">
         <defaultForeground>
           <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -139,7 +139,7 @@
       </intersection>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="State table" domainClass="railwayDSL1::Railway">
-      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <metamodel href="../../abc/model/railwayDSL1.ecore#/"/>
       <ownedLineMappings name="VSS" domainClass="railwayDSL1::VirtualBlock" semanticCandidatesExpression="feature:virtualblock" headerLabelExpression="['VSS'+' '+self.Id/]"/>
       <ownedColumnMappings name="State" featureName="VssStatus">
         <backgroundConditionalStyle predicateExpression="[self.VssStatus=VSSStatus::UnknownVSS/]">
@@ -165,7 +165,7 @@
       </ownedColumnMappings>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="TTD State Table" domainClass="railwayDSL1::Railway">
-      <metamodel href="http://www.example.org/railwayDSL1#/"/>
+      <metamodel href="../../abc/model/railwayDSL1.ecore#/"/>
       <ownedLineMappings name="TTD" domainClass="railwayDSL1::Trackside" semanticCandidatesExpression="feature:ttds">
         <defaultForeground>
           <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
