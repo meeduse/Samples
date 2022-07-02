@@ -77,8 +77,13 @@ Now arrange your Tables in a way shown in screenshot below:
 
 - Now in Project explorer on left side of the eclispe application, under My.railwaydsl1 -> right click on Railway -> Execute Model -> and here you will see all the B machines. You have to select from Linkage0.ref, Linkage1.ref, Linkage2.ref and Linkage3.ref.
 
-Lets select th Linkage3....
+- Lets select th Linkage3. And you will get the prompted dialog box, you have the option to generate injected machine (you can click it if you want to generate the injected valued machine). Enter Finish and the it open the Meeduse Perspective. In below screenshot you can see the State View, Execution View and Execution History View from Meeduse alongside the tables. You can play with visualization using the operations in Execution view. 
+
+![Screenshot](./Images/screenShot6.png)
 
 
+ - You can also randomly animate the the model by clicking the green play button in the Execution View-> Random animation with invariant checking. Below is a GIF which shows the animation of the new VSS table and new State Table illustrating random animation of Linkage3. 
+
+![GIF](./Images/GIF.gif)
 
 
