@@ -155,9 +155,9 @@ OPERATIONS
         & active: BOOL
        
     THEN
-        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ||
-        supervisor := active ||
-      	SetSupervisionOfTrain(Linked_Railway,{TRUE|->Active,FALSE|->Deactive}(active)) ||
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ;
+        supervisor := active ;
+      	SetSupervisionOfTrain(Linked_Railway,{TRUE|->Active,FALSE|->Deactive}(active)) ;
  		BEGIN
         	SetTracksStatus(Linked_Trackside~[ttds] ,Occupied);
        	 	SetTracksStatus(Linked_Trackside~[Ttds - ttds] , Free)
@@ -185,9 +185,9 @@ OPERATIONS
       & tr: TRAINS - dom(trainOccupationVSSFront) 
       & tr : Trains
     THEN
-      supervisor := TRUE ||
-      trainOccupationVSSFront(tr) := minVSS ||
-      trainOccupationVSSRear(tr) := minVSS ||
+      supervisor := TRUE ;
+      trainOccupationVSSFront(tr) := minVSS ;
+      trainOccupationVSSRear(tr) := minVSS ;
       
       
       trainLocationVSSRear := 
@@ -196,33 +196,33 @@ OPERATIONS
               trainLocationVSSRear \/ {tr |-> minVSS} 
           ELSE 
               trainLocationVSSRear 
-          END ||
+          END ;
       trainLocationVSSFront := 
           IF 
               (tr |-> TRUE) : isConnected 
           THEN trainLocationVSSFront \/ {tr |-> minVSS} 
           ELSE 
               trainLocationVSSFront 
-          END ||
+          END ;
           
-        SetSupervisionOfTrain(Linked_Railway,Active) ||
-        SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(minVSS)) ||
-        SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(minVSS)) ||
+        SetSupervisionOfTrain(Linked_Railway,Active) ;
+        SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(minVSS)) ;
+        SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(minVSS)) ;
         IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainLocationVSSRear)
           THEN 
               SetRearVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(trainLocationVSSRear(tr)))
-          END ||
+          END ;
          IF (tr |-> TRUE) : isConnected /* added later -> */ & tr : dom(trainLocationVSSFront)
           THEN 
            	SetFrontVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(trainLocationVSSFront(tr)))
           END  
-          ||
-       SetFront2(Linked_Trains~(tr),Linked_Trackside~(minTTD)) ||
-       SetRear2(Linked_Trains~(tr),Linked_Trackside~(minTTD)) ||
+         ;
+       SetFront2(Linked_Trains~(tr),Linked_Trackside~(minTTD)) ;
+       SetRear2(Linked_Trains~(tr),Linked_Trackside~(minTTD)) ;
         IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
           THEN 
               SetRearTrackLocation2(Linked_Trains~(tr),Linked_Trackside~(minTTD))
-              END ||
+              END ;
        IF 
               (tr |-> TRUE) : isConnected 
           THEN 
@@ -252,22 +252,22 @@ OPERATIONS
             currentVSSRear <currentVSSFront))
             )
     THEN 
-         supervisor := TRUE ||
-         trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ||
-         trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ||
-         trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ||
+         supervisor := TRUE ;
+         trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ;
+         trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ;
+         trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ;
          trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newposVSSSRear} ELSE trainLocationVSSRear END
     
     	||
     	
    	SetSupervisionOfTrain(Linked_Railway,Active) 
-   	|| SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSSRear)) 
-     ||  SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSFront)) 
-    ||	IF (tr |-> TRUE) : isConnected 
+   	; SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSSRear)) 
+     ;  SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSFront)) 
+    ;	IF (tr |-> TRUE) : isConnected 
     	THEN 
     	SetFrontVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSFront))
     	 END 
-    	 ||
+    	 ;
         IF (tr |->TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
         THEN 
         SetRearVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(newposVSSSRear))
@@ -290,12 +290,12 @@ OPERATIONS
     THEN 
     
 	    LET newFront BE newFront = TtdOfVss(newFrontVSS) IN
-		      trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ||
-		      supervisor := TRUE ||
+		      trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ;
+		      supervisor := TRUE ;
 		      trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newFrontVSS} ELSE trainLocationVSSFront END
-		    ||
-		    SetSupervisionOfTrain(Linked_Railway,Active) ||
-		    SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(newFrontVSS)) ||
+		    ;
+		    SetSupervisionOfTrain(Linked_Railway,Active) ;
+		    SetVssFront2(Linked_Trains~(tr),Linked_VirtualBlock~(newFrontVSS)) ;
 		    IF (tr |-> TRUE) : isConnected 
 		    THEN 
 		    SetFrontVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(newFrontVSS)) 
@@ -318,12 +318,12 @@ OPERATIONS
     
     LET newRear BE newRear = TtdOfVss(newRearVSS) IN
    
-      supervisor := TRUE ||
-      trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ||
+      supervisor := TRUE ;
+      trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ;
       trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newRearVSS} ELSE trainLocationVSSRear END
-      ||
-      SetSupervisionOfTrain(Linked_Railway,Active) ||
-      SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(newRearVSS)) ||
+      ;
+      SetSupervisionOfTrain(Linked_Railway,Active) ;
+      SetVssRear2(Linked_Trains~(tr),Linked_VirtualBlock~(newRearVSS)) ;
       IF (tr |-> TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
       THEN 
       SetRearVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(newRearVSS))
@@ -340,22 +340,22 @@ OPERATIONS
       & trainOccupationVSSRear(tr) = maxVSS
       & tr : Trains
     THEN 
-      trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ||
-      trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ||
+      trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ;
+      trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ;
       supervisor := TRUE ||
-      trainLocationVSSFront := {tr} <<| trainLocationVSSFront ||
+      trainLocationVSSFront := {tr} <<| trainLocationVSSFront ;
       trainLocationVSSRear := {tr} <<| trainLocationVSSRear
       
-      ||
-      SetSupervisionOfTrain(Linked_Railway,Active) ||
-      UnsetVssRear(Linked_Trains~(tr)) ||
-      UnsetVssFront(Linked_Trains~(tr)) ||
-      UnsetFrontVssLocation(Linked_Trains~(tr)) ||
-      UnsetRearVssLocation(Linked_Trains~(tr)) ||
+      ;
+      SetSupervisionOfTrain(Linked_Railway,Active) ;
+      UnsetVssRear(Linked_Trains~(tr)) ;
+      UnsetVssFront(Linked_Trains~(tr)) ;
+      UnsetFrontVssLocation(Linked_Trains~(tr)) ;
+      UnsetRearVssLocation(Linked_Trains~(tr)) ;
       
-      UnsetFront(Linked_Trains~(tr))||
-      UnsetRear(Linked_Trains~(tr)) ||
-      UnsetFrontTrackLocation(Linked_Trains~(tr)) ||
+      UnsetFront(Linked_Trains~(tr));
+      UnsetRear(Linked_Trains~(tr)) ;
+      UnsetFrontTrackLocation(Linked_Trains~(tr)) ;
       UnsetRearTrackLocation(Linked_Trains~(tr))
   END;
   
@@ -369,23 +369,23 @@ OPERATIONS
       & tr : dom(trainOccupationVSSFront) // added later
       
     THEN
-       isConnected := isConnected <+ {tr |-> TRUE} ||
+       isConnected := isConnected <+ {tr |-> TRUE} ;
        supervisor := TRUE ||
-       trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ||
+       trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ;
        trainLocationVSSFront := trainLocationVSSFront <+ ({tr} <| trainOccupationVSSFront)
        
-       ||
-       SetSupervisionOfTrain(Linked_Railway,Active)||
-       SetConnected(Linked_Trains~(tr),TRUE) ||
+       ;
+       SetSupervisionOfTrain(Linked_Railway,Active);
+       SetConnected(Linked_Trains~(tr),TRUE) ;
        IF trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainOccupationVSSRear)
        THEN 
        SetRearVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(trainOccupationVSSRear(tr)))
-       END ||
-       SetFrontVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(trainOccupationVSSFront(tr)))   ||
+       END ;
+       SetFrontVssLocation2(Linked_Trains~(tr),Linked_VirtualBlock~(trainOccupationVSSFront(tr)))   ;
        
         IF trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainOccupationVSSRear)
           THEN SetRearTrackLocation2(Linked_Trains~(tr),Linked_Trackside~(TtdOfVss(trainOccupationVSSRear(tr))))
-        END ||
+        END ;
        SetFrontTrackLocation2(Linked_Trains~(tr),Linked_Trackside~(TtdOfVss(trainOccupationVSSFront(tr)))) 
        
   END;
@@ -397,10 +397,10 @@ OPERATIONS
       & isConnected(tr)=TRUE
       & supervisor = FALSE
     THEN
-      isConnected(tr) :=  FALSE ||
+      isConnected(tr) :=  FALSE ;
       supervisor := TRUE 
-      ||
-      SetSupervisionOfTrain(Linked_Railway,Active) ||
+     ;
+      SetSupervisionOfTrain(Linked_Railway,Active) ;
       SetConnected(Linked_Trains~(tr),FALSE)
   END;
 
@@ -408,7 +408,7 @@ TimerExipation =
     SELECT
         supervisor = FALSE
     THEN
-        supervisor := TRUE||
+        supervisor := TRUE;
         SetSupervisionOfTrain(Linked_Railway,Active)
     END
   

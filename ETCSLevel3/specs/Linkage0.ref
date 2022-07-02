@@ -224,7 +224,7 @@ trainDisconnect =
       & FALSE = TRUE
     THEN
       trainOccupationTTDRear := ({tr}<<|trainOccupationTTDRear) \/ {tr|->td, car|->trainOccupationTTDRear(tr)} ||
-      trainOccupationTTDFront(car) := td ||
+      trainOccupationTTDFront(car) := td ;
       supervisor := FALSE;
       SetSupervisionOfTrain(Linked_Railway,Deactive) 
   END;
