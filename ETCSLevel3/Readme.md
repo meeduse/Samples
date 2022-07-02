@@ -1,7 +1,6 @@
 The ETCSLevel3 Sample contains the artifects used in our SEFM 2022 conference paper: An Iterative Formal Model-Driven Approach to Railway Systems Validation - A Case Study
 
 1. Prerequits to use this project are ECLIPSE and MEEDUSE
-(Option: You can animate the linkage machines without graphical animation in ProB -> goto folder Samples -> ETCSLevel3 -> model -> animation -> My ; and here you can open the Linkage0, Linkage1, Linkage2 and Linkage3. Note that file railwayDSL1.mch is the DSL machine contains all the DSL concepts from DSLv0 to DSLv3).
 
 MEEDUSE Installation: Link: http://vasco.imag.fr/tools/meeduse/html/index.html
 
