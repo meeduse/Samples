@@ -59,6 +59,12 @@ INVARIANT
  
      & dom(TrainRear)  =Linked_Trains~[dom(trainOccupationTTDRear)]
 INITIALISATION
+    
+    SetSupervisionOfTrain(Linked_Railway,Active); //Always start an initialization with an active supervision
+    
+   
+   UnsetConnectedTrains(NoERTMS) ;  //To check if a NoERTMS train has Connected value then unset it in order to satisfy the invariant in Existing Spec.
+    
  ANY
         stateTTD_, trainOccupationTTDRear_, trainOccupationTTDFront_, isConnected_, supervisor_
     WHERE
