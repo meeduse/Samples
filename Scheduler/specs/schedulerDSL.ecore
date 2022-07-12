@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="schedulerDSL" nsURI="http://www.example.org/schedulerDSL" nsPrefix="schedulerDSL">
+  <eClassifiers xsi:type="ecore:EClass" name="SchedulerClass">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processes" upperBound="-1"
+        eType="#//ProcessClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Status" eType="#//StatusEnum"
+        defaultValueLiteral="Waiting"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Number" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PreviousStatus" eType="#//StatusEnum"
+        defaultValueLiteral="Waiting"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StatusEnum">
+    <eLiterals name="Waiting"/>
+    <eLiterals name="Ready" value="1"/>
+    <eLiterals name="Active" value="2"/>
+    <eLiterals name="Deleted" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

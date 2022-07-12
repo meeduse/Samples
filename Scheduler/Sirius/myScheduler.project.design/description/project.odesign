@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ProcessView" domainClass="schedulerDSL::ProcessClass" enablePopupBars="true">
+      <metamodel href="http://www.example.org/schedulerDSL#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ActiveNode" semanticCandidatesExpression="[self/]" domainClass="schedulerDSL::ProcessClass">
+          <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Active" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.Status=StatusEnum::Active/]">
+            <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Active" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="WaitingNode" semanticCandidatesExpression="[self/]" domainClass="schedulerDSL::ProcessClass">
+          <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Waiting" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.Status=StatusEnum::Waiting/]">
+            <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Waiting" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="ReadyNode" semanticCandidatesExpression="[self/]" domainClass="schedulerDSL::ProcessClass">
+          <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Ready" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.Status=StatusEnum::Ready/]">
+            <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Ready" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="DeletedNode" semanticCandidatesExpression="[self/]" domainClass="schedulerDSL::ProcessClass">
+          <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Deleted" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[self.Status=StatusEnum::Deleted/]">
+            <style xsi:type="style:DotDescription" labelSize="9" showIcon="false" labelExpression="Deleted" sizeComputationExpression="5" labelPosition="node" strokeSizeComputationExpression="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="WaitingToActive" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='WaitingNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='ActiveNode']" targetFinderExpression="[self/]" sourceFinderExpression="[self/]" domainClass="schedulerDSL::ProcessClass" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.PreviousStatus=StatusEnum::Waiting and self.Status=StatusEnum::Active/]">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="WaitingToReady" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='WaitingNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='ReadyNode']" targetFinderExpression="[self/]" sourceFinderExpression="[self/]" domainClass="schedulerDSL::ProcessClass" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.PreviousStatus=StatusEnum::Waiting and self.Status=StatusEnum::Ready/]">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="ReadyToActive" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='ReadyNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='ActiveNode']" targetFinderExpression="[self/]" sourceFinderExpression="[self/]" domainClass="schedulerDSL::ProcessClass" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.PreviousStatus=StatusEnum::Ready  and self.Status=StatusEnum::Active/]">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="ActiveToWaiting" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='ActiveNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='WaitingNode']" targetFinderExpression="[self/]" sourceFinderExpression="[self/]" domainClass="schedulerDSL::ProcessClass" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.PreviousStatus=StatusEnum::Active and self.Status=StatusEnum::Waiting/]">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="WaitingToDeleted" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='WaitingNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ProcessView']/@defaultLayer/@nodeMappings[name='DeletedNode']" targetFinderExpression="[self/]" sourceFinderExpression="[self/]" domainClass="schedulerDSL::ProcessClass" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[self.PreviousStatus=StatusEnum::Waiting  and self.Status=StatusEnum::Deleted/]">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="myScheduler.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
