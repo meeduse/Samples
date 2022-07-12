@@ -30,7 +30,8 @@ See the Eclipse User Guide for instructions on how to install software from upda
 
 - Setting up the meta-model in Sirius Project: In the model explorer under the myLift2.project.design project, open the description folder and double click the project.odesign. Once it is open, go to project folder -> MyViewpoint -> BuildingDiagram. Goto the properties of BuildingDiagram and click the meta-model tab where you can find a liftM model source with a red cross (which mean  that it is invalid). Select it and click remove. Once it is removed, click on "Add from workspace" and in the prompted dialog, click on "abc" folder. Under the model folder, select the liftM.ecore and click Ok. Now save all. 
 
-- Now it is time to goto runtime eclipse: Right click in model explorer, then click on Run As-> Eclipse Application and it will start a runtime eclipse. 
+- Now it is time to goto runtime eclipse: Right click in model explorer, then click on Run As-> Run Configurations. It will open the Run Configurations window. Now Right click on "Eclipse Application" Option on left side of window. And here you can select "New Configuration". Name it "RunTimeLift" then click Apply and Run. It will start a runtime eclipse.
+ 
 
 - In runtime eclispe, click on New -> Other -> Sirius -> Modeling project, Next -> give a project name: "xyz" and Ok Finish. 
 
