@@ -51,20 +51,20 @@ new(pp) =
 		pp /: active &
 		pp /: (ready \/ waiting) 
 	THEN
-		waiting := (waiting \/ { pp }); SetStatus(linked_process~(pp), Waiting)
-		
-	//ProcessClass_NEW2(linked_process~(pp))
+		waiting := (waiting \/ { pp }); //SetStatus(linked_process~(pp), Waiting)
+		ProcessClass_NEW2(linked_process~(pp))
 	END;
 
 del(pp) =
 	SELECT
 		pp : waiting
 	THEN
-		waiting := waiting - { pp }; //ProcessClass_Free(linked_process~(pp))
+		waiting := waiting - { pp }; 
+		ProcessClass_Free(linked_process~(pp))
 		// UnsetStatus(linked_process~(pp))
 		//DeleteProcessWaiting(linked_process~(pp))
-		SetPreviousStatus(linked_process~(pp),Waiting);
-		SetStatus(linked_process~(pp),Deleted)
+		//SetPreviousStatus(linked_process~(pp),Waiting)
+		//SetStatus(linked_process~(pp),Deleted)
 
 
 	END;

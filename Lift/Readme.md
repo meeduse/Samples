@@ -1,4 +1,4 @@
-The Lift Sample contains the artifects used in our ICFEM 2022 conference paper: Visual Animation of B Specifications using Domain-Specific Languages
+The Lift Sample contains the artifects used in our MODEVVA 2022 Workshop paper: Visual Animation of B Specifications using Executable DSLs
 
 1. Prerequits to use this project are ECLIPSE and MEEDUSE
 
