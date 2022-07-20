@@ -44,6 +44,6 @@ See the Eclipse User Guide for instructions on how to install software from upda
 - Setting up the representation: Double click on representation.aird and now you can find MyViewpoint (disabled) under the representations in aird editor. Select the MyViewpoint (disabled) and click Enable. Now your view point is enabled. Double Click on below ProcessView (0) in aird editor. A window will open, select 1st Process Class and Finish. The default name is New ProcessView, Set it to 'Process1View' click Ok. Now Save (ctrl+s). Now in Model exploerer, right click on the 2nd Process -> New Representation -> new ProcessView , Now name it Process2View Ok. Now Save (ctrl+s). 
 - Arrange it like this in below screeshot and save it: 
 
-![Screenshot](./Images/screenShot1.png)
+![Screenshot](./Images/screenShot.png)
 
 - Once your model and representation are ready. Now right click on Scheduler Class in Model Explorer , click on Execute Model -> LinkageScheduler.ref and in the prompted dialog box, you have the option to generate injected machine (you can click it if you want to generate the injected valued machine). Enter Finish and the it open the Meeduse Perspective. You can play with visualization using the operations in execution view. 
