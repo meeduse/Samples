@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.lig.vasco.generator.feature_1.0.0.202302211557.jar" id="fr.lig.vasco.generator.feature" version="1.0.0.202302211557">
+      <category name="Generator"/>
+   </feature>
+   <category-def name="Generator" label="Generator"/>
+</site>
