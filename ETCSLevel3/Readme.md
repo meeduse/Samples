@@ -1,4 +1,4 @@
-The ETCSLevel3 Sample contains the artifects used in our SEFM 2022 conference paper: An Iterative Formal Model-Driven Approach to Railway Systems Validation - A Case Study
+The ETCSLevel3 Sample contains the artifects used in our work: An Iterative Formal Model-Driven Approach to Railway Systems Validation - A Case Study
 
 1. Prerequits to use this project are ECLIPSE and MEEDUSE
 
