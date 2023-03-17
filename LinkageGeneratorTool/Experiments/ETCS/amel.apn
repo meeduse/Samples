@@ -1,0 +1,212 @@
+technique RefinementInclusion
+header {
+
+REFINEMENT Linkage0 
+
+B{   
+REFINES M0_Existing
+    
+INCLUDES railwayDSL1}B 
+
+}
+
+
+
+
+applyPattern amel.EClassToConstant(
+	Train
+	Trains)
+	
+applyPattern amel.EClassToExtendedConstant(
+	Trackside
+	Ttds
+	B{!(tk1,tk2).(tk1 : Trackside & tk2 : Trackside & (tk1|->tk2) : previous_next~ => Linked_Trackside(tk2) = Linked_Trackside(tk1) + 1}B
+)
+
+applyPattern amel.EclassToMachine(Railway)
+
+applyPattern amel.EnumToSet
+(
+Status 
+B{freeT|->Free,occupiedT|->Occupied}B
+)
+
+applyPattern amel.EnumToSet(TrainKind B{TIMSERTMS|->TimErtms, ERTMS |->Ertms, NoERTMS|->NoErtms}B )
+
+applyPattern amel.BoolAttributeToBoolVariable
+(
+	Linked_Train 
+	Connected 
+	isConnected
+)
+
+applyPattern 
+amel.EnumTypeAttributeToSetValuedVariable
+(
+	TrackStatus 
+	Linked_Trackside 
+	stateTTD 
+	Linked_Status
+)
+
+applyPattern amel.EnumTypeToBoolean(
+	B{SuperVisionOfTrain(Linked_Railway)}B Active Deactive supervisor)
+	
+applyPattern amel.ReferenceToVariable(TrainFront Linked_Train trainnOccupationTTDFront)
+
+applyPattern amel.ReferenceToVariable(TrainRear Linked_Train trainnOccupationTTDRear)
+
+BClause INITIALISATION
+B{Initialisations}B
+
+BClause OPERATIONS
+B{trainSupervisor =
+    ANY 
+        ttds, active 
+    WHERE
+        ttds=(UNION tr.(tr: dom(trainOccupationTTDFront) | trainOccupationTTDRear(tr)..trainOccupationTTDFront(tr)))
+        & supervisor = TRUE
+        & active: BOOL
+    THEN
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ;
+        SetTracksStatus(Linked_Trackside~[stateTTD~[{occupiedT}]] ,Occupied);
+        SetTracksStatus(Linked_Trackside~[stateTTD~[{freeT}]] , Free);
+        
+        supervisor := active;
+        IF (supervisor = TRUE) THEN SetSupervisionOfTrain(Linked_Railway,Active) END;
+        IF (supervisor = FALSE) THEN SetSupervisionOfTrain(Linked_Railway,Deactive) END
+  END ;
+    
+trainEntring =
+    ANY tr 
+    WHERE
+      tr: TRAINS - dom(trainOccupationTTDFront) 
+      & supervisor = FALSE
+      & tr : Trains
+    THEN
+      trainOccupationTTDFront(tr) := minTTD;
+      SetFront2(Linked_Trains~(tr),Linked_Trackside~(minTTD));
+      
+     trainOccupationTTDRear(tr) := minTTD;
+     SetRear2(Linked_Trains~(tr),Linked_Trackside~(minTTD));
+     
+     supervisor := TRUE;
+     SetSupervisionOfTrain(Linked_Railway,Active)
+  END;
+ 
+
+ trainMovingInSameTTD = 
+    ANY tr 
+    WHERE
+      tr: dom(trainOccupationTTDFront) 
+      & supervisor = FALSE 
+      & tr : Trains
+    THEN
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active) 
+  END; 
+  
+trainMovingFrontNextTTD =
+    ANY tr, newFront 
+    WHERE
+      tr : dom(trainOccupationTTDFront)
+      & trainOccupationTTDFront(tr) < maxTTD
+      & supervisor = FALSE
+      & newFront = trainOccupationTTDFront(tr) + 1
+      & tr : Trains
+    THEN
+      trainOccupationTTDFront(tr) := newFront;
+      SetFront2(Linked_Trains~(tr),Linked_Trackside~(newFront));
+      
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active)
+    
+      
+    END;
+trainMovingRearNextTTD =
+    ANY tr, newRear 
+    WHERE
+      tr : dom(trainOccupationTTDFront)
+      & trainOccupationTTDRear(tr) < trainOccupationTTDFront(tr)
+      & supervisor = FALSE
+      & newRear = trainOccupationTTDRear(tr) + 1
+      & tr : Trains
+    THEN
+      trainOccupationTTDRear(tr) := newRear;
+      SetRear2(Linked_Trains~(tr),Linked_Trackside~(newRear));
+     
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active) 
+      
+  END;
+  
+trainExiting = 
+    ANY tr 
+    WHERE
+      tr : dom(trainOccupationTTDFront)
+      & trainOccupationTTDRear(tr) = maxTTD
+      & supervisor = FALSE
+    THEN
+      trainOccupationTTDFront := {tr} <<| trainOccupationTTDFront;  
+      UnsetFront(Linked_Trains~(tr));
+      
+      trainOccupationTTDRear := {tr} <<| trainOccupationTTDRear ;
+      UnsetRear(Linked_Trains~(tr));
+      
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active)
+     
+  END;
+  
+trainConnect = 
+    ANY tr 
+    WHERE
+      tr : Trains
+      & trainKind(tr) : {Ertms,TimErtms}
+      & isConnected(tr) = FALSE
+      & supervisor = FALSE
+    THEN
+      isConnected(tr) := TRUE ;
+      SetConnecteds(Linked_Trains~[isConnected~[{TRUE}]],TRUE);
+     
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active)
+      
+  END;
+   
+trainDisconnect = 
+    ANY tr 
+    WHERE
+      tr : dom(isConnected) & isConnected(tr)=TRUE
+      & supervisor = FALSE
+    THEN
+      isConnected(tr) := FALSE ;
+      SetConnecteds(Linked_Trains~[isConnected~[{FALSE}]],FALSE);
+      
+      supervisor := TRUE;
+      SetSupervisionOfTrain(Linked_Railway,Active) 
+  END;
+  //Will not use the trainSplit in the use case?
+ trainSplit = 
+    ANY tr, car, td 
+    WHERE
+      tr : Trains & tr : dom(trainOccupationTTDFront)
+      & car : Cars -  dom(trainOccupationTTDFront)
+      & td : Ttds & td : trainOccupationTTDRear(tr)..trainOccupationTTDFront(tr)
+      & supervisor = TRUE
+      & FALSE = TRUE
+    THEN
+      trainOccupationTTDRear := ({tr}<<|trainOccupationTTDRear) \/ {tr|->td, car|->trainOccupationTTDRear(tr)} ||
+      trainOccupationTTDFront(car) := td ;
+      supervisor := FALSE;
+      SetSupervisionOfTrain(Linked_Railway,Deactive) 
+  END;
+TimerExipation =
+    SELECT
+        supervisor = FALSE
+    THEN
+        supervisor := TRUE;
+        SetSupervisionOfTrain(Linked_Railway,Active)
+
+    END 
+    }B 

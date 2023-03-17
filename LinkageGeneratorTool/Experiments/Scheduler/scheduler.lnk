@@ -1,0 +1,22 @@
+template scheduler
+pattern EClassToExtendedConstant
+(anEClass aConstant userDefined)
+alias anEClass:anEClass
+alias aConstant: aConstant
+alias consName: "Linked_"anEClass
+alias userDefined : userDefined 
+alias relation : anEClass ">->>" aConstant
+{
+	CONSTANTS: 
+	    consName
+	PROPERTIES:
+		consName ":" relation
+		" & " userDefined
+}
+pattern ReferenceToVariable(bExp aVar)
+alias bExp: bExp
+alias aVar: aVar
+{
+	INVARIANT:
+		aVar "=" bExp
+}

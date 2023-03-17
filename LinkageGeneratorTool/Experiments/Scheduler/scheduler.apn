@@ -1,0 +1,119 @@
+technique RefinementInclusion
+
+header {
+	REFINEMENT LinkageScheduler
+	B{
+		REFINES Existing_Scheduler
+		INCLUDES schedulerDSL
+	}B
+}
+
+
+
+BClause DEFINITIONS
+B{
+relationWaiting==linked_process~[waiting]*{Waiting};
+relationReady==linked_process~[ready]*{Ready};
+relationActive==linked_process~[active]*{Active}
+}B
+
+
+
+
+
+
+applyPattern scheduler.EClassToExtendedConstant(
+	PROCESSCLASS
+	PID
+	B{ card(PROCESSCLASS) = card(PID) }B
+)
+
+applyPattern scheduler.ReferenceToVariable(
+	B{linked_process[dom(Status|>{Waiting}) ]}B
+	waiting 
+)
+applyPattern scheduler.ReferenceToVariable(
+	B{linked_process[dom(Status|>{Ready}) ]}B
+	ready
+)
+applyPattern scheduler.ReferenceToVariable(	 
+	B{linked_process[dom(Status|>{Active}) ]}B
+	active
+)
+
+BClause INITIALISATION
+B{
+	ANY
+        active_, ready_, waiting_
+    WHERE
+        linked_process[dom(Status|>{Waiting}) ] = waiting_  &
+	 linked_process[dom(Status|>{Ready}) ] = ready_ &
+	 linked_process[dom(Status|>{Active}) ] = active_
+        
+    THEN
+        active := active_ ; ready := ready_ ; waiting := waiting_
+    END	
+	
+}B
+
+BClause OPERATIONS
+B{
+	new(pp) =
+	SELECT
+		pp : PID  &
+		pp /: active &
+		pp /: (ready \/ waiting) 
+	THEN
+		waiting := (waiting \/ { pp }); //SetStatus(linked_process~(pp), Waiting)
+		ProcessClass_NEW2(linked_process~(pp))
+	END;
+
+del(pp) =
+	SELECT
+		pp : waiting
+	THEN
+		waiting := waiting - { pp }; 
+		ProcessClass_Free(linked_process~(pp))
+		// UnsetStatus(linked_process~(pp))
+		//DeleteProcessWaiting(linked_process~(pp))
+		//SetPreviousStatus(linked_process~(pp),Waiting)
+		//SetStatus(linked_process~(pp),Deleted)
+
+
+	END;
+	
+ready(rr) =
+        SELECT
+                rr : waiting
+        THEN
+                waiting := (waiting - {rr}) ||
+                IF (active = {}) THEN
+                    SetPreviousStatus(linked_process~(rr),Waiting);
+                   active := {rr}; SetStatus(linked_process~(rr), Active)
+                ELSE
+                    SetPreviousStatus(linked_process~(rr),Waiting);
+                   ready := ready \/ {rr};  SetStatus(linked_process~(rr), Ready)
+                END
+        END; 
+        	
+swap =
+        SELECT
+                active /= {}
+        THEN
+                waiting := (waiting \/ active) ||
+                
+                IF (ready = {}) THEN
+                   active := {}
+                ELSE
+                   ANY pp WHERE pp : ready
+                   THEN
+                       active := {pp} ||
+                      // SetPreviousStatus(linked_process~(pp), Ready) ;
+                       ready := ready - {pp} 
+                   END 
+                END ;
+	update(relationWaiting\/relationActive\/relationReady)
+
+        END 
+	
+}B

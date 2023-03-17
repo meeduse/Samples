@@ -1,0 +1,93 @@
+template amel
+pattern EClassToConstant
+(anEClass aConstant)
+alias anEClass:anEClass
+alias aConstant: aConstant
+alias consName: "Linked_"anEClass
+alias relation : anEClass ">->>" aConstant
+{
+	CONSTANTS: 
+	    consName
+	PROPERTIES:
+		consName ":" relation
+}
+
+pattern EClassToExtendedConstant(anEClass aConstant userDefined)
+alias anEClass:anEClass
+alias aConstant: aConstant
+alias consName: "Linked_"anEClass
+alias userDefined : userDefined 
+alias relation : anEClass ">->>" aConstant
+{
+	CONSTANTS: 
+	    consName
+	PROPERTIES:
+		consName ":" relation
+		"&" userDefined
+}
+
+pattern EclassToMachine(anEClass)
+alias anEClass : anEClass
+alias consName : "Linked_"anEClass
+
+{	
+	CONSTANTS : consName 
+	PROPERTIES : consName ":" anEClass 
+	
+	
+}
+pattern EnumToSet(anEnum bExp)
+alias consName: "Linked_"anEnum
+alias bExp: bExp 
+{
+	CONSTANTS: 
+		consName
+	PROPERTIES:
+		consName "={" bExp "}"
+}
+
+pattern BoolAttributeToBoolVariable
+(consVarName anAttribute aVar)
+alias consVarName : consVarName
+alias anAttribute: anAttribute
+alias aVar: aVar
+{   
+VARIABLES: aVar
+INVARIANT: anAttribute"=("consVarName","aVar")"
+}
+
+pattern EnumTypeAttributeToSetValuedVariable
+(anAttribute consVarName1 aVar consVarName2)
+alias consVarName1 : consVarName1
+alias consVarName2 : consVarName2
+alias anAttribute: anAttribute
+alias aVar: aVar
+{
+VARIABLES: aVar
+INVARIANT: 
+anAttribute"=("consVarName1","
+			  aVar","consVarName2")"
+}
+
+pattern EnumTypeToBoolean(attributeExp aVal1 aVal2 aVar )
+alias attributeExp : attributeExp
+alias aVar : aVar
+alias aVal1 : aVal1
+alias aVal2 : aVal2
+{
+	VARIABLES: aVar
+	INVARIANT : 
+		"(" aVar "= TRUE =>" attributeExp "=" aVal1 ")"
+		"&" "(" aVar "= FALSE =>" attributeExp "=" aVal2 ")"
+		
+}
+
+pattern ReferenceToVariable(aRef consVarName aVar)
+alias consVarName : consVarName
+alias aRef: aRef
+alias aVar: aVar
+{
+	VARIABLES: aVar
+	INVARIANT:
+		"dom(" aRef ")=" consVarName "~[dom(" aVar ")]"
+}

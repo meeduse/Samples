@@ -1,0 +1,64 @@
+template MyTemplate 
+
+pattern EclassToMachine(anEClass)
+alias anEClass : anEClass
+alias varName : "linked_"anEClass
+
+{	
+	VARIABLES : varName 
+	INVARIANT : varName ":" anEClass
+	INITIALISATION : varName "::" anEClass  
+	
+}
+
+pattern EClassToBSet(anEClass aBSet userDefined)
+alias anEClass : anEClass
+alias abset : aBSet
+alias userDefined : userDefined 
+alias varName : "linked_"anEClass
+alias relation : anEClass ">->>" aBSet
+{
+	VARIABLES : anEClass
+	INVARIANT : varName ":" relation
+	INITIALISATION:
+	"ANY mapping WHERE 
+		mapping :" relation "
+	&
+	" 
+		userDefined 
+	"THEN
+	" 
+	 	varName ":= mapping
+	END"
+}
+
+pattern SingleValuedERefToSetElement
+(EReferenceExp aSetElement)
+alias EReferenceExp : EReferenceExp
+alias aSetElement : aSetElement
+{
+	INVARIANT : EReferenceExp "=" aSetElement
+}
+
+pattern MultileValuedERefToSet
+(EReferenceExp aSet)
+alias EReferenceExp : EReferenceExp
+alias aSet : aSet
+{
+	INVARIANT : EReferenceExp "=" aSet
+}
+
+pattern EnumTypeToBoolean(attributeExp bExp aVal1 aVal2)
+alias attributeExp : attributeExp
+alias bExp : bExp
+alias aVal1 : aVal1
+alias aVal2 : aVal2
+{
+	INVARIANT : 
+		"(" attributeExp "=" aVal1 "<=>" bExp "=" "FALSE" ")"
+		"&" "(" attributeExp "=" aVal2 "<=>" bExp "=" "TRUE" ")"
+}
+
+
+
+
