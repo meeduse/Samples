@@ -51,7 +51,8 @@ new(pp) =
 		pp /: active &
 		pp /: (ready \/ waiting) 
 	THEN
-		waiting := (waiting \/ { pp }); //SetStatus(linked_process~(pp), Waiting)
+		waiting := (waiting \/ { pp }); 
+		//SetStatus(linked_process~(pp), Waiting)
 		ProcessClass_NEW2(linked_process~(pp))
 	END;
 

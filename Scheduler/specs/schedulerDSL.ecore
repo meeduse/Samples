@@ -10,10 +10,13 @@
         defaultValueLiteral="Waiting"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Number" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PreviousStatus" eType="#//StatusEnum"
+        defaultValueLiteral="Waiting"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="StatusEnum">
     <eLiterals name="Waiting"/>
     <eLiterals name="Ready" value="1"/>
     <eLiterals name="Active" value="2"/>
+    <eLiterals name="Deleted" value="3"/>
   </eClassifiers>
 </ecore:EPackage>
