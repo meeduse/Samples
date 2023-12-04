@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="TabularViewpoint">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VSSTrain" domainClass="eTCSData::ETCSModel">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <ownedLineMappings name="train" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Occupation'/]"/>
+      <ownedLineMappings name="trainLocation" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Location'/]"/>
+      <ownedColumnMappings name="VSS" headerLabelExpression="['VSS ' + self.Id/]" domainClass="extractedMM::VirtualSubSection" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TdsSection))/]"/>
+      <intersection name="IntersectionFrontOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.occupyFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.occupyRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionFrontLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.locationFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrain']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.locationRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="TTDTrain" domainClass="eTCSData::ETCSModel">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <ownedLineMappings name="train" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Occupation'/]"/>
+      <ownedColumnMappings name="Tvp" headerLabelExpression="['TTD ' + self.Id/]" domainClass="extractedMM::TvpSection" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TvpSection))/]"/>
+      <intersection name="IntersectionFrontOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.occupyFront.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.occupyRear.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionOtherOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrain']/@ownedColumnMappings.0" labelExpression="Others" columnFinderExpression="aql: self.getOthers(self)">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="TTDTrainLevel2" domainClass="eTCSData::ETCSModel">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <ownedLineMappings name="train" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Occupation'/]"/>
+      <ownedLineMappings name="trainLocation" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Location'/]"/>
+      <ownedColumnMappings name="Tvp" headerLabelExpression="['TTD ' + self.Id/]" domainClass="extractedMM::TvpSection" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TvpSection))/]"/>
+      <intersection name="IntersectionFrontOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.occupyFront.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.occupyRear.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionFrontLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.locationFront.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='TTDTrainLevel2']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.locationRear.appliesToTvpsection/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VSSTrainlevel4" domainClass="eTCSData::ETCSModel">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <ownedLineMappings name="train" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Occupation'/]"/>
+      <ownedLineMappings name="trainLocation" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' Location'/]"/>
+      <ownedLineMappings name="trainMA" domainClass="eTCSData::Train" semanticCandidatesExpression="[trains/]" headerLabelExpression="[' Train' + self.Id + ' MA'/]"/>
+      <ownedColumnMappings name="VSS" headerLabelExpression="['VSS ' + self.Id/]" domainClass="extractedMM::VirtualSubSection" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TdsSection))/]"/>
+      <intersection name="IntersectionFrontOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.occupyFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearOccupation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='train']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.occupyRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionFrontLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.locationFront/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearLocation" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='trainLocation']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.locationRear/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionFrontMA" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='trainMA']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Front" columnFinderExpression="[self.frontMA/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+        </defaultBackground>
+      </intersection>
+      <intersection name="IntersectionRearMA" lineMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedLineMappings[name='trainMA']" columnMapping="//@ownedViewpoints[name='TabularViewpoint']/@ownedRepresentations[name='VSSTrainlevel4']/@ownedColumnMappings.0" labelExpression="Rear" columnFinderExpression="[self.rearMA/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+        </defaultBackground>
+      </intersection>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="TopologyViewPoint">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="TopologyDiagram" domainClass="extractedMM::DocumentRoot" enablePopupBars="true">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="TrackLinearElement" domainClass="extractedMM::LinearElement">
+          <conditionnalStyles predicateExpression="[self.longname='leftdown'/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/LeftDownTrackNew.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.longname='leftup'/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/LeftUpTrackNew.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.longname='rightdown'/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" sizeComputationExpression="=1" workspacePath="/EulynxEtcsRep.project.design/images/RightDownTrackNew.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.longname='rightup'/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/RightUpTrackNew.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.longname='straight'/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackNew.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="RouteView" domainClass="extractedMM::SectionList" enablePopupBars="true">
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="TvpSections" semanticCandidatesExpression="[self.hasSection/]" domainClass="extractedMM::TvpSection">
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_occupied).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Occupied'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackOccupiedYellow.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_vacant).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Free'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackFreeGreen.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_unknown).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Free'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackFreeGreen.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_ambigious).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Free'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackFreeGreen.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="RouteVSSView" domainClass="extractedMM::SectionList" enablePopupBars="true">
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="VssSections" semanticCandidatesExpression="[self.hasSection.eInverse()->select(oclIsKindOf(TdsSection))/]" domainClass="extractedMM::VirtualSubSection">
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_vacant).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Free'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackFreeGreen.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_occupied).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Occupied'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackOccupiedYellow.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_unknown).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Unknown'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackUnknownRed.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_ambigious).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="[self.Id + ' = Ambiguous'/]" sizeComputationExpression="-1" workspacePath="/EulynxEtcsRep.project.design/images/StraightTrackAmbiguousOrange.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="ETCSHL3ViewPoint">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="ETCSStyleSectionDiagram" domainClass="eTCSData::ETCSModel" enablePopupBars="true">
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Sections" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TvpSection))/]" domainClass="extractedMM::TvpSection">
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_occupied).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['TTD '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_unknown).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['TTD '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_ambigious).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['TTD '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_vacant).refersToTdsSection.appliesToTvpsection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['TTD '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="SubSections" semanticCandidatesExpression="[self.EulynxModel.dataPrepEntities.ownsTrackAsset->select(oclIsKindOf(TdsSection))/]" domainClass="extractedMM::VirtualSubSection">
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_vacant).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['VSS '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_occupied).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['VSS '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_unknown).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['VSS '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[SectionAndVacancy.allInstances()->select(inVacancyState=SectionVacancyTypes::E_ambigious).refersToTdsSection->includes(self)/]">
+            <style xsi:type="style:SquareDescription" labelSize="7" showIcon="false" labelExpression="['VSS '+self.Id/]" sizeComputationExpression="2" labelPosition="node" resizeKind="EAST_WEST" width="5" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="EulynxEtcsRep.project.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="ETCSModell">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="etcs" domainClass="eTCSData::ETCSModel" enablePopupBars="true">
+      <metamodel href="http://www.example.org/eTCSData#/"/>
+      <metamodel href="http://www.example.org/extractedMM#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="abc" semanticCandidatesExpression="[self.trains/]" domainClass="eTCSData::Train">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql: self.getOthers(self)" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="EulynxEtcsRep.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

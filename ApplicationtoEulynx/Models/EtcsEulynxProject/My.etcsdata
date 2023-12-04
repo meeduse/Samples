@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eTCSData:ETCSModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eTCSData="http://www.example.org/eTCSData">
+  <trains Id="1" TrainConnected="true"/>
+  <trains Id="2"/>
+  <EulynxModel href="My.extractedmm#/"/>
+</eTCSData:ETCSModel>

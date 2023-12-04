@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/ExtractedMM/src-gen" creationIcons="false" editDirectory="/ExtractedMM.edit/src-gen"
+    editorDirectory="/ExtractedMM.editor/src-gen" modelPluginID="ExtractedMM" modelName="ExtractedMM"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>extractedMM.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="ExtractedMM" disposableProviderFactory="true" ecorePackage="extractedMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//Navigability">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Navigability/Both"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Navigability/AB"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Navigability/BA"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Navigability/None"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//Usage">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Usage/start"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Usage/end"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//LeftRight">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//LeftRight/left"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//LeftRight/right"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//ApplicationDirection">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//ApplicationDirection/undefined"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//ApplicationDirection/normal"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//ApplicationDirection/reverse"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//ApplicationDirection/both"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//Side">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Side/undefined"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Side/left"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Side/right"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Side/centre"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//Side/both"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extractedMM.ecore#//SectionVacancyTypes">
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//SectionVacancyTypes/E_occupied"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//SectionVacancyTypes/E_vacant"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//SectionVacancyTypes/E_ambigious"/>
+      <genEnumLiterals ecoreEnumLiteral="extractedMM.ecore#//SectionVacancyTypes/E_unknown"/>
+    </genEnums>
+    <genClasses ecoreClass="extractedMM.ecore#//BaseObjectRSM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//BaseObjectRSM/Id"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//NamedResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//NamedResource/longname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//NamedResource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//NetworkResource"/>
+    <genClasses ecoreClass="extractedMM.ecore#//NetElement"/>
+    <genClasses ecoreClass="extractedMM.ecore#//CompositionNetElement"/>
+    <genClasses ecoreClass="extractedMM.ecore#//PositioningNetElement"/>
+    <genClasses ecoreClass="extractedMM.ecore#//LinearElement"/>
+    <genClasses ecoreClass="extractedMM.ecore#//Relation"/>
+    <genClasses ecoreClass="extractedMM.ecore#//PositionedRelation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//PositionedRelation/navigibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//PositionedRelation/positionOnA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//PositionedRelation/positionOnB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//PositionedRelation/leadsTowards"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//PositionedRelation/elementA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//PositionedRelation/elementB"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//BaseLocation"/>
+    <genClasses ecoreClass="extractedMM.ecore#//SpotLocation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//SpotLocation/associatedNetElements"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//LinearLocation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//LinearLocation/associatedNetElements"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//AreaLocation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//AreaLocation/associatedNetElements"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//AssociatedNetElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//AssociatedNetElement/netElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//AssociatedNetElement/appliesInDirection"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//AssociatedNetElement/hasLateralPosition"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//LateralPosition"/>
+    <genClasses ecoreClass="extractedMM.ecore#//LateralSide">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//LateralSide/side"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//BaseObjectEULYNX"/>
+    <genClasses ecoreClass="extractedMM.ecore#//TvpSection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//TvpSection/isLocatedAt"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//VirtualTrackAsset"/>
+    <genClasses ecoreClass="extractedMM.ecore#//TrackAsset"/>
+    <genClasses ecoreClass="extractedMM.ecore#//ConfiguredBaseObject"/>
+    <genClasses ecoreClass="extractedMM.ecore#//TdsSection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//TdsSection/appliesToTvpsection"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//TdsCompnent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//TdsCompnent/limitsTdsSection"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//VehiclePassageDetector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//VehiclePassageDetector/occupiesTdsSection"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//PhysicalTrackAsset"/>
+    <genClasses ecoreClass="extractedMM.ecore#//VssLimit"/>
+    <genClasses ecoreClass="extractedMM.ecore#//VirtualSubSection"/>
+    <genClasses ecoreClass="extractedMM.ecore#//EtcsMaSection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//EtcsMaSection/hasSectionEntryLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//Route">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Route/appliesToRouteBody"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//EtcsRoute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//EtcsRoute/hasMaSection"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//RouteBody/hasEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//RouteBody/hasExit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//RouteBody/refersToRsmRoutBody"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteBodyProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//RouteBodyProperty/appliesToRouteBody"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//SectionList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//SectionList/hasSection"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteExtremity"/>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteEntry"/>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteExit"/>
+    <genClasses ecoreClass="extractedMM.ecore#//Signal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Signal/refersToRsmSignal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Signal/hasGroupMainSignal"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//NonPhysicalSignal"/>
+    <genClasses ecoreClass="extractedMM.ecore#//VirtualSignal"/>
+    <genClasses ecoreClass="extractedMM.ecore#//NetEntity"/>
+    <genClasses ecoreClass="extractedMM.ecore#//LocatedNetEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//LocatedNetEntity/locations"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//SignalRSM"/>
+    <genClasses ecoreClass="extractedMM.ecore#//RouteBodyRSM"/>
+    <genClasses ecoreClass="extractedMM.ecore#//EtcsSignalProperties">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//EtcsSignalProperties/refersToEoA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//EtcsSignalProperties/appliesToSignal"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//EtcsEndOfAuthority"/>
+    <genClasses ecoreClass="extractedMM.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DocumentRoot/dataPrepEntities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DocumentRoot/rsmEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//DataPrepEntities">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsEtcsEndOfAuthority"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsEtcsMaSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsEtcsSignalProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsRouteBodyProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsRouteBody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsRoute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/ownsTrackAsset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//DataPrepEntities/KnowsAssetAndState"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//RsmEntities">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//RsmEntities/usesEtcsTopology"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//Topology">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Topology/usesPositionedRelation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Topology/usesNetElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Topology/usesLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Topology/ownsSignalRSM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extractedMM.ecore#//Topology/ownsRouteBodyRSM"/>
+    </genClasses>
+    <genClasses ecoreClass="extractedMM.ecore#//AssetAndState"/>
+    <genClasses ecoreClass="extractedMM.ecore#//SectionAndVacancy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extractedMM.ecore#//SectionAndVacancy/refersToTdsSection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extractedMM.ecore#//SectionAndVacancy/inVacancyState"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

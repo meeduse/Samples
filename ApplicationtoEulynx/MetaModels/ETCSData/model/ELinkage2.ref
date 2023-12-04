@@ -1,0 +1,428 @@
+REFINEMENT ELinkage2
+    
+REFINES M2_Existing
+    
+INCLUDES  eTCSData 
+
+DEFINITIONS
+
+     SET_PREF_SHOW_EVENTB_ANY_VALUES == TRUE ;
+    SET_PREF_MAXINT ==10 ;
+    SET_PREF_DEFAULT_SETSIZE == 5 ;
+    
+    TTD == HasSection[{Linked_SectionList}];
+    TTDConnecttion == ( (TvpSectionLocation;AreaAssociatedNetElements~;ToNetElement);(ElementARelation~;ElementBRelation); (TvpSectionLocation;AreaAssociatedNetElements~;ToNetElement)~);
+
+	VSS == ran(({Linked_SectionList} <| HasSection);ApplyTdsToTvp~ ) /* explain */
+	; VSSConnections == ran(fnc(LimitsTdsSection  |> VSS ))
+	; next_previous(vs1,vs2) == ((Linked_VirtualSubSection(vs1) = Linked_VirtualSubSection(vs2)+1) or (Linked_VirtualSubSection(vs1) = Linked_VirtualSubSection(vs2)-1))
+
+CONSTANTS
+   
+    Linked_SectionList,
+    Linked_Train,
+   Linked_SectionVacancyTypes ,
+    Linked_TrainKind,
+
+	Linked_ETCSModel,
+
+  Linked_TvpSection ,
+
+	//From M2
+    Linked_VirtualSubSection
+    
+    
+       
+PROPERTIES
+
+
+	
+
+                  Linked_SectionList:SectionList &
+	Linked_SectionList:{ROUTEBODYPROPERTY1} & // Setting the SectionList (Route), instances of SectionList  are called ROUTEBODYPROPERTY1, ROUTEBODYPROPERTY2 etc....
+	minTTD = 1 &
+                  maxTTD = card(ran({Linked_SectionList} <| HasSection)) &
+	Linked_Train: Train >->>Trains &
+	Linked_ETCSModel: ETCSModel &
+ 	Linked_SectionVacancyTypes = {freeT|->E_vacant,occupiedT|->E_occupied} & 
+	Linked_TrainKind={TIMSERTMS|->TimErtms, ERTMS |->Ertms, NoERTMS|->NoErtms}
+ 
+     & Linked_TvpSection: TTD >->>Ttds
+
+	 & !(tk1,tk2).(tk1 : TTD & tk2 : TTD & (tk1|->tk2) : TTDConnecttion => Linked_TvpSection(tk2) = Linked_TvpSection(tk1) + 1)
+
+	// From M2
+
+	& Linked_VirtualSubSection : VSS >->> Vss 
+	
+	& !(vs1,vs2).(vs1: VSS & vs2: VSS & vs1 /= vs2 & {vs1, vs2} :  VSSConnections => next_previous(vs1,vs2))
+
+	& !(vs1, vs2).(vs1 : VSS & vs2 : VSS & Linked_TvpSection(ApplyTdsToTvp(vs1)) > Linked_TvpSection(ApplyTdsToTvp(vs2)) => Linked_VirtualSubSection(vs1) > Linked_VirtualSubSection(vs2))
+	
+ VARIABLES
+    
+    stateTTD,
+    trainOccupationVSSFront,
+    trainOccupationVSSRear,
+    isConnected,
+    supervisor,
+    trainLocationVSSFront,
+    trainLocationVSSRear   
+ 
+INVARIANT
+
+
+
+
+	(inVacancyState~ ; VacancyToTds ;  ApplyTdsToTvp ; Linked_TvpSection) = (Linked_SectionVacancyTypes ~ ;  stateTTD~;Linked_TvpSection~;Linked_TvpSection)
+
+	&
+                   (supervisor = TRUE => SupervisionOfTrain(Linked_ETCSModel) = Active) 
+    	&  (supervisor = FALSE => SupervisionOfTrain(Linked_ETCSModel) = Deactive) 
+
+	& TrainConnected=	(Linked_Train;isConnected)
+
+	// From M2
+                  // for the link
+
+	
+
+	& dom(TrainFront)  =Linked_Train~[dom(trainOccupationVSSFront)]
+    	& dom(TrainRear)  =Linked_Train~[dom(trainOccupationVSSRear)]
+   
+   	 & dom(TrainFrontLocation)  =Linked_Train~[dom(trainLocationVSSFront)]
+   	 & dom(TrainRearLocation)  =Linked_Train~[dom(trainLocationVSSRear)]
+
+INITIALISATION
+
+SetSupervisionOfTrain(Linked_ETCSModel,Active); //Always start an initialization with an active supervision
+
+UnsetConnectedTrains(NoERTMS);  //To check if a NoERTMS train has Connected value then unset it in order to satisfy the invariant in Existing Spec.
+
+ANY  
+      stateTTD_ , supervisor_ ,  
+      isConnected_,
+      
+      
+      trainOccupationVSSFront_,
+      trainOccupationVSSRear_,
+      trainLocationVSSFront_,
+      trainLocationVSSRear_
+      
+      WHERE
+        
+      
+     trainLocationVSSFront_ : Linked_Train[dom(TrainFrontLocation)] --> Vss
+     & trainLocationVSSRear_ : Linked_Train[dom(TrainRearLocation)] --> Vss
+     & trainOccupationVSSFront_ : Linked_Train[dom(TrainFront)] --> Vss
+      & trainOccupationVSSRear_ : Linked_Train[dom(TrainRear)] --> Vss
+
+
+	
+
+     & ran((inVacancyState |> {E_vacant})~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD_  |> {freeT})
+     & ran((inVacancyState |> {E_occupied})~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD_  |> {occupiedT})
+
+   // & (Linked_Trackside[dom(TrackStatus|>{Free}) ] = dom(stateTTD_|>{freeT}))
+    // &  (Linked_Trackside[dom(TrackStatus|>{Occupied}) ] = dom(stateTTD_|>{occupiedT}))
+
+	//(inVacancyState~ ; VacancyToTds ;  ApplyTdsToTvp ; Linked_TvpSection) = (Linked_SectionVacancyTypes ~ ;  stateTTD_~;Linked_TvpSection~;Linked_TvpSection)
+
+    
+        
+   // & TrackStatus=(Linked_Trackside;stateTTD_;Linked_Status)
+       &
+ (supervisor_ = TRUE => SupervisionOfTrain(Linked_ETCSModel) = Active) 
+        &  (supervisor_ = FALSE => SupervisionOfTrain(Linked_ETCSModel) = Deactive) 
+      //   & Connected=	(Linked_Trains;isConnected_)
+        
+        &   Linked_Train[dom(TrainConnected |> {FALSE})] = dom(isConnected_ |> {FALSE}) 
+        &   Linked_Train[dom(TrainConnected |> {TRUE})] = dom(isConnected_ |> {TRUE}) 
+        
+                  & dom(TrainFront)  =Linked_Train~[dom(trainOccupationVSSFront_)]
+    	& dom(TrainRear)  =Linked_Train~[dom(trainOccupationVSSRear_)]
+   
+   	 & dom(TrainFrontLocation)  =Linked_Train~[dom(trainLocationVSSFront_)]
+   	 & dom(TrainRearLocation)  =Linked_Train~[dom(trainLocationVSSRear_)]
+     
+
+
+	
+        
+    THEN
+         stateTTD := stateTTD_
+        
+    	|| isConnected := isConnected_
+                  || supervisor := supervisor_
+        
+         
+    	|| trainOccupationVSSFront := trainOccupationVSSFront_ 
+    	|| trainOccupationVSSRear := trainOccupationVSSRear_
+    	|| trainLocationVSSFront := trainLocationVSSFront_
+    	|| trainLocationVSSRear := trainLocationVSSRear_ 
+    	
+    END  
+
+OPERATIONS 
+    trainSupervisor =
+    ANY 
+        ttds, active 
+    WHERE
+        ttds=(UNION tr.(tr: dom(trainOccupationVSSFront) | TtdOfVss(trainOccupationVSSRear(tr))..TtdOfVss(trainOccupationVSSFront(tr))))
+        & supervisor = TRUE
+        & active: BOOL
+        
+        & supervisor=TRUE
+    THEN
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ;
+        supervisor := active;
+	SetSupervisionOfTrain(Linked_ETCSModel,{TRUE|->Active,FALSE|->Deactive}(active)) ;
+	BEGIN
+		SetTvpSectionVacancyStates(Linked_TvpSection~[stateTTD~[{occupiedT}]],E_occupied);
+                  		SetTvpSectionVacancyStates(Linked_TvpSection~[stateTTD~[{freeT}]],E_vacant)
+	END
+  END ;
+
+
+trainEntring =
+    ANY tr 
+    WHERE
+      supervisor = FALSE
+      & tr: TRAINS - dom(trainOccupationVSSFront) 
+      & tr : Trains
+    THEN
+      supervisor := TRUE ;
+      trainOccupationVSSFront(tr) := minVSS ;
+      trainOccupationVSSRear(tr) := minVSS ;
+      
+      
+      trainLocationVSSRear := 
+          IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+              trainLocationVSSRear \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSRear 
+          END ;
+      trainLocationVSSFront := 
+          IF 
+              (tr |-> TRUE) : isConnected 
+          THEN trainLocationVSSFront \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSFront 
+          END ;
+          
+        SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+        SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(minVSS)) ;
+        SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(minVSS)) ;
+        IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainLocationVSSRear)
+          THEN 
+              SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainLocationVSSRear(tr)))
+          END ;
+         IF (tr |-> TRUE) : isConnected /* added later -> */ & tr : dom(trainLocationVSSFront)
+          THEN 
+           	SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainLocationVSSFront(tr)))
+          END  
+         ;
+       SetTvpSectionFront(Linked_Train~(tr),(Linked_TvpSection~(minTTD)));
+       SetTvpSectionRear(Linked_Train~(tr),(Linked_TvpSection~(minTTD)));
+       
+
+	
+        IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+               SetTvpSectionRearLocation(Linked_Train~(tr),Linked_TvpSection~(minTTD))
+              END ;
+       IF 
+              (tr |-> TRUE) : isConnected 
+          THEN 
+          
+           SetTvpSectionFrontLocation(Linked_Train~(tr),Linked_TvpSection~(minTTD))
+       END
+  END;
+  
+  trainMovingInSameTTD = 
+    ANY integ, newposVSSSRear, newposVSSFront, currentVSSRear, tr, currentVSSFront
+    WHERE
+      tr: dom(trainOccupationVSSFront) 
+      & supervisor = FALSE
+      & tr : dom(trainOccupationVSSFront)
+      & currentVSSRear = trainOccupationVSSRear(tr)
+      & currentVSSFront = trainOccupationVSSFront(tr)
+      & tr : Trains
+      & newposVSSSRear |-> newposVSSFront : 
+          ({TRUE |-> {currentVSSRear |-> currentVSSFront+1}, FALSE |-> {}}
+            ( bool(currentVSSFront<max(TtdOfVss~[{TtdOfVss(currentVSSFront)}])))
+            )
+            \/
+            (
+            {TRUE |-> {currentVSSRear +1 |-> currentVSSFront},
+            FALSE |-> {}}
+            (bool( currentVSSRear <max(TtdOfVss~[{TtdOfVss(currentVSSRear)}]) &
+            currentVSSRear <currentVSSFront))
+            )
+    THEN 
+         supervisor := TRUE ;
+         trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ;
+         trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ;
+         trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ;
+         trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newposVSSSRear} ELSE trainLocationVSSRear END
+    
+    	||
+    	
+   	SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+   	SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSSRear)) ;
+     SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSFront)) 
+    ;	IF (tr |-> TRUE) : isConnected 
+    	THEN 
+    	SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSFront))
+    	 END 
+    	 ;
+        IF (tr |->TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
+        THEN 
+        SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSSRear))
+    	END
+    
+    END ;
+  
+   trainMovingFrontNextTTD =
+    ANY newFrontVSS, tr, integ
+    WHERE 
+      tr : dom(trainOccupationVSSFront)
+      & tr : Trains
+      & TtdOfVss(trainOccupationVSSFront(tr)) < maxTTD
+      & newFrontVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))+ 1}])
+      & supervisor = FALSE
+      & trainOccupationVSSFront(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))}])
+      & (tr : dom(trainLocationVSSFront)=> newFrontVSS >= trainLocationVSSFront(tr))
+      & integ : BOOL
+    
+    THEN 
+    
+	    LET newFront BE newFront = TtdOfVss(newFrontVSS) IN
+		      trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ;
+		      supervisor := TRUE ;
+		      trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newFrontVSS} ELSE trainLocationVSSFront END
+		    ;
+		    SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+		    SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(newFrontVSS)) ;
+		    IF (tr |-> TRUE) : isConnected 
+		    THEN 
+		    SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newFrontVSS)) 
+		    END
+		 END
+
+    END;
+    
+    trainMovingRearNextTTD =
+    ANY integ,newRearVSS,tr
+    WHERE 
+      tr : dom(trainOccupationVSSFront)
+      & tr : Trains
+      & TtdOfVss(trainOccupationVSSRear(tr)) < TtdOfVss(trainOccupationVSSFront(tr))
+      & newRearVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr)) + 1}])
+      & (tr : dom(trainLocationVSSFront)=> trainOccupationVSSFront(tr) >= trainLocationVSSFront(tr))
+      & supervisor = FALSE
+      & trainOccupationVSSRear(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr))}])
+    THEN
+    
+    LET newRear BE newRear = TtdOfVss(newRearVSS) IN
+   
+      supervisor := TRUE ;
+      trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ;
+      trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newRearVSS} ELSE trainLocationVSSRear END
+      ;
+      SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+      SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(newRearVSS)) ;
+      IF (tr |-> TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
+      THEN 
+     SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newRearVSS))
+      END
+  END
+    
+ END;
+  
+ trainExiting = 
+    ANY tr
+    WHERE 
+      supervisor = FALSE
+      & tr : dom(trainOccupationVSSFront)
+      & trainOccupationVSSRear(tr) = maxVSS
+      & tr : Trains
+    THEN 
+      trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ;
+      trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ;
+      supervisor := TRUE ||
+      trainLocationVSSFront := {tr} <<| trainLocationVSSFront ;
+      trainLocationVSSRear := {tr} <<| trainLocationVSSRear
+      
+      ;
+    SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+
+     
+      
+      UnsetOccupyFront(Linked_Train~(tr));
+      UnsetOccupyRear(Linked_Train~(tr));
+      UnsetLocationFront(Linked_Train~(tr));
+      UnsetLocationRear(Linked_Train~(tr))
+  END;
+  
+  trainConnect = 
+    ANY tr 
+    WHERE
+      tr : Trains
+      & trainKind(tr) : {Ertms,TimErtms}
+      & isConnected(tr) = FALSE
+      & supervisor = FALSE
+     // & tr : dom(trainOccupationVSSFront) // added later
+      
+    THEN
+       isConnected := isConnected <+ {tr |-> TRUE} ;
+       supervisor := TRUE ||
+       trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ;
+       trainLocationVSSFront := trainLocationVSSFront <+ ({tr} <| trainOccupationVSSFront)
+       
+       ;
+       SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+
+
+      SetTrainConnected(Linked_Train~(tr),TRUE) ;
+
+
+       IF trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainOccupationVSSRear)
+       THEN 
+       SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainOccupationVSSRear(tr)))
+   END ;
+   
+       IF tr : dom(trainOccupationVSSFront) THEN
+       SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainOccupationVSSFront(tr)))  END ;
+       
+        IF trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainOccupationVSSRear)
+          THEN SetTvpSectionRearLocation(Linked_Train~(tr),Linked_TvpSection~(TtdOfVss(trainOccupationVSSRear(tr))))
+        END ;
+       SetTvpSectionFrontLocation(Linked_Train~(tr),Linked_TvpSection~(TtdOfVss(trainOccupationVSSFront(tr)))) 
+       
+  END;
+  
+  trainDisconnect = 
+    ANY tr 
+    WHERE
+      tr : dom(isConnected) 
+      & isConnected(tr)=TRUE
+      & supervisor = FALSE
+    THEN
+      isConnected(tr) :=  FALSE ;
+      supervisor := TRUE 
+     ;
+      SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+      SetTrainConnected(Linked_Train~(tr),FALSE)
+  END;
+
+TimerExipation =
+    SELECT
+        supervisor = FALSE
+    THEN
+        supervisor := TRUE;
+        SetSupervisionOfTrain(Linked_ETCSModel,Active)
+    END
+  
+END

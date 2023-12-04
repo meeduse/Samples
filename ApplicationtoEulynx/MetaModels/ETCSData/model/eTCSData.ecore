@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="eTCSData" nsURI="http://www.example.org/eTCSData" nsPrefix="eTCSData">
+  <eAnnotations source="meeduse">
+    <details key="generated" value=""/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ETCSModel">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trains" upperBound="-1"
+        eType="#//Train" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="ListOfTrains"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EulynxModel" eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//DocumentRoot">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="EulynxModels"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SupervisionOfTrain" eType="#//SupervisionStatus">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Train">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="occupyFront" upperBound="-1"
+        eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="TrainFront"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="occupyRear" upperBound="-1"
+        eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="TrainRear"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationRear" upperBound="-1"
+        eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="TrainRearLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationFront" upperBound="-1"
+        eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="TrainFrontLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontMA" eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="frontMA"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rearMA" eType="ecore:EClass ../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="association" value="rearMA"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrainConnected" eType="ecore:EDataType http://www.eclipse.org/uml2/5.0.0/Types#//Boolean">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TrainReConnected" eType="ecore:EDataType http://www.eclipse.org/uml2/5.0.0/Types#//Boolean">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="KindOfTrain" eType="#//KindOfTrains">
+      <eAnnotations source="meeduse">
+        <details key="generated"/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="KindOfTrains">
+    <eLiterals name="TIMSERTMS"/>
+    <eLiterals name="ERTMS" value="1"/>
+    <eLiterals name="NoERTMS" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SupervisionStatus">
+    <eLiterals name="Active"/>
+    <eLiterals name="Deactive" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

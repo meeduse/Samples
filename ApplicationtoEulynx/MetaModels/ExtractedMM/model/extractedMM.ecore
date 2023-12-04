@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extractedMM" nsURI="http://www.example.org/extractedMM" nsPrefix="extractedMM">
+  <eAnnotations source="meeduse">
+    <details key="generated" value=""/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseObjectRSM" abstract="true">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedResource" abstract="true" eSuperTypes="#//BaseObjectRSM">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkResource" abstract="true" eSuperTypes="#//NamedResource">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetElement" eSuperTypes="#//NetworkResource">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositionNetElement" abstract="true"
+      eSuperTypes="#//NetElement">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositioningNetElement" eSuperTypes="#//CompositionNetElement">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearElement" eSuperTypes="#//PositioningNetElement">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="#//NetworkResource">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionedRelation" eSuperTypes="#//Relation">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigibility" eType="#//Navigability">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionOnA" eType="#//Usage">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionOnB" eType="#//Usage">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leadsTowards" eType="#//LeftRight">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementA" lowerBound="1"
+        eType="#//PositioningNetElement">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="ElementARelation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementB" lowerBound="1"
+        eType="#//PositioningNetElement">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="ElementBRelation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Navigability">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eLiterals name="Both" literal="Both"/>
+    <eLiterals name="AB" value="1" literal="AB"/>
+    <eLiterals name="BA" value="2" literal="BA"/>
+    <eLiterals name="None" value="3" literal="None"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Usage">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eLiterals name="start" literal="start"/>
+    <eLiterals name="end" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LeftRight">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eLiterals name="left" literal="left"/>
+    <eLiterals name="right" value="1" literal="right"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseLocation" abstract="true" eSuperTypes="#//BaseObjectRSM">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpotLocation" eSuperTypes="#//BaseLocation">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearLocation" eSuperTypes="#//BaseLocation">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AreaLocation" eSuperTypes="#//BaseLocation">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="AreaAssociatedNetElements"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociatedNetElement">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netElement" lowerBound="1"
+        eType="#//PositioningNetElement">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="ToNetElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="appliesInDirection" eType="#//ApplicationDirection">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasLateralPosition" eType="#//LateralPosition"
+        containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ApplicationDirection">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eLiterals name="undefined" literal="undefined"/>
+    <eLiterals name="normal" value="1" literal="normal"/>
+    <eLiterals name="reverse" value="2" literal="reverse"/>
+    <eLiterals name="both" value="3" literal="both"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralPosition">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralSide" abstract="true" eSuperTypes="#//LateralPosition">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="side" eType="#//Side">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Side">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eLiterals name="undefined"/>
+    <eLiterals name="left" value="1"/>
+    <eLiterals name="right" value="2"/>
+    <eLiterals name="centre" value="3"/>
+    <eLiterals name="both" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseObjectEULYNX" abstract="true" eSuperTypes="#//BaseObjectRSM">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TvpSection" eSuperTypes="#//VirtualTrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedAt" lowerBound="1"
+        eType="#//AreaLocation">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="TvpSectionLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualTrackAsset" abstract="true" eSuperTypes="#//TrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrackAsset" abstract="true" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfiguredBaseObject" abstract="true"
+      eSuperTypes="#//BaseObjectEULYNX">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TdsSection" eSuperTypes="#//VirtualTrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToTvpsection" lowerBound="1"
+        eType="#//TvpSection">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="ApplyTdsToTvp"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TdsCompnent" eSuperTypes="#//VehiclePassageDetector">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limitsTdsSection" upperBound="-1"
+        eType="#//TdsSection">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="LimitsTdsSection"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehiclePassageDetector" abstract="true"
+      eSuperTypes="#//PhysicalTrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="occupiesTdsSection" eType="#//TdsSection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalTrackAsset" abstract="true"
+      eSuperTypes="#//TrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VssLimit" eSuperTypes="#//TdsCompnent">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualSubSection" eSuperTypes="#//TdsSection">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsMaSection" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSectionEntryLocation"
+        lowerBound="1" eType="#//SpotLocation">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route" abstract="true" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToRouteBody" lowerBound="1"
+        eType="#//RouteBody">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsRoute" eSuperTypes="#//Route">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMaSection" upperBound="-1"
+        eType="#//EtcsMaSection" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBody" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasEntry" lowerBound="1"
+        eType="#//RouteEntry" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasExit" lowerBound="1"
+        eType="#//RouteExit" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToRsmRoutBody" lowerBound="1"
+        eType="#//RouteBodyRSM">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBodyProperty" abstract="true" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToRouteBody" lowerBound="1"
+        eType="#//RouteBody">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SectionList" eSuperTypes="#//RouteBodyProperty">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSection" lowerBound="1"
+        upperBound="-1" eType="#//TvpSection">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="association" value="HasSection"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteExtremity" abstract="true" eSuperTypes="#//BaseObjectEULYNX">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteEntry" eSuperTypes="#//RouteExtremity">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteExit" eSuperTypes="#//RouteExtremity">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="#//TrackAsset">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToRsmSignal" lowerBound="1"
+        eType="#//SignalRSM">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasGroupMainSignal" eType="#//RouteEntry">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPhysicalSignal" eSuperTypes="#//Signal">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualSignal" eSuperTypes="#//NonPhysicalSignal">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetEntity" eSuperTypes="#//NetworkResource">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocatedNetEntity" abstract="true" eSuperTypes="#//NetEntity">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//BaseLocation" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalRSM" eSuperTypes="#//LocatedNetEntity">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBodyRSM" eSuperTypes="#//LocatedNetEntity">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsSignalProperties" eSuperTypes="#//BaseObjectEULYNX">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToEoA" eType="#//EtcsEndOfAuthority">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToSignal" lowerBound="1"
+        eType="#//Signal">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsEndOfAuthority" eSuperTypes="#//BaseObjectEULYNX">
+    <eAnnotations source="meeduse">
+      <details key="generated" value="NOT"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataPrepEntities" upperBound="-1"
+        eType="#//DataPrepEntities" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rsmEntities" upperBound="-1"
+        eType="#//RsmEntities" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPrepEntities" eSuperTypes="#//BaseObjectRSM">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant" value="OK"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsEndOfAuthority"
+        upperBound="-1" eType="#//EtcsEndOfAuthority" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsMaSection" upperBound="-1"
+        eType="#//EtcsMaSection" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsSignalProperties"
+        upperBound="-1" eType="#//EtcsSignalProperties" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBodyProperty"
+        upperBound="-1" eType="#//RouteBodyProperty" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="OK"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBody" upperBound="-1"
+        eType="#//RouteBody" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRoute" upperBound="-1"
+        eType="#//Route" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsTrackAsset" upperBound="-1"
+        eType="#//TrackAsset" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="KnowsAssetAndState" upperBound="-1"
+        eType="#//AssetAndState" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RsmEntities" eSuperTypes="#//BaseObjectRSM">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesEtcsTopology" eType="#//Topology"
+        containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="association" value="EtcsTopologies"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Topology">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesPositionedRelation"
+        upperBound="-1" eType="#//PositionedRelation" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesNetElement" upperBound="-1"
+        eType="#//PositioningNetElement" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesLocation" upperBound="-1"
+        eType="#//BaseLocation" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsSignalRSM" upperBound="-1"
+        eType="#//SignalRSM" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBodyRSM" upperBound="-1"
+        eType="#//RouteBodyRSM" containment="true">
+      <eAnnotations source="meeduse">
+        <details key="generated" value="NOT"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssetAndState" abstract="true" eSuperTypes="#//ConfiguredBaseObject">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SectionAndVacancy" eSuperTypes="#//AssetAndState">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+      <details key="constant"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToTdsSection" lowerBound="1"
+        eType="#//TdsSection">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+        <details key="constant"/>
+        <details key="opposite-upper" value="1"/>
+        <details key="opposite-lower" value="1"/>
+        <details key="association" value="VacancyToTds"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inVacancyState" eType="#//SectionVacancyTypes">
+      <eAnnotations source="meeduse">
+        <details key="generated" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SectionVacancyTypes">
+    <eAnnotations source="meeduse">
+      <details key="generated" value=""/>
+    </eAnnotations>
+    <eLiterals name="E_occupied"/>
+    <eLiterals name="E_vacant" value="1"/>
+    <eLiterals name="E_ambigious" value="2"/>
+    <eLiterals name="E_unknown" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

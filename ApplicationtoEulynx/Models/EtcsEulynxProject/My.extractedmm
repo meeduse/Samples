@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extractedMM:DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extractedMM="http://www.example.org/extractedMM">
+  <dataPrepEntities>
+    <ownsRouteBodyProperty xsi:type="extractedMM:SectionList" Id="1" hasSection="//@dataPrepEntities.0/@ownsTrackAsset.0 //@dataPrepEntities.0/@ownsTrackAsset.1 //@dataPrepEntities.0/@ownsTrackAsset.2 //@dataPrepEntities.0/@ownsTrackAsset.17 //@dataPrepEntities.0/@ownsTrackAsset.18"/>
+    <ownsRouteBodyProperty xsi:type="extractedMM:SectionList" Id="2" hasSection="//@dataPrepEntities.0/@ownsTrackAsset.0 //@dataPrepEntities.0/@ownsTrackAsset.1 //@dataPrepEntities.0/@ownsTrackAsset.2 //@dataPrepEntities.0/@ownsTrackAsset.19 //@dataPrepEntities.0/@ownsTrackAsset.20"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="1" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.0"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="2" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.1"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="3" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.2"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="11" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.0"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="12" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.0"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="21" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.1"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="22" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.1"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="31" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.2"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="32" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.2"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="41" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.17"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="42" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.17"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="51" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.18"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="52" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.18"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="61" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.19"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="62" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.19"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="71" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.20"/>
+    <ownsTrackAsset xsi:type="extractedMM:VirtualSubSection" Id="72" appliesToTvpsection="//@dataPrepEntities.0/@ownsTrackAsset.20"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="4" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.3"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="5" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.4"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="6" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.5"/>
+    <ownsTrackAsset xsi:type="extractedMM:TvpSection" Id="7" isLocatedAt="//@rsmEntities.0/@usesEtcsTopology/@usesLocation.6"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="1" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.3 //@dataPrepEntities.0/@ownsTrackAsset.4"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="2" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.4 //@dataPrepEntities.0/@ownsTrackAsset.5"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="3" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.5 //@dataPrepEntities.0/@ownsTrackAsset.6"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="4" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.6 //@dataPrepEntities.0/@ownsTrackAsset.7"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="5" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.7 //@dataPrepEntities.0/@ownsTrackAsset.8"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="6" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.8 //@dataPrepEntities.0/@ownsTrackAsset.9"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="7" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.9 //@dataPrepEntities.0/@ownsTrackAsset.10"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="8" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.10 //@dataPrepEntities.0/@ownsTrackAsset.11"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="9" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.11 //@dataPrepEntities.0/@ownsTrackAsset.12"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="10" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.8 //@dataPrepEntities.0/@ownsTrackAsset.13"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="11" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.13 //@dataPrepEntities.0/@ownsTrackAsset.14"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="12" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.14 //@dataPrepEntities.0/@ownsTrackAsset.15"/>
+    <ownsTrackAsset xsi:type="extractedMM:VssLimit" Id="13" limitsTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.15 //@dataPrepEntities.0/@ownsTrackAsset.16"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="11" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.3" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="12" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.4" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="21" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.5" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="22" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.6" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="31" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.7" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="32" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.8" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="41" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.9" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="42" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.10" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="51" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.11" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="52" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.12" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="61" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.13" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="62" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.14" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="71" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.15" inVacancyState="E_vacant"/>
+    <KnowsAssetAndState xsi:type="extractedMM:SectionAndVacancy" Id="72" refersToTdsSection="//@dataPrepEntities.0/@ownsTrackAsset.16" inVacancyState="E_vacant"/>
+  </dataPrepEntities>
+  <rsmEntities Id="1">
+    <usesEtcsTopology>
+      <usesPositionedRelation Id="1" name="RelationTrack1Track2" positionOnA="end" leadsTowards="right" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.0" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.1"/>
+      <usesPositionedRelation Id="2" name="RealtionTrack2Track3" positionOnA="end" leadsTowards="right" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.1" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.2"/>
+      <usesPositionedRelation name="RelationTrack3Track4" positionOnA="end" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.2" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.3"/>
+      <usesPositionedRelation name="RelationTrack3Track6" positionOnA="end" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.2" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.5"/>
+      <usesPositionedRelation name="RelationTrack4Track5" positionOnA="end" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.3" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.4"/>
+      <usesPositionedRelation name="RelationTrack6Track7" positionOnA="end" elementA="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.5" elementB="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.6"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="1" longname="straight" name="Track1"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="2" longname="straight" name="Track2"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="3" longname="straight" name="Track3"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="4" longname="leftup" name="Track4"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="5" longname="straight" name="Track5"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="6" longname="leftdown" name="Track6"/>
+      <usesNetElement xsi:type="extractedMM:LinearElement" Id="7" longname="straight" name="Track7"/>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="1">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.0"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="2">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.1"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="3">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.2"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="4">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.3"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="5">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.4"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="6">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.5"/>
+      </usesLocation>
+      <usesLocation xsi:type="extractedMM:AreaLocation" Id="7">
+        <associatedNetElements netElement="//@rsmEntities.0/@usesEtcsTopology/@usesNetElement.6"/>
+      </usesLocation>
+    </usesEtcsTopology>
+  </rsmEntities>
+</extractedMM:DocumentRoot>

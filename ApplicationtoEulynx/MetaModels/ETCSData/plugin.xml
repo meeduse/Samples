@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated eTCSData -->
+      <package
+            uri="http://www.example.org/eTCSData"
+            class="eTCSData.ETCSDataPackage"
+            genModel="model/eTCSData.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated eTCSData -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="types.TypesPackage"
+            genModel="model/eTCSData.genmodel"/>
+   </extension>
+
+</plugin>

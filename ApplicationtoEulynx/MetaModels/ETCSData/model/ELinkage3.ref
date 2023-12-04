@@ -1,0 +1,866 @@
+REFINEMENT ELinkage3
+    
+REFINES M3_Existing
+    
+INCLUDES  eTCSData 
+
+DEFINITIONS
+
+     SET_PREF_SHOW_EVENTB_ANY_VALUES == TRUE ;
+    SET_PREF_MAXINT ==10 ;
+    SET_PREF_DEFAULT_SETSIZE == 5 ;
+    
+    TTD == HasSection[{Linked_SectionList}];
+    TTDConnecttion == ( (TvpSectionLocation;AreaAssociatedNetElements~;ToNetElement);(ElementARelation~;ElementBRelation); (TvpSectionLocation;AreaAssociatedNetElements~;ToNetElement)~);
+    
+    VSS == ran(({Linked_SectionList} <| HasSection);ApplyTdsToTvp~ ) /* explain */
+	; VSSConnections == ran(fnc(LimitsTdsSection  |> VSS ))
+	; next_previous(vs1,vs2) == ((Linked_VirtualSubSection(vs1) = Linked_VirtualSubSection(vs2)+1) or (Linked_VirtualSubSection(vs1) = Linked_VirtualSubSection(vs2)-1))
+
+
+CONSTANTS
+   
+    Linked_SectionList,
+    Linked_Train,
+  
+    Linked_TrainKind,
+
+	Linked_ETCSModel,
+//Linked_SectionVacancyTypes,
+
+  Linked_TvpSection ,
+
+	//From M2
+    Linked_VirtualSubSection,
+
+	//From M3
+    
+     Linked_SectionVacancyTypesVSS
+       
+PROPERTIES
+
+
+	
+
+                  Linked_SectionList:SectionList &
+	Linked_SectionList:{ROUTEBODYPROPERTY1} & // Setting the SectionList (Route), instances of SectionList  are called ROUTEBODYPROPERTY1, ROUTEBODYPROPERTY2 etc....
+	minTTD = 1 &
+                  maxTTD = card(ran({Linked_SectionList} <| HasSection)) &
+	Linked_Train: Train >->>Trains &
+	Linked_ETCSModel: ETCSModel &
+ 	
+	Linked_TrainKind={TIMSERTMS|->TimErtms, ERTMS |->Ertms, NoERTMS|->NoErtms}
+
+	& Linked_TvpSection: TTD >->>Ttds
+
+	 & !(tk1,tk2).(tk1 : TTD & tk2 : TTD & (tk1|->tk2) : TTDConnecttion => Linked_TvpSection(tk2) = Linked_TvpSection(tk1) + 1)
+
+	//& Linked_SectionVacancyTypes = {freeV|->E_vacant,occupiedV|->E_occupied}   
+
+	// From M2
+
+	& Linked_VirtualSubSection : VSS >->> Vss 
+	
+	& !(vs1,vs2).(vs1: VSS & vs2: VSS & vs1 /= vs2 & {vs1, vs2} :  VSSConnections => next_previous(vs1,vs2))
+
+	& !(vs1, vs2).(vs1 : VSS & vs2 : VSS & Linked_TvpSection(ApplyTdsToTvp(vs1)) > Linked_TvpSection(ApplyTdsToTvp(vs2)) => Linked_VirtualSubSection(vs1) > Linked_VirtualSubSection(vs2))
+
+	//From M3
+
+	& Linked_SectionVacancyTypesVSS = {freeV|->E_vacant,occupiedV|->E_occupied,unknown|->E_unknown,ambiguous|->E_ambigious}   
+
+VARIABLES 
+
+    muteTimer,
+    lengthChange,
+  previousFrontState,
+    previousFront,
+    ghostTimer,
+   disconnectTimer,
+    MATrainRear,
+    reConnected,
+    MATrainFront,
+   waitIntegrityTimer,
+    currentStateVSS,
+    trainOccupationVSSRear,
+    trainLocationVSSFront,
+    trainLocationVSSRear,
+    trainOccupationVSSFront,
+    supervisor,
+    stateTTD,
+    isConnected
+    
+  INVARIANT
+
+ 
+ 
+
+    
+    
+    //Mappings
+    
+ // (inVacancyState~ ; VacancyToTds ;  ApplyTdsToTvp ; Linked_TvpSection) = (Linked_SectionVacancyTypes ~ ;  stateTTD~;Linked_TvpSection~;Linked_TvpSection)
+
+    // (inVacancyState~ ; VacancyToTds; Linked_VirtualSubSection) = (Linked_SectionVacancyTypesVSS ~ ;  currentStateVSS~;Linked_VirtualSubSection~; Linked_VirtualSubSection)
+     
+    
+       TrainReConnected = (Linked_Train;reConnected)
+    & TrainConnected=	(Linked_Train;isConnected)
+    
+    & dom(frontMA)  =Linked_Train~[dom(MATrainFront)]
+    & dom(rearMA)  =Linked_Train~[dom(MATrainRear)]
+    
+    
+   & ran((inVacancyState |> {E_vacant})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS  |> {freeV})
+    & ran((inVacancyState |> {E_occupied})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS  |> {occupiedV})
+    & ran((inVacancyState |> {E_ambigious})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS  |> {ambiguous})
+    & ran((inVacancyState |> {E_unknown})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS  |> {unknown})
+
+	// & ran((inVacancyState |> {E_vacant})~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD  |> {freeT})
+               //    & ran((inVacancyState |> {E_occupied} )~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD  |> {occupiedT})
+	
+      
+  
+
+INITIALISATION
+
+SetSupervisionOfTrain(Linked_ETCSModel,Active); //Always start an initialization with an active supervision
+
+UnsetConnectedTrains(NoERTMS);  //To check if a NoERTMS train has Connected value then unset it in order to satisfy the invariant in Existing Spec.
+
+    
+    
+    
+   
+ 
+    
+  
+
+   SetVSSsVacancyStates(Linked_VirtualSubSection~[Vss],E_unknown) ; //to set all the VSS states to unknown at initialization
+    
+   
+     UnsetReConnectedTrains(NoERTMS);
+    
+      ANY  
+       supervisor_ ,  
+      isConnected_,
+      
+      
+      trainOccupationVSSFront_,
+      trainOccupationVSSRear_,
+      trainLocationVSSFront_,
+      trainLocationVSSRear_,
+      
+      reConnected_,
+      
+      MATrainRear_,
+      MATrainFront_,
+      
+    
+      
+      currentStateVSS_
+      
+      
+      
+      WHERE
+        
+           MATrainRear_ : Trains +-> Vss
+      & MATrainFront_ : dom(MATrainRear_) --> Vss
+      
+       & !tr.(tr : Trains & (tr : dom(MATrainRear_) & trainKind(tr) = NoErtms) => #(td1,td2).(td1 : Ttds & (td2 : Ttds & (td1 <= td2 & (MATrainRear_(tr) = min((TtdOfVss~)[{td1}]) & MATrainFront_(tr) = max((TtdOfVss~)[{td2}]))))))
+       & !tr.(tr : dom(MATrainRear_) => MATrainRear_(tr) <= MATrainFront_(tr))
+       & !tr1.(tr1 : dom(MATrainFront_) => !tr2.(tr2 : dom(MATrainFront_) & tr1 /= tr2 & 1=1 /* LEQ_SYM_BREAK(tr1,tr2) */ => MATrainRear_(tr1)..MATrainFront_(tr1) /\ MATrainRear_(tr2)..MATrainFront_(tr2) = {}))
+    
+     //  & previousFront_ : dom(trainLocationVSSFront_) +-> Vss
+      // & previousFrontState_ : dom(previousFront_) --> StateVSS
+      
+      & trainLocationVSSFront_ : Linked_Train[dom(TrainFrontLocation)] --> Vss
+     & trainLocationVSSRear_ : Linked_Train[dom(TrainRearLocation)] --> Vss
+     & trainOccupationVSSFront_ : Linked_Train[dom(TrainFront)] --> Vss
+      & trainOccupationVSSRear_ : Linked_Train[dom(TrainRear)] --> Vss
+
+    & ran((inVacancyState |> {E_vacant})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS_  |> {freeV})
+    & ran((inVacancyState |> {E_occupied})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS_   |> {occupiedV})
+    & ran((inVacancyState |> {E_ambigious})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS_   |> {ambiguous})
+    & ran((inVacancyState |> {E_unknown})~; VacancyToTds;Linked_VirtualSubSection) = dom(currentStateVSS_   |> {unknown})
+
+//& ran((inVacancyState |> {E_vacant})~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD_  |> {freeT})
+ //    & ran((inVacancyState |> {E_occupied})~; VacancyToTds; ApplyTdsToTvp ; Linked_TvpSection) = dom(stateTTD_  |> {occupiedT})
+    
+        
+        & (supervisor_ = TRUE => SupervisionOfTrain(Linked_ETCSModel) = Active) 
+        &  (supervisor_ = FALSE => SupervisionOfTrain(Linked_ETCSModel) = Deactive) 
+        
+        &   Linked_Train[dom(TrainConnected |> {FALSE})] = dom(isConnected_ |> {FALSE}) 
+        &   Linked_Train[dom(TrainConnected |> {TRUE})] = dom(isConnected_ |> {TRUE}) 
+
+        &   Linked_Train[dom(TrainReConnected |> {FALSE})] = dom(reConnected_ |> {FALSE}) 
+        &   Linked_Train[dom(TrainReConnected |> {TRUE})] = dom(reConnected_ |> {TRUE}) 
+        
+        
+     
+                   & dom(TrainFront)  =Linked_Train~[dom(trainOccupationVSSFront_)]
+    	 & dom(TrainRear)  =Linked_Train~[dom(trainOccupationVSSRear_)]
+   
+   	 & dom(TrainFrontLocation)  =Linked_Train~[dom(trainLocationVSSFront_)]
+   	 & dom(TrainRearLocation)  =Linked_Train~[dom(trainLocationVSSRear_)]
+   
+    
+    	
+    	& !(train).( train : dom(frontMA)=>( Linked_Train(train) |-> Linked_VirtualSubSection(frontMA(train)) ) : MATrainFront_)
+        & !(train).( train : dom(rearMA)=>( Linked_Train(train) |-> Linked_VirtualSubSection(rearMA(train)) ) : MATrainRear_)
+     
+      
+    THEN
+       
+        
+    	isConnected := isConnected_
+        || supervisor := supervisor_
+        
+         
+    	|| trainOccupationVSSFront := trainOccupationVSSFront_ 
+    	|| trainOccupationVSSRear := trainOccupationVSSRear_
+    	|| trainLocationVSSFront := trainLocationVSSFront_
+    	|| trainLocationVSSRear := trainLocationVSSRear_ 
+    	
+    	|| reConnected := reConnected_
+    	
+    	|| MATrainRear := MATrainRear_
+        || MATrainFront := MATrainFront_
+        
+       
+        
+        || currentStateVSS := currentStateVSS_
+        
+       
+    
+    
+ END
+
+	|| stateTTD := Ttds * {occupiedT} 
+    || previousFront := {}
+    || previousFrontState := {}
+    || muteTimer := (trainKind~)[{TimErtms,Ertms}] * {inactive}
+    || waitIntegrityTimer := (trainKind~)[{TimErtms,Ertms}] * {inactive}
+    || lengthChange := {}
+    || disconnectTimer := Vss * {inactive}
+    || ghostTimer := Ttds * {inactive}
+    
+
+
+OPERATIONS
+ trainSupervisor =
+ ANY 
+        ttds, active, ghostTimerStop, vss10B, vss10A, vss9A, disconnectTimerStop, vss3A, vss4B, vss2A, vss1A, vss1B ,stateVSS, vss7A , vss8B, vss6A, vss5A, vss4A, vss1C, ghostTimerStart, vss1D, vss1F
+    WHERE
+        ttds=(UNION tr.(tr: dom(trainOccupationVSSFront) | TtdOfVss(trainOccupationVSSRear(tr))..TtdOfVss(trainOccupationVSSFront(tr))))
+        & supervisor = TRUE
+        & active: BOOL
+        & supervisor=TRUE
+        & vss1A=
+        (UNION vs . (vs: TtdOfVss~[ttds-stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (! tr.(tr: dom(MATrainFront) => TtdOfVss(vs): MATrainRear(tr).. MATrainFront(tr)))
+                &
+                (! tr. (tr: dom(trainLocationVSSRear) =>
+                        TtdOfVss(vs)/:  TtdOfVss(trainLocationVSSRear(tr))..TtdOfVss(trainLocationVSSFront(tr)))) | {vs}))*{unknown}
+        & vss1B= (UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (# tr . (tr : dom(muteTimer) &muteTimer(tr)= expired & tr : dom(MATrainRear) & vs : MATrainRear(tr)..MATrainFront(tr) & tr: dom(trainLocationVSSFront) & vs > trainLocationVSSFront(tr))) | {vs}))*{unknown}
+        & vss1C= (UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	& (# vs1.(vs1 : Vss-{vs} & TtdOfVss(vs)=TtdOfVss(vs1) & disconnectTimer(vs1)=expired & currentStateVSS[vs+1..vs1-1 \/ vs1+1..vs-1]<: {unknown, freeV})) |  {vs}))*{unknown}
+        & vss1D=
+        (UNION vs.(vs: TtdOfVss~[stateTTD~[{occupiedT}]] &  currentStateVSS(vs)= freeV	&
+                (!tr.(tr: dom(MATrainFront) => vs/:MATrainRear(tr)..MATrainFront(tr))) &
+                (# vs1.(vs1 : Vss-{vs} & TtdOfVss(vs)/=TtdOfVss(vs1) &
+                        disconnectTimer(vs1)=expired &
+                        currentStateVSS[vs+1..vs1-1 \/ vs1+1..vs-1]<: {unknown, freeV}))
+                |  {vs}
+            ))
+        * {unknown}
+        
+        &  vss1F = (UNION vs . (vs : TtdOfVss~[stateTTD~[{occupiedT}]]  &  currentStateVSS(vs)= freeV	&
+                (# td. (td: dom(ghostTimer) & ghostTimer(td)=expired &
+                        (! vs1. (vs1 : (vs+1)..min(TtdOfVss~[{td}])\/max(TtdOfVss~[{td}])..(vs-1) => currentStateVSS(vs1): {freeV, unknown}))
+                        & TtdOfVss(vs)/=td
+                    ))
+                |  {vs})
+        ) *{unknown}
+        & vss2A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= freeV &
+                (#tr. ( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr) &
+                        (tr: dom(previousFrontState) & previousFront(tr)/=vs & previousFrontState(tr)=occupiedV)
+                    )
+                )
+                |{vs}
+            )) * {occupiedV}
+        & vss3A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= freeV &
+                (#tr.( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss4A=(UNION vs.(vs :  TtdOfVss~[stateTTD~[{freeT}]-ttds] & currentStateVSS(vs)= unknown|{vs})) * {freeV}
+        & vss4B=(UNION vs.(vs :  Vss & currentStateVSS(vs)= unknown &
+                (# tr. (tr: dom(reConnected) & reConnected(tr)=TRUE &
+                        tr: dom(MATrainRear) & vs : MATrainRear(tr)..MATrainFront(tr)
+                        &
+                        (tr: dom(trainLocationVSSRear) & vs > trainLocationVSSFront(tr))
+                    ))
+                |{vs})) * {freeV}
+        & vss5A=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= unknown &
+                (#tr.( tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss6A=
+        (
+            UNION vs.(vs : TtdOfVss~[stateTTD~[{occupiedT}]] & currentStateVSS(vs)= occupiedV &
+                (!tr.(tr: dom(trainLocationVSSRear) =>  vs/= trainLocationVSSRear(tr)
+                    )
+                )
+                |{vs}
+            ) )* {freeV}
+        & vss7A=
+        (
+            UNION vs.(vs : Vss  & currentStateVSS(vs)= occupiedV &
+                (
+                    #tr.(tr: dom(trainLocationVSSRear) &
+                        vs: trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                        & trainKind(tr): {TimErtms,Ertms} &
+                        (muteTimer(tr)=expired  or isConnected(tr)=FALSE)
+                    )
+                )
+                |{vs}
+            )) * {unknown}
+        & vss8B=
+        (
+            UNION vs.(vs : Vss  & currentStateVSS(vs)= occupiedV &
+                (
+                    #tr.(tr: dom(trainLocationVSSRear) & trainLocationVSSRear(tr)/=minVSS
+                        & vs : trainLocationVSSRear(tr)..trainLocationVSSFront(tr)
+                        &
+                        
+                        (currentStateVSS(trainLocationVSSRear(tr)-1)=unknown
+                            or
+                            disconnectTimer(trainLocationVSSRear(tr)-1)=expired)
+                    )
+                )
+                |{vs}
+            )) * {ambiguous}
+        & vss9A=(UNION vs.(vs : TtdOfVss~[stateTTD~[{freeT}]-ttds] &
+                currentStateVSS(vs)= ambiguous |{vs})) * {freeV}
+        & vss10A=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= ambiguous  &
+                (
+                    ! tr.(tr: dom(trainLocationVSSRear) =>
+                        vs < trainLocationVSSRear(tr))
+                )
+                |{vs}
+            ))
+        *{unknown}
+        & vss10B=
+        (
+            UNION vs.(vs : Vss & currentStateVSS(vs)= ambiguous  &
+                (
+                    # tr.(tr: dom(trainLocationVSSRear) &
+                        vs : trainLocationVSSRear(tr).. trainLocationVSSFront(tr) &
+                        trainKind(tr): {TimErtms,Ertms} &
+                        (muteTimer(tr)=expired or isConnected(tr)=FALSE) &
+                        (!tr1.(tr1: dom(trainLocationVSSRear)=> vs/:trainLocationVSSRear(tr1).. trainLocationVSSFront(tr1)))
+                    )
+                )
+                |{vs}
+            ))
+        *{unknown}
+        & stateVSS = vss1A \/ (vss1B \/ (vss1C \/ (vss1D \/ (vss1F \/ ((vss3A <+ vss2A)
+                            \/ ((vss5A <+ (vss4B \/ vss4A)) \/ (((vss6A \/ vss8B) <+ vss7A) \/ ((vss10A <+ vss9A) \/ vss10B)
+                                )))))))
+        & active= (bool(stateVSS /<: currentStateVSS or ((ttds*{occupiedT})\/((Ttds-ttds)*{freeT}))/=stateTTD))
+        & disconnectTimerStop={TRUE|-> {}, FALSE|->( UNION vs.(vs : Vss & disconnectTimer(vs) /= inactive| {vs}))}(active)
+        & ghostTimerStop=(UNION td.(td:Ttds & ghostTimer(td)=expired|{td}))
+        & ghostTimerStart=(UNION td.(td : ttds - stateTTD~[{occupiedT}] &
+                (!tr.(tr: dom(trainLocationVSSRear) => TtdOfVss~[{td}] /\ (trainLocationVSSRear(tr).. trainLocationVSSFront(tr))={})) &
+                (!tr.(tr : TRAINS => tr: dom(MATrainRear) & TtdOfVss~[{td}] /\  MATrainRear(tr)..MATrainFront(tr)={})) | {td}))
+    THEN
+        
+        BEGIN
+        stateTTD := (ttds * {occupiedT}) \/ ((Ttds - ttds)*{freeT}) ;
+        supervisor := active
+      ;   currentStateVSS:=currentStateVSS <+ (stateVSS)
+      ;previousFront:= (UNION tr. (tr: dom(trainLocationVSSFront)|
+            {tr|-> trainLocationVSSFront(tr)}))
+      ;previousFrontState:=(UNION tr. (tr: dom(trainLocationVSSFront)|
+            {tr |-> (currentStateVSS <+ (stateVSS))(trainLocationVSSFront(tr))}))
+      ; disconnectTimer:=
+            (disconnectTimer <+(
+            (UNION vs. (vs :dom(stateVSS) & stateVSS(vs)=unknown &
+            (# tr. (tr: dom(MATrainRear) &
+            muteTimer(tr)=expired &
+            vs : MATrainRear(tr)..MATrainFront(tr)))
+            | {vs}))*{running}))
+            <+(((UNION vs. (vs:dom(stateVSS) & stateVSS(vs)/=unknown|{vs})\/ disconnectTimerStop))*{inactive})
+      ; ghostTimer:=ghostTimer <+((ghostTimerStart*{running})\/(ghostTimerStop*{inactive}))
+      
+  END;
+  
+  BEGIN
+  
+        IF active = TRUE THEN
+        SetSupervisionOfTrain(Linked_ETCSModel,Active)
+        ELSE
+        SetSupervisionOfTrain(Linked_ETCSModel,Deactive)
+        END;
+
+ SetVSSsVacancyStates(Linked_VirtualSubSection~[dom(currentStateVSS |> {freeV})],E_vacant) ;
+        SetVSSsVacancyStates(Linked_VirtualSubSection~[dom(currentStateVSS |> {occupiedV})],E_occupied) ;
+        SetVSSsVacancyStates(Linked_VirtualSubSection~[dom(currentStateVSS |> {unknown})],E_unknown) ;
+        SetVSSsVacancyStates(Linked_VirtualSubSection~[dom(currentStateVSS |> {ambiguous})],E_ambigious)
+    
+        //SetTvpSectionVacancyStates(Linked_TvpSection~[stateTTD~[{occupiedT}]],E_occupied);
+      //  SetTvpSectionVacancyStates(Linked_TvpSection~[stateTTD~[{freeT}]],E_vacant)
+        
+        
+        
+        
+        
+       
+        
+        
+        
+   END
+        
+END;
+
+ trainEntring =
+  ANY tr 
+    WHERE
+      supervisor = FALSE
+      & tr: TRAINS - dom(trainOccupationVSSFront) 
+      & tr : Trains
+      & trainKind(tr):{Ertms,TimErtms} /*=> */ & tr : dom(MATrainFront) & minVSS : MATrainRear(tr)..MATrainFront(tr) //Problem here so changed the implies with the And operator
+    //  & isConnected(tr) = TRUE  // added by me because train that are not connected cannot enter as in m3 level
+THEN
+    
+    BEGIN
+      supervisor := TRUE ;
+      trainOccupationVSSFront(tr) := minVSS ;
+      trainOccupationVSSRear(tr) := minVSS  
+      ;
+      
+      
+      trainLocationVSSRear := 
+          IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+              trainLocationVSSRear \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSRear 
+          END ;
+      trainLocationVSSFront := 
+          IF 
+              (tr |-> TRUE) : isConnected 
+          THEN trainLocationVSSFront \/ {tr |-> minVSS} 
+          ELSE 
+              trainLocationVSSFront 
+          END 
+     ;
+        
+        
+        muteTimer := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN muteTimer <+ {tr 
+                |-> running} ELSE muteTimer END
+        ;
+        lengthChange := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN lengthChange 
+            <+ {tr |-> FALSE} ELSE lengthChange END  
+        
+    END;
+    
+    BEGIN
+          
+        
+        SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+        SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(minVSS)) ;
+        SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(minVSS)) ;
+        IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainLocationVSSRear)
+          THEN 
+               SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainLocationVSSRear(tr)))
+          END ;
+         IF (tr |-> TRUE) : isConnected /* added later -> */ & tr : dom(trainLocationVSSFront)
+          THEN 
+           	SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainLocationVSSFront(tr)))
+          END  
+          ;
+       SetTvpSectionFront(Linked_Train~(tr),(Linked_TvpSection~(minTTD)));
+       SetTvpSectionRear(Linked_Train~(tr),(Linked_TvpSection~(minTTD)));
+        IF (tr |-> TRUE) : isConnected & trainKind(tr) = TimErtms 
+          THEN 
+              SetTvpSectionRearLocation(Linked_Train~(tr),Linked_TvpSection~(minTTD))
+	END;
+       IF 
+              (tr |-> TRUE) : isConnected 
+          THEN 
+          
+          SetTvpSectionFrontLocation(Linked_Train~(tr),Linked_TvpSection~(minTTD))
+       END 
+         
+     END
+END;
+trainMovingInSameTTD = 
+    ANY integ, newposVSSSRear, newposVSSFront, currentVSSRear, tr, currentVSSFront, lengch
+    WHERE
+    
+ supervisor = FALSE
+        & tr : dom(trainOccupationVSSFront)
+       & currentVSSRear = trainOccupationVSSRear(tr) & currentVSSFront = trainOccupationVSSFront(tr)
+        & tr : Trains
+       & newposVSSSRear |-> newposVSSFront : 
+        ({TRUE |-> {currentVSSRear |-> currentVSSFront+1}, FALSE |-> {}}
+            ( bool(currentVSSFront<max(TtdOfVss~[{TtdOfVss(currentVSSFront)}])))
+           )
+           \/
+           (
+           {TRUE |-> {currentVSSRear +1 |-> currentVSSFront},
+            FALSE |-> {}}
+           (bool( currentVSSRear <max(TtdOfVss~[{TtdOfVss(currentVSSRear)}]) &
+           currentVSSRear <currentVSSFront))
+            )
+    & integ : BOOL
+    & tr : dom(MATrainFront)  /* => */ & newposVSSFront : MATrainRear(tr)..MATrainFront(tr) //problem in the predicate so changed the implies with the and operator
+       & lengch : BOOL  & lengch = FALSE
+      & integ=TRUE
+        
+    THEN 
+        supervisor := TRUE ;
+        trainOccupationVSSRear := trainOccupationVSSRear <+ {tr |-> newposVSSSRear} ;
+        trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newposVSSFront} ;
+      
+      trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newposVSSFront} ELSE trainLocationVSSFront END ;
+        trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newposVSSSRear} ELSE trainLocationVSSRear END
+        ;
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer <+ {tr |-> running} ELSE muteTimer END
+        ;
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer or lengch = TRUE))}(bool(integ = TRUE))
+        ;
+        lengthChange := IF tr |-> TRUE : isConnected THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange END
+ 
+         ;
+    	
+   	SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+   	SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSSRear)) ;
+     SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSFront)) 
+   ;	IF (tr |-> TRUE) : isConnected 
+    	THEN 
+    	SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSFront))
+    	 END 
+    	 ;
+        IF (tr |->TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
+        THEN 
+       SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newposVSSSRear))
+    	END
+    	
+    END ;
+    trainMovingFrontNextTTD =
+    ANY integ,newFrontVSS,tr,lengch
+    WHERE 
+        tr : dom(trainOccupationVSSFront)
+        & tr : Trains
+        & TtdOfVss(trainOccupationVSSFront(tr)) < maxTTD
+        & newFrontVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))+ 1}])
+        & supervisor = FALSE
+        & trainOccupationVSSFront(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSFront(tr))}])
+        & (tr : dom(trainLocationVSSFront)=> newFrontVSS >= trainLocationVSSFront(tr))
+       
+        & (tr : dom(MATrainFront) => newFrontVSS : MATrainRear(tr) ..MATrainFront(tr))
+        & lengch = FALSE
+        &  integ = TRUE
+        
+    THEN 
+
+  LET  newFront  BE newFront = TtdOfVss(newFrontVSS) IN
+        trainOccupationVSSFront := trainOccupationVSSFront <+ {tr |-> newFrontVSS} ;
+        supervisor := TRUE ;
+        trainLocationVSSFront := IF tr |-> TRUE : isConnected THEN trainLocationVSSFront <+ {tr |-> newFrontVSS} ELSE trainLocationVSSFront END
+        ;
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer 
+            <+ {tr |-> running} ELSE muteTimer END
+        ;
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer 
+                    <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer & lengch = TRUE))}(bool(integ = TRUE))
+       ;
+        lengthChange := IF tr |-> TRUE : isConnected THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange  END
+          ;
+        
+		 SetSupervisionOfTrain(Linked_ETCSModel,Active);
+		SetVSSFront(Linked_Train~(tr),Linked_VirtualSubSection~(newFrontVSS)) ;
+		IF (tr |-> TRUE) : isConnected 
+		THEN 
+		SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newFrontVSS)) 
+		END
+		
+		
+END
+        
+    END;
+    
+    trainMovingRearNextTTD =
+    ANY integ,newRearVSS,tr,lengch
+    WHERE 
+        tr : dom(trainOccupationVSSFront)
+        & tr : Trains
+        & TtdOfVss(trainOccupationVSSRear(tr)) < TtdOfVss(trainOccupationVSSFront(tr))
+        & newRearVSS = min((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr)) + 1}])
+        & (tr : dom(trainLocationVSSFront)=> trainOccupationVSSFront(tr) >= trainLocationVSSFront(tr))
+        & supervisor = FALSE
+        & trainOccupationVSSRear(tr) = max((TtdOfVss~)[{TtdOfVss(trainOccupationVSSRear(tr))}])
+        
+        
+        & lengch:BOOL  & lengch=FALSE
+        & integ=TRUE
+    THEN 
+
+LET newRear BE newRear = TtdOfVss(newRearVSS) IN
+        supervisor := TRUE ||
+        trainOccupationVSSRear := trainOccupationVSSRear <+ {tr|-> newRearVSS} ||
+        trainLocationVSSRear := IF tr |-> TRUE : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) THEN trainLocationVSSRear <+ {tr |-> newRearVSS} ELSE trainLocationVSSRear END  ||
+        muteTimer := IF trainKind(tr) : {TimErtms,Ertms} & tr |-> TRUE : isConnected THEN muteTimer 
+            <+ {tr |-> running} ELSE muteTimer END
+        ;
+        waitIntegrityTimer := {TRUE |-> (IF trainKind(tr) : {TimErtms,Ertms} THEN waitIntegrityTimer 
+                    <+ {tr |-> running} ELSE waitIntegrityTimer END),FALSE |-> {TRUE |-> (IF trainKind(tr) : {TimErtms,
+                            Ertms} THEN waitIntegrityTimer <+ {tr |-> inactive} ELSE waitIntegrityTimer END),FALSE |-> waitIntegrityTimer}(
+                bool(tr |-> expired : muteTimer & lengch = TRUE))}(bool(integ = TRUE))
+        ;
+        lengthChange := IF tr : dom(isConnected) & isConnected(tr) = TRUE THEN lengthChange 
+            <+ {tr |-> FALSE} ELSE lengthChange END
+        
+        ;
+        
+        SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+      SetVSSRear(Linked_Train~(tr),Linked_VirtualSubSection~(newRearVSS)) ;
+        IF (tr |-> TRUE) : isConnected & (trainKind(tr) = TimErtms & integ = TRUE) 
+        THEN 
+        SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(newRearVSS))
+        END   
+        
+       
+	END
+	
+	     
+        
+	
+    END;
+trainExiting = 
+ANY tr
+    WHERE 
+        supervisor = FALSE
+        & tr : dom(trainOccupationVSSFront)
+        & trainOccupationVSSRear(tr) = maxVSS
+        & tr : Trains
+    THEN 
+        trainOccupationVSSFront := {tr} <<| trainOccupationVSSFront ;
+        trainOccupationVSSRear := {tr} <<| trainOccupationVSSRear ;
+        supervisor := TRUE ||
+        trainLocationVSSFront := {tr} <<| trainLocationVSSFront ;
+        trainLocationVSSRear := {tr} <<| trainLocationVSSRear ;
+        previousFront := {tr} <<| previousFront
+        ;
+        previousFrontState := {tr} <<| previousFrontState
+        ;
+        lengthChange := {tr} <<| lengthChange
+        ;
+        waitIntegrityTimer(tr) := inactive
+       ;
+        muteTimer(tr) := inactive
+        ;
+        MATrainRear := {tr} <<| MATrainRear
+        ;
+        MATrainFront := {tr} <<| MATrainFront
+        
+         ;
+        SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+
+     
+      
+      UnsetOccupyFront(Linked_Train~(tr));
+      UnsetOccupyRear(Linked_Train~(tr));
+      UnsetLocationFront(Linked_Train~(tr));
+      UnsetLocationRear(Linked_Train~(tr));
+      
+   
+        UnsetRearMA(Linked_Train~(tr)) ;
+        UnsetFrontMA(Linked_Train~(tr)) 
+        
+
+END;
+trainConnect =
+ ANY tr 
+    WHERE
+      tr : Trains
+      & trainKind(tr) : {Ertms,TimErtms}
+      & isConnected(tr) = FALSE
+      & supervisor = FALSE
+    //  & tr : dom(trainOccupationVSSFront) // added later
+    THEN
+        
+       
+       isConnected := isConnected <+ {tr |-> TRUE} ;
+       supervisor := TRUE ;
+       trainLocationVSSRear := IF trainKind(tr) = TimErtms THEN trainLocationVSSRear <+ ({tr} <| trainOccupationVSSRear) ELSE trainLocationVSSRear END ;
+       trainLocationVSSFront := trainLocationVSSFront <+ ({tr} <| trainOccupationVSSFront) ||
+        muteTimer(tr) :=  running
+        ;
+        disconnectTimer := disconnectTimer <+ (Vss <| (max(trainLocationVSSRear[{tr}] \/ {0})
+                .. max(trainLocationVSSFront[{tr}] \/ {0})) * {inactive})
+        ;
+        reConnected := reConnected <+ {tr |-> bool(muteTimer(tr) /= inactive)}
+        ;
+        lengthChange := IF tr : dom(trainOccupationVSSFront) THEN lengthChange <+ {tr |-> FALSE} ELSE lengthChange END
+          
+          
+       ;
+        
+        
+          
+        SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+
+
+      SetTrainConnected(Linked_Train~(tr),TRUE) ;
+         IF trainKind(tr) = TimErtms /* added later -> */ & tr : dom(trainOccupationVSSRear)
+         THEN 
+         SetVSSRearLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainOccupationVSSRear(tr)))
+         END ;
+     
+     IF tr : dom(trainOccupationVSSFront) THEN
+         SetVSSFrontLocation(Linked_Train~(tr),Linked_VirtualSubSection~(trainOccupationVSSFront(tr))) END ;
+          IF trainKind(tr) = TimErtms /* added later -> */  & tr : dom(trainOccupationVSSRear)
+          THEN SetTvpSectionRearLocation(Linked_Train~(tr),Linked_TvpSection~(TtdOfVss(trainOccupationVSSRear(tr))))
+          END ;
+          
+          IF tr : dom(trainOccupationVSSFront) THEN
+         SetTvpSectionFrontLocation(Linked_Train~(tr),Linked_TvpSection~(TtdOfVss(trainOccupationVSSFront(tr)))) 
+     END 
+     
+     
+END;
+trainDisconnect =
+ANY tr 
+    WHERE
+      tr : dom(isConnected) 
+      & isConnected(tr)=TRUE
+      & supervisor = FALSE
+      & tr : dom(trainLocationVSSRear)
+    THEN
+        
+        BEGIN
+      isConnected(tr) :=  FALSE ||
+      supervisor := TRUE ||
+      disconnectTimer := disconnectTimer <+ (trainLocationVSSRear(tr) .. trainLocationVSSFront(tr)) * {running} ||
+        muteTimer(tr) := inactive
+      END;
+      BEGIN
+     SetSupervisionOfTrain(Linked_ETCSModel,Active) ;
+      SetTrainConnected(Linked_Train~(tr),FALSE)
+        
+        
+        END
+END;
+assignMANoErtmsTrain =
+ ANY tr, newFront, newRear
+    WHERE
+        tr : TRAINS & trainKind(tr) = NoErtms
+        & newFront : max(TtdOfVss[MATrainFront[{tr}]] \/ {minTTD}).. maxTTD
+        & newRear : max(TtdOfVss[MATrainRear[{tr}]] \/ {minTTD})..maxTTD
+        & newRear <= newFront
+        & !tr1.(tr1 : dom(MATrainFront) & tr1 /= tr => min((TtdOfVss~)[{newRear}])
+            .. max((TtdOfVss~)[{newFront}]) /\ MATrainRear(tr1).. MATrainFront(tr1) = {})
+        & max(MATrainFront[{tr}] \/ {minTTD}) .. newFront <: (stateTTD~)[{freeT}]
+    THEN 
+        
+        BEGIN
+        MATrainRear := MATrainRear <+ {tr |-> min((TtdOfVss~)[{newRear}])} ;
+        MATrainFront := MATrainFront <+ {tr |-> max((TtdOfVss~)[{newFront}])}
+        END;
+    
+        BEGIN
+        SetRearMA2(Linked_Train~(tr),Linked_VirtualSubSection~(MATrainRear(tr)))
+        ;
+        SetFrontMA2(Linked_Train~(tr),Linked_VirtualSubSection~(MATrainFront(tr)))
+        END
+END;
+assignMAErtmsTrain= 
+   ANY tr,newFront
+    WHERE 
+        tr : dom(isConnected)
+        & isConnected(tr) = TRUE
+        & trainKind(tr) /= NoErtms
+        & newFront : Vss
+        & newFront : max(trainLocationVSSFront[{tr}] \/ (MATrainFront[{tr}] \/{minVSS})
+        )..max(Vss)
+        & !tr1.(tr1 : dom(MATrainFront) & tr1 /= tr => max(trainLocationVSSRear[{tr}] 
+                \/{minVSS})..newFront /\ MATrainRear(tr1) .. MATrainFront(tr1) = {})
+        & max(trainLocationVSSRear[{tr}] \/ {minVSS}) ‥ newFront <: (currentStateVSS~)
+        [{freeV}]
+    THEN 
+        
+        BEGIN
+        MATrainRear := MATrainRear <+ {tr |-> max(trainLocationVSSRear[{tr}] \/ {minVSS})} ;
+        MATrainFront := MATrainFront <+ {tr |-> newFront}
+         END;
+         
+         BEGIN
+        SetRearMA2(Linked_Train~(tr),Linked_VirtualSubSection~(MATrainRear(tr)))
+        ;
+        SetFrontMA2(Linked_Train~(tr),Linked_VirtualSubSection~(MATrainFront(tr))) 
+        END
+END;
+muteTimerExpire =
+ ANY tr
+    WHERE 
+        supervisor = FALSE
+        &  tr : dom(trainLocationVSSRear)
+        & tr : dom(muteTimer)
+        & muteTimer(tr) = running
+        & tr : dom(isConnected)
+        & isConnected(tr) = FALSE
+    THEN 
+        supervisor := TRUE ;
+        muteTimer := muteTimer <+ {tr |-> expired} ;
+        disconnectTimer:=
+        disconnectTimer<+(
+            (UNION vs.(vs : trainLocationVSSRear(tr)..trainLocationVSSFront(tr) &
+                    tr /: dom(MATrainRear) | {vs}))*{running})
+         ;
+        SetSupervisionOfTrain(Linked_ETCSModel,Active)
+END;
+disconectTimerExpire = 
+ANY tr
+    WHERE 
+        supervisor = FALSE
+        & tr : dom(trainLocationVSSRear)
+        & disconnectTimer[trainLocationVSSRear(tr) .. trainLocationVSSFront(tr)] = {running}
+    THEN 
+        supervisor := TRUE ;
+        disconnectTimer := disconnectTimer <+ (trainLocationVSSRear(tr) ..trainLocationVSSFront(tr)) * {expired} 
+       ;
+        SetSupervisionOfTrain(Linked_ETCSModel,Active)
+END;
+ghostTimerExpire = 
+ ANY td 
+ WHERE
+        supervisor = FALSE
+        & td : Ttds
+        & ghostTimer(td)=running
+    THEN
+        supervisor := TRUE;
+        ghostTimer(td):= expired ;
+        SetSupervisionOfTrain(Linked_ETCSModel,Active)
+    END
+END

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extractedMM" nsURI="http://www.example.org/extractedMM" nsPrefix="extractedMM">
+  <eClassifiers xsi:type="ecore:EClass" name="BaseObjectRSM">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedResource" eSuperTypes="#//BaseObjectRSM">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkResource" eSuperTypes="#//NamedResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetElement" eSuperTypes="#//NetworkResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositionNetElement" eSuperTypes="#//NetElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositioningNetElement" eSuperTypes="#//CompositionNetElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearElement" eSuperTypes="#//PositioningNetElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="#//NetworkResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionedRelation" eSuperTypes="#//Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigibility" eType="#//Navigability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionOnA" eType="#//Usage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionOnB" eType="#//Usage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leadsTowards" eType="#//LeftRight"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementA" lowerBound="1"
+        eType="#//PositioningNetElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementB" lowerBound="1"
+        eType="#//PositioningNetElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Navigability">
+    <eLiterals name="Both" literal="Both"/>
+    <eLiterals name="AB" value="1" literal="AB"/>
+    <eLiterals name="BA" value="2" literal="BA"/>
+    <eLiterals name="None" value="3" literal="None"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Usage">
+    <eLiterals name="start" literal="start"/>
+    <eLiterals name="end" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LeftRight">
+    <eLiterals name="left" literal="left"/>
+    <eLiterals name="right" value="1" literal="right"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseLocation" eSuperTypes="#//BaseObjectRSM"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpotLocation" eSuperTypes="#//BaseLocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearLocation" eSuperTypes="#//BaseLocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AreaLocation" eSuperTypes="#//BaseLocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedNetElements"
+        upperBound="-1" eType="#//AssociatedNetElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociatedNetElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netElement" lowerBound="1"
+        eType="#//PositioningNetElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="appliesInDirection" eType="#//ApplicationDirection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasLateralPosition" eType="#//LateralPosition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ApplicationDirection">
+    <eLiterals name="undefined" literal="undefined"/>
+    <eLiterals name="normal" value="1" literal="normal"/>
+    <eLiterals name="reverse" value="2" literal="reverse"/>
+    <eLiterals name="both" value="3" literal="both"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralPosition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralSide" eSuperTypes="#//LateralPosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="side" eType="#//Side"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Side">
+    <eLiterals name="undefined"/>
+    <eLiterals name="left" value="1"/>
+    <eLiterals name="right" value="2"/>
+    <eLiterals name="centre" value="3"/>
+    <eLiterals name="both" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseObjectEULYNX" eSuperTypes="#//BaseObjectRSM"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TvpSection" eSuperTypes="#//VirtualTrackAsset">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedAt" lowerBound="1"
+        eType="#//AreaLocation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualTrackAsset" eSuperTypes="#//TrackAsset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrackAsset" eSuperTypes="#//ConfiguredBaseObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfiguredBaseObject" eSuperTypes="#//BaseObjectEULYNX"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TdsSection" eSuperTypes="#//VirtualTrackAsset">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToTvpsection" lowerBound="1"
+        eType="#//TvpSection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TdsCompnent" eSuperTypes="#//VehiclePassageDetector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limitsTdsSection" eType="#//TdsSection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehiclePassageDetector" eSuperTypes="#//PhysicalTrackAsset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalTrackAsset" eSuperTypes="#//TrackAsset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VssLimit" eSuperTypes="#//TdsCompnent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualSubSection" eSuperTypes="#//TdsSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsMaSection" eSuperTypes="#//ConfiguredBaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSectionEntryLocation"
+        lowerBound="1" eType="#//SpotLocation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route" eSuperTypes="#//ConfiguredBaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToRouteBody" lowerBound="1"
+        eType="#//RouteBody"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsRoute" eSuperTypes="#//Route">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMaSection" upperBound="-1"
+        eType="#//EtcsMaSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBody" eSuperTypes="#//ConfiguredBaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasEntry" lowerBound="1"
+        eType="#//RouteEntry" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasExit" lowerBound="1"
+        eType="#//RouteExit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToRsmRoutBody" lowerBound="1"
+        eType="#//RouteBodyRSM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBodyProperty" eSuperTypes="#//ConfiguredBaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToRouteBody" lowerBound="1"
+        eType="#//RouteBody"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SectionList" eSuperTypes="#//RouteBodyProperty">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSection" lowerBound="1"
+        upperBound="-1" eType="#//TvpSection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteExtremity" eSuperTypes="#//BaseObjectEULYNX"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteEntry" eSuperTypes="#//RouteExtremity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteExit" eSuperTypes="#//RouteExtremity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="#//TrackAsset">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToRsmSignal" lowerBound="1"
+        eType="#//SignalRSM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasGroupMainSignal" eType="#//RouteEntry"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPhysicalSignal" eSuperTypes="#//Signal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualSignal" eSuperTypes="#//NonPhysicalSignal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetEntity" eSuperTypes="#//NetworkResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LocatedNetEntity" eSuperTypes="#//NetEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//BaseLocation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalRSM" eSuperTypes="#//LocatedNetEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RouteBodyRSM" eSuperTypes="#//LocatedNetEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsSignalProperties" eSuperTypes="#//BaseObjectEULYNX">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToEoA" eType="#//EtcsEndOfAuthority"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToSignal" lowerBound="1"
+        eType="#//Signal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EtcsEndOfAuthority" eSuperTypes="#//BaseObjectEULYNX"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataPrepEntities" upperBound="-1"
+        eType="#//DataPrepEntities" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rsmEntities" upperBound="-1"
+        eType="#//RsmEntities" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPrepEntities" eSuperTypes="#//BaseObjectRSM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsEndOfAuthority"
+        upperBound="-1" eType="#//EtcsEndOfAuthority" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsMaSection" upperBound="-1"
+        eType="#//EtcsMaSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsEtcsSignalProperties"
+        upperBound="-1" eType="#//EtcsSignalProperties" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBodyProperty"
+        upperBound="-1" eType="#//RouteBodyProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBody" upperBound="-1"
+        eType="#//RouteBody" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRoute" upperBound="-1"
+        eType="#//Route" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsTrackAsset" upperBound="-1"
+        eType="#//TrackAsset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="KnowsAssetAndState" upperBound="-1"
+        eType="#//AssetAndState" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RsmEntities" eSuperTypes="#//BaseObjectRSM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesEtcsTopology" eType="#//Topology"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Topology">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesPositionedRelation"
+        upperBound="-1" eType="#//PositionedRelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesNetElement" upperBound="-1"
+        eType="#//PositioningNetElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usesLocation" upperBound="-1"
+        eType="#//BaseLocation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsSignalRSM" upperBound="-1"
+        eType="#//SignalRSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsRouteBodyRSM" upperBound="-1"
+        eType="#//RouteBodyRSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssetAndState" eSuperTypes="#//ConfiguredBaseObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SectionAndVacancy" eSuperTypes="#//AssetAndState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersToTdsSection" lowerBound="1"
+        eType="#//TdsSection"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inVacancyState" eType="#//SectionVacancyTypes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SectionVacancyTypes">
+    <eLiterals name="occupied"/>
+    <eLiterals name="vacant" value="1"/>
+    <eLiterals name="ambigious" value="2"/>
+    <eLiterals name="unknown" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

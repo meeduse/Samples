@@ -1,0 +1,2561 @@
+<?xml version="1.0" encoding="ASCII"?>
+<bmethod:BSpec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bmethod="http://fr.liglab.vasco/b4msecure/2.0/models/bmethod" xmlns:ctm.trace="http://fr.liglab.vasco/b4msecure/2.0/models/ctm/trace" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" systemMachine="//@machines.0">
+  <eAnnotations source="http://fr.liglab.vasco/b4msecure/2.0/transformation/metadata">
+    <details key="date" value="Thursday, July 20, 2023, 5:03 PM"/>
+    <details key="options" value="&lt;null>[!use fully qualified names,inline role definitions]"/>
+    <contents xsi:type="ecore:EAnnotation" source="transformation/configuration">
+      <references href="http://fr.liglab.vasco/b4msecure/2.0/transformation/functional/B4MSecure.transformationconfig#B4MSecureConfiguration"/>
+    </contents>
+    <contents xsi:type="ecore:EAnnotation" source="transformation/trace" references="//%meeduse%/%trace%/@contents.0"/>
+  </eAnnotations>
+  <eAnnotations source="meeduse">
+    <details key="options" value="protected.sections=definitions,invariant,operations;definitions.external=false"/>
+    <contents xsi:type="ecore:EAnnotation" source="trace">
+      <contents xsi:type="ctm.trace:TransformationTrace">
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.1" source="//%meeduse%/%trace%/@contents.0/@references.0" rule="fr.lig.vasco.becore.BEcoreTransformation#toMachine"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.3" source="//%meeduse%/%trace%/@contents.0/@references.2" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.5" source="//%meeduse%/%trace%/@contents.0/@references.4" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.7" source="//%meeduse%/%trace%/@contents.0/@references.6" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.9" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.9" source="//%meeduse%/%trace%/@contents.0/@references.10" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.12" source="//%meeduse%/%trace%/@contents.0/@references.11" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.14" source="//%meeduse%/%trace%/@contents.0/@references.13" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.16" source="//%meeduse%/%trace%/@contents.0/@references.15" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.18" source="//%meeduse%/%trace%/@contents.0/@references.17" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.20" source="//%meeduse%/%trace%/@contents.0/@references.19" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.22" source="//%meeduse%/%trace%/@contents.0/@references.21" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.24" source="//%meeduse%/%trace%/@contents.0/@references.23" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.26" source="//%meeduse%/%trace%/@contents.0/@references.25" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.26" source="//%meeduse%/%trace%/@contents.0/@references.27" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.29" source="//%meeduse%/%trace%/@contents.0/@references.28" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.30" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.32" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.33" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.34" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.35" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.36" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.37" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.38" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.31" source="//%meeduse%/%trace%/@contents.0/@references.39" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.41" source="//%meeduse%/%trace%/@contents.0/@references.40" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.43" source="//%meeduse%/%trace%/@contents.0/@references.42" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.43" source="//%meeduse%/%trace%/@contents.0/@references.44" rule="fr.lig.vasco.becore.BEcoreTransformation#toSet"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.45" source="//%meeduse%/%trace%/@contents.0/@references.27" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.46" source="//%meeduse%/%trace%/@contents.0/@references.42" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.47" source="//%meeduse%/%trace%/@contents.0/@references.25" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.48" source="//%meeduse%/%trace%/@contents.0/@references.28" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.49" source="//%meeduse%/%trace%/@contents.0/@references.38" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.50" source="//%meeduse%/%trace%/@contents.0/@references.17" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.51" source="//%meeduse%/%trace%/@contents.0/@references.13" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.52" source="//%meeduse%/%trace%/@contents.0/@references.40" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.53" source="//%meeduse%/%trace%/@contents.0/@references.33" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.54" source="//%meeduse%/%trace%/@contents.0/@references.44" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.55" source="//%meeduse%/%trace%/@contents.0/@references.15" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.56" source="//%meeduse%/%trace%/@contents.0/@references.32" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.57" source="//%meeduse%/%trace%/@contents.0/@references.39" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.58" source="//%meeduse%/%trace%/@contents.0/@references.30" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.59" source="//%meeduse%/%trace%/@contents.0/@references.11" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.60" source="//%meeduse%/%trace%/@contents.0/@references.34" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.61" source="//%meeduse%/%trace%/@contents.0/@references.23" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.62" source="//%meeduse%/%trace%/@contents.0/@references.10" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.63" source="//%meeduse%/%trace%/@contents.0/@references.19" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.64" source="//%meeduse%/%trace%/@contents.0/@references.21" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.65" source="//%meeduse%/%trace%/@contents.0/@references.8" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.66" source="//%meeduse%/%trace%/@contents.0/@references.36" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.67" source="//%meeduse%/%trace%/@contents.0/@references.35" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.68" source="//%meeduse%/%trace%/@contents.0/@references.37" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.70" source="//%meeduse%/%trace%/@contents.0/@references.69" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.72" source="//%meeduse%/%trace%/@contents.0/@references.71" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.74" source="//%meeduse%/%trace%/@contents.0/@references.73" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.76" source="//%meeduse%/%trace%/@contents.0/@references.75" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.78" source="//%meeduse%/%trace%/@contents.0/@references.77" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.80" source="//%meeduse%/%trace%/@contents.0/@references.79" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.82" source="//%meeduse%/%trace%/@contents.0/@references.81" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.84" source="//%meeduse%/%trace%/@contents.0/@references.83" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.86" source="//%meeduse%/%trace%/@contents.0/@references.85" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.88" source="//%meeduse%/%trace%/@contents.0/@references.87" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.90" source="//%meeduse%/%trace%/@contents.0/@references.89" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.92" source="//%meeduse%/%trace%/@contents.0/@references.91" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.94" source="//%meeduse%/%trace%/@contents.0/@references.93" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.96" source="//%meeduse%/%trace%/@contents.0/@references.95" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.98" source="//%meeduse%/%trace%/@contents.0/@references.97" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.100" source="//%meeduse%/%trace%/@contents.0/@references.99" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.102" source="//%meeduse%/%trace%/@contents.0/@references.101" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.104" source="//%meeduse%/%trace%/@contents.0/@references.103" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.106" source="//%meeduse%/%trace%/@contents.0/@references.105" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.108" source="//%meeduse%/%trace%/@contents.0/@references.107" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.110" source="//%meeduse%/%trace%/@contents.0/@references.109" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.112" source="//%meeduse%/%trace%/@contents.0/@references.111" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.114" source="//%meeduse%/%trace%/@contents.0/@references.113" rule="fr.lig.vasco.becore.BEcoreTransformation#toInverseVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.116" source="//%meeduse%/%trace%/@contents.0/@references.115" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.118" source="//%meeduse%/%trace%/@contents.0/@references.117" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.120" source="//%meeduse%/%trace%/@contents.0/@references.119" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.122" source="//%meeduse%/%trace%/@contents.0/@references.121" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.124" source="//%meeduse%/%trace%/@contents.0/@references.123" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.126" source="//%meeduse%/%trace%/@contents.0/@references.125" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.128" source="//%meeduse%/%trace%/@contents.0/@references.127" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.130" source="//%meeduse%/%trace%/@contents.0/@references.129" rule="fr.lig.vasco.becore.BEcoreTransformation#toVariable"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.131" source="//%meeduse%/%trace%/@contents.0/@references.19" rule="fr.lig.vasco.becore.BEcoreTransformation#toConstructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.132" source="//%meeduse%/%trace%/@contents.0/@references.19" rule="fr.lig.vasco.becore.BEcoreTransformation#toDestructor"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.133" source="//%meeduse%/%trace%/@contents.0/@references.121" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.134" source="//%meeduse%/%trace%/@contents.0/@references.123" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.135" source="//%meeduse%/%trace%/@contents.0/@references.125" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.136" source="//%meeduse%/%trace%/@contents.0/@references.127" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.137" source="//%meeduse%/%trace%/@contents.0/@references.129" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.138" source="//%meeduse%/%trace%/@contents.0/@references.89" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.139" source="//%meeduse%/%trace%/@contents.0/@references.69" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.140" source="//%meeduse%/%trace%/@contents.0/@references.99" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.141" source="//%meeduse%/%trace%/@contents.0/@references.93" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.142" source="//%meeduse%/%trace%/@contents.0/@references.91" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.143" source="//%meeduse%/%trace%/@contents.0/@references.81" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.144" source="//%meeduse%/%trace%/@contents.0/@references.115" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.145" source="//%meeduse%/%trace%/@contents.0/@references.79" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.146" source="//%meeduse%/%trace%/@contents.0/@references.75" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.147" source="//%meeduse%/%trace%/@contents.0/@references.119" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.148" source="//%meeduse%/%trace%/@contents.0/@references.87" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.149" source="//%meeduse%/%trace%/@contents.0/@references.105" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.150" source="//%meeduse%/%trace%/@contents.0/@references.85" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.151" source="//%meeduse%/%trace%/@contents.0/@references.83" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.152" source="//%meeduse%/%trace%/@contents.0/@references.73" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.153" source="//%meeduse%/%trace%/@contents.0/@references.117" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.154" source="//%meeduse%/%trace%/@contents.0/@references.111" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.155" source="//%meeduse%/%trace%/@contents.0/@references.103" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.156" source="//%meeduse%/%trace%/@contents.0/@references.109" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.157" source="//%meeduse%/%trace%/@contents.0/@references.71" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.158" source="//%meeduse%/%trace%/@contents.0/@references.113" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.159" source="//%meeduse%/%trace%/@contents.0/@references.95" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.160" source="//%meeduse%/%trace%/@contents.0/@references.107" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.161" source="//%meeduse%/%trace%/@contents.0/@references.77" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.162" source="//%meeduse%/%trace%/@contents.0/@references.97" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.163" source="//%meeduse%/%trace%/@contents.0/@references.101" rule="fr.lig.vasco.becore.BEcoreTransformation#toGetter"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.164 //%meeduse%/%trace%/@contents.0/@references.165 //%meeduse%/%trace%/@contents.0/@references.166" source="//%meeduse%/%trace%/@contents.0/@references.121" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.167 //%meeduse%/%trace%/@contents.0/@references.168 //%meeduse%/%trace%/@contents.0/@references.169" source="//%meeduse%/%trace%/@contents.0/@references.125" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.170 //%meeduse%/%trace%/@contents.0/@references.171 //%meeduse%/%trace%/@contents.0/@references.172" source="//%meeduse%/%trace%/@contents.0/@references.127" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.173 //%meeduse%/%trace%/@contents.0/@references.174 //%meeduse%/%trace%/@contents.0/@references.175" source="//%meeduse%/%trace%/@contents.0/@references.129" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.176 //%meeduse%/%trace%/@contents.0/@references.177 //%meeduse%/%trace%/@contents.0/@references.178 //%meeduse%/%trace%/@contents.0/@references.179" source="//%meeduse%/%trace%/@contents.0/@references.89" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.180 //%meeduse%/%trace%/@contents.0/@references.181 //%meeduse%/%trace%/@contents.0/@references.182 //%meeduse%/%trace%/@contents.0/@references.183" source="//%meeduse%/%trace%/@contents.0/@references.93" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.184 //%meeduse%/%trace%/@contents.0/@references.185 //%meeduse%/%trace%/@contents.0/@references.186" source="//%meeduse%/%trace%/@contents.0/@references.99" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.187 //%meeduse%/%trace%/@contents.0/@references.188 //%meeduse%/%trace%/@contents.0/@references.189 //%meeduse%/%trace%/@contents.0/@references.190" source="//%meeduse%/%trace%/@contents.0/@references.91" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.191 //%meeduse%/%trace%/@contents.0/@references.192 //%meeduse%/%trace%/@contents.0/@references.193 //%meeduse%/%trace%/@contents.0/@references.194" source="//%meeduse%/%trace%/@contents.0/@references.75" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.195 //%meeduse%/%trace%/@contents.0/@references.196 //%meeduse%/%trace%/@contents.0/@references.197 //%meeduse%/%trace%/@contents.0/@references.198" source="//%meeduse%/%trace%/@contents.0/@references.105" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.199 //%meeduse%/%trace%/@contents.0/@references.200 //%meeduse%/%trace%/@contents.0/@references.201 //%meeduse%/%trace%/@contents.0/@references.202" source="//%meeduse%/%trace%/@contents.0/@references.85" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.203 //%meeduse%/%trace%/@contents.0/@references.204 //%meeduse%/%trace%/@contents.0/@references.205 //%meeduse%/%trace%/@contents.0/@references.206" source="//%meeduse%/%trace%/@contents.0/@references.83" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.207 //%meeduse%/%trace%/@contents.0/@references.208 //%meeduse%/%trace%/@contents.0/@references.209" source="//%meeduse%/%trace%/@contents.0/@references.117" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.210 //%meeduse%/%trace%/@contents.0/@references.211 //%meeduse%/%trace%/@contents.0/@references.212 //%meeduse%/%trace%/@contents.0/@references.213" source="//%meeduse%/%trace%/@contents.0/@references.111" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.214 //%meeduse%/%trace%/@contents.0/@references.215 //%meeduse%/%trace%/@contents.0/@references.216" source="//%meeduse%/%trace%/@contents.0/@references.109" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.217 //%meeduse%/%trace%/@contents.0/@references.218 //%meeduse%/%trace%/@contents.0/@references.219" source="//%meeduse%/%trace%/@contents.0/@references.103" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.220 //%meeduse%/%trace%/@contents.0/@references.221 //%meeduse%/%trace%/@contents.0/@references.222 //%meeduse%/%trace%/@contents.0/@references.223" source="//%meeduse%/%trace%/@contents.0/@references.71" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.224 //%meeduse%/%trace%/@contents.0/@references.225 //%meeduse%/%trace%/@contents.0/@references.226" source="//%meeduse%/%trace%/@contents.0/@references.107" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.227 //%meeduse%/%trace%/@contents.0/@references.228 //%meeduse%/%trace%/@contents.0/@references.229 //%meeduse%/%trace%/@contents.0/@references.230" source="//%meeduse%/%trace%/@contents.0/@references.77" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.231 //%meeduse%/%trace%/@contents.0/@references.232 //%meeduse%/%trace%/@contents.0/@references.233 //%meeduse%/%trace%/@contents.0/@references.234" source="//%meeduse%/%trace%/@contents.0/@references.97" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <maps targets="//%meeduse%/%trace%/@contents.0/@references.235 //%meeduse%/%trace%/@contents.0/@references.236 //%meeduse%/%trace%/@contents.0/@references.237 //%meeduse%/%trace%/@contents.0/@references.238" source="//%meeduse%/%trace%/@contents.0/@references.101" rule="fr.lig.vasco.becore.BEcoreTransformation#toSetters"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.0">
+          <object href="eTCSData.ecore#/"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.0" object="//@machines.0"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.1">
+          <object href="eTCSData.ecore#//KindOfTrains"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.1" object="//@machines.0/@data.0"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.2">
+          <object href="eTCSData.ecore#//SupervisionStatus"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.2" object="//@machines.0/@data.1"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.3">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionVacancyTypes"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.3" object="//@machines.0/@data.2"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.4 //%meeduse%/%trace%/@contents.0/@maps.48">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//AssetAndState"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.4 //%meeduse%/%trace%/@contents.0/@maps.5" object="//@machines.0/@data.13"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.5 //%meeduse%/%trace%/@contents.0/@maps.45">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionAndVacancy"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.6 //%meeduse%/%trace%/@contents.0/@maps.42">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//AreaLocation"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.6" object="//@machines.0/@data.8"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.7 //%meeduse%/%trace%/@contents.0/@maps.34">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DocumentRoot"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.7" object="//@machines.0/@data.11"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.8 //%meeduse%/%trace%/@contents.0/@maps.38">
+          <object href="eTCSData.ecore#//ETCSModel"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.8" object="//@machines.0/@data.3"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.9 //%meeduse%/%trace%/@contents.0/@maps.33">
+          <object href="eTCSData.ecore#//Train"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.9" object="//@machines.0/@data.4"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.10 //%meeduse%/%trace%/@contents.0/@maps.46 //%meeduse%/%trace%/@contents.0/@maps.83 //%meeduse%/%trace%/@contents.0/@maps.84">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//Topology"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.10" object="//@machines.0/@data.15"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.11 //%meeduse%/%trace%/@contents.0/@maps.47">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DataPrepEntities"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.11" object="//@machines.0/@data.12"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.12 //%meeduse%/%trace%/@contents.0/@maps.44">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//RsmEntities"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.12" object="//@machines.0/@data.14"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.13 //%meeduse%/%trace%/@contents.0/@maps.30">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//LinearElement"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.13 //%meeduse%/%trace%/@contents.0/@maps.14" object="//@machines.0/@data.5"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.14 //%meeduse%/%trace%/@contents.0/@maps.28">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//PositioningNetElement"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.15 //%meeduse%/%trace%/@contents.0/@maps.31">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//PositionedRelation"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.15" object="//@machines.0/@data.6"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.16 //%meeduse%/%trace%/@contents.0/@maps.41">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//PhysicalTrackAsset"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.16 //%meeduse%/%trace%/@contents.0/@maps.17 //%meeduse%/%trace%/@contents.0/@maps.18 //%meeduse%/%trace%/@contents.0/@maps.19 //%meeduse%/%trace%/@contents.0/@maps.20 //%meeduse%/%trace%/@contents.0/@maps.21 //%meeduse%/%trace%/@contents.0/@maps.22 //%meeduse%/%trace%/@contents.0/@maps.23 //%meeduse%/%trace%/@contents.0/@maps.24" object="//@machines.0/@data.9"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.17 //%meeduse%/%trace%/@contents.0/@maps.39">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TdsSection"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.18 //%meeduse%/%trace%/@contents.0/@maps.36">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//VirtualSubSection"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.19 //%meeduse%/%trace%/@contents.0/@maps.43">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TvpSection"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.20 //%meeduse%/%trace%/@contents.0/@maps.50">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//VssLimit"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.21 //%meeduse%/%trace%/@contents.0/@maps.49">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TrackAsset"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.22 //%meeduse%/%trace%/@contents.0/@maps.51">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//VehiclePassageDetector"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.23 //%meeduse%/%trace%/@contents.0/@maps.32">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//VirtualTrackAsset"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.24 //%meeduse%/%trace%/@contents.0/@maps.40">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TdsCompnent"/>
+        </references>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.25 //%meeduse%/%trace%/@contents.0/@maps.35">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//AssociatedNetElement"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.25" object="//@machines.0/@data.7"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.26 //%meeduse%/%trace%/@contents.0/@maps.29">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionList"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.26 //%meeduse%/%trace%/@contents.0/@maps.27" object="//@machines.0/@data.10"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.27 //%meeduse%/%trace%/@contents.0/@maps.37">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//RouteBodyProperty"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.28" object="//@machines.0/@data.46"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.29" object="//@machines.0/@data.54"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.30" object="//@machines.0/@data.53"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.31" object="//@machines.0/@data.47"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.32" object="//@machines.0/@data.20"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.33" object="//@machines.0/@data.45"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.34" object="//@machines.0/@data.50"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.35" object="//@machines.0/@data.48"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.36" object="//@machines.0/@data.59"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.37" object="//@machines.0/@data.17"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.38" object="//@machines.0/@data.44"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.39" object="//@machines.0/@data.57"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.40" object="//@machines.0/@data.58"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.41" object="//@machines.0/@data.21"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.42" object="//@machines.0/@data.49"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.43" object="//@machines.0/@data.56"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.44" object="//@machines.0/@data.52"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.45" object="//@machines.0/@data.55"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.46" object="//@machines.0/@data.19"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.47" object="//@machines.0/@data.51"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.48" object="//@machines.0/@data.18"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.49" object="//@machines.0/@data.16"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.50" object="//@machines.0/@data.60"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.51" object="//@machines.0/@data.22"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.52 //%meeduse%/%trace%/@contents.0/@maps.91">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//PositionedRelation/elementB"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.52" object="//@machines.0/@data.63"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.53 //%meeduse%/%trace%/@contents.0/@maps.109 //%meeduse%/%trace%/@contents.0/@maps.132">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//Topology/usesNetElement"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.53" object="//@machines.0/@data.37"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.54 //%meeduse%/%trace%/@contents.0/@maps.104">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TdsSection/appliesToTvpsection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.54" object="//@machines.0/@data.67"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.55 //%meeduse%/%trace%/@contents.0/@maps.98 //%meeduse%/%trace%/@contents.0/@maps.124">
+          <object href="eTCSData.ecore#//Train/occupyRear"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.55" object="//@machines.0/@data.24"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.56 //%meeduse%/%trace%/@contents.0/@maps.113 //%meeduse%/%trace%/@contents.0/@maps.134">
+          <object href="eTCSData.ecore#//Train/occupyFront"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.56" object="//@machines.0/@data.23"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.57 //%meeduse%/%trace%/@contents.0/@maps.97">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//AssociatedNetElement/netElement"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.57" object="//@machines.0/@data.64"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.58 //%meeduse%/%trace%/@contents.0/@maps.95">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//PositionedRelation/elementA"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.58" object="//@machines.0/@data.62"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.59 //%meeduse%/%trace%/@contents.0/@maps.103 //%meeduse%/%trace%/@contents.0/@maps.127">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DataPrepEntities/ownsTrackAsset"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.59" object="//@machines.0/@data.33"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.60 //%meeduse%/%trace%/@contents.0/@maps.102 //%meeduse%/%trace%/@contents.0/@maps.126">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DocumentRoot/rsmEntities"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.60" object="//@machines.0/@data.39"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.61 //%meeduse%/%trace%/@contents.0/@maps.100">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionAndVacancy/refersToTdsSection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.61" object="//@machines.0/@data.70"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.62 //%meeduse%/%trace%/@contents.0/@maps.90 //%meeduse%/%trace%/@contents.0/@maps.120">
+          <object href="eTCSData.ecore#//ETCSModel/trains"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.62" object="//@machines.0/@data.29"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.63 //%meeduse%/%trace%/@contents.0/@maps.94 //%meeduse%/%trace%/@contents.0/@maps.123">
+          <object href="eTCSData.ecore#//Train/locationRear"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.63" object="//@machines.0/@data.25"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.64 //%meeduse%/%trace%/@contents.0/@maps.93 //%meeduse%/%trace%/@contents.0/@maps.121">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DataPrepEntities/KnowsAssetAndState"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.64" object="//@machines.0/@data.34"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.65 //%meeduse%/%trace%/@contents.0/@maps.111">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TdsCompnent/limitsTdsSection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.65" object="//@machines.0/@data.68"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.66 //%meeduse%/%trace%/@contents.0/@maps.114 //%meeduse%/%trace%/@contents.0/@maps.135">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DocumentRoot/dataPrepEntities"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.66" object="//@machines.0/@data.35"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.67 //%meeduse%/%trace%/@contents.0/@maps.92 //%meeduse%/%trace%/@contents.0/@maps.122">
+          <object href="eTCSData.ecore#//ETCSModel/EulynxModel"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.67" object="//@machines.0/@data.30"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.68 //%meeduse%/%trace%/@contents.0/@maps.115 //%meeduse%/%trace%/@contents.0/@maps.136">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//Topology/usesPositionedRelation"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.68" object="//@machines.0/@data.36"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.69 //%meeduse%/%trace%/@contents.0/@maps.107 //%meeduse%/%trace%/@contents.0/@maps.131">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//RsmEntities/usesEtcsTopology"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.69" object="//@machines.0/@data.38"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.70 //%meeduse%/%trace%/@contents.0/@maps.101 //%meeduse%/%trace%/@contents.0/@maps.125">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//DataPrepEntities/ownsRouteBodyProperty"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.70" object="//@machines.0/@data.32"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.71 //%meeduse%/%trace%/@contents.0/@maps.112 //%meeduse%/%trace%/@contents.0/@maps.133">
+          <object href="eTCSData.ecore#//Train/frontMA"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.71" object="//@machines.0/@data.27"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.72 //%meeduse%/%trace%/@contents.0/@maps.108 //%meeduse%/%trace%/@contents.0/@maps.130">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//VehiclePassageDetector/occupiesTdsSection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.72" object="//@machines.0/@data.31"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.73 //%meeduse%/%trace%/@contents.0/@maps.106 //%meeduse%/%trace%/@contents.0/@maps.129">
+          <object href="eTCSData.ecore#//Train/locationFront"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.73" object="//@machines.0/@data.26"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.74 //%meeduse%/%trace%/@contents.0/@maps.110">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//AreaLocation/associatedNetElements"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.74" object="//@machines.0/@data.65"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.75 //%meeduse%/%trace%/@contents.0/@maps.96">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//TvpSection/isLocatedAt"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.75" object="//@machines.0/@data.66"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.76 //%meeduse%/%trace%/@contents.0/@maps.105 //%meeduse%/%trace%/@contents.0/@maps.128">
+          <object href="eTCSData.ecore#//Train/rearMA"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.76" object="//@machines.0/@data.28"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.77 //%meeduse%/%trace%/@contents.0/@maps.99">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionList/hasSection"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.77" object="//@machines.0/@data.69"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.78 //%meeduse%/%trace%/@contents.0/@maps.85 //%meeduse%/%trace%/@contents.0/@maps.116">
+          <object href="eTCSData.ecore#//Train/TrainConnected"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.78" object="//@machines.0/@data.41"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.79 //%meeduse%/%trace%/@contents.0/@maps.86">
+          <object href="eTCSData.ecore#//Train/KindOfTrain"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.79" object="//@machines.0/@data.61"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.80 //%meeduse%/%trace%/@contents.0/@maps.87 //%meeduse%/%trace%/@contents.0/@maps.117">
+          <object href="../../ExtractedMM/model/extractedMM.ecore#//SectionAndVacancy/inVacancyState"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.80" object="//@machines.0/@data.43"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.81 //%meeduse%/%trace%/@contents.0/@maps.88 //%meeduse%/%trace%/@contents.0/@maps.118">
+          <object href="eTCSData.ecore#//Train/TrainReConnected"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.81" object="//@machines.0/@data.42"/>
+        <references outgoing="//%meeduse%/%trace%/@contents.0/@maps.82 //%meeduse%/%trace%/@contents.0/@maps.89 //%meeduse%/%trace%/@contents.0/@maps.119">
+          <object href="eTCSData.ecore#//ETCSModel/SupervisionOfTrain"/>
+        </references>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.82" object="//@machines.0/@data.40"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.83" object="//@machines.0/@operations.0"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.84" object="//@machines.0/@operations.1"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.85" object="//@machines.0/@operations.92"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.86" object="//@machines.0/@operations.94"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.87" object="//@machines.0/@operations.95"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.88" object="//@machines.0/@operations.93"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.89" object="//@machines.0/@operations.91"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.90" object="//@machines.0/@operations.2"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.91" object="//@machines.0/@operations.11"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.92" object="//@machines.0/@operations.3"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.93" object="//@machines.0/@operations.23"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.94" object="//@machines.0/@operations.6"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.95" object="//@machines.0/@operations.10"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.96" object="//@machines.0/@operations.14"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.97" object="//@machines.0/@operations.12"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.98" object="//@machines.0/@operations.5"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.99" object="//@machines.0/@operations.18"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.100" object="//@machines.0/@operations.27"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.101" object="//@machines.0/@operations.21"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.102" object="//@machines.0/@operations.20"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.103" object="//@machines.0/@operations.22"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.104" object="//@machines.0/@operations.15"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.105" object="//@machines.0/@operations.9"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.106" object="//@machines.0/@operations.7"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.107" object="//@machines.0/@operations.24"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.108" object="//@machines.0/@operations.17"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.109" object="//@machines.0/@operations.26"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.110" object="//@machines.0/@operations.13"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.111" object="//@machines.0/@operations.16"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.112" object="//@machines.0/@operations.8"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.113" object="//@machines.0/@operations.4"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.114" object="//@machines.0/@operations.19"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.115" object="//@machines.0/@operations.25"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.116" object="//@machines.0/@operations.101"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.116" object="//@machines.0/@operations.105"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.116" object="//@machines.0/@operations.97"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.117" object="//@machines.0/@operations.107"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.117" object="//@machines.0/@operations.103"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.117" object="//@machines.0/@operations.99"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.118" object="//@machines.0/@operations.106"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.118" object="//@machines.0/@operations.102"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.118" object="//@machines.0/@operations.98"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.119" object="//@machines.0/@operations.104"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.119" object="//@machines.0/@operations.96"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.119" object="//@machines.0/@operations.100"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.120" object="//@machines.0/@operations.62"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.120" object="//@machines.0/@operations.74"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.120" object="//@machines.0/@operations.28"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.120" object="//@machines.0/@operations.45"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.121" object="//@machines.0/@operations.41"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.121" object="//@machines.0/@operations.58"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.121" object="//@machines.0/@operations.87"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.121" object="//@machines.0/@operations.71"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.122" object="//@machines.0/@operations.29"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.122" object="//@machines.0/@operations.46"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.122" object="//@machines.0/@operations.75"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.123" object="//@machines.0/@operations.49"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.123" object="//@machines.0/@operations.32"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.123" object="//@machines.0/@operations.65"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.123" object="//@machines.0/@operations.78"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.124" object="//@machines.0/@operations.64"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.124" object="//@machines.0/@operations.31"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.124" object="//@machines.0/@operations.48"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.124" object="//@machines.0/@operations.77"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.125" object="//@machines.0/@operations.69"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.125" object="//@machines.0/@operations.85"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.125" object="//@machines.0/@operations.39"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.125" object="//@machines.0/@operations.56"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.126" object="//@machines.0/@operations.68"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.126" object="//@machines.0/@operations.38"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.126" object="//@machines.0/@operations.84"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.126" object="//@machines.0/@operations.55"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.127" object="//@machines.0/@operations.86"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.127" object="//@machines.0/@operations.70"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.127" object="//@machines.0/@operations.40"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.127" object="//@machines.0/@operations.57"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.128" object="//@machines.0/@operations.35"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.128" object="//@machines.0/@operations.52"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.128" object="//@machines.0/@operations.81"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.129" object="//@machines.0/@operations.50"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.129" object="//@machines.0/@operations.33"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.129" object="//@machines.0/@operations.66"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.129" object="//@machines.0/@operations.79"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.130" object="//@machines.0/@operations.82"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.130" object="//@machines.0/@operations.36"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.130" object="//@machines.0/@operations.53"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.131" object="//@machines.0/@operations.88"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.131" object="//@machines.0/@operations.59"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.131" object="//@machines.0/@operations.42"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.132" object="//@machines.0/@operations.61"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.132" object="//@machines.0/@operations.44"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.132" object="//@machines.0/@operations.73"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.132" object="//@machines.0/@operations.90"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.133" object="//@machines.0/@operations.34"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.133" object="//@machines.0/@operations.51"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.133" object="//@machines.0/@operations.80"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.134" object="//@machines.0/@operations.47"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.134" object="//@machines.0/@operations.63"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.134" object="//@machines.0/@operations.30"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.134" object="//@machines.0/@operations.76"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.135" object="//@machines.0/@operations.83"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.135" object="//@machines.0/@operations.37"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.135" object="//@machines.0/@operations.54"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.135" object="//@machines.0/@operations.67"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.136" object="//@machines.0/@operations.60"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.136" object="//@machines.0/@operations.89"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.136" object="//@machines.0/@operations.72"/>
+        <references incoming="//%meeduse%/%trace%/@contents.0/@maps.136" object="//@machines.0/@operations.43"/>
+      </contents>
+    </contents>
+  </eAnnotations>
+  <machines name="eTCSData">
+    <data xsi:type="bmethod:BEnumSet" name="KindOfTrains" typing="//@machines.0/@data.0/@values.0 //@machines.0/@data.0/@values.1 //@machines.0/@data.0/@values.2">
+      <values name="TIMSERTMS" type="//@machines.0/@data.0"/>
+      <values name="ERTMS" type="//@machines.0/@data.0"/>
+      <values name="NoERTMS" type="//@machines.0/@data.0"/>
+    </data>
+    <data xsi:type="bmethod:BEnumSet" name="SupervisionStatus" typing="//@machines.0/@data.1/@values.0 //@machines.0/@data.1/@values.1 //@machines.0/@operations.96/@param.1 //@machines.0/@operations.104/@param.1">
+      <values name="Active" type="//@machines.0/@data.1"/>
+      <values name="Deactive" type="//@machines.0/@data.1"/>
+    </data>
+    <data xsi:type="bmethod:BEnumSet" name="SectionVacancyTypes" typing="//@machines.0/@data.2/@values.0 //@machines.0/@data.2/@values.1 //@machines.0/@data.2/@values.2 //@machines.0/@data.2/@values.3 //@machines.0/@operations.99/@param.1 //@machines.0/@operations.107/@param.1">
+      <values name="E_occupied" type="//@machines.0/@data.2"/>
+      <values name="E_vacant" type="//@machines.0/@data.2"/>
+      <values name="E_ambigious" type="//@machines.0/@data.2"/>
+      <values name="E_unknown" type="//@machines.0/@data.2"/>
+    </data>
+    <data xsi:type="bmethod:BAbstractSet" name="ETCSMODEL"/>
+    <data xsi:type="bmethod:BAbstractSet" name="TRAIN"/>
+    <data xsi:type="bmethod:BAbstractSet" name="POSITIONINGNETELEMENT"/>
+    <data xsi:type="bmethod:BAbstractSet" name="POSITIONEDRELATION"/>
+    <data xsi:type="bmethod:BAbstractSet" name="ASSOCIATEDNETELEMENT"/>
+    <data xsi:type="bmethod:BAbstractSet" name="AREALOCATION"/>
+    <data xsi:type="bmethod:BAbstractSet" name="TRACKASSET" typing="//@machines.0/@data.56 //@machines.0/@data.57 //@machines.0/@data.58"/>
+    <data xsi:type="bmethod:BAbstractSet" name="ROUTEBODYPROPERTY" typing="//@machines.0/@data.54"/>
+    <data xsi:type="bmethod:BAbstractSet" name="DOCUMENTROOT"/>
+    <data xsi:type="bmethod:BAbstractSet" name="DATAPREPENTITIES"/>
+    <data xsi:type="bmethod:BAbstractSet" name="ASSETANDSTATE" typing="//@machines.0/@data.55"/>
+    <data xsi:type="bmethod:BAbstractSet" name="RSMENTITIES"/>
+    <data xsi:type="bmethod:BAbstractSet" name="TOPOLOGY" typing="//@machines.0/@operations.0/@param.0"/>
+    <data xsi:type="bmethod:BVariable" name="TrackAsset" type="//@sharedTypes.14" typing="//@machines.0/@data.20 //@machines.0/@data.21 //@machines.0/@operations.70/@param.1 //@machines.0/@operations.86/@param.1">
+      <typingPredicate operator="In" type="//@sharedTypes.14"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="RouteBodyProperty" type="//@sharedTypes.16" typing="//@machines.0/@operations.69/@param.1 //@machines.0/@operations.85/@param.1">
+      <typingPredicate operator="In" type="//@sharedTypes.16"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="AssetAndState" type="//@sharedTypes.22" typing="//@machines.0/@operations.71/@param.1 //@machines.0/@operations.87/@param.1">
+      <typingPredicate operator="In" type="//@sharedTypes.22"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="Topology" type="//@sharedTypes.26" typing="//@machines.0/@operations.1/@param.0 //@machines.0/@operations.25/@param.0 //@machines.0/@operations.26/@param.0 //@machines.0/@operations.42/@param.1 //@machines.0/@operations.43/@param.0 //@machines.0/@operations.44/@param.0 //@machines.0/@operations.60/@param.0 //@machines.0/@operations.61/@param.0 //@machines.0/@operations.72/@param.0 //@machines.0/@operations.73/@param.0 //@machines.0/@operations.88/@param.1 //@machines.0/@operations.89/@param.0 //@machines.0/@operations.90/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.26"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="VirtualTrackAsset" type="//@machines.0/@data.16">
+      <typingPredicate type="//@machines.0/@data.16"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="PhysicalTrackAsset" type="//@machines.0/@data.16" typing="//@machines.0/@data.22">
+      <typingPredicate type="//@machines.0/@data.16"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="VehiclePassageDetector" type="//@machines.0/@data.21" typing="//@machines.0/@operations.17/@param.0 //@machines.0/@operations.36/@param.0 //@machines.0/@operations.53/@param.0 //@machines.0/@operations.82/@param.0">
+      <typingPredicate type="//@machines.0/@data.21"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainFront" type="//@sharedTypes.27">
+      <typingPredicate operator="In" type="//@sharedTypes.27"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainRear" type="//@sharedTypes.28">
+      <typingPredicate operator="In" type="//@sharedTypes.28"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainRearLocation" type="//@sharedTypes.29">
+      <typingPredicate operator="In" type="//@sharedTypes.29"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainFrontLocation" type="//@sharedTypes.30">
+      <typingPredicate operator="In" type="//@sharedTypes.30"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="frontMA" type="//@sharedTypes.31">
+      <typingPredicate operator="In" type="//@sharedTypes.31"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="rearMA" type="//@sharedTypes.32">
+      <typingPredicate operator="In" type="//@sharedTypes.32"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="ListOfTrains" type="//@sharedTypes.33">
+      <typingPredicate operator="In" type="//@sharedTypes.33"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="EulynxModels" type="//@sharedTypes.34">
+      <typingPredicate operator="In" type="//@sharedTypes.34"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_occupiesTdsSection_vehiclePassageDetector" type="//@sharedTypes.41">
+      <typingPredicate operator="In" type="//@sharedTypes.41"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_ownsRouteBodyProperty_dataPrepEntities" type="//@sharedTypes.44">
+      <typingPredicate operator="In" type="//@sharedTypes.44"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_ownsTrackAsset_dataPrepEntities" type="//@sharedTypes.45">
+      <typingPredicate operator="In" type="//@sharedTypes.45"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_KnowsAssetAndState_dataPrepEntities" type="//@sharedTypes.46">
+      <typingPredicate operator="In" type="//@sharedTypes.46"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_dataPrepEntities_documentRoot" type="//@sharedTypes.47">
+      <typingPredicate operator="In" type="//@sharedTypes.47"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_usesPositionedRelation_topology" type="//@sharedTypes.48">
+      <typingPredicate operator="In" type="//@sharedTypes.48"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_usesNetElement_topology" type="//@sharedTypes.49">
+      <typingPredicate operator="In" type="//@sharedTypes.49"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="EtcsTopologies" type="//@sharedTypes.50">
+      <typingPredicate operator="In" type="//@sharedTypes.50"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="A_rsmEntities_documentRoot" type="//@sharedTypes.51">
+      <typingPredicate operator="In" type="//@sharedTypes.51"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="SupervisionOfTrain" type="//@sharedTypes.53">
+      <typingPredicate operator="In" type="//@sharedTypes.53"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainConnected" type="//@sharedTypes.54">
+      <typingPredicate operator="In" type="//@sharedTypes.54"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="TrainReConnected" type="//@sharedTypes.55">
+      <typingPredicate operator="In" type="//@sharedTypes.55"/>
+    </data>
+    <data xsi:type="bmethod:BVariable" name="inVacancyState" type="//@sharedTypes.57">
+      <typingPredicate operator="In" type="//@sharedTypes.57"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="ETCSModel" type="//@sharedTypes.2" typing="//@machines.0/@operations.2/@param.0 //@machines.0/@operations.3/@param.0 //@machines.0/@operations.28/@param.0 //@machines.0/@operations.29/@param.0 //@machines.0/@operations.45/@param.0 //@machines.0/@operations.46/@param.0 //@machines.0/@operations.62/@param.0 //@machines.0/@operations.74/@param.0 //@machines.0/@operations.75/@param.0 //@machines.0/@operations.91/@param.0 //@machines.0/@operations.96/@param.0 //@machines.0/@operations.100/@param.0 //@machines.0/@operations.104/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.2"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="Train" type="//@sharedTypes.4" typing="//@machines.0/@operations.4/@param.0 //@machines.0/@operations.5/@param.0 //@machines.0/@operations.6/@param.0 //@machines.0/@operations.7/@param.0 //@machines.0/@operations.8/@param.0 //@machines.0/@operations.9/@param.0 //@machines.0/@operations.30/@param.0 //@machines.0/@operations.31/@param.0 //@machines.0/@operations.32/@param.0 //@machines.0/@operations.33/@param.0 //@machines.0/@operations.34/@param.0 //@machines.0/@operations.35/@param.0 //@machines.0/@operations.47/@param.0 //@machines.0/@operations.48/@param.0 //@machines.0/@operations.49/@param.0 //@machines.0/@operations.50/@param.0 //@machines.0/@operations.51/@param.0 //@machines.0/@operations.52/@param.0 //@machines.0/@operations.62/@param.1 //@machines.0/@operations.63/@param.0 //@machines.0/@operations.64/@param.0 //@machines.0/@operations.65/@param.0 //@machines.0/@operations.66/@param.0 //@machines.0/@operations.74/@param.1 //@machines.0/@operations.76/@param.0 //@machines.0/@operations.77/@param.0 //@machines.0/@operations.78/@param.0 //@machines.0/@operations.79/@param.0 //@machines.0/@operations.80/@param.0 //@machines.0/@operations.81/@param.0 //@machines.0/@operations.92/@param.0 //@machines.0/@operations.93/@param.0 //@machines.0/@operations.94/@param.0 //@machines.0/@operations.97/@param.0 //@machines.0/@operations.98/@param.0 //@machines.0/@operations.101/@param.0 //@machines.0/@operations.102/@param.0 //@machines.0/@operations.105/@param.0 //@machines.0/@operations.106/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.4"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="PositioningNetElement" type="//@sharedTypes.6" typing="//@machines.0/@operations.73/@param.1 //@machines.0/@operations.90/@param.1 //@machines.0/@data.53">
+      <typingPredicate operator="In" type="//@sharedTypes.6"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="PositionedRelation" type="//@sharedTypes.8" typing="//@machines.0/@operations.10/@param.0 //@machines.0/@operations.11/@param.0 //@machines.0/@operations.72/@param.1 //@machines.0/@operations.89/@param.1">
+      <typingPredicate operator="In" type="//@sharedTypes.8"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="AssociatedNetElement" type="//@sharedTypes.10" typing="//@machines.0/@operations.12/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.10"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="AreaLocation" type="//@sharedTypes.12" typing="//@machines.0/@operations.13/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.12"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="DocumentRoot" type="//@sharedTypes.18" typing="//@machines.0/@operations.19/@param.0 //@machines.0/@operations.20/@param.0 //@machines.0/@operations.29/@param.1 //@machines.0/@operations.37/@param.0 //@machines.0/@operations.38/@param.0 //@machines.0/@operations.54/@param.0 //@machines.0/@operations.55/@param.0 //@machines.0/@operations.67/@param.0 //@machines.0/@operations.68/@param.0 //@machines.0/@operations.75/@param.1 //@machines.0/@operations.83/@param.0 //@machines.0/@operations.84/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.18"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="DataPrepEntities" type="//@sharedTypes.20" typing="//@machines.0/@operations.21/@param.0 //@machines.0/@operations.22/@param.0 //@machines.0/@operations.23/@param.0 //@machines.0/@operations.39/@param.0 //@machines.0/@operations.40/@param.0 //@machines.0/@operations.41/@param.0 //@machines.0/@operations.56/@param.0 //@machines.0/@operations.57/@param.0 //@machines.0/@operations.58/@param.0 //@machines.0/@operations.67/@param.1 //@machines.0/@operations.69/@param.0 //@machines.0/@operations.70/@param.0 //@machines.0/@operations.71/@param.0 //@machines.0/@operations.83/@param.1 //@machines.0/@operations.85/@param.0 //@machines.0/@operations.86/@param.0 //@machines.0/@operations.87/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.20"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="RsmEntities" type="//@sharedTypes.24" typing="//@machines.0/@operations.24/@param.0 //@machines.0/@operations.42/@param.0 //@machines.0/@operations.59/@param.0 //@machines.0/@operations.68/@param.1 //@machines.0/@operations.84/@param.1 //@machines.0/@operations.88/@param.0">
+      <typingPredicate operator="In" type="//@sharedTypes.24"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="LinearElement" type="//@machines.0/@data.46">
+      <typingPredicate type="//@machines.0/@data.46"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="SectionList" type="//@machines.0/@data.10" typing="//@machines.0/@operations.18/@param.0">
+      <typingPredicate type="//@machines.0/@data.10"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="SectionAndVacancy" type="//@machines.0/@data.13" typing="//@machines.0/@operations.27/@param.0 //@machines.0/@operations.95/@param.0 //@machines.0/@operations.99/@param.0 //@machines.0/@operations.103/@param.0 //@machines.0/@operations.107/@param.0">
+      <typingPredicate type="//@machines.0/@data.13"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="TvpSection" type="//@machines.0/@data.9" typing="//@machines.0/@operations.14/@param.0">
+      <typingPredicate type="//@machines.0/@data.9"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="TdsSection" type="//@machines.0/@data.9" typing="//@machines.0/@operations.15/@param.0 //@machines.0/@operations.36/@param.1 //@machines.0/@operations.82/@param.1 //@machines.0/@data.59">
+      <typingPredicate type="//@machines.0/@data.9"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="TdsCompnent" type="//@machines.0/@data.9" typing="//@machines.0/@operations.16/@param.0 //@machines.0/@data.60">
+      <typingPredicate type="//@machines.0/@data.9"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="VirtualSubSection" type="//@machines.0/@data.57" typing="//@machines.0/@operations.34/@param.1 //@machines.0/@operations.35/@param.1 //@machines.0/@operations.63/@param.1 //@machines.0/@operations.64/@param.1 //@machines.0/@operations.65/@param.1 //@machines.0/@operations.66/@param.1 //@machines.0/@operations.76/@param.1 //@machines.0/@operations.77/@param.1 //@machines.0/@operations.78/@param.1 //@machines.0/@operations.79/@param.1 //@machines.0/@operations.80/@param.1 //@machines.0/@operations.81/@param.1">
+      <typingPredicate type="//@machines.0/@data.57"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="VssLimit" type="//@machines.0/@data.58">
+      <typingPredicate type="//@machines.0/@data.58"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="KindOfTrain" type="//@sharedTypes.56">
+      <typingPredicate operator="In" type="//@sharedTypes.56"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="ElementARelation" type="//@sharedTypes.35">
+      <typingPredicate operator="In" type="//@sharedTypes.35"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="ElementBRelation" type="//@sharedTypes.36">
+      <typingPredicate operator="In" type="//@sharedTypes.36"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="ToNetElement" type="//@sharedTypes.37">
+      <typingPredicate operator="In" type="//@sharedTypes.37"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="AreaAssociatedNetElements" type="//@sharedTypes.38">
+      <typingPredicate operator="In" type="//@sharedTypes.38"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="TvpSectionLocation" type="//@sharedTypes.39">
+      <typingPredicate operator="In" type="//@sharedTypes.39"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="ApplyTdsToTvp" type="//@sharedTypes.40">
+      <typingPredicate operator="In" type="//@sharedTypes.40"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="LimitsTdsSection" type="//@sharedTypes.42">
+      <typingPredicate operator="In" type="//@sharedTypes.42"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="HasSection" type="//@sharedTypes.43">
+      <typingPredicate operator="In" type="//@sharedTypes.43"/>
+    </data>
+    <data xsi:type="bmethod:BConstant" name="VacancyToTds" type="//@sharedTypes.52">
+      <typingPredicate operator="In" type="//@sharedTypes.52"/>
+    </data>
+    <invariant body="PhysicalTrackAsset /\ VirtualTrackAsset = {}"/>
+    <invariant body="TdsSection /\ TvpSection = {}"/>
+    <invariant body="dom(HasSection)=SectionList"/>
+    <invariant body="SectionList &lt;: RouteBodyProperty"/>
+    <invariant body="SectionAndVacancy &lt;: AssetAndState"/>
+    <invariant body="TvpSection &lt;: VirtualTrackAsset"/>
+    <invariant body="TdsSection &lt;: VirtualTrackAsset"/>
+    <invariant body="TdsCompnent &lt;: VehiclePassageDetector"/>
+    <operations name="Topology_NEW">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.19">
+            <value name="Topology \/ {aTopology}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTopology /: Topology"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.15">
+        <typingPredicate operator="In" type="//@machines.0/@data.15"/>
+      </param>
+    </operations>
+    <operations name="Topology_Free">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.19">
+            <value name="Topology - {aTopology}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.36">
+            <value name="A_usesPositionedRelation_topology |>> {aTopology}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.37">
+            <value name="A_usesNetElement_topology |>> {aTopology}"/>
+          </expression>
+        </substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.38">
+            <value name="EtcsTopologies |>> {aTopology}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="GetTrains">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := ListOfTrains~[{aETCSModel}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aETCSModel : ran(ListOfTrains)"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="GetEulynxModel">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := EulynxModels(aETCSModel)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aETCSModel : dom(EulynxModels)"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="GetOccupyFront">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainFront[{aTrain}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainFront)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetOccupyRear">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainRear[{aTrain}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainRear)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetLocationRear">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainRearLocation[{aTrain}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainRearLocation)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetLocationFront">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainFrontLocation[{aTrain}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainFrontLocation)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetFrontMA">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := frontMA(aTrain)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(frontMA)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetRearMA">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := rearMA(aTrain)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(rearMA)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetElementA">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := ElementARelation(aPositionedRelation)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aPositionedRelation : dom(ElementARelation)"/>
+        </precondition>
+      </substitution>
+      <param name="aPositionedRelation" type="//@machines.0/@data.47">
+        <typingPredicate operator="In" type="//@machines.0/@data.47"/>
+      </param>
+    </operations>
+    <operations name="GetElementB">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := ElementBRelation(aPositionedRelation)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aPositionedRelation : dom(ElementBRelation)"/>
+        </precondition>
+      </substitution>
+      <param name="aPositionedRelation" type="//@machines.0/@data.47">
+        <typingPredicate operator="In" type="//@machines.0/@data.47"/>
+      </param>
+    </operations>
+    <operations name="GetNetElement">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := ToNetElement(aAssociatedNetElement)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aAssociatedNetElement : dom(ToNetElement)"/>
+        </precondition>
+      </substitution>
+      <param name="aAssociatedNetElement" type="//@machines.0/@data.48">
+        <typingPredicate operator="In" type="//@machines.0/@data.48"/>
+      </param>
+    </operations>
+    <operations name="GetAssociatedNetElements">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := AreaAssociatedNetElements~[{aAreaLocation}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aAreaLocation : ran(AreaAssociatedNetElements)"/>
+        </precondition>
+      </substitution>
+      <param name="aAreaLocation" type="//@machines.0/@data.49">
+        <typingPredicate operator="In" type="//@machines.0/@data.49"/>
+      </param>
+    </operations>
+    <operations name="GetIsLocatedAt">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TvpSectionLocation(aTvpSection)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTvpSection : dom(TvpSectionLocation)"/>
+        </precondition>
+      </substitution>
+      <param name="aTvpSection" type="//@machines.0/@data.56">
+        <typingPredicate operator="In" type="//@machines.0/@data.56"/>
+      </param>
+    </operations>
+    <operations name="GetAppliesToTvpsection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := ApplyTdsToTvp(aTdsSection)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTdsSection : dom(ApplyTdsToTvp)"/>
+        </precondition>
+      </substitution>
+      <param name="aTdsSection" type="//@machines.0/@data.57">
+        <typingPredicate operator="In" type="//@machines.0/@data.57"/>
+      </param>
+    </operations>
+    <operations name="GetLimitsTdsSection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := LimitsTdsSection[{aTdsCompnent}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTdsCompnent : dom(LimitsTdsSection)"/>
+        </precondition>
+      </substitution>
+      <param name="aTdsCompnent" type="//@machines.0/@data.58">
+        <typingPredicate operator="In" type="//@machines.0/@data.58"/>
+      </param>
+    </operations>
+    <operations name="GetOccupiesTdsSection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_occupiesTdsSection_vehiclePassageDetector(aVehiclePassageDetector)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aVehiclePassageDetector : dom(A_occupiesTdsSection_vehiclePassageDetector)"/>
+        </precondition>
+      </substitution>
+      <param name="aVehiclePassageDetector" type="//@machines.0/@data.22">
+        <typingPredicate operator="In" type="//@machines.0/@data.22"/>
+      </param>
+    </operations>
+    <operations name="GetHasSection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := HasSection[{aSectionList}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aSectionList : dom(HasSection)"/>
+        </precondition>
+      </substitution>
+      <param name="aSectionList" type="//@machines.0/@data.54">
+        <typingPredicate operator="In" type="//@machines.0/@data.54"/>
+      </param>
+    </operations>
+    <operations name="GetDataPrepEntities">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_dataPrepEntities_documentRoot~[{aDocumentRoot}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aDocumentRoot : ran(A_dataPrepEntities_documentRoot)"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="GetRsmEntities">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_rsmEntities_documentRoot~[{aDocumentRoot}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aDocumentRoot : ran(A_rsmEntities_documentRoot)"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="GetOwnsRouteBodyProperty">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_ownsRouteBodyProperty_dataPrepEntities~[{aDataPrepEntities}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aDataPrepEntities : ran(A_ownsRouteBodyProperty_dataPrepEntities)"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="GetOwnsTrackAsset">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_ownsTrackAsset_dataPrepEntities~[{aDataPrepEntities}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aDataPrepEntities : ran(A_ownsTrackAsset_dataPrepEntities)"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="GetKnowsAssetAndState">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_KnowsAssetAndState_dataPrepEntities~[{aDataPrepEntities}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aDataPrepEntities : ran(A_KnowsAssetAndState_dataPrepEntities)"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="GetUsesEtcsTopology">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := EtcsTopologies(aRsmEntities)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aRsmEntities : dom(EtcsTopologies)"/>
+        </precondition>
+      </substitution>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+    </operations>
+    <operations name="GetUsesPositionedRelation">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_usesPositionedRelation_topology~[{aTopology}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTopology : ran(A_usesPositionedRelation_topology)"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="GetUsesNetElement">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := A_usesNetElement_topology~[{aTopology}]"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTopology : ran(A_usesNetElement_topology)"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="GetRefersToTdsSection">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := VacancyToTds(aSectionAndVacancy)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aSectionAndVacancy : dom(VacancyToTds)"/>
+        </precondition>
+      </substitution>
+      <param name="aSectionAndVacancy" type="//@machines.0/@data.55">
+        <typingPredicate operator="In" type="//@machines.0/@data.55"/>
+      </param>
+    </operations>
+    <operations name="SetTrains">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.29">
+            <value name="(ListOfTrains |>> {aETCSModel}) \/ (theTrains * {aETCSModel})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theTrains * {aETCSModel}) /&lt;: ListOfTrains"/>
+          <typingPredicate body="!added.( added : theTrains => ListOfTrains[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="theTrains" type="//@sharedTypes.61">
+        <typingPredicate operator="In" type="//@sharedTypes.61"/>
+      </param>
+    </operations>
+    <operations name="SetEulynxModel">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.30">
+            <value name="({aETCSModel} &lt;&lt;| EulynxModels) \/ {(aETCSModel |-> aEulynxModel)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aETCSModel |-> aEulynxModel)} /&lt;: EulynxModels"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aEulynxModel" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="SetOccupyFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.23">
+            <value name="({aTrain} &lt;&lt;| TrainFront) \/ ({aTrain} * theOccupyFront)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="({aTrain} * theOccupyFront) /&lt;: TrainFront"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="theOccupyFront" type="//@sharedTypes.63">
+        <typingPredicate operator="In" type="//@sharedTypes.63"/>
+      </param>
+    </operations>
+    <operations name="SetOccupyRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.24">
+            <value name="({aTrain} &lt;&lt;| TrainRear) \/ ({aTrain} * theOccupyRear)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="({aTrain} * theOccupyRear) /&lt;: TrainRear"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="theOccupyRear" type="//@sharedTypes.63">
+        <typingPredicate operator="In" type="//@sharedTypes.63"/>
+      </param>
+    </operations>
+    <operations name="SetLocationRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.25">
+            <value name="({aTrain} &lt;&lt;| TrainRearLocation) \/ ({aTrain} * theLocationRear)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="({aTrain} * theLocationRear) /&lt;: TrainRearLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="theLocationRear" type="//@sharedTypes.63">
+        <typingPredicate operator="In" type="//@sharedTypes.63"/>
+      </param>
+    </operations>
+    <operations name="SetLocationFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.26">
+            <value name="({aTrain} &lt;&lt;| TrainFrontLocation) \/ ({aTrain} * theLocationFront)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="({aTrain} * theLocationFront) /&lt;: TrainFrontLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="theLocationFront" type="//@sharedTypes.63">
+        <typingPredicate operator="In" type="//@sharedTypes.63"/>
+      </param>
+    </operations>
+    <operations name="SetFrontMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.27">
+            <value name="({aTrain} &lt;&lt;| frontMA) \/ {(aTrain |-> aFrontMA)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aTrain |-> aFrontMA)} /&lt;: frontMA"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aFrontMA" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="SetRearMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.28">
+            <value name="({aTrain} &lt;&lt;| rearMA) \/ {(aTrain |-> aRearMA)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aTrain |-> aRearMA)} /&lt;: rearMA"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aRearMA" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="SetOccupiesTdsSection">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.31">
+            <value name="({aVehiclePassageDetector} &lt;&lt;| A_occupiesTdsSection_vehiclePassageDetector) \/ {(aVehiclePassageDetector |-> aOccupiesTdsSection)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aVehiclePassageDetector |-> aOccupiesTdsSection)} /&lt;: A_occupiesTdsSection_vehiclePassageDetector"/>
+        </precondition>
+      </substitution>
+      <param name="aVehiclePassageDetector" type="//@machines.0/@data.22">
+        <typingPredicate operator="In" type="//@machines.0/@data.22"/>
+      </param>
+      <param name="aOccupiesTdsSection" type="//@machines.0/@data.57">
+        <typingPredicate operator="In" type="//@machines.0/@data.57"/>
+      </param>
+    </operations>
+    <operations name="SetDataPrepEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.35">
+            <value name="(A_dataPrepEntities_documentRoot |>> {aDocumentRoot}) \/ (theDataPrepEntities * {aDocumentRoot})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theDataPrepEntities * {aDocumentRoot}) /&lt;: A_dataPrepEntities_documentRoot"/>
+          <typingPredicate body="!added.( added : theDataPrepEntities => A_dataPrepEntities_documentRoot[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="theDataPrepEntities" type="//@sharedTypes.69">
+        <typingPredicate operator="In" type="//@sharedTypes.69"/>
+      </param>
+    </operations>
+    <operations name="SetRsmEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.39">
+            <value name="(A_rsmEntities_documentRoot |>> {aDocumentRoot}) \/ (theRsmEntities * {aDocumentRoot})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theRsmEntities * {aDocumentRoot}) /&lt;: A_rsmEntities_documentRoot"/>
+          <typingPredicate body="!added.( added : theRsmEntities => A_rsmEntities_documentRoot[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="theRsmEntities" type="//@sharedTypes.71">
+        <typingPredicate operator="In" type="//@sharedTypes.71"/>
+      </param>
+    </operations>
+    <operations name="SetOwnsRouteBodyProperty">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.32">
+            <value name="(A_ownsRouteBodyProperty_dataPrepEntities |>> {aDataPrepEntities}) \/ (theOwnsRouteBodyProperty * {aDataPrepEntities})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theOwnsRouteBodyProperty * {aDataPrepEntities}) /&lt;: A_ownsRouteBodyProperty_dataPrepEntities"/>
+          <typingPredicate body="!added.( added : theOwnsRouteBodyProperty => A_ownsRouteBodyProperty_dataPrepEntities[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="theOwnsRouteBodyProperty" type="//@sharedTypes.73">
+        <typingPredicate operator="In" type="//@sharedTypes.73"/>
+      </param>
+    </operations>
+    <operations name="SetOwnsTrackAsset">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.33">
+            <value name="(A_ownsTrackAsset_dataPrepEntities |>> {aDataPrepEntities}) \/ (theOwnsTrackAsset * {aDataPrepEntities})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theOwnsTrackAsset * {aDataPrepEntities}) /&lt;: A_ownsTrackAsset_dataPrepEntities"/>
+          <typingPredicate body="!added.( added : theOwnsTrackAsset => A_ownsTrackAsset_dataPrepEntities[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="theOwnsTrackAsset" type="//@sharedTypes.75">
+        <typingPredicate operator="In" type="//@sharedTypes.75"/>
+      </param>
+    </operations>
+    <operations name="SetKnowsAssetAndState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.34">
+            <value name="(A_KnowsAssetAndState_dataPrepEntities |>> {aDataPrepEntities}) \/ (theKnowsAssetAndState * {aDataPrepEntities})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theKnowsAssetAndState * {aDataPrepEntities}) /&lt;: A_KnowsAssetAndState_dataPrepEntities"/>
+          <typingPredicate body="!added.( added : theKnowsAssetAndState => A_KnowsAssetAndState_dataPrepEntities[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="theKnowsAssetAndState" type="//@sharedTypes.77">
+        <typingPredicate operator="In" type="//@sharedTypes.77"/>
+      </param>
+    </operations>
+    <operations name="SetUsesEtcsTopology">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.38">
+            <value name="({aRsmEntities} &lt;&lt;| EtcsTopologies) \/ {(aRsmEntities |-> aUsesEtcsTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aRsmEntities |-> aUsesEtcsTopology)} /&lt;: EtcsTopologies"/>
+          <typingPredicate body="EtcsTopologies~[{aUsesEtcsTopology}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+      <param name="aUsesEtcsTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="SetUsesPositionedRelation">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.36">
+            <value name="(A_usesPositionedRelation_topology |>> {aTopology}) \/ (theUsesPositionedRelation * {aTopology})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theUsesPositionedRelation * {aTopology}) /&lt;: A_usesPositionedRelation_topology"/>
+          <typingPredicate body="!added.( added : theUsesPositionedRelation => A_usesPositionedRelation_topology[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="theUsesPositionedRelation" type="//@sharedTypes.79">
+        <typingPredicate operator="In" type="//@sharedTypes.79"/>
+      </param>
+    </operations>
+    <operations name="SetUsesNetElement">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.37">
+            <value name="(A_usesNetElement_topology |>> {aTopology}) \/ (theUsesNetElement * {aTopology})"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(theUsesNetElement * {aTopology}) /&lt;: A_usesNetElement_topology"/>
+          <typingPredicate body="!added.( added : theUsesNetElement => A_usesNetElement_topology[{added}] = {})"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="theUsesNetElement" type="//@sharedTypes.81">
+        <typingPredicate operator="In" type="//@sharedTypes.81"/>
+      </param>
+    </operations>
+    <operations name="UnsetTrains">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.29">
+            <value name="ListOfTrains |>> {aETCSModel}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="UnsetEulynxModel">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.30">
+            <value name="{aETCSModel} &lt;&lt;| EulynxModels"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="UnsetOccupyFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.23">
+            <value name="{aTrain} &lt;&lt;| TrainFront"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetOccupyRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.24">
+            <value name="{aTrain} &lt;&lt;| TrainRear"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetLocationRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.25">
+            <value name="{aTrain} &lt;&lt;| TrainRearLocation"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetLocationFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.26">
+            <value name="{aTrain} &lt;&lt;| TrainFrontLocation"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetFrontMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.27">
+            <value name="{aTrain} &lt;&lt;| frontMA"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetRearMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.28">
+            <value name="{aTrain} &lt;&lt;| rearMA"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetOccupiesTdsSection">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.31">
+            <value name="{aVehiclePassageDetector} &lt;&lt;| A_occupiesTdsSection_vehiclePassageDetector"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aVehiclePassageDetector" type="//@machines.0/@data.22">
+        <typingPredicate operator="In" type="//@machines.0/@data.22"/>
+      </param>
+    </operations>
+    <operations name="UnsetDataPrepEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.35">
+            <value name="A_dataPrepEntities_documentRoot |>> {aDocumentRoot}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="UnsetRsmEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.39">
+            <value name="A_rsmEntities_documentRoot |>> {aDocumentRoot}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="UnsetOwnsRouteBodyProperty">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.32">
+            <value name="A_ownsRouteBodyProperty_dataPrepEntities |>> {aDataPrepEntities}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="UnsetOwnsTrackAsset">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.33">
+            <value name="A_ownsTrackAsset_dataPrepEntities |>> {aDataPrepEntities}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="UnsetKnowsAssetAndState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.34">
+            <value name="A_KnowsAssetAndState_dataPrepEntities |>> {aDataPrepEntities}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="UnsetUsesEtcsTopology">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.38">
+            <value name="{aRsmEntities} &lt;&lt;| EtcsTopologies"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+    </operations>
+    <operations name="UnsetUsesPositionedRelation">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.36">
+            <value name="A_usesPositionedRelation_topology |>> {aTopology}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="UnsetUsesNetElement">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.37">
+            <value name="A_usesNetElement_topology |>> {aTopology}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="AddTrains">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.29">
+            <value name="ListOfTrains \/ {(aTrains |-> aETCSModel)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrains |-> aETCSModel) /: ListOfTrains"/>
+          <typingPredicate body="ListOfTrains[{aTrains}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aTrains" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="AddOccupyFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.23">
+            <value name="TrainFront \/ {(aTrain |-> aOccupyFront)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aOccupyFront) /: TrainFront"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aOccupyFront" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="AddOccupyRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.24">
+            <value name="TrainRear \/ {(aTrain |-> aOccupyRear)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aOccupyRear) /: TrainRear"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aOccupyRear" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="AddLocationRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.25">
+            <value name="TrainRearLocation \/ {(aTrain |-> aLocationRear)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aLocationRear) /: TrainRearLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aLocationRear" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="AddLocationFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.26">
+            <value name="TrainFrontLocation \/ {(aTrain |-> aLocationFront)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aLocationFront) /: TrainFrontLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aLocationFront" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="AddDataPrepEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.35">
+            <value name="A_dataPrepEntities_documentRoot \/ {(aDataPrepEntities |-> aDocumentRoot)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aDataPrepEntities |-> aDocumentRoot) /: A_dataPrepEntities_documentRoot"/>
+          <typingPredicate body="A_dataPrepEntities_documentRoot[{aDataPrepEntities}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="AddRsmEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.39">
+            <value name="A_rsmEntities_documentRoot \/ {(aRsmEntities |-> aDocumentRoot)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aRsmEntities |-> aDocumentRoot) /: A_rsmEntities_documentRoot"/>
+          <typingPredicate body="A_rsmEntities_documentRoot[{aRsmEntities}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+    </operations>
+    <operations name="AddOwnsRouteBodyProperty">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.32">
+            <value name="A_ownsRouteBodyProperty_dataPrepEntities \/ {(aOwnsRouteBodyProperty |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aOwnsRouteBodyProperty |-> aDataPrepEntities) /: A_ownsRouteBodyProperty_dataPrepEntities"/>
+          <typingPredicate body="A_ownsRouteBodyProperty_dataPrepEntities[{aOwnsRouteBodyProperty}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aOwnsRouteBodyProperty" type="//@machines.0/@data.17">
+        <typingPredicate operator="In" type="//@machines.0/@data.17"/>
+      </param>
+    </operations>
+    <operations name="AddOwnsTrackAsset">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.33">
+            <value name="A_ownsTrackAsset_dataPrepEntities \/ {(aOwnsTrackAsset |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aOwnsTrackAsset |-> aDataPrepEntities) /: A_ownsTrackAsset_dataPrepEntities"/>
+          <typingPredicate body="A_ownsTrackAsset_dataPrepEntities[{aOwnsTrackAsset}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aOwnsTrackAsset" type="//@machines.0/@data.16">
+        <typingPredicate operator="In" type="//@machines.0/@data.16"/>
+      </param>
+    </operations>
+    <operations name="AddKnowsAssetAndState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.34">
+            <value name="A_KnowsAssetAndState_dataPrepEntities \/ {(aKnowsAssetAndState |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aKnowsAssetAndState |-> aDataPrepEntities) /: A_KnowsAssetAndState_dataPrepEntities"/>
+          <typingPredicate body="A_KnowsAssetAndState_dataPrepEntities[{aKnowsAssetAndState}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aKnowsAssetAndState" type="//@machines.0/@data.18">
+        <typingPredicate operator="In" type="//@machines.0/@data.18"/>
+      </param>
+    </operations>
+    <operations name="AddUsesPositionedRelation">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.36">
+            <value name="A_usesPositionedRelation_topology \/ {(aUsesPositionedRelation |-> aTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aUsesPositionedRelation |-> aTopology) /: A_usesPositionedRelation_topology"/>
+          <typingPredicate body="A_usesPositionedRelation_topology[{aUsesPositionedRelation}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="aUsesPositionedRelation" type="//@machines.0/@data.47">
+        <typingPredicate operator="In" type="//@machines.0/@data.47"/>
+      </param>
+    </operations>
+    <operations name="AddUsesNetElement">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.37">
+            <value name="A_usesNetElement_topology \/ {(aUsesNetElement |-> aTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aUsesNetElement |-> aTopology) /: A_usesNetElement_topology"/>
+          <typingPredicate body="A_usesNetElement_topology[{aUsesNetElement}] = {}"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="aUsesNetElement" type="//@machines.0/@data.46">
+        <typingPredicate operator="In" type="//@machines.0/@data.46"/>
+      </param>
+    </operations>
+    <operations name="RemoveTrains">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.29">
+            <value name="ListOfTrains - {(aTrains |-> aETCSModel)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrains |-> aETCSModel) : ListOfTrains"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aTrains" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="RemoveEulynxModel">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.30">
+            <value name="EulynxModels - {(aETCSModel |-> aEulynxModel)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aETCSModel |-> aEulynxModel) : EulynxModels"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aEulynxModel" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+    </operations>
+    <operations name="RemoveOccupyFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.23">
+            <value name="TrainFront - {(aTrain |-> aOccupyFront)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aOccupyFront) : TrainFront"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aOccupyFront" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveOccupyRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.24">
+            <value name="TrainRear - {(aTrain |-> aOccupyRear)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aOccupyRear) : TrainRear"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aOccupyRear" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveLocationRear">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.25">
+            <value name="TrainRearLocation - {(aTrain |-> aLocationRear)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aLocationRear) : TrainRearLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aLocationRear" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveLocationFront">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.26">
+            <value name="TrainFrontLocation - {(aTrain |-> aLocationFront)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aLocationFront) : TrainFrontLocation"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aLocationFront" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveFrontMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.27">
+            <value name="frontMA - {(aTrain |-> aFrontMA)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aFrontMA) : frontMA"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aFrontMA" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveRearMA">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.28">
+            <value name="rearMA - {(aTrain |-> aRearMA)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aTrain |-> aRearMA) : rearMA"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aRearMA" type="//@machines.0/@data.59">
+        <typingPredicate operator="In" type="//@machines.0/@data.59"/>
+      </param>
+    </operations>
+    <operations name="RemoveOccupiesTdsSection">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.31">
+            <value name="A_occupiesTdsSection_vehiclePassageDetector - {(aVehiclePassageDetector |-> aOccupiesTdsSection)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aVehiclePassageDetector |-> aOccupiesTdsSection) : A_occupiesTdsSection_vehiclePassageDetector"/>
+        </precondition>
+      </substitution>
+      <param name="aVehiclePassageDetector" type="//@machines.0/@data.22">
+        <typingPredicate operator="In" type="//@machines.0/@data.22"/>
+      </param>
+      <param name="aOccupiesTdsSection" type="//@machines.0/@data.57">
+        <typingPredicate operator="In" type="//@machines.0/@data.57"/>
+      </param>
+    </operations>
+    <operations name="RemoveDataPrepEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.35">
+            <value name="A_dataPrepEntities_documentRoot - {(aDataPrepEntities |-> aDocumentRoot)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aDataPrepEntities |-> aDocumentRoot) : A_dataPrepEntities_documentRoot"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+    </operations>
+    <operations name="RemoveRsmEntities">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.39">
+            <value name="A_rsmEntities_documentRoot - {(aRsmEntities |-> aDocumentRoot)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aRsmEntities |-> aDocumentRoot) : A_rsmEntities_documentRoot"/>
+        </precondition>
+      </substitution>
+      <param name="aDocumentRoot" type="//@machines.0/@data.50">
+        <typingPredicate operator="In" type="//@machines.0/@data.50"/>
+      </param>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+    </operations>
+    <operations name="RemoveOwnsRouteBodyProperty">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.32">
+            <value name="A_ownsRouteBodyProperty_dataPrepEntities - {(aOwnsRouteBodyProperty |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aOwnsRouteBodyProperty |-> aDataPrepEntities) : A_ownsRouteBodyProperty_dataPrepEntities"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aOwnsRouteBodyProperty" type="//@machines.0/@data.17">
+        <typingPredicate operator="In" type="//@machines.0/@data.17"/>
+      </param>
+    </operations>
+    <operations name="RemoveOwnsTrackAsset">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.33">
+            <value name="A_ownsTrackAsset_dataPrepEntities - {(aOwnsTrackAsset |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aOwnsTrackAsset |-> aDataPrepEntities) : A_ownsTrackAsset_dataPrepEntities"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aOwnsTrackAsset" type="//@machines.0/@data.16">
+        <typingPredicate operator="In" type="//@machines.0/@data.16"/>
+      </param>
+    </operations>
+    <operations name="RemoveKnowsAssetAndState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.34">
+            <value name="A_KnowsAssetAndState_dataPrepEntities - {(aKnowsAssetAndState |-> aDataPrepEntities)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aKnowsAssetAndState |-> aDataPrepEntities) : A_KnowsAssetAndState_dataPrepEntities"/>
+        </precondition>
+      </substitution>
+      <param name="aDataPrepEntities" type="//@machines.0/@data.51">
+        <typingPredicate operator="In" type="//@machines.0/@data.51"/>
+      </param>
+      <param name="aKnowsAssetAndState" type="//@machines.0/@data.18">
+        <typingPredicate operator="In" type="//@machines.0/@data.18"/>
+      </param>
+    </operations>
+    <operations name="RemoveUsesEtcsTopology">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.38">
+            <value name="EtcsTopologies - {(aRsmEntities |-> aUsesEtcsTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aRsmEntities |-> aUsesEtcsTopology) : EtcsTopologies"/>
+        </precondition>
+      </substitution>
+      <param name="aRsmEntities" type="//@machines.0/@data.52">
+        <typingPredicate operator="In" type="//@machines.0/@data.52"/>
+      </param>
+      <param name="aUsesEtcsTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+    </operations>
+    <operations name="RemoveUsesPositionedRelation">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.36">
+            <value name="A_usesPositionedRelation_topology - {(aUsesPositionedRelation |-> aTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aUsesPositionedRelation |-> aTopology) : A_usesPositionedRelation_topology"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="aUsesPositionedRelation" type="//@machines.0/@data.47">
+        <typingPredicate operator="In" type="//@machines.0/@data.47"/>
+      </param>
+    </operations>
+    <operations name="RemoveUsesNetElement">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.37">
+            <value name="A_usesNetElement_topology - {(aUsesNetElement |-> aTopology)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="(aUsesNetElement |-> aTopology) : A_usesNetElement_topology"/>
+        </precondition>
+      </substitution>
+      <param name="aTopology" type="//@machines.0/@data.19">
+        <typingPredicate operator="In" type="//@machines.0/@data.19"/>
+      </param>
+      <param name="aUsesNetElement" type="//@machines.0/@data.46">
+        <typingPredicate operator="In" type="//@machines.0/@data.46"/>
+      </param>
+    </operations>
+    <operations name="GetSupervisionOfTrain">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := SupervisionOfTrain(aETCSModel)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aETCSModel : dom(SupervisionOfTrain)"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="GetTrainConnected">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainConnected(aTrain)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainConnected)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetTrainReConnected">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := TrainReConnected(aTrain)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(TrainReConnected)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetKindOfTrain">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := KindOfTrain(aTrain)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aTrain : dom(KindOfTrain)"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="GetInVacancyState">
+      <substitution>
+        <substitution>
+          <expression>
+            <value name="result := inVacancyState(aSectionAndVacancy)"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="aSectionAndVacancy : dom(inVacancyState)"/>
+        </precondition>
+      </substitution>
+      <param name="aSectionAndVacancy" type="//@machines.0/@data.55">
+        <typingPredicate operator="In" type="//@machines.0/@data.55"/>
+      </param>
+    </operations>
+    <operations name="SetSupervisionOfTrain">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.40">
+            <value name="({aETCSModel} &lt;&lt;| SupervisionOfTrain)  \/ {(aETCSModel |-> aSupervisionOfTrain)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aSupervisionOfTrain" type="//@machines.0/@data.1">
+        <typingPredicate operator="In" type="//@machines.0/@data.1"/>
+      </param>
+    </operations>
+    <operations name="SetTrainConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.41">
+            <value name="({aTrain} &lt;&lt;| TrainConnected)  \/ {(aTrain |-> aTrainConnected)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aTrainConnected" type="//@sharedTypes.0">
+        <typingPredicate operator="In" type="//@sharedTypes.0"/>
+      </param>
+    </operations>
+    <operations name="SetTrainReConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.42">
+            <value name="({aTrain} &lt;&lt;| TrainReConnected)  \/ {(aTrain |-> aTrainReConnected)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aTrainReConnected" type="//@sharedTypes.0">
+        <typingPredicate operator="In" type="//@sharedTypes.0"/>
+      </param>
+    </operations>
+    <operations name="SetInVacancyState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.43">
+            <value name="({aSectionAndVacancy} &lt;&lt;| inVacancyState)  \/ {(aSectionAndVacancy |-> aInVacancyState)}"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aSectionAndVacancy" type="//@machines.0/@data.55">
+        <typingPredicate operator="In" type="//@machines.0/@data.55"/>
+      </param>
+      <param name="aInVacancyState" type="//@machines.0/@data.2">
+        <typingPredicate operator="In" type="//@machines.0/@data.2"/>
+      </param>
+    </operations>
+    <operations name="UnsetSupervisionOfTrain">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.40">
+            <value name="{aETCSModel} &lt;&lt;| SupervisionOfTrain"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+    </operations>
+    <operations name="UnsetTrainConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.41">
+            <value name="{aTrain} &lt;&lt;| TrainConnected"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetTrainReConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.42">
+            <value name="{aTrain} &lt;&lt;| TrainReConnected"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+    </operations>
+    <operations name="UnsetInVacancyState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.43">
+            <value name="{aSectionAndVacancy} &lt;&lt;| inVacancyState"/>
+          </expression>
+        </substitution>
+      </substitution>
+      <param name="aSectionAndVacancy" type="//@machines.0/@data.55">
+        <typingPredicate operator="In" type="//@machines.0/@data.55"/>
+      </param>
+    </operations>
+    <operations name="RemoveSupervisionOfTrain">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.40">
+            <value name="SupervisionOfTrain - {(aETCSModel |-> aSupervisionOfTrain)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aETCSModel |-> aSupervisionOfTrain)} &lt;: SupervisionOfTrain"/>
+        </precondition>
+      </substitution>
+      <param name="aETCSModel" type="//@machines.0/@data.44">
+        <typingPredicate operator="In" type="//@machines.0/@data.44"/>
+      </param>
+      <param name="aSupervisionOfTrain" type="//@machines.0/@data.1">
+        <typingPredicate operator="In" type="//@machines.0/@data.1"/>
+      </param>
+    </operations>
+    <operations name="RemoveTrainConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.41">
+            <value name="TrainConnected - {(aTrain |-> aTrainConnected)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aTrain |-> aTrainConnected)} &lt;: TrainConnected"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aTrainConnected" type="//@sharedTypes.0">
+        <typingPredicate operator="In" type="//@sharedTypes.0"/>
+      </param>
+    </operations>
+    <operations name="RemoveTrainReConnected">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.42">
+            <value name="TrainReConnected - {(aTrain |-> aTrainReConnected)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aTrain |-> aTrainReConnected)} &lt;: TrainReConnected"/>
+        </precondition>
+      </substitution>
+      <param name="aTrain" type="//@machines.0/@data.45">
+        <typingPredicate operator="In" type="//@machines.0/@data.45"/>
+      </param>
+      <param name="aTrainReConnected" type="//@sharedTypes.0">
+        <typingPredicate operator="In" type="//@sharedTypes.0"/>
+      </param>
+    </operations>
+    <operations name="RemoveInVacancyState">
+      <substitution>
+        <substitution>
+          <expression data="//@machines.0/@data.43">
+            <value name="inVacancyState - {(aSectionAndVacancy |-> aInVacancyState)}"/>
+          </expression>
+        </substitution>
+        <precondition>
+          <typingPredicate body="{(aSectionAndVacancy |-> aInVacancyState)} &lt;: inVacancyState"/>
+        </precondition>
+      </substitution>
+      <param name="aSectionAndVacancy" type="//@machines.0/@data.55">
+        <typingPredicate operator="In" type="//@machines.0/@data.55"/>
+      </param>
+      <param name="aInVacancyState" type="//@machines.0/@data.2">
+        <typingPredicate operator="In" type="//@machines.0/@data.2"/>
+      </param>
+    </operations>
+    <initialisation init="//@machines.0/@data.16"/>
+    <initialisation init="//@machines.0/@data.17"/>
+    <initialisation init="//@machines.0/@data.18"/>
+    <initialisation init="//@machines.0/@data.19"/>
+    <initialisation init="//@machines.0/@data.20"/>
+    <initialisation init="//@machines.0/@data.21"/>
+    <initialisation init="//@machines.0/@data.22"/>
+    <initialisation init="//@machines.0/@data.23"/>
+    <initialisation init="//@machines.0/@data.24"/>
+    <initialisation init="//@machines.0/@data.25"/>
+    <initialisation init="//@machines.0/@data.26"/>
+    <initialisation init="//@machines.0/@data.27"/>
+    <initialisation init="//@machines.0/@data.28"/>
+    <initialisation init="//@machines.0/@data.29"/>
+    <initialisation init="//@machines.0/@data.30"/>
+    <initialisation init="//@machines.0/@data.31"/>
+    <initialisation init="//@machines.0/@data.32"/>
+    <initialisation init="//@machines.0/@data.33"/>
+    <initialisation init="//@machines.0/@data.34"/>
+    <initialisation init="//@machines.0/@data.35"/>
+    <initialisation init="//@machines.0/@data.36"/>
+    <initialisation init="//@machines.0/@data.37"/>
+    <initialisation init="//@machines.0/@data.38"/>
+    <initialisation init="//@machines.0/@data.39"/>
+    <initialisation init="//@machines.0/@data.40"/>
+    <initialisation init="//@machines.0/@data.41"/>
+    <initialisation init="//@machines.0/@data.42"/>
+    <initialisation init="//@machines.0/@data.43"/>
+  </machines>
+  <sharedTypes xsi:type="bmethod:Bool" typing="//@machines.0/@operations.97/@param.1 //@machines.0/@operations.98/@param.1 //@machines.0/@operations.105/@param.1 //@machines.0/@operations.106/@param.1"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.3"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.44" base="//@machines.0/@data.3" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.4"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.45" base="//@machines.0/@data.4" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.5"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.46" base="//@machines.0/@data.5" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.6"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.47" base="//@machines.0/@data.6" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.7"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.48" base="//@machines.0/@data.7" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.8"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.49" base="//@machines.0/@data.8" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.9"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.16" base="//@machines.0/@data.9" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.10"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.17" base="//@machines.0/@data.10" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.11"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.50" base="//@machines.0/@data.11" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.12"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.51" base="//@machines.0/@data.12" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.13"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.18" base="//@machines.0/@data.13" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.14"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.52" base="//@machines.0/@data.14" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.15"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@data.19" base="//@machines.0/@data.15" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.23" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.24" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.25" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.26" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.27" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.28" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.29" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@machines.0/@data.44"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.30" expression="PartialFunction" dom="//@machines.0/@data.44" ran="//@machines.0/@data.50"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.62" expression="TotalFunction" dom="//@machines.0/@data.47" ran="//@machines.0/@data.46"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.63" expression="TotalFunction" dom="//@machines.0/@data.47" ran="//@machines.0/@data.46"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.64" expression="TotalFunction" dom="//@machines.0/@data.48" ran="//@machines.0/@data.46"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.65" expression="PartialFunction" dom="//@machines.0/@data.48" ran="//@machines.0/@data.49"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.66" expression="TotalFunction" dom="//@machines.0/@data.56" ran="//@machines.0/@data.49"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.67" expression="TotalFunction" dom="//@machines.0/@data.57" ran="//@machines.0/@data.56"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.31" expression="PartialFunction" dom="//@machines.0/@data.22" ran="//@machines.0/@data.57"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.68" dom="//@machines.0/@data.58" ran="//@machines.0/@data.57"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.69" dom="//@machines.0/@data.54" ran="//@machines.0/@data.56"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.32" expression="PartialFunction" dom="//@machines.0/@data.17" ran="//@machines.0/@data.51"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.33" expression="PartialFunction" dom="//@machines.0/@data.16" ran="//@machines.0/@data.51"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.34" expression="PartialFunction" dom="//@machines.0/@data.18" ran="//@machines.0/@data.51"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.35" expression="PartialFunction" dom="//@machines.0/@data.51" ran="//@machines.0/@data.50"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.36" expression="PartialFunction" dom="//@machines.0/@data.47" ran="//@machines.0/@data.19"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.37" expression="PartialFunction" dom="//@machines.0/@data.46" ran="//@machines.0/@data.19"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.38" expression="PartialInjection" dom="//@machines.0/@data.52" ran="//@machines.0/@data.19"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.39" expression="PartialFunction" dom="//@machines.0/@data.52" ran="//@machines.0/@data.50"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.70" expression="TotalBijection" dom="//@machines.0/@data.55" ran="//@machines.0/@data.57"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.40" expression="PartialFunction" dom="//@machines.0/@data.44" ran="//@machines.0/@data.1"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.41" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@sharedTypes.0"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.42" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@sharedTypes.0"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.61" expression="PartialFunction" dom="//@machines.0/@data.45" ran="//@machines.0/@data.0"/>
+  <sharedTypes xsi:type="bmethod:BComposedType" typing="//@machines.0/@data.43" expression="PartialFunction" dom="//@machines.0/@data.55" ran="//@machines.0/@data.2"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.56"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.56" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.45"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.28/@param.1" base="//@machines.0/@data.45" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.59"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.30/@param.1 //@machines.0/@operations.31/@param.1 //@machines.0/@operations.32/@param.1 //@machines.0/@operations.33/@param.1" base="//@machines.0/@data.59" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.48"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.48" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.57"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.57" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.51"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.37/@param.1" base="//@machines.0/@data.51" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.52"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.38/@param.1" base="//@machines.0/@data.52" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.17"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.39/@param.1" base="//@machines.0/@data.17" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.16"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.40/@param.1" base="//@machines.0/@data.16" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.18"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.41/@param.1" base="//@machines.0/@data.18" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.47"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.43/@param.1" base="//@machines.0/@data.47" finite="true"/>
+  <sharedTypes xsi:type="bmethod:BPowType" base="//@machines.0/@data.46"/>
+  <sharedTypes xsi:type="bmethod:BPowType" typing="//@machines.0/@operations.44/@param.1" base="//@machines.0/@data.46" finite="true"/>
+</bmethod:BSpec>
