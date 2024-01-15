@@ -68,3 +68,6 @@ See the Eclipse User Guide for instructions on how to install software from upda
 Once your model and representation are ready. Now right click on either model or representation, click on Execute Model -> Linkage_Refinement.ref / Linkage_Synchronization.ref and in the prompted dialog box, you have the option to generate injected machine (you can click it if you want to generate the injected valued machine). Enter Finish and the it open the Meeduse Perspective. You can play with visualization using the operations in execution view. You can also randomly animatie by clicking the green play button -> Random animation with invariant checking. 
 
 ![Screenshot](./Images/GIF.gif)
+
+- In this repository, ../Samples/tree/main/Lift/model contains a model of My.liftm with instances of lift and floors from meta-model (liftM Ecore Model). In the same folder, a sub-folder ../model/animation/My, a B specification named liftM.mch is the valuated specification (containing values from model My.liftm).
+-- Note that in this Meeduse Git repository, the valuated B Specifications for samples: GpuServer and IdmDay are presented in folder: ../model/animation/Values. So for clarification, ../model/animation/My and ../model/animation/Values are meant to be the same folders.
